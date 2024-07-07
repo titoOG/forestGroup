@@ -1,0 +1,137 @@
+{
+  "root": "E:/zlecenia/forestGroup",
+  "modules": [
+    {
+      "id": "E:/zlecenia/forestGroup/assets/js/main.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:resolve",
+          "resolveId": 2
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        }
+      ],
+      "virtual": true,
+      "totalTime": 0,
+      "invokeCount": 2,
+      "sourceSize": 0,
+      "distSize": 0
+    },
+    {
+      "id": "E:/zlecenia/forestGroup/node_modules/vite/dist/client/client.mjs",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "__load__",
+          "transform": 0
+        },
+        {
+          "name": "vite:asset-import-meta-url",
+          "transform": 22
+        },
+        {
+          "name": "vite:client-inject",
+          "transform": 1
+        },
+        {
+          "name": "vite:import-analysis",
+          "transform": 5
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 1
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "alias",
+          "resolveId": 1
+        },
+        {
+          "name": "alias",
+          "resolveId": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 28,
+      "invokeCount": 1,
+      "sourceSize": 23730,
+      "distSize": 23675
+    },
+    {
+      "id": "E:/zlecenia/forestGroup/node_modules/vite/dist/client/env.mjs",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "__load__",
+          "transform": 0
+        },
+        {
+          "name": "vite:client-inject",
+          "transform": 0
+        },
+        {
+          "name": "vite:import-analysis",
+          "transform": 0
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 0
+        },
+        {
+          "name": "alias",
+          "resolveId": 0
+        }
+      ],
+      "virtual": false,
+      "totalTime": 0,
+      "invokeCount": 1,
+      "sourceSize": 643,
+      "distSize": 634
+    },
+    {
+      "id": "E:/zlecenia/forestGroup/src/assets/sass/main.scss",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:pre-alias",
+          "resolveId": 1
+        },
+        {
+          "name": "vite:pre-alias",
+          "resolveId": 0
+        }
+      ],
+      "virtual": true,
+      "totalTime": 0,
+      "invokeCount": 0,
+      "sourceSize": 0,
+      "distSize": 0
+    },
+    {
+      "id": "E:\\zlecenia\\forestGroup\\src\\assets/sass/main.scss",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "alias",
+          "resolveId": 1
+        },
+        {
+          "name": "alias",
+          "resolveId": 0
+        }
+      ],
+      "virtual": true,
+      "totalTime": 0,
+      "invokeCount": 0,
+      "sourceSize": 0,
+      "distSize": 0
+    }
+  ],
+  "ssrModules": []
+}

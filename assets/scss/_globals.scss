@@ -1,0 +1,10 @@
+@use './mixins' as m;
+@use './colors' as c;
+
+.btn {
+  @include m.buttonSettings;
+}
+
+.cta {
+  @include m.buttonCta;
+}

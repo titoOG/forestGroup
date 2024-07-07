@@ -1,0 +1,25 @@
+@use './colors' as c;
+
+:root {
+  --regular-font: 'regularRaleway', sans-serif;
+  --bold-font: 'boldRaleway', sans-serif;
+  font-size: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: c.$primary-color;
+  color: c.$secondary-color;
+  font-family: var(--regular-font);
+}
+
+.test {
+  margin: 1rem auto;
+}

@@ -3,7 +3,6 @@ import Inspect from 'vite-plugin-inspect';
 import path from 'path';
 import { resolve } from 'path';
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
-// import mpa from 'vite-plugin-multi-pages';
 
 export default defineConfig({
   server: {
@@ -21,12 +20,6 @@ export default defineConfig({
       outputDir: '.vite-inspect',
     }),
 
-    // mpa({
-    //   scanDir: './',
-    //   defaultOpenPage: 'offers.html',
-    //   ignorePageNames: '',
-    // }),
-
     ViteImageOptimizer({
       includePublic: false,
       jpg: {
@@ -42,8 +35,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        contact: resolve(__dirname, './pages/contact.html'),
-        offers: resolve(__dirname, './pages/offers.html'),
+        contact: resolve(__dirname, './assets/pages/contact.html'),
+        offers: resolve(__dirname, './assets/pages/offers.html'),
       },
 
       output: {
@@ -70,7 +63,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src/assets'),
-      'stylePath': path.resolve(__dirname, './src/assets/scss'),
+      'STYLE': path.resolve(__dirname, './src/assets/scss'),
     },
   },
 });
