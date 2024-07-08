@@ -1,0 +1,104 @@
+{
+  "resolvedId": "E:/zlecenia/forestGroup/assets/scss/_reset.scss",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "*,\r\n*::before,\r\n*::after {\r\n  box-sizing: border-box;\r\n  margin: 0;\r\n  padding: 0;\r\n}\r\n\r\nbutton,\r\na {\r\n  font-family: inherit;\r\n}\r\n",
+      "start": 1720432615415,
+      "end": 1720432615418,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:css",
+      "result": "*,\n*::before,\n*::after {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nbutton,\na {\n  font-family: inherit;\n}",
+      "start": 1720432615418,
+      "end": 1720432615922,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1720432615923,
+      "end": 1720432615923,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1720432615923,
+      "end": 1720432615923,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1720432615923,
+      "end": 1720432615923,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1720432615923,
+      "end": 1720432615923,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "result": "",
+      "start": 1720432615923,
+      "end": 1720432615923,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1720432615924,
+      "end": 1720432615924,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1720432615924,
+      "end": 1720432615924,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1720432615924,
+      "end": 1720432615924,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1720432615924,
+      "end": 1720432615924,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1720432615924,
+      "end": 1720432615924,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1720432615924,
+      "end": 1720432615924,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1720432615924,
+      "end": 1720432615924,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1720432615924,
+      "end": 1720432615925,
+      "order": "normal"
+    }
+  ]
+}

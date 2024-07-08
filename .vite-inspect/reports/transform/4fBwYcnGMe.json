@@ -1,0 +1,96 @@
+{
+  "resolvedId": "E:/zlecenia/forestGroup/assets/js/main.js",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import '../scss/main.scss';\nimport '../scss/_reset.scss';\nimport '../scss/_fonts.scss';\nimport '../scss/_globals.scss';\nimport '../scss/_mixins.scss';\nimport '../scss/_nav.scss';\nimport '../scss/_header.scss';\nimport '../scss/_about.scss';\n\nconst burgerBtn = document.getElementById('burgerBtn');\nconst navMobile = document.getElementById('navMobile');\nconst navDesktop = document.getElementById('navDesktop');\n\nburgerBtn.addEventListener('click', () => {\n  navMobile.classList.toggle('active');\n  //   console.log('essa');\n});\n",
+      "start": 1720432615397,
+      "end": 1720432615399,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:css",
+      "start": 1720432615399,
+      "end": 1720432615399,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1720432615399,
+      "end": 1720432615399,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1720432615399,
+      "end": 1720432615399,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1720432615399,
+      "end": 1720432615399,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1720432615399,
+      "end": 1720432615399,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1720432615399,
+      "end": 1720432615399,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1720432615400,
+      "end": 1720432615400,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1720432615400,
+      "end": 1720432615400,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1720432615400,
+      "end": 1720432615400,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1720432615400,
+      "end": 1720432615400,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1720432615400,
+      "end": 1720432615400,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1720432615400,
+      "end": 1720432615400,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1720432615400,
+      "end": 1720432615400,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1720432615400,
+      "end": 1720432615400,
+      "order": "normal"
+    }
+  ]
+}

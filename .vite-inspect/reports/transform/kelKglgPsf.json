@@ -1,0 +1,17 @@
+{
+  "resolvedId": "E:/zlecenia/forestGroup/assets/pages/offers.html",
+  "transforms": [
+    {
+      "name": "__load__",
+      "result": "",
+      "start": 1720432615383,
+      "end": 1720432615383
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1720432615383,
+      "end": 1720432615383,
+      "order": "normal"
+    }
+  ]
+}

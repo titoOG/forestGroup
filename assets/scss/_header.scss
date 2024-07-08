@@ -1,0 +1,54 @@
+@use './colors' as c;
+.header {
+  height: 5rem;
+  width: 100%;
+  margin-top: 6rem;
+  //   position: relative;
+  &__hero {
+    height: 30rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../img/heroSD.jpg');
+    position: relative;
+    z-index: -1;
+    &--shadow {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: -1;
+    }
+  }
+  &__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    padding: 2rem;
+    min-width: fit-content;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    color: c.$primary-color;
+    z-index: 1;
+
+    &--title {
+      margin-bottom: 0.25rem;
+      width: 100%;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 100;
+    }
+    &--subtitle {
+      width: 100%;
+      text-align: center;
+      font-size: 2.25rem;
+      font-family: var(--bold-font);
+    }
+  }
+}

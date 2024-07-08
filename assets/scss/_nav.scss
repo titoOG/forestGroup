@@ -1,0 +1,97 @@
+@use './colors' as c;
+@use './mixins' as m;
+
+.nav {
+  display: flex;
+  border: 1px solid;
+  justify-content: space-evenly;
+  align-items: center;
+  position: fixed;
+  height: 6rem;
+  top: 0;
+  padding: 0.5rem;
+  width: 100%;
+  background-color: c.$primary-color;
+  z-index: 100;
+
+  &__burger {
+    // border: 1px solid red;
+    align-items: center;
+    padding: 1.15rem 0.75rem;
+    cursor: pointer;
+    z-index: 555;
+    &--icon {
+      display: flex;
+      justify-content: flex-end;
+      position: relative;
+      width: 20px;
+      border-bottom: 2px solid black;
+      &::before {
+        content: '';
+        border-bottom: 2px solid black;
+        position: absolute;
+        width: 15px;
+        top: 7px;
+      }
+
+      &::after {
+        content: '';
+        border-bottom: 2px solid black;
+        position: absolute;
+        width: 30px;
+        top: -7px;
+      }
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+
+    &--link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2.25rem;
+      padding: 0.5rem;
+    }
+    &--image {
+      width: 2.25rem;
+    }
+  }
+
+  &__mobile {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: c.$primary-color;
+    position: absolute;
+    top: -1000px;
+    // transform: translate(-50%, -50%);
+    width: 100dvw;
+    height: 100dvh;
+    transition: top 0.3s ease-in-out;
+    &--link {
+      position: relative;
+      padding: 2rem;
+      border: 1px solid;
+    }
+  }
+
+  &__desktop {
+    display: flex;
+    display: none;
+    // align-items: center;
+
+    &--link {
+      min-width: fit-content;
+      @include m.navigation;
+      padding: 2.4rem;
+    }
+  }
+}
+
+.active {
+  top: 0;
+}

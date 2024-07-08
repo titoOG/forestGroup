@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="icon" type="image/svg+xml" href="./assets/img/favicon.svg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="author" content="titoOG" />
   <meta name="description" content="Odkryj niesamowity park." />
@@ -11,15 +11,101 @@
   <title>Forest Group - najpiękniejszy park w Twojej okolicy</title>
 </head>
 
-<body>
+<body id="indexPage">
 
-  <h1>ąęćżźńłó</h1>
+  <nav class="nav" id="nav">
+
+
+    <div class="nav__logo">
+      <a href="./" class="nav__logo--link">
+        <img src="./assets/img/forestLogo.svg" alt="forestGroup logo" class="nav__logo--image">Forest
+      </a>
+    </div>
+    <div class="nav__burger" id="burgerBtn">
+      <span class="nav__burger--icon"></span>
+    </div>
+
+    <div class="nav__mobile" id="navMobile">
+      <a href="#" class="nav__mobile--link">Home</a>
+      <a href="#" class="nav__mobile--link">O nas</a>
+      <a href="#" class="nav__mobile--link">Oferta</a>
+      <a href="#" class="nav__mobile--link">Kontakt</a>
+    </div>
+
+    <div class="nav__desktop" id="navDesktop">
+      <a href="#" class="nav__desktop--link">Home</a>
+      <a href="#" class="nav__desktop--link">O nas</a>
+      <a href="#" class="nav__desktop--link">Oferta</a>
+      <a href="#" class="nav__desktop--link">Kontakt</a>
+    </div>
+  </nav>
+
+  <header class="header " id="header">
+    <div class="header__hero">
+
+      <div class="header__box">
+        <h1 class="header__box--title">Forest Group</h1>
+        <h1 class="header__box--subtitle">Najpiękniejszy park w Twojej okolicy!</h1>
+      </div>
+      <div class="header__hero--shadow"></div>
+    </div>
+  </header>
+
+  <main class="wrapper">
+
+    <section class="about section" id="about">
+      <h2 class="about__title sectionTitle">O nas</h2>
+      <div class="about__content">
+        <div class="about__box">
+          <img src="./assets/img/sectionImageSD.jpg" alt="" class="about__box--image">
+        </div>
+        <div class="about__box">
+          <h3 class="about__box--title">Niezapomniane przygody</h3>
+          <p class="about__box-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+            laborum.
+            <a href="#" class="about__box-text--link">
+
+              www.MMCSchool.pl
+            </a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="offers section" id="offers">
+      <h2 class="offers__title sectionTitle">Oferta</h2>
+      <div class="offers__content">
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" id="footer">
+    <h3>futer</h3>
+  </footer>
+
+
+
+  <!-- 
 
   <div class="test">
 
     <button class="btn">Wybierz</button>
     <button class="btn cta">Wybierz</button>
   </div>
+
+  <div class="icons">
+    <img src="./assets/img/forestLogo.svg" alt="" srcset="">
+    <img src="./assets/img/icon_checkmark.svg" alt="" srcset="">
+    <img src="./assets/img/icon_minus.svg" alt="" srcset="">
+    <img src="./assets/img/icon_envelope.svg" alt="" srcset="">
+  </div> -->
 
   <script type="module" src="./assets/js/main.js"></script>
 </body>
