@@ -6,6 +6,8 @@ import '../scss/_mixins.scss';
 import '../scss/_nav.scss';
 import '../scss/_header.scss';
 import '../scss/_about.scss';
+import '../scss/_offersSection.scss';
+import '../scss/_parallax.scss';
 
 const burgerBtn = document.getElementById('burgerBtn');
 const navMobile = document.getElementById('navMobile');

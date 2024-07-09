@@ -14,13 +14,14 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  max-width: 75rem;
   align-items: center;
   width: 100%;
   margin: 2rem auto;
 
-  &:first-child {
-    margin-top: 27rem;
-  }
+  // &:first-child {
+  //   margin-top: 27rem;
+  // }
   // border: 1px solid gold;
 }
 
@@ -34,7 +35,7 @@ main {
 .wrapper {
   margin: 0 auto;
   width: 100%;
-  max-width: 75rem;
+  // max-width: 75rem;
   text-align: center;
   overflow-x: hidden;
 }

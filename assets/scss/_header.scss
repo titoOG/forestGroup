@@ -1,11 +1,13 @@
 @use './colors' as c;
 .header {
-  height: 5rem;
   width: 100%;
   margin-top: 6rem;
+  overflow: hidden;
   //   position: relative;
   &__hero {
-    height: 30rem;
+    height: 10rem;
+    padding: 10rem;
+    max-width: 100dvw;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
