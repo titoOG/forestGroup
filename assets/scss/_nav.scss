@@ -3,28 +3,54 @@
 
 .nav {
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
   position: fixed;
   height: 6rem;
-  top: 0;
-  padding: 0.5rem;
   width: 100%;
-  background-color: c.$primary-color;
+  top: 0;
   z-index: 100;
 
-  &__burger {
-    // border: 1px solid red;
+  &__content {
+    display: flex;
+    justify-content: space-evenly;
     align-items: center;
-    padding: 1.15rem 0.75rem;
+    min-width: 13rem;
+    width: 100%;
+    background-color: c.$primary-color;
+  }
+
+  &__burger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.75rem;
+    min-width: 3rem;
+
     cursor: pointer;
     z-index: 555;
+    // border: 1px solid;
+
+    border: 1px solid;
+    transition: width 1s ease-in-out;
+
+    &:hover &--icon::before {
+      width: 20px;
+    }
+
+    &:hover &--icon::after {
+      width: 20px;
+    }
+
+    &:hover &--icon {
+      width: 20px;
+    }
+
     &--icon {
       display: flex;
       justify-content: flex-end;
       position: relative;
-      width: 20px;
+      width: 15px;
       border-bottom: 2px solid black;
+
       &::before {
         content: '';
         border-bottom: 2px solid black;
@@ -37,7 +63,7 @@
         content: '';
         border-bottom: 2px solid black;
         position: absolute;
-        width: 30px;
+        width: 20px;
         top: -7px;
       }
     }
@@ -52,11 +78,14 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-shrink: 2.5;
       font-size: 2.25rem;
       padding: 0.5rem;
     }
     &--image {
-      width: 2.25rem;
+      display: flex;
+      min-width: 2.25rem;
+      max-width: 2.25rem;
     }
   }
 
@@ -65,58 +94,26 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background-color: c.$primary-color;
     position: absolute;
     top: -1000px;
-    // transform: translate(-50%, -50%);
+    // transform: translateY(-1000px);
     width: 100dvw;
     min-height: 100vh;
+    background-color: c.$primary-color;
     transition: top 0.3s ease-in-out;
     &--link {
       position: relative;
-      padding: 2rem;
       margin: 0.5rem auto;
+      border: 1px solid;
+      padding: 1.35rem;
       min-width: 8rem;
       font-size: 1.45rem;
       text-align: center;
       transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 
-      &::after {
-        content: '';
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        width: 7rem;
-        border: 1px solid c.$secondary-color;
-        height: 0%;
-        translate: (-50%);
-      }
-
-      &::after {
-        content: '';
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        width: 7rem;
-        border: 1px solid c.$secondary-color;
-        height: 0%;
-        transition: background-color 0.3s ease-in-out;
-      }
-
       &:hover {
         background-color: c.$secondary-color;
         color: c.$primary-color;
-
-        &::after {
-          content: '';
-          position: absolute;
-          top: 100%;
-          left: 50%;
-          width: 7rem;
-          border: 1px solid c.$secondary-color;
-          height: 0%;
-          transition: background-color 0.3s ease-in-out;
-        }
       }
     }
   }
@@ -135,5 +132,19 @@
 }
 
 .active {
-  top: 0;
+  top: 0px;
+}
+
+.burgerActive {
+  animation: anm_BurgerActive 1s ease-in-out linear forwards;
+}
+
+@keyframes anm_BurgerActive {
+  from {
+    width: 30px;
+  }
+
+  to {
+    width: 40px;
+  }
 }
