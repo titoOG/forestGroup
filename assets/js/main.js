@@ -8,12 +8,16 @@ import '../scss/_header.scss';
 import '../scss/_about.scss';
 import '../scss/_offersSection.scss';
 import '../scss/_parallax.scss';
+import '../scss/_animations.scss';
 
 const burgerBtn = document.getElementById('burgerBtn');
+const burgerBtnMid = document.getElementById('burgerBtnMid');
+const burgerBtnBot = document.getElementById('burgerBtnBot');
 const navMobile = document.getElementById('navMobile');
 const navDesktop = document.getElementById('navDesktop');
 
 burgerBtn.addEventListener('click', () => {
   navMobile.classList.toggle('active');
-  //   console.log('essa');
+  burgerBtnMid.classList.toggle('burgerActive');
+  burgerBtnBot.classList.toggle('burgerActive');
 });

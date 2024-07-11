@@ -1,5 +1,6 @@
 @use './colors' as c;
 @use './mixins' as m;
+// @use './animations';
 
 .nav {
   display: flex;
@@ -22,49 +23,41 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0.75rem;
-    min-width: 3rem;
-
+    position: relative;
+    padding: 1px 15px 1px 40px;
+    min-width: 2.5rem;
     cursor: pointer;
     z-index: 555;
-    // border: 1px solid;
 
-    border: 1px solid;
-    transition: width 1s ease-in-out;
-
-    &:hover &--icon::before {
-      width: 20px;
-    }
-
-    &:hover &--icon::after {
-      width: 20px;
-    }
-
-    &:hover &--icon {
-      width: 20px;
-    }
-
-    &--icon {
+    &-icon {
       display: flex;
       justify-content: flex-end;
       position: relative;
-      width: 15px;
-      border-bottom: 2px solid black;
+      width: 100%;
+      padding: 23px 0.5rem 0.5rem;
 
-      &::before {
-        content: '';
-        border-bottom: 2px solid black;
+      &--top {
         position: absolute;
-        width: 15px;
-        top: 7px;
+        width: 2rem;
+        height: 1px;
+        top: 20%;
+        border-bottom: 2px solid c.$secondary-color;
       }
 
-      &::after {
-        content: '';
-        border-bottom: 2px solid black;
+      &--mid {
         position: absolute;
-        width: 20px;
-        top: -7px;
+        width: 1.5rem;
+        top: 50%;
+        border-bottom: 2px solid c.$secondary-color;
+        animation: anm_burgerMidInactive 0.3s ease-in-out forwards;
+      }
+
+      &--bot {
+        position: absolute;
+        width: 1rem;
+        top: 80%;
+        border-bottom: 2px solid c.$secondary-color;
+        animation: anm_burgerBotInactive 0.3s ease-in-out forwards;
       }
     }
   }
@@ -136,15 +129,10 @@
 }
 
 .burgerActive {
-  animation: anm_BurgerActive 1s ease-in-out linear forwards;
+  animation: anm_burgerActive 0.3s ease-in-out forwards;
 }
 
-@keyframes anm_BurgerActive {
-  from {
-    width: 30px;
-  }
-
-  to {
-    width: 40px;
-  }
-}
+// &:hover &--mid,
+// &:hover &--bot {
+//   animation: anm_burgerActive 0.3s ease-in-out forwards;
+// }

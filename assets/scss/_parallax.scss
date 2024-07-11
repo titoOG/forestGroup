@@ -2,27 +2,32 @@
 
 .parallax {
   &__content {
-    border: 1px solid red;
+    min-width: 10rem;
+    width: 100%;
+    overflow: hidden;
+    // height: fit-content;
   }
 
   &__hero {
-    background-image: url('../img/parallax.jpg');
+    border: 1px solid red;
+    // background-image: url('../img/parallax.jpg');
+    // background-attachment: fixed;
     width: 100%;
     background-position: center;
     background-size: cover;
-    padding: 4rem;
+    // padding: 10rem;
+    height: 20rem;
     position: relative;
-
     z-index: 1;
     color: c.$primary-color;
-    &--title {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border: 1px solid c.$primary-color;
-      border-radius: 0.1rem;
-      padding: 3rem;
-      //   width: 20rem;
+    &--img {
+      // position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: url('../img/parallax.jpg');
+      background-size: cover;
+      background-attachment: local;
+      background-position: center;
     }
   }
   &__shadow {
@@ -32,6 +37,6 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
-    z-index: -1;
+    z-index: 1;
   }
 }
