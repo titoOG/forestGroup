@@ -48,3 +48,7 @@ main {
 .cta {
   @include m.buttonCta;
 }
+
+.inactive {
+  color: grey;
+}
