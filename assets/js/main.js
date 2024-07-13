@@ -26,4 +26,4 @@ burgerBtn.addEventListener('click', () => {
 
 const date = new Date();
 console.log(date);
-footerInfo.innerHTML = `&copy ${date.getFullYear()} Forest Group Company Ltd`;
+footerInfo.innerHTML = `&copy${date.getFullYear()} Forest Group Company Ltd`;
