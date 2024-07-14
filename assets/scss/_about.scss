@@ -12,13 +12,14 @@
     margin: 1rem;
     padding: 1rem;
     &--title {
+      width: 100%;
       margin-bottom: 1rem;
       font-size: 1.6rem;
       font-family: var(--bold-font);
     }
     &-text {
       line-height: 1.8rem;
-      letter-spacing: -0.06rem;
+      letter-spacing: 0.0125rem;
       padding: 1rem;
       &--link {
         text-decoration: underline;

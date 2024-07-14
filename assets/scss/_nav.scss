@@ -8,6 +8,7 @@
   height: 6rem;
   width: 100%;
   top: 0;
+  background-color: c.$primary-color;
   z-index: 100;
 
   &__content {
@@ -112,9 +113,10 @@
   }
 
   &__desktop {
-    display: flex;
     display: none;
-    // align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 10%;
 
     &--link {
       min-width: fit-content;

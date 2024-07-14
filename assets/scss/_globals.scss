@@ -60,14 +60,13 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid rebeccapurple;
-  padding: 1.5rem;
-  border-radius: 25%;
   position: fixed;
+  padding: 0.15rem;
   bottom: 10px;
+  right: 5px;
+  background-color: c.$accent-color;
   background-position: center;
-  background-image: url('../img/icon_arrowUp.svg');
-  right: 7px;
+  border-radius: 25%;
   transition: border-radius 0.3s ease-in-out;
 
   &:hover {

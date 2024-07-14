@@ -10,6 +10,7 @@ import '../scss/_offersSection.scss';
 import '../scss/_parallax.scss';
 import '../scss/_animations.scss';
 import '../scss/_footer.scss';
+import '../scss/_media.scss';
 
 const burgerBtn = document.getElementById('burgerBtn');
 const burgerBtnMid = document.getElementById('burgerBtnMid');
@@ -17,6 +18,7 @@ const burgerBtnBot = document.getElementById('burgerBtnBot');
 const navMobile = document.getElementById('navMobile');
 const navDesktop = document.getElementById('navDesktop');
 const footerInfo = document.getElementById('footerInfo');
+const scrollToTopBtn = document.getElementById('scrollToTopBtn');
 
 burgerBtn.addEventListener('click', () => {
   navMobile.classList.toggle('active');
@@ -25,5 +27,11 @@ burgerBtn.addEventListener('click', () => {
 });
 
 const date = new Date();
-console.log(date);
 footerInfo.innerHTML = `&copy${date.getFullYear()} Forest Group Company Ltd`;
+
+scrollToTopBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  window.scrollTo({
+    top: 0,
+  });
+});

@@ -1,0 +1,179 @@
+@media (width >= 300px) {
+  .parallax {
+    &__hero {
+      &-box {
+        &--title {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}
+
+@media (width >= 400px) {
+  .about {
+    &__box {
+      &--image {
+        width: 350px;
+        height: 220px;
+      }
+    }
+  }
+
+  .footer {
+    &__logo {
+      &-link {
+        font-size: 2.8rem;
+      }
+    }
+  }
+}
+
+@media (width >= 768px) {
+  .header {
+    &__hero {
+      padding: 12.5rem;
+    }
+    &__box {
+      &--title {
+        font-size: 1.75rem;
+      }
+
+      &--subtitle {
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  .about {
+    &__box {
+      &--image {
+        width: 433px;
+        height: 333px;
+      }
+    }
+  }
+}
+
+@media (width >= 992px) {
+  .sectionTitle {
+    margin-bottom: 1.25rem;
+  }
+
+  .nav {
+    &__burger {
+      display: none;
+    }
+    &__mobile {
+      display: none;
+    }
+    &__desktop {
+      display: flex;
+    }
+  }
+
+  .about {
+    &__content {
+      flex-direction: row;
+    }
+
+    &__box {
+      padding: 1.25rem;
+      align-items: center;
+      justify-content: center;
+
+      &--title {
+        width: 110%;
+        text-align: left;
+      }
+
+      &-text {
+        width: 110%;
+        padding: 0.25rem;
+        line-height: 2.05rem;
+      }
+
+      &:nth-child(2) {
+        display: flex;
+        text-align: left;
+        justify-content: flex-start;
+        // background-color: rgba(78, 78, 175, 0.2);
+      }
+    }
+  }
+
+  .parallax {
+    &__hero {
+      &-box {
+        width: 70%;
+      }
+    }
+  }
+
+  .offers {
+    &__content {
+      flex-direction: row;
+    }
+    &__card {
+      margin: 2rem 1rem;
+    }
+  }
+
+  .footer {
+    &__container {
+      flex-direction: row;
+      margin: 0 auto;
+      width: 57.5rem;
+    }
+    &__logo {
+      margin-top: -4rem;
+      margin-right: 2.5rem;
+    }
+    &__list {
+      height: 14rem;
+      &--title {
+        width: 10rem;
+        margin-left: 1.906rem;
+        // border: 1px solid;
+      }
+      &--item {
+        justify-content: flex-start;
+        width: 9rem;
+      }
+
+      &:nth-child(2) {
+        // background-color: rgb(198, 226, 43);
+      }
+
+      &:nth-child(3) {
+        margin-left: -2rem;
+        // background-color: blueviolet;
+      }
+
+      &:nth-child(4) {
+        margin-left: 0.5rem;
+      }
+    }
+  }
+}
+
+@media (width >= 1200px) {
+  .about {
+    &__box {
+      &--image {
+        width: 503px;
+        height: 333px;
+      }
+      &:nth-child(2) {
+        // margin-top: 3rem;
+        padding: 2.25rem;
+        margin-top: -2.5rem;
+        // background-color: rgba(78, 78, 175, 0.2);
+      }
+      &-text {
+        padding: 0.25rem;
+        width: 110%;
+      }
+    }
+  }
+}
