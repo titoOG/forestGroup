@@ -26,3 +26,22 @@
     transition: width 0.3s ease-in-out;
   }
 }
+
+@keyframes anm_btnFadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes anm_btnFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

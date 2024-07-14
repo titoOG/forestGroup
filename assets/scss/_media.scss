@@ -97,7 +97,6 @@
         display: flex;
         text-align: left;
         justify-content: flex-start;
-        // background-color: rgba(78, 78, 175, 0.2);
       }
     }
   }
@@ -134,20 +133,14 @@
       &--title {
         width: 10rem;
         margin-left: 1.906rem;
-        // border: 1px solid;
       }
       &--item {
         justify-content: flex-start;
         width: 9rem;
       }
 
-      &:nth-child(2) {
-        // background-color: rgb(198, 226, 43);
-      }
-
       &:nth-child(3) {
         margin-left: -2rem;
-        // background-color: blueviolet;
       }
 
       &:nth-child(4) {
@@ -165,10 +158,8 @@
         height: 333px;
       }
       &:nth-child(2) {
-        // margin-top: 3rem;
         padding: 2.25rem;
         margin-top: -2.5rem;
-        // background-color: rgba(78, 78, 175, 0.2);
       }
       &-text {
         padding: 0.25rem;
