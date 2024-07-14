@@ -1,0 +1,33 @@
+.about {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 1rem;
+    padding: 1rem;
+    &--title {
+      width: 100%;
+      margin-bottom: 1rem;
+      font-size: 1.6rem;
+      font-family: var(--bold-font);
+    }
+    &-text {
+      line-height: 1.8rem;
+      letter-spacing: 0.0125rem;
+      padding: 1rem;
+      &--link {
+        text-decoration: underline;
+      }
+    }
+    &--image {
+      width: 255px;
+      height: 200px;
+    }
+  }
+}

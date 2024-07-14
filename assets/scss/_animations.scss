@@ -1,0 +1,47 @@
+@keyframes anm_burgerActive {
+  to {
+    width: 2rem;
+    transition: width 0.3s ease-in-out;
+  }
+}
+
+@keyframes anm_burgerMidInactive {
+  from {
+    width: 2rem;
+  }
+
+  to {
+    width: 1.5rem;
+    transition: width 0.3s ease-in-out;
+  }
+}
+
+@keyframes anm_burgerBotInactive {
+  from {
+    width: 2rem;
+  }
+
+  to {
+    width: 1rem;
+    transition: width 0.3s ease-in-out;
+  }
+}
+
+@keyframes anm_btnFadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes anm_btnFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

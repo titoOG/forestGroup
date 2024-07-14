@@ -1,0 +1,62 @@
+@use './colors' as c;
+
+.parallax {
+  &__content {
+    min-width: 10rem;
+    width: 100%;
+    overflow: hidden;
+    // height: fit-content;
+  }
+
+  &__hero {
+    background-image: url('../img/parallax.jpg');
+    // background-attachment: fixed;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    height: 21.75rem;
+    position: relative;
+    z-index: -1;
+    color: c.$primary-color;
+    &-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      min-width: 11.5rem;
+      width: 43.25rem;
+      height: 100%;
+      padding: 0.015rem;
+      white-space: wrap;
+      max-width: 100%;
+      &--title {
+        padding: 2.15rem;
+        line-height: 2.5rem;
+        font-size: 1.5rem;
+        // text-align: left;
+        width: 85%;
+        border-radius: 0.125rem;
+        border: 1px solid c.$parallax-border-color;
+      }
+    }
+
+    // &--img {
+    //   // position: absolute;
+    //   width: 100%;
+    //   height: 100%;
+    //   background-image: url('../img/parallax.jpg');
+    //   background-size: cover;
+    //   background-attachment: local;
+    //   background-position: center;
+    // }
+  }
+  &__shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+  }
+}

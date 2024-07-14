@@ -1,0 +1,95 @@
+@use './colors' as c;
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: c.$footer-color;
+  overflow: hidden;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  &__logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1.5rem auto;
+    padding: 0.5rem;
+
+    &-link {
+      padding: 1rem;
+      min-width: 10rem;
+      display: flex;
+      font-size: 2.25rem;
+      align-items: center;
+      // padding: 1rem;
+      &--image {
+        width: 2.5rem;
+      }
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // align-items: flex-start;
+    // justify-content: flex-start;
+    padding: 1.25rem;
+    width: 14.5rem;
+    margin: 1rem auto;
+    &--title {
+      font-family: var(--bold-font);
+      margin-bottom: 1rem;
+    }
+    &--item {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin: 0.25rem auto;
+      padding: 0.5rem;
+      font-size: 0.95rem;
+      transition: color 0.3s ease-in-out;
+
+      &:hover {
+        color: c.$footer-font;
+      }
+    }
+  }
+
+  &__separator {
+    height: 1px;
+    width: 100%;
+    margin: 1rem auto;
+    background-color: c.$grey-color;
+  }
+
+  &__info {
+    padding: 1.5rem;
+    width: 100%;
+    &--details {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.5rem;
+      font-size: 0.85rem;
+    }
+  }
+}

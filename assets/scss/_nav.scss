@@ -1,0 +1,140 @@
+@use './colors' as c;
+@use './mixins' as m;
+// @use './animations';
+
+.nav {
+  display: flex;
+  position: fixed;
+  height: 6rem;
+  width: 100%;
+  top: 0;
+  background-color: c.$primary-color;
+  z-index: 100;
+
+  &__content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    min-width: 13rem;
+    width: 100%;
+    background-color: c.$primary-color;
+  }
+
+  &__burger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 1px 15px 1px 40px;
+    min-width: 2.5rem;
+    cursor: pointer;
+    z-index: 555;
+
+    &-icon {
+      display: flex;
+      justify-content: flex-end;
+      position: relative;
+      width: 100%;
+      padding: 23px 0.5rem 0.5rem;
+
+      &--top {
+        position: absolute;
+        width: 2rem;
+        height: 1px;
+        top: 20%;
+        border-bottom: 2px solid c.$secondary-color;
+      }
+
+      &--mid {
+        position: absolute;
+        width: 1.5rem;
+        top: 50%;
+        border-bottom: 2px solid c.$secondary-color;
+        animation: anm_burgerMidInactive 0.3s ease-in-out forwards;
+      }
+
+      &--bot {
+        position: absolute;
+        width: 1rem;
+        top: 80%;
+        border-bottom: 2px solid c.$secondary-color;
+        animation: anm_burgerBotInactive 0.3s ease-in-out forwards;
+      }
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    z-index: 555;
+
+    &--link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 2.5;
+      font-size: 2.25rem;
+      padding: 0.5rem;
+    }
+    &--image {
+      display: flex;
+      min-width: 2.25rem;
+      max-width: 2.25rem;
+    }
+  }
+
+  &__mobile {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: -1000px;
+    // transform: translateY(-1000px);
+    width: 100dvw;
+    min-height: 100vh;
+    background-color: c.$primary-color;
+    transition: top 0.3s ease-in-out;
+    &--link {
+      position: relative;
+      margin: 0.5rem auto;
+      border: 1px solid;
+      padding: 1.35rem;
+      min-width: 8rem;
+      font-size: 1.45rem;
+      text-align: center;
+      transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+      &:hover {
+        background-color: c.$secondary-color;
+        color: c.$primary-color;
+      }
+    }
+  }
+
+  &__desktop {
+    display: none;
+    justify-content: center;
+    width: 100%;
+    margin: 0 10%;
+
+    &--link {
+      min-width: fit-content;
+      @include m.navigation;
+      padding: 2.4rem;
+    }
+  }
+}
+
+.active {
+  top: 0px;
+}
+
+.burgerActive {
+  animation: anm_burgerActive 0.3s ease-in-out forwards;
+}
+
+// &:hover &--mid,
+// &:hover &--bot {
+//   animation: anm_burgerActive 0.3s ease-in-out forwards;
+// }

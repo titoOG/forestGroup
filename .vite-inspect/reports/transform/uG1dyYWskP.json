@@ -1,0 +1,104 @@
+{
+  "resolvedId": "E:/zlecenia/forestGroup/assets/scss/_nav.scss",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "@use './colors' as c;\r\n@use './mixins' as m;\r\n\r\n.nav {\r\n  display: flex;\r\n  border: 1px solid;\r\n  justify-content: space-evenly;\r\n  align-items: center;\r\n  position: fixed;\r\n  height: 6rem;\r\n  top: 0;\r\n  padding: 0.5rem;\r\n  width: 100%;\r\n  background-color: c.$primary-color;\r\n  z-index: 100;\r\n\r\n  &__burger {\r\n    // border: 1px solid red;\r\n    align-items: center;\r\n    padding: 1.15rem 0.75rem;\r\n    cursor: pointer;\r\n    z-index: 555;\r\n    &--icon {\r\n      display: flex;\r\n      justify-content: flex-end;\r\n      position: relative;\r\n      width: 20px;\r\n      border-bottom: 2px solid black;\r\n      &::before {\r\n        content: '';\r\n        border-bottom: 2px solid black;\r\n        position: absolute;\r\n        width: 15px;\r\n        top: 7px;\r\n      }\r\n\r\n      &::after {\r\n        content: '';\r\n        border-bottom: 2px solid black;\r\n        position: absolute;\r\n        width: 30px;\r\n        top: -7px;\r\n      }\r\n    }\r\n  }\r\n\r\n  &__logo {\r\n    display: flex;\r\n    align-items: center;\r\n\r\n    &--link {\r\n      display: flex;\r\n      justify-content: center;\r\n      align-items: center;\r\n      font-size: 2.25rem;\r\n      padding: 0.5rem;\r\n    }\r\n    &--image {\r\n      width: 2.25rem;\r\n    }\r\n  }\r\n\r\n  &__mobile {\r\n    display: flex;\r\n    justify-content: center;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    background-color: goldenrod;\r\n    position: absolute;\r\n    top: 0;\r\n    // transform: translate(-50%, -50%);\r\n    width: 100dvw;\r\n    height: 100dvh;\r\n    &--link {\r\n      position: relative;\r\n      padding: 2rem;\r\n      border: 1px solid;\r\n    }\r\n  }\r\n\r\n  &__desktop {\r\n    display: flex;\r\n    display: none;\r\n    // align-items: center;\r\n\r\n    &--link {\r\n      min-width: fit-content;\r\n      @include m.navigation;\r\n      padding: 2.4rem;\r\n    }\r\n  }\r\n}\r\n",
+      "start": 1720432615416,
+      "end": 1720432615419,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:css",
+      "result": ".nav {\n  display: flex;\n  border: 1px solid;\n  justify-content: space-evenly;\n  align-items: center;\n  position: fixed;\n  height: 6rem;\n  top: 0;\n  padding: 0.5rem;\n  width: 100%;\n  background-color: #fff;\n  z-index: 100;\n}\n.nav__burger {\n  align-items: center;\n  padding: 1.15rem 0.75rem;\n  cursor: pointer;\n  z-index: 555;\n}\n.nav__burger--icon {\n  display: flex;\n  justify-content: flex-end;\n  position: relative;\n  width: 20px;\n  border-bottom: 2px solid black;\n}\n.nav__burger--icon::before {\n  content: \"\";\n  border-bottom: 2px solid black;\n  position: absolute;\n  width: 15px;\n  top: 7px;\n}\n.nav__burger--icon::after {\n  content: \"\";\n  border-bottom: 2px solid black;\n  position: absolute;\n  width: 30px;\n  top: -7px;\n}\n.nav__logo {\n  display: flex;\n  align-items: center;\n}\n.nav__logo--link {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-size: 2.25rem;\n  padding: 0.5rem;\n}\n.nav__logo--image {\n  width: 2.25rem;\n}\n.nav__mobile {\n  display: flex;\n  justify-content: center;\n  flex-direction: column;\n  align-items: center;\n  background-color: goldenrod;\n  position: absolute;\n  top: 0;\n  width: 100dvw;\n  height: 100dvh;\n}\n.nav__mobile--link {\n  position: relative;\n  padding: 2rem;\n  border: 1px solid;\n}\n.nav__desktop {\n  display: flex;\n  display: none;\n}\n.nav__desktop--link {\n  min-width: fit-content;\n  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;\n  padding: 2.4rem;\n}\n.nav__desktop--link:hover {\n  background-color: #000000;\n  color: #fff;\n}",
+      "start": 1720432615419,
+      "end": 1720432615922,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1720432615923,
+      "end": 1720432615923,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1720432615923,
+      "end": 1720432615923,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1720432615923,
+      "end": 1720432615923,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1720432615923,
+      "end": 1720432615923,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "result": "",
+      "start": 1720432615923,
+      "end": 1720432615923,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1720432615924,
+      "end": 1720432615924,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1720432615924,
+      "end": 1720432615924,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1720432615924,
+      "end": 1720432615924,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1720432615924,
+      "end": 1720432615924,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1720432615924,
+      "end": 1720432615924,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1720432615924,
+      "end": 1720432615924,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1720432615924,
+      "end": 1720432615924,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1720432615925,
+      "end": 1720432615925,
+      "order": "normal"
+    }
+  ]
+}

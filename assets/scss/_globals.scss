@@ -1,0 +1,79 @@
+@use './mixins' as m;
+@use './colors' as c;
+
+a {
+  text-decoration: none;
+  color: c.$secondary-color;
+}
+
+main {
+  position: relative;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 75rem;
+  align-items: center;
+  width: 100%;
+  min-width: 17rem;
+  margin: 2rem auto;
+}
+
+.sectionTitle {
+  font-size: 40px;
+  margin-top: 2rem;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.center {
+  max-width: 75rem;
+}
+
+.btn {
+  @include m.buttonSettings;
+}
+
+.cta {
+  @include m.buttonCta;
+}
+
+.inactive {
+  color: grey;
+}
+
+.upBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  opacity: 0;
+  padding: 0.15rem;
+  bottom: 10px;
+  right: 5px;
+  background-color: c.$accent-color;
+  background-position: center;
+  border-radius: 25%;
+  transition: border-radius 0.3s ease-in-out;
+
+  &:hover {
+    border-radius: 50%;
+  }
+}
+
+.btnFadeOut {
+  animation: anm_btnFadeOut 0.3s ease-in-out forwards;
+}
+
+.btnFadeIn {
+  animation: anm_btnFadeIn 0.3s ease-in-out forwards;
+}
