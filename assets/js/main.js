@@ -21,6 +21,8 @@ const navDesktop = document.getElementById('navDesktop');
 const footerInfo = document.getElementById('footerInfo');
 const scrollToTopBtn = document.getElementById('scrollToTopBtn');
 
+const target = document.querySelectorAll('.spy');
+
 let scroll_Y_Position;
 
 burgerBtn.addEventListener('click', () => {
@@ -45,25 +47,11 @@ navMobileLinks.forEach((link) => {
   });
 });
 
-// window.addEventListener('scroll', () => {
-//   // if (window.scrollY < 500) {
-//   //   scrollToTopBtn.classList.add('btnFadeOut');
-//   // }
-
-//   if (window.scrollY >= 504) {
-//     scrollToTopBtn.classList.add('btnFadeIn');
-//   } else if (window.scrollY < 504) {
-//     scrollToTopBtn.classList.remove('btnFadeIn');
-//     scrollToTopBtn.classList.add('btnFadeOut');
-//   }
-// });
-
 setInterval(() => {
   scroll_Y_Position =
     document.documentElement.scrollTop || document.body.scrollTop;
   if (scroll_Y_Position > 500) {
     scrollToTopBtn.classList.add('btnFadeIn');
-    // scrollToTopBtn.style.opacity = '1';
   }
 }, 100);
 
@@ -79,3 +67,30 @@ window.onscroll = () => {
     }
   }
 };
+
+const options = {
+  root: null,
+  rootMargin: '23.5px',
+  threshold: 1,
+};
+const handleScrollSpy = (entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      console.log(entry);
+      let navDesktopLinks = document.querySelectorAll(`.nav__desktop--link`);
+
+      const activeLink = document.querySelector(
+        `.nav__desktop--link[href='#${entry.target.id}']`
+      );
+
+      navDesktopLinks.forEach((link) => link.classList.remove('navActive'));
+      activeLink.classList.add('navActive');
+    }
+  });
+};
+
+const observer = new IntersectionObserver(handleScrollSpy, options);
+
+target.forEach((section) => {
+  observer.observe(section);
+});

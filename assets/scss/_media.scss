@@ -32,7 +32,7 @@
 @media (width >= 768px) {
   .header {
     &__hero {
-      padding: 12.5rem;
+      padding: 13.25rem;
     }
     &__box {
       &--title {
@@ -165,6 +165,14 @@
         padding: 0.25rem;
         width: 110%;
       }
+    }
+  }
+}
+
+@media (width >= 1400px) {
+  .header {
+    &__hero {
+      padding: 15.25rem;
     }
   }
 }
