@@ -1,17 +1,21 @@
 @use './colors' as c;
 .header {
   width: 100%;
-  margin-top: 6rem;
+  height: 34.375rem;
   overflow: hidden;
   &__hero {
-    padding: 10rem;
-    max-width: 100dvw;
+    display: flex;
+    min-width: 11rem;
+    width: 100%;
+    padding: 24.25rem 1px;
+    background-color: rgb(158, 140, 39);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: bottom;
     background-image: url('../img/heroSD.jpg');
     position: relative;
     z-index: -1;
+
     &--shadow {
       position: absolute;
       top: 0;
@@ -24,12 +28,14 @@
   }
   &__box {
     display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 1.5rem;
     flex-direction: column;
     justify-content: center;
+    min-width: 10rem;
     position: absolute;
-    padding: 2rem;
-    min-width: fit-content;
-    top: 50%;
+    top: 40%;
     left: 50%;
     width: 100%;
     transform: translate(-50%, -50%);
@@ -39,7 +45,7 @@
 
     &--title {
       margin-bottom: 0.25rem;
-      width: 100%;
+      padding: 0.25rem;
       text-align: center;
       font-size: 1.5rem;
       font-weight: 100;

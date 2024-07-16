@@ -18,6 +18,7 @@ const burgerBtnBot = document.getElementById('burgerBtnBot');
 const navMobile = document.getElementById('navMobile');
 const navMobileLinks = document.querySelectorAll('.nav__mobile--link');
 const navDesktop = document.getElementById('navDesktop');
+let navDesktopLinks = document.querySelectorAll(`.nav__desktop--link`);
 const footerInfo = document.getElementById('footerInfo');
 const scrollToTopBtn = document.getElementById('scrollToTopBtn');
 
@@ -69,16 +70,15 @@ window.onscroll = () => {
 };
 
 const options = {
-  root: null,
-  rootMargin: '23.5px',
-  threshold: 1,
+  threshold: [0.9, 1],
+  // rootMargin: '5.5% 0px 9.5% 0px',
 };
 const handleScrollSpy = (entries) => {
   entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      console.log(entry);
-      let navDesktopLinks = document.querySelectorAll(`.nav__desktop--link`);
-
+    // entry.target.style.opacity = entry.intersectionRatio - 0.25;
+    if (!entry.isIntersecting) {
+      return;
+    } else if (entry.isIntersecting && entry.intersectionRatio >= 0.75) {
       const activeLink = document.querySelector(
         `.nav__desktop--link[href='#${entry.target.id}']`
       );
@@ -86,6 +86,7 @@ const handleScrollSpy = (entries) => {
       navDesktopLinks.forEach((link) => link.classList.remove('navActive'));
       activeLink.classList.add('navActive');
     }
+    // console.log(entry);
   });
 };
 

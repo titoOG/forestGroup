@@ -31,9 +31,9 @@
 
 @media (width >= 768px) {
   .header {
-    &__hero {
-      padding: 13.25rem;
-    }
+    // &__hero {
+    //   padding: 13.25rem;
+    // }
     &__box {
       &--title {
         font-size: 1.75rem;
@@ -72,6 +72,12 @@
     }
   }
 
+  .header {
+    &__hero {
+      background-image: url('../img/heroHD.jpg');
+    }
+  }
+
   .about {
     &__content {
       flex-direction: row;
@@ -105,6 +111,9 @@
     &__hero {
       &-box {
         width: 70%;
+        &--title {
+          font-size: 2.5rem;
+        }
       }
     }
   }
@@ -170,9 +179,9 @@
 }
 
 @media (width >= 1400px) {
-  .header {
-    &__hero {
-      padding: 15.25rem;
-    }
-  }
+  // .header {
+  //   &__hero {
+  //     padding: 25.5rem;
+  //   }
+  // }
 }
