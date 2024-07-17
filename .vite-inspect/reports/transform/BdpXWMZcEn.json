@@ -2,17 +2,19 @@
   "resolvedId": "E:/zlecenia/forestGroup/assets/scss/_globals.scss",
   "transforms": [
     {
-      "name": "vite:load-fallback",
-      "result": "@use './mixins' as m;\r\n@use './colors' as c;\r\n\r\na {\r\n  text-decoration: none;\r\n  color: c.$secondary-color;\r\n}\r\n\r\nmain {\r\n  position: relative;\r\n}\r\n\r\n.active {\r\n  display: flex;\r\n}\r\n\r\n.section {\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: center;\r\n  align-items: center;\r\n  width: 100%;\r\n  margin: 2rem auto;\r\n\r\n  &:first-child {\r\n    margin-top: 27rem;\r\n  }\r\n  // border: 1px solid gold;\r\n}\r\n\r\n.sectionTitle {\r\n  font-size: 40px;\r\n  margin-top: 2rem;\r\n  font-weight: 100;\r\n  text-transform: uppercase;\r\n}\r\n\r\n.wrapper {\r\n  margin: 0 auto;\r\n  width: 100%;\r\n  max-width: 75rem;\r\n  text-align: center;\r\n  overflow-x: hidden;\r\n}\r\n\r\n.btn {\r\n  @include m.buttonSettings;\r\n}\r\n\r\n.cta {\r\n  @include m.buttonCta;\r\n}\r\n",
-      "start": 1720432615416,
-      "end": 1720432615419,
-      "sourcemaps": null
+      "name": "__load__",
+      "result": "@use './mixins' as m;\n@use './colors' as c;\n\na {\n  text-decoration: none;\n  color: c.$secondary-color;\n}\n\nmain {\n  position: relative;\n}\n\n.section {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  max-width: 75rem;\n  align-items: center;\n  width: 100%;\n  min-width: 17rem;\n  margin: 2rem auto;\n}\n\n.sectionTitle {\n  font-size: 40px;\n  margin-top: 2rem;\n  font-weight: 100;\n  text-transform: uppercase;\n}\n\n.wrapper {\n  margin: 0 auto;\n  width: 100%;\n  text-align: center;\n  overflow-x: hidden;\n}\n\n.center {\n  max-width: 75rem;\n}\n\n.btn {\n  @include m.buttonSettings;\n}\n\n.cta {\n  @include m.buttonCta;\n}\n\n.inactive {\n  color: grey;\n}\n\n.upBtn {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  position: fixed;\n  opacity: 0;\n  padding: 0.15rem;\n  bottom: 10px;\n  right: 5px;\n  background-color: c.$accent-color;\n  background-position: center;\n  border-radius: 25%;\n  transition: border-radius 0.3s ease-in-out;\n\n  &:hover {\n    border-radius: 50%;\n  }\n}\n\n.btnFadeOut {\n  animation: anm_btnFadeOut 0.3s ease-in-out forwards;\n}\n\n.btnFadeIn {\n  animation: anm_btnFadeIn 0.3s ease-in-out forwards;\n}\n\n.navActive {\n  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;\n  background-color: c.$secondary-color;\n  color: c.$primary-color;\n}\n",
+      "start": 1721243571361,
+      "end": 1721243571361,
+      "sourcemaps": {
+        "mappings": ""
+      }
     },
     {
       "name": "vite:css",
-      "result": "a {\n  text-decoration: none;\n  color: #000000;\n}\n\nmain {\n  position: relative;\n}\n\n.active {\n  display: flex;\n}\n\n.section {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  width: 100%;\n  margin: 2rem auto;\n}\n.section:first-child {\n  margin-top: 27rem;\n}\n\n.sectionTitle {\n  font-size: 40px;\n  margin-top: 2rem;\n  font-weight: 100;\n  text-transform: uppercase;\n}\n\n.wrapper {\n  margin: 0 auto;\n  width: 100%;\n  max-width: 75rem;\n  text-align: center;\n  overflow-x: hidden;\n}\n\n.btn {\n  padding: 0.5rem;\n  width: 11.25rem;\n  background-color: #fff;\n  font-size: 1.05rem;\n  border: none;\n  border-radius: 0.4rem;\n  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;\n  cursor: pointer;\n  -webkit-box-shadow: 0px 2px 5px 0px rgb(120, 120, 120);\n  -moz-box-shadow: 0px 2px 5px 0px rgb(120, 120, 120);\n  box-shadow: 0px 2px 5px 0px rgb(120, 120, 120);\n}\n.btn:hover {\n  background-color: #2cf57c;\n  -webkit-box-shadow: 0px 2px 5px 0px rgb(42, 222, 114);\n  -moz-box-shadow: 0px 2px 5px 0px rgb(42, 222, 114);\n  box-shadow: 0px 2px 5px 0px rgb(42, 222, 114);\n}\n\n.cta {\n  background-color: #2ade72;\n  -webkit-box-shadow: 0px 2px 5px 0px rgb(42, 222, 114);\n  -moz-box-shadow: 0px 2px 5px 0px rgb(42, 222, 114);\n  box-shadow: 0px 2px 5px 0px rgb(42, 222, 114);\n}",
-      "start": 1720432615419,
-      "end": 1720432615922,
+      "result": "a {\n  text-decoration: none;\n  color: #000000;\n}\n\nmain {\n  position: relative;\n}\n\n.section {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  max-width: 75rem;\n  align-items: center;\n  width: 100%;\n  min-width: 17rem;\n  margin: 2rem auto;\n}\n\n.sectionTitle {\n  font-size: 40px;\n  margin-top: 2rem;\n  font-weight: 100;\n  text-transform: uppercase;\n}\n\n.wrapper {\n  margin: 0 auto;\n  width: 100%;\n  text-align: center;\n  overflow-x: hidden;\n}\n\n.center {\n  max-width: 75rem;\n}\n\n.btn {\n  padding: 0.5rem;\n  width: 11.25rem;\n  background-color: #fff;\n  font-size: 1.05rem;\n  border: none;\n  border-radius: 0.4rem;\n  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;\n  cursor: pointer;\n  -webkit-box-shadow: 0px 2px 5px 0px rgb(120, 120, 120);\n  -moz-box-shadow: 0px 2px 5px 0px rgb(120, 120, 120);\n  box-shadow: 0px 2px 5px 0px rgb(120, 120, 120);\n}\n.btn:hover {\n  background-color: #2cf57c;\n  -webkit-box-shadow: 0px 2px 5px 0px rgb(42, 222, 114);\n  -moz-box-shadow: 0px 2px 5px 0px rgb(42, 222, 114);\n  box-shadow: 0px 2px 5px 0px rgb(42, 222, 114);\n}\n\n.cta {\n  background-color: #2ade72;\n  -webkit-box-shadow: 0px 2px 5px 0px rgb(42, 222, 114);\n  -moz-box-shadow: 0px 2px 5px 0px rgb(42, 222, 114);\n  box-shadow: 0px 2px 5px 0px rgb(42, 222, 114);\n}\n\n.inactive {\n  color: grey;\n}\n\n.upBtn {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  position: fixed;\n  opacity: 0;\n  padding: 0.15rem;\n  bottom: 10px;\n  right: 5px;\n  background-color: #2ade72;\n  background-position: center;\n  border-radius: 25%;\n  transition: border-radius 0.3s ease-in-out;\n}\n.upBtn:hover {\n  border-radius: 50%;\n}\n\n.btnFadeOut {\n  animation: anm_btnFadeOut 0.3s ease-in-out forwards;\n}\n\n.btnFadeIn {\n  animation: anm_btnFadeIn 0.3s ease-in-out forwards;\n}\n\n.navActive {\n  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;\n  background-color: #000000;\n  color: #fff;\n}",
+      "start": 1721243571361,
+      "end": 1721243571578,
       "order": "normal",
       "sourcemaps": {
         "mappings": ""
@@ -20,85 +22,81 @@
     },
     {
       "name": "vite:esbuild",
-      "start": 1720432615923,
-      "end": 1720432615923,
+      "start": 1721243571578,
+      "end": 1721243571578,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1720432615923,
-      "end": 1720432615923,
+      "start": 1721243571578,
+      "end": 1721243571578,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1720432615923,
-      "end": 1720432615923,
+      "start": 1721243571581,
+      "end": 1721243571581,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1720432615923,
-      "end": 1720432615923,
+      "start": 1721243571583,
+      "end": 1721243571583,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "result": "",
-      "start": 1720432615923,
-      "end": 1720432615923,
+      "result": "import { updateStyle as __vite__updateStyle, removeStyle as __vite__removeStyle } from \"/@vite/client\"\nconst __vite__id = \"E:/zlecenia/forestGroup/assets/scss/_globals.scss\"\nconst __vite__css = \"a {\\n  text-decoration: none;\\n  color: #000000;\\n}\\n\\nmain {\\n  position: relative;\\n}\\n\\n.section {\\n  display: flex;\\n  flex-direction: column;\\n  justify-content: center;\\n  max-width: 75rem;\\n  align-items: center;\\n  width: 100%;\\n  min-width: 17rem;\\n  margin: 2rem auto;\\n}\\n\\n.sectionTitle {\\n  font-size: 40px;\\n  margin-top: 2rem;\\n  font-weight: 100;\\n  text-transform: uppercase;\\n}\\n\\n.wrapper {\\n  margin: 0 auto;\\n  width: 100%;\\n  text-align: center;\\n  overflow-x: hidden;\\n}\\n\\n.center {\\n  max-width: 75rem;\\n}\\n\\n.btn {\\n  padding: 0.5rem;\\n  width: 11.25rem;\\n  background-color: #fff;\\n  font-size: 1.05rem;\\n  border: none;\\n  border-radius: 0.4rem;\\n  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;\\n  cursor: pointer;\\n  -webkit-box-shadow: 0px 2px 5px 0px rgb(120, 120, 120);\\n  -moz-box-shadow: 0px 2px 5px 0px rgb(120, 120, 120);\\n  box-shadow: 0px 2px 5px 0px rgb(120, 120, 120);\\n}\\n.btn:hover {\\n  background-color: #2cf57c;\\n  -webkit-box-shadow: 0px 2px 5px 0px rgb(42, 222, 114);\\n  -moz-box-shadow: 0px 2px 5px 0px rgb(42, 222, 114);\\n  box-shadow: 0px 2px 5px 0px rgb(42, 222, 114);\\n}\\n\\n.cta {\\n  background-color: #2ade72;\\n  -webkit-box-shadow: 0px 2px 5px 0px rgb(42, 222, 114);\\n  -moz-box-shadow: 0px 2px 5px 0px rgb(42, 222, 114);\\n  box-shadow: 0px 2px 5px 0px rgb(42, 222, 114);\\n}\\n\\n.inactive {\\n  color: grey;\\n}\\n\\n.upBtn {\\n  display: flex;\\n  justify-content: center;\\n  align-items: center;\\n  position: fixed;\\n  opacity: 0;\\n  padding: 0.15rem;\\n  bottom: 10px;\\n  right: 5px;\\n  background-color: #2ade72;\\n  background-position: center;\\n  border-radius: 25%;\\n  transition: border-radius 0.3s ease-in-out;\\n}\\n.upBtn:hover {\\n  border-radius: 50%;\\n}\\n\\n.btnFadeOut {\\n  animation: anm_btnFadeOut 0.3s ease-in-out forwards;\\n}\\n\\n.btnFadeIn {\\n  animation: anm_btnFadeIn 0.3s ease-in-out forwards;\\n}\\n\\n.navActive {\\n  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;\\n  background-color: #000000;\\n  color: #fff;\\n}\"\n__vite__updateStyle(__vite__id, __vite__css)\nimport.meta.hot.accept()\nimport.meta.hot.prune(() => __vite__removeStyle(__vite__id))",
+      "start": 1721243571583,
+      "end": 1721243571583,
       "order": "normal",
       "sourcemaps": {
         "mappings": ""
       }
     },
     {
-      "name": "vite:build-html",
-      "start": 1720432615924,
-      "end": 1720432615924,
-      "order": "normal"
-    },
-    {
       "name": "vite:worker-import-meta-url",
-      "start": 1720432615924,
-      "end": 1720432615924,
+      "start": 1721243571583,
+      "end": 1721243571583,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1720432615924,
-      "end": 1720432615924,
-      "order": "normal"
-    },
-    {
-      "name": "commonjs",
-      "start": 1720432615924,
-      "end": 1720432615924,
+      "start": 1721243571583,
+      "end": 1721243571583,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1720432615924,
-      "end": 1720432615924,
+      "start": 1721243571584,
+      "end": 1721243571584,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1720432615924,
-      "end": 1720432615924,
+      "start": 1721243571584,
+      "end": 1721243571584,
       "order": "normal"
     },
     {
-      "name": "vite:build-import-analysis",
-      "start": 1720432615924,
-      "end": 1720432615924,
+      "name": "vite:client-inject",
+      "start": 1721243571584,
+      "end": 1721243571584,
       "order": "normal"
     },
     {
-      "name": "vite:reporter",
-      "start": 1720432615925,
-      "end": 1720432615925,
+      "name": "vite:css-analysis",
+      "start": 1721243571584,
+      "end": 1721243571584,
       "order": "normal"
+    },
+    {
+      "name": "vite:import-analysis",
+      "result": "import { createHotContext as __vite__createHotContext } from \"/@vite/client\";import.meta.hot = __vite__createHotContext(\"/assets/scss/_globals.scss\");import { updateStyle as __vite__updateStyle, removeStyle as __vite__removeStyle } from \"/@vite/client\"\nconst __vite__id = \"E:/zlecenia/forestGroup/assets/scss/_globals.scss\"\nconst __vite__css = \"a {\\n  text-decoration: none;\\n  color: #000000;\\n}\\n\\nmain {\\n  position: relative;\\n}\\n\\n.section {\\n  display: flex;\\n  flex-direction: column;\\n  justify-content: center;\\n  max-width: 75rem;\\n  align-items: center;\\n  width: 100%;\\n  min-width: 17rem;\\n  margin: 2rem auto;\\n}\\n\\n.sectionTitle {\\n  font-size: 40px;\\n  margin-top: 2rem;\\n  font-weight: 100;\\n  text-transform: uppercase;\\n}\\n\\n.wrapper {\\n  margin: 0 auto;\\n  width: 100%;\\n  text-align: center;\\n  overflow-x: hidden;\\n}\\n\\n.center {\\n  max-width: 75rem;\\n}\\n\\n.btn {\\n  padding: 0.5rem;\\n  width: 11.25rem;\\n  background-color: #fff;\\n  font-size: 1.05rem;\\n  border: none;\\n  border-radius: 0.4rem;\\n  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;\\n  cursor: pointer;\\n  -webkit-box-shadow: 0px 2px 5px 0px rgb(120, 120, 120);\\n  -moz-box-shadow: 0px 2px 5px 0px rgb(120, 120, 120);\\n  box-shadow: 0px 2px 5px 0px rgb(120, 120, 120);\\n}\\n.btn:hover {\\n  background-color: #2cf57c;\\n  -webkit-box-shadow: 0px 2px 5px 0px rgb(42, 222, 114);\\n  -moz-box-shadow: 0px 2px 5px 0px rgb(42, 222, 114);\\n  box-shadow: 0px 2px 5px 0px rgb(42, 222, 114);\\n}\\n\\n.cta {\\n  background-color: #2ade72;\\n  -webkit-box-shadow: 0px 2px 5px 0px rgb(42, 222, 114);\\n  -moz-box-shadow: 0px 2px 5px 0px rgb(42, 222, 114);\\n  box-shadow: 0px 2px 5px 0px rgb(42, 222, 114);\\n}\\n\\n.inactive {\\n  color: grey;\\n}\\n\\n.upBtn {\\n  display: flex;\\n  justify-content: center;\\n  align-items: center;\\n  position: fixed;\\n  opacity: 0;\\n  padding: 0.15rem;\\n  bottom: 10px;\\n  right: 5px;\\n  background-color: #2ade72;\\n  background-position: center;\\n  border-radius: 25%;\\n  transition: border-radius 0.3s ease-in-out;\\n}\\n.upBtn:hover {\\n  border-radius: 50%;\\n}\\n\\n.btnFadeOut {\\n  animation: anm_btnFadeOut 0.3s ease-in-out forwards;\\n}\\n\\n.btnFadeIn {\\n  animation: anm_btnFadeIn 0.3s ease-in-out forwards;\\n}\\n\\n.navActive {\\n  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;\\n  background-color: #000000;\\n  color: #fff;\\n}\"\n__vite__updateStyle(__vite__id, __vite__css)\nimport.meta.hot.accept()\nimport.meta.hot.prune(() => __vite__removeStyle(__vite__id))",
+      "start": 1721243571585,
+      "end": 1721243571585,
+      "order": "normal",
+      "sourcemaps": null
     }
   ]
 }

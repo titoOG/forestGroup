@@ -2,17 +2,19 @@
   "resolvedId": "E:/zlecenia/forestGroup/assets/scss/_about.scss",
   "transforms": [
     {
-      "name": "vite:load-fallback",
-      "result": ".about {\r\n  &__content {\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n    align-items: center;\r\n  }\r\n  &__box {\r\n    display: flex;\r\n    justify-content: center;\r\n    flex-direction: column;\r\n    margin: 1rem;\r\n    padding: 1rem;\r\n    &--title {\r\n      margin-bottom: 1rem;\r\n      font-size: 1.6rem;\r\n    }\r\n    &-text {\r\n      line-height: 1.8rem;\r\n      letter-spacing: -0.06rem;\r\n      padding: 1rem;\r\n      &--link {\r\n        text-decoration: underline;\r\n      }\r\n    }\r\n    &--image {\r\n      width: 327px;\r\n      height: 240px;\r\n    }\r\n  }\r\n}\r\n",
-      "start": 1720432615416,
-      "end": 1720432615419,
-      "sourcemaps": null
+      "name": "__load__",
+      "result": ".about {\n  &__content {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n  }\n  &__box {\n    display: flex;\n    justify-content: center;\n    flex-direction: column;\n    margin: 1rem;\n    padding: 1rem;\n    &--title {\n      width: 100%;\n      margin-bottom: 1rem;\n      font-size: 1.6rem;\n      font-family: var(--bold-font);\n    }\n    &-text {\n      line-height: 1.8rem;\n      letter-spacing: 0.0125rem;\n      padding: 1rem;\n      &--link {\n        text-decoration: underline;\n      }\n    }\n    &--image {\n      width: 255px;\n      height: 200px;\n    }\n  }\n}\n",
+      "start": 1721243571388,
+      "end": 1721243571388,
+      "sourcemaps": {
+        "mappings": ""
+      }
     },
     {
       "name": "vite:css",
-      "result": ".about__content {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n}\n.about__box {\n  display: flex;\n  justify-content: center;\n  flex-direction: column;\n  margin: 1rem;\n  padding: 1rem;\n}\n.about__box--title {\n  margin-bottom: 1rem;\n  font-size: 1.6rem;\n}\n.about__box-text {\n  line-height: 1.8rem;\n  letter-spacing: -0.06rem;\n  padding: 1rem;\n}\n.about__box-text--link {\n  text-decoration: underline;\n}\n.about__box--image {\n  width: 327px;\n  height: 240px;\n}",
-      "start": 1720432615419,
-      "end": 1720432615922,
+      "result": ".about__content {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n}\n.about__box {\n  display: flex;\n  justify-content: center;\n  flex-direction: column;\n  margin: 1rem;\n  padding: 1rem;\n}\n.about__box--title {\n  width: 100%;\n  margin-bottom: 1rem;\n  font-size: 1.6rem;\n  font-family: var(--bold-font);\n}\n.about__box-text {\n  line-height: 1.8rem;\n  letter-spacing: 0.0125rem;\n  padding: 1rem;\n}\n.about__box-text--link {\n  text-decoration: underline;\n}\n.about__box--image {\n  width: 255px;\n  height: 200px;\n}",
+      "start": 1721243571388,
+      "end": 1721243571578,
       "order": "normal",
       "sourcemaps": {
         "mappings": ""
@@ -20,85 +22,81 @@
     },
     {
       "name": "vite:esbuild",
-      "start": 1720432615923,
-      "end": 1720432615923,
+      "start": 1721243571578,
+      "end": 1721243571578,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1720432615923,
-      "end": 1720432615923,
+      "start": 1721243571578,
+      "end": 1721243571578,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1720432615923,
-      "end": 1720432615923,
+      "start": 1721243571581,
+      "end": 1721243571581,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1720432615923,
-      "end": 1720432615923,
+      "start": 1721243571583,
+      "end": 1721243571583,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "result": "",
-      "start": 1720432615923,
-      "end": 1720432615923,
+      "result": "import { updateStyle as __vite__updateStyle, removeStyle as __vite__removeStyle } from \"/@vite/client\"\nconst __vite__id = \"E:/zlecenia/forestGroup/assets/scss/_about.scss\"\nconst __vite__css = \".about__content {\\n  display: flex;\\n  flex-direction: column;\\n  justify-content: center;\\n  align-items: center;\\n}\\n.about__box {\\n  display: flex;\\n  justify-content: center;\\n  flex-direction: column;\\n  margin: 1rem;\\n  padding: 1rem;\\n}\\n.about__box--title {\\n  width: 100%;\\n  margin-bottom: 1rem;\\n  font-size: 1.6rem;\\n  font-family: var(--bold-font);\\n}\\n.about__box-text {\\n  line-height: 1.8rem;\\n  letter-spacing: 0.0125rem;\\n  padding: 1rem;\\n}\\n.about__box-text--link {\\n  text-decoration: underline;\\n}\\n.about__box--image {\\n  width: 255px;\\n  height: 200px;\\n}\"\n__vite__updateStyle(__vite__id, __vite__css)\nimport.meta.hot.accept()\nimport.meta.hot.prune(() => __vite__removeStyle(__vite__id))",
+      "start": 1721243571583,
+      "end": 1721243571583,
       "order": "normal",
       "sourcemaps": {
         "mappings": ""
       }
     },
     {
-      "name": "vite:build-html",
-      "start": 1720432615924,
-      "end": 1720432615924,
-      "order": "normal"
-    },
-    {
       "name": "vite:worker-import-meta-url",
-      "start": 1720432615924,
-      "end": 1720432615924,
+      "start": 1721243571583,
+      "end": 1721243571583,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1720432615924,
-      "end": 1720432615924,
-      "order": "normal"
-    },
-    {
-      "name": "commonjs",
-      "start": 1720432615924,
-      "end": 1720432615924,
+      "start": 1721243571583,
+      "end": 1721243571583,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1720432615924,
-      "end": 1720432615924,
+      "start": 1721243571584,
+      "end": 1721243571584,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1720432615924,
-      "end": 1720432615924,
+      "start": 1721243571584,
+      "end": 1721243571584,
       "order": "normal"
     },
     {
-      "name": "vite:build-import-analysis",
-      "start": 1720432615924,
-      "end": 1720432615924,
+      "name": "vite:client-inject",
+      "start": 1721243571584,
+      "end": 1721243571584,
       "order": "normal"
     },
     {
-      "name": "vite:reporter",
-      "start": 1720432615925,
-      "end": 1720432615925,
+      "name": "vite:css-analysis",
+      "start": 1721243571584,
+      "end": 1721243571584,
       "order": "normal"
+    },
+    {
+      "name": "vite:import-analysis",
+      "result": "import { createHotContext as __vite__createHotContext } from \"/@vite/client\";import.meta.hot = __vite__createHotContext(\"/assets/scss/_about.scss\");import { updateStyle as __vite__updateStyle, removeStyle as __vite__removeStyle } from \"/@vite/client\"\nconst __vite__id = \"E:/zlecenia/forestGroup/assets/scss/_about.scss\"\nconst __vite__css = \".about__content {\\n  display: flex;\\n  flex-direction: column;\\n  justify-content: center;\\n  align-items: center;\\n}\\n.about__box {\\n  display: flex;\\n  justify-content: center;\\n  flex-direction: column;\\n  margin: 1rem;\\n  padding: 1rem;\\n}\\n.about__box--title {\\n  width: 100%;\\n  margin-bottom: 1rem;\\n  font-size: 1.6rem;\\n  font-family: var(--bold-font);\\n}\\n.about__box-text {\\n  line-height: 1.8rem;\\n  letter-spacing: 0.0125rem;\\n  padding: 1rem;\\n}\\n.about__box-text--link {\\n  text-decoration: underline;\\n}\\n.about__box--image {\\n  width: 255px;\\n  height: 200px;\\n}\"\n__vite__updateStyle(__vite__id, __vite__css)\nimport.meta.hot.accept()\nimport.meta.hot.prune(() => __vite__removeStyle(__vite__id))",
+      "start": 1721243571585,
+      "end": 1721243571585,
+      "order": "normal",
+      "sourcemaps": null
     }
   ]
 }

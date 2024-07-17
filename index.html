@@ -9,17 +9,33 @@
   <meta name="description" content="Odkryj niesamowity park." />
   <meta name="keywords" content="forestGroup, park" />
   <title>Forest Group - najpiękniejszy park w Twojej okolicy</title>
+
 </head>
 
 <body id="indexPage">
 
-  <nav class="nav" id="nav">
+  <nav class="nav spy" id="home">
     <div class="nav__content">
-      <div class="nav__logo" id="navContent">
-        <a href="./" class="nav__logo--link">
+      <div class="nav__logo">
+        <a href="./" class="nav__logo--link" id="#home">
           <img src="./assets/img/forestLogo.svg" alt="forestGroup logo" class="nav__logo--image">Forest
         </a>
       </div>
+
+      <div class="nav__desktop" id="navDesktop">
+        <a href="#home" class="nav__desktop--link">Home</a>
+        <a href="#about" class="nav__desktop--link ">O nas</a>
+        <a href="#offers" class="nav__desktop--link">Oferta</a>
+        <a href="./contact.html" class="nav__desktop--link">Kontakt</a>
+      </div>
+
+      <div class="nav__mobile" id="navMobile">
+        <a href="#home" class="nav__mobile--link">Home</a>
+        <a href="#about" class="nav__mobile--link">O nas</a>
+        <a href="#offers" class="nav__mobile--link">Oferta</a>
+        <a href="./contact.html" class="nav__mobile--link">Kontakt</a>
+      </div>
+
 
       <div class="nav__burger" id="burgerBtn">
         <div class="nav__burger-icon">
@@ -29,24 +45,9 @@
         </div>
       </div>
     </div>
-
-
-    <div class="nav__mobile" id="navMobile">
-      <a href="#" class="nav__mobile--link">Home</a>
-      <a href="#about" class="nav__mobile--link">O nas</a>
-      <a href="#offers" class="nav__mobile--link">Oferta</a>
-      <a href="./assets/pages/contact.html" class="nav__mobile--link">Kontakt</a>
-    </div>
-
-    <div class="nav__desktop" id="navDesktop">
-      <a href="#header" class="nav__desktop--link">Home</a>
-      <a href="#about" class="nav__desktop--link ">O nas</a>
-      <a href="#offers" class="nav__desktop--link">Oferta</a>
-      <a href="./assets/pages/contact.html" class="nav__desktop--link">Kontakt</a>
-    </div>
   </nav>
 
-  <header class="header spy " id="header">
+  <header class="header" id="header">
     <div class="header__hero">
       <div class="header__box">
         <h1 class="header__box--title">Forest Group</h1>
@@ -81,7 +82,7 @@
       </div>
     </section>
 
-    <section class="parallax" id="parallax">
+    <section class="parallax">
       <div class="parallax__content">
         <div class="parallax__hero">
           <div class="parallax__hero-box">
@@ -198,6 +199,9 @@
           </div>
           <button class="offers__card--button btn ">Wybierz</button>
         </div>
+      </div>
+      <div class="offers__button">
+        <a href="./offers.html" class="offers__button--btn btn">Zarezerwuj już teraz!</a>
       </div>
     </section>
   </main>

@@ -35,8 +35,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        contact: resolve(__dirname, './assets/pages/contact.html'),
-        offers: resolve(__dirname, './assets/pages/offers.html'),
+        contact: resolve(__dirname, './contact.html'),
+        offers: resolve(__dirname, './offers.html'),
       },
 
       output: {
@@ -62,7 +62,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src/assets'),
+      '@': path.resolve(__dirname, './src'),
       'STYLE': path.resolve(__dirname, './src/assets/scss'),
     },
   },

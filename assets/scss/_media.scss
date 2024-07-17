@@ -109,6 +109,7 @@
 
   .parallax {
     &__hero {
+      background-attachment: fixed;
       &-box {
         width: 70%;
         &--title {

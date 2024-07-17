@@ -70,28 +70,32 @@ window.onscroll = () => {
 };
 
 const options = {
-  threshold: [0.9, 1],
-  // rootMargin: '5.5% 0px 9.5% 0px',
+  threshold: [0.85, 1],
+  rootMargin: '20px',
+  // rootMargin: '50px 0px -150px 0px ',
 };
 const handleScrollSpy = (entries) => {
   entries.forEach((entry) => {
     // entry.target.style.opacity = entry.intersectionRatio - 0.25;
+    let targetID = entry.target.id;
+
     if (!entry.isIntersecting) {
       return;
     } else if (entry.isIntersecting && entry.intersectionRatio >= 0.75) {
       const activeLink = document.querySelector(
-        `.nav__desktop--link[href='#${entry.target.id}']`
+        `.nav__desktop--link[href='#${targetID}']`
       );
-
       navDesktopLinks.forEach((link) => link.classList.remove('navActive'));
       activeLink.classList.add('navActive');
+      console.log(
+        `target to: <${targetID}> jego ratio to <${entry.intersectionRatio}>`
+      );
     }
-    // console.log(entry);
   });
 };
 
 const observer = new IntersectionObserver(handleScrollSpy, options);
 
-target.forEach((section) => {
-  observer.observe(section);
-});
+// target.forEach((section) => {
+//   observer.observe(section);
+// });

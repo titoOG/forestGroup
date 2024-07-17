@@ -2,17 +2,19 @@
   "resolvedId": "E:/zlecenia/forestGroup/assets/scss/_mixins.scss",
   "transforms": [
     {
-      "name": "vite:load-fallback",
-      "result": "@use './colors' as c;\r\n\r\n@mixin buttonSettings {\r\n  padding: 0.5rem;\r\n  width: 11.25rem;\r\n  background-color: c.$primary-color;\r\n  font-size: 1.05rem;\r\n  border: none;\r\n  border-radius: 0.4rem;\r\n  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;\r\n  cursor: pointer;\r\n  -webkit-box-shadow: 0px 2px 5px 0px rgba(120, 120, 120, 1);\r\n  -moz-box-shadow: 0px 2px 5px 0px rgba(120, 120, 120, 1);\r\n  box-shadow: 0px 2px 5px 0px rgba(120, 120, 120, 1);\r\n\r\n  &:hover {\r\n    background-color: c.$accent-hover;\r\n    -webkit-box-shadow: 0px 2px 5px 0px rgba(42, 222, 114, 1);\r\n    -moz-box-shadow: 0px 2px 5px 0px rgba(42, 222, 114, 1);\r\n    box-shadow: 0px 2px 5px 0px rgba(42, 222, 114, 1);\r\n  }\r\n}\r\n\r\n@mixin buttonCta {\r\n  background-color: c.$accent-color;\r\n  -webkit-box-shadow: 0px 2px 5px 0px rgba(42, 222, 114, 1);\r\n  -moz-box-shadow: 0px 2px 5px 0px rgba(42, 222, 114, 1);\r\n  box-shadow: 0px 2px 5px 0px rgba(42, 222, 114, 1);\r\n}\r\n\r\n@mixin navigation {\r\n  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;\r\n  &:hover {\r\n    background-color: c.$secondary-color;\r\n    color: c.$primary-color;\r\n  }\r\n}\r\n",
-      "start": 1720432615416,
-      "end": 1720432615419,
-      "sourcemaps": null
+      "name": "__load__",
+      "result": "@use './colors' as c;\n\n@mixin buttonSettings {\n  padding: 0.5rem;\n  width: 11.25rem;\n  background-color: c.$primary-color;\n  font-size: 1.05rem;\n  border: none;\n  border-radius: 0.4rem;\n  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;\n  cursor: pointer;\n  -webkit-box-shadow: 0px 2px 5px 0px rgba(120, 120, 120, 1);\n  -moz-box-shadow: 0px 2px 5px 0px rgba(120, 120, 120, 1);\n  box-shadow: 0px 2px 5px 0px rgba(120, 120, 120, 1);\n\n  &:hover {\n    background-color: c.$accent-hover;\n    -webkit-box-shadow: 0px 2px 5px 0px rgba(42, 222, 114, 1);\n    -moz-box-shadow: 0px 2px 5px 0px rgba(42, 222, 114, 1);\n    box-shadow: 0px 2px 5px 0px rgba(42, 222, 114, 1);\n  }\n}\n\n@mixin buttonCta {\n  background-color: c.$accent-color;\n  -webkit-box-shadow: 0px 2px 5px 0px rgba(42, 222, 114, 1);\n  -moz-box-shadow: 0px 2px 5px 0px rgba(42, 222, 114, 1);\n  box-shadow: 0px 2px 5px 0px rgba(42, 222, 114, 1);\n}\n\n@mixin navigation {\n  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;\n  &:hover {\n    background-color: c.$secondary-color;\n    color: c.$primary-color;\n  }\n}\n",
+      "start": 1721243571372,
+      "end": 1721243571372,
+      "sourcemaps": {
+        "mappings": ""
+      }
     },
     {
       "name": "vite:css",
       "result": "",
-      "start": 1720432615419,
-      "end": 1720432615922,
+      "start": 1721243571372,
+      "end": 1721243571578,
       "order": "normal",
       "sourcemaps": {
         "mappings": ""
@@ -20,85 +22,81 @@
     },
     {
       "name": "vite:esbuild",
-      "start": 1720432615923,
-      "end": 1720432615923,
+      "start": 1721243571578,
+      "end": 1721243571578,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1720432615923,
-      "end": 1720432615923,
+      "start": 1721243571578,
+      "end": 1721243571578,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1720432615923,
-      "end": 1720432615923,
+      "start": 1721243571581,
+      "end": 1721243571581,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1720432615923,
-      "end": 1720432615923,
+      "start": 1721243571583,
+      "end": 1721243571583,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "result": "",
-      "start": 1720432615923,
-      "end": 1720432615923,
+      "result": "import { updateStyle as __vite__updateStyle, removeStyle as __vite__removeStyle } from \"/@vite/client\"\nconst __vite__id = \"E:/zlecenia/forestGroup/assets/scss/_mixins.scss\"\nconst __vite__css = \"\"\n__vite__updateStyle(__vite__id, __vite__css)\nimport.meta.hot.accept()\nimport.meta.hot.prune(() => __vite__removeStyle(__vite__id))",
+      "start": 1721243571583,
+      "end": 1721243571583,
       "order": "normal",
       "sourcemaps": {
         "mappings": ""
       }
     },
     {
-      "name": "vite:build-html",
-      "start": 1720432615924,
-      "end": 1720432615924,
-      "order": "normal"
-    },
-    {
       "name": "vite:worker-import-meta-url",
-      "start": 1720432615924,
-      "end": 1720432615924,
+      "start": 1721243571583,
+      "end": 1721243571583,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1720432615924,
-      "end": 1720432615924,
-      "order": "normal"
-    },
-    {
-      "name": "commonjs",
-      "start": 1720432615924,
-      "end": 1720432615924,
+      "start": 1721243571583,
+      "end": 1721243571583,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1720432615924,
-      "end": 1720432615924,
+      "start": 1721243571584,
+      "end": 1721243571584,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1720432615924,
-      "end": 1720432615924,
+      "start": 1721243571584,
+      "end": 1721243571584,
       "order": "normal"
     },
     {
-      "name": "vite:build-import-analysis",
-      "start": 1720432615924,
-      "end": 1720432615924,
+      "name": "vite:client-inject",
+      "start": 1721243571584,
+      "end": 1721243571584,
       "order": "normal"
     },
     {
-      "name": "vite:reporter",
-      "start": 1720432615925,
-      "end": 1720432615925,
+      "name": "vite:css-analysis",
+      "start": 1721243571584,
+      "end": 1721243571584,
       "order": "normal"
+    },
+    {
+      "name": "vite:import-analysis",
+      "result": "import { createHotContext as __vite__createHotContext } from \"/@vite/client\";import.meta.hot = __vite__createHotContext(\"/assets/scss/_mixins.scss\");import { updateStyle as __vite__updateStyle, removeStyle as __vite__removeStyle } from \"/@vite/client\"\nconst __vite__id = \"E:/zlecenia/forestGroup/assets/scss/_mixins.scss\"\nconst __vite__css = \"\"\n__vite__updateStyle(__vite__id, __vite__css)\nimport.meta.hot.accept()\nimport.meta.hot.prune(() => __vite__removeStyle(__vite__id))",
+      "start": 1721243571585,
+      "end": 1721243571585,
+      "order": "normal",
+      "sourcemaps": null
     }
   ]
 }

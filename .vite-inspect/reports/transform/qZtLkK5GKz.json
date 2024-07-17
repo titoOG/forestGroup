@@ -1,0 +1,102 @@
+{
+  "resolvedId": "E:/zlecenia/forestGroup/assets/scss/_footer.scss",
+  "transforms": [
+    {
+      "name": "__load__",
+      "result": "@use './colors' as c;\n\n.footer {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  width: 100%;\n  background-color: c.$footer-color;\n  overflow: hidden;\n\n  &__content {\n    display: flex;\n    flex-direction: column;\n    justify-content: space-evenly;\n    align-items: center;\n    width: 100%;\n    margin-top: 1.5rem;\n  }\n\n  &__container {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    width: 100%;\n  }\n\n  &__logo {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    margin: 1.5rem auto;\n    padding: 0.5rem;\n\n    &-link {\n      padding: 1rem;\n      min-width: 10rem;\n      display: flex;\n      font-size: 2.25rem;\n      align-items: center;\n      // padding: 1rem;\n      &--image {\n        width: 2.5rem;\n      }\n    }\n  }\n  &__list {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    // align-items: flex-start;\n    // justify-content: flex-start;\n    padding: 1.25rem;\n    width: 14.5rem;\n    margin: 1rem auto;\n    &--title {\n      font-family: var(--bold-font);\n      margin-bottom: 1rem;\n    }\n    &--item {\n      display: flex;\n      justify-content: center;\n      width: 100%;\n      margin: 0.25rem auto;\n      padding: 0.5rem;\n      font-size: 0.95rem;\n      transition: color 0.3s ease-in-out;\n\n      &:hover {\n        color: c.$footer-font;\n      }\n    }\n  }\n\n  &__separator {\n    height: 1px;\n    width: 100%;\n    margin: 1rem auto;\n    background-color: c.$grey-color;\n  }\n\n  &__info {\n    padding: 1.5rem;\n    width: 100%;\n    &--details {\n      display: flex;\n      justify-content: center;\n      align-items: center;\n      padding: 0.5rem;\n      font-size: 0.85rem;\n    }\n  }\n}\n",
+      "start": 1721243571406,
+      "end": 1721243571406,
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:css",
+      "result": ".footer {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  width: 100%;\n  background-color: #f5f5f5;\n  overflow: hidden;\n}\n.footer__content {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-evenly;\n  align-items: center;\n  width: 100%;\n  margin-top: 1.5rem;\n}\n.footer__container {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  width: 100%;\n}\n.footer__logo {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  margin: 1.5rem auto;\n  padding: 0.5rem;\n}\n.footer__logo-link {\n  padding: 1rem;\n  min-width: 10rem;\n  display: flex;\n  font-size: 2.25rem;\n  align-items: center;\n}\n.footer__logo-link--image {\n  width: 2.5rem;\n}\n.footer__list {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  padding: 1.25rem;\n  width: 14.5rem;\n  margin: 1rem auto;\n}\n.footer__list--title {\n  font-family: var(--bold-font);\n  margin-bottom: 1rem;\n}\n.footer__list--item {\n  display: flex;\n  justify-content: center;\n  width: 100%;\n  margin: 0.25rem auto;\n  padding: 0.5rem;\n  font-size: 0.95rem;\n  transition: color 0.3s ease-in-out;\n}\n.footer__list--item:hover {\n  color: #656565;\n}\n.footer__separator {\n  height: 1px;\n  width: 100%;\n  margin: 1rem auto;\n  background-color: #787878;\n}\n.footer__info {\n  padding: 1.5rem;\n  width: 100%;\n}\n.footer__info--details {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  padding: 0.5rem;\n  font-size: 0.85rem;\n}",
+      "start": 1721243571406,
+      "end": 1721243571578,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1721243571578,
+      "end": 1721243571578,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1721243571578,
+      "end": 1721243571578,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1721243571581,
+      "end": 1721243571581,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1721243571583,
+      "end": 1721243571583,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "result": "import { updateStyle as __vite__updateStyle, removeStyle as __vite__removeStyle } from \"/@vite/client\"\nconst __vite__id = \"E:/zlecenia/forestGroup/assets/scss/_footer.scss\"\nconst __vite__css = \".footer {\\n  display: flex;\\n  flex-direction: column;\\n  justify-content: center;\\n  align-items: center;\\n  width: 100%;\\n  background-color: #f5f5f5;\\n  overflow: hidden;\\n}\\n.footer__content {\\n  display: flex;\\n  flex-direction: column;\\n  justify-content: space-evenly;\\n  align-items: center;\\n  width: 100%;\\n  margin-top: 1.5rem;\\n}\\n.footer__container {\\n  display: flex;\\n  flex-direction: column;\\n  align-items: center;\\n  justify-content: center;\\n  width: 100%;\\n}\\n.footer__logo {\\n  display: flex;\\n  flex-direction: column;\\n  align-items: center;\\n  justify-content: center;\\n  margin: 1.5rem auto;\\n  padding: 0.5rem;\\n}\\n.footer__logo-link {\\n  padding: 1rem;\\n  min-width: 10rem;\\n  display: flex;\\n  font-size: 2.25rem;\\n  align-items: center;\\n}\\n.footer__logo-link--image {\\n  width: 2.5rem;\\n}\\n.footer__list {\\n  display: flex;\\n  flex-direction: column;\\n  align-items: center;\\n  padding: 1.25rem;\\n  width: 14.5rem;\\n  margin: 1rem auto;\\n}\\n.footer__list--title {\\n  font-family: var(--bold-font);\\n  margin-bottom: 1rem;\\n}\\n.footer__list--item {\\n  display: flex;\\n  justify-content: center;\\n  width: 100%;\\n  margin: 0.25rem auto;\\n  padding: 0.5rem;\\n  font-size: 0.95rem;\\n  transition: color 0.3s ease-in-out;\\n}\\n.footer__list--item:hover {\\n  color: #656565;\\n}\\n.footer__separator {\\n  height: 1px;\\n  width: 100%;\\n  margin: 1rem auto;\\n  background-color: #787878;\\n}\\n.footer__info {\\n  padding: 1.5rem;\\n  width: 100%;\\n}\\n.footer__info--details {\\n  display: flex;\\n  justify-content: center;\\n  align-items: center;\\n  padding: 0.5rem;\\n  font-size: 0.85rem;\\n}\"\n__vite__updateStyle(__vite__id, __vite__css)\nimport.meta.hot.accept()\nimport.meta.hot.prune(() => __vite__removeStyle(__vite__id))",
+      "start": 1721243571583,
+      "end": 1721243571583,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1721243571583,
+      "end": 1721243571583,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1721243571583,
+      "end": 1721243571583,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1721243571584,
+      "end": 1721243571584,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1721243571584,
+      "end": 1721243571584,
+      "order": "normal"
+    },
+    {
+      "name": "vite:client-inject",
+      "start": 1721243571584,
+      "end": 1721243571584,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-analysis",
+      "start": 1721243571584,
+      "end": 1721243571584,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-analysis",
+      "result": "import { createHotContext as __vite__createHotContext } from \"/@vite/client\";import.meta.hot = __vite__createHotContext(\"/assets/scss/_footer.scss\");import { updateStyle as __vite__updateStyle, removeStyle as __vite__removeStyle } from \"/@vite/client\"\nconst __vite__id = \"E:/zlecenia/forestGroup/assets/scss/_footer.scss\"\nconst __vite__css = \".footer {\\n  display: flex;\\n  flex-direction: column;\\n  justify-content: center;\\n  align-items: center;\\n  width: 100%;\\n  background-color: #f5f5f5;\\n  overflow: hidden;\\n}\\n.footer__content {\\n  display: flex;\\n  flex-direction: column;\\n  justify-content: space-evenly;\\n  align-items: center;\\n  width: 100%;\\n  margin-top: 1.5rem;\\n}\\n.footer__container {\\n  display: flex;\\n  flex-direction: column;\\n  align-items: center;\\n  justify-content: center;\\n  width: 100%;\\n}\\n.footer__logo {\\n  display: flex;\\n  flex-direction: column;\\n  align-items: center;\\n  justify-content: center;\\n  margin: 1.5rem auto;\\n  padding: 0.5rem;\\n}\\n.footer__logo-link {\\n  padding: 1rem;\\n  min-width: 10rem;\\n  display: flex;\\n  font-size: 2.25rem;\\n  align-items: center;\\n}\\n.footer__logo-link--image {\\n  width: 2.5rem;\\n}\\n.footer__list {\\n  display: flex;\\n  flex-direction: column;\\n  align-items: center;\\n  padding: 1.25rem;\\n  width: 14.5rem;\\n  margin: 1rem auto;\\n}\\n.footer__list--title {\\n  font-family: var(--bold-font);\\n  margin-bottom: 1rem;\\n}\\n.footer__list--item {\\n  display: flex;\\n  justify-content: center;\\n  width: 100%;\\n  margin: 0.25rem auto;\\n  padding: 0.5rem;\\n  font-size: 0.95rem;\\n  transition: color 0.3s ease-in-out;\\n}\\n.footer__list--item:hover {\\n  color: #656565;\\n}\\n.footer__separator {\\n  height: 1px;\\n  width: 100%;\\n  margin: 1rem auto;\\n  background-color: #787878;\\n}\\n.footer__info {\\n  padding: 1.5rem;\\n  width: 100%;\\n}\\n.footer__info--details {\\n  display: flex;\\n  justify-content: center;\\n  align-items: center;\\n  padding: 0.5rem;\\n  font-size: 0.85rem;\\n}\"\n__vite__updateStyle(__vite__id, __vite__css)\nimport.meta.hot.accept()\nimport.meta.hot.prune(() => __vite__removeStyle(__vite__id))",
+      "start": 1721243571585,
+      "end": 1721243571585,
+      "order": "normal",
+      "sourcemaps": null
+    }
+  ]
+}
