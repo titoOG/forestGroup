@@ -1,6 +1,7 @@
 @use './colors' as c;
 
 @mixin buttonSettings {
+  display: inline-block;
   padding: 0.5rem;
   width: 11.25rem;
   background-color: c.$primary-color;

@@ -2,24 +2,47 @@
   "root": "E:/zlecenia/forestGroup",
   "modules": [
     {
+      "id": "\u0000vite/modulepreload-polyfill.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:modulepreload-polyfill",
+          "transform": 0
+        },
+        {
+          "name": "vite:modulepreload-polyfill",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:modulepreload-polyfill",
+          "resolveId": 0
+        },
+        {
+          "name": "vite:modulepreload-polyfill",
+          "resolveId": 0
+        }
+      ],
+      "virtual": true,
+      "totalTime": 0,
+      "invokeCount": 1,
+      "sourceSize": 1280,
+      "distSize": 1280
+    },
+    {
       "id": "E:/zlecenia/forestGroup/assets/js/main.js",
       "deps": [],
       "plugins": [
         {
-          "name": "__load__",
-          "transform": 0
-        },
-        {
-          "name": "vite:import-analysis",
-          "transform": 4
+          "name": "vite:load-fallback",
+          "transform": 20
         },
         {
           "name": "vite:resolve",
-          "resolveId": 0
+          "resolveId": 1
         },
         {
           "name": "vite:resolve",
-          "resolveId": 0
+          "resolveId": 1
         },
         {
           "name": "vite:resolve",
@@ -27,61 +50,45 @@
         }
       ],
       "virtual": false,
-      "totalTime": 4,
+      "totalTime": 20,
       "invokeCount": 1,
       "sourceSize": 3093,
-      "distSize": 3158
+      "distSize": 0
     },
     {
       "id": "E:/zlecenia/forestGroup/assets/scss/_about.scss",
       "deps": [],
       "plugins": [
         {
-          "name": "__load__",
-          "transform": 0
+          "name": "vite:load-fallback",
+          "transform": 5
         },
         {
           "name": "vite:css",
-          "transform": 190
-        },
-        {
-          "name": "vite:css-post",
-          "transform": 0
-        },
-        {
-          "name": "vite:import-analysis",
-          "transform": 0
+          "transform": 588
         },
         {
           "name": "vite:resolve",
-          "resolveId": 0
+          "resolveId": 1
         }
       ],
       "virtual": false,
-      "totalTime": 190,
+      "totalTime": 593,
       "invokeCount": 1,
       "sourceSize": 610,
-      "distSize": 1052
+      "distSize": 0
     },
     {
       "id": "E:/zlecenia/forestGroup/assets/scss/_animations.scss",
       "deps": [],
       "plugins": [
         {
-          "name": "__load__",
-          "transform": 0
+          "name": "vite:load-fallback",
+          "transform": 5
         },
         {
           "name": "vite:css",
-          "transform": 174
-        },
-        {
-          "name": "vite:css-post",
-          "transform": 0
-        },
-        {
-          "name": "vite:import-analysis",
-          "transform": 0
+          "transform": 588
         },
         {
           "name": "vite:resolve",
@@ -89,61 +96,45 @@
         }
       ],
       "virtual": false,
-      "totalTime": 174,
+      "totalTime": 593,
       "invokeCount": 1,
       "sourceSize": 550,
-      "distSize": 1064
+      "distSize": 0
     },
     {
       "id": "E:/zlecenia/forestGroup/assets/scss/_fonts.scss",
       "deps": [],
       "plugins": [
         {
-          "name": "__load__",
-          "transform": 0
+          "name": "vite:load-fallback",
+          "transform": 5
         },
         {
           "name": "vite:css",
-          "transform": 224
-        },
-        {
-          "name": "vite:css-post",
-          "transform": 0
-        },
-        {
-          "name": "vite:import-analysis",
-          "transform": 0
+          "transform": 605
         },
         {
           "name": "vite:resolve",
-          "resolveId": 0
+          "resolveId": 3
         }
       ],
       "virtual": false,
-      "totalTime": 224,
+      "totalTime": 610,
       "invokeCount": 1,
       "sourceSize": 464,
-      "distSize": 980
+      "distSize": 0
     },
     {
       "id": "E:/zlecenia/forestGroup/assets/scss/_footer.scss",
       "deps": [],
       "plugins": [
         {
-          "name": "__load__",
-          "transform": 0
+          "name": "vite:load-fallback",
+          "transform": 5
         },
         {
           "name": "vite:css",
-          "transform": 172
-        },
-        {
-          "name": "vite:css-post",
-          "transform": 0
-        },
-        {
-          "name": "vite:import-analysis",
-          "transform": 0
+          "transform": 588
         },
         {
           "name": "vite:resolve",
@@ -151,92 +142,68 @@
         }
       ],
       "virtual": false,
-      "totalTime": 172,
+      "totalTime": 593,
       "invokeCount": 1,
       "sourceSize": 1777,
-      "distSize": 2083
+      "distSize": 0
     },
     {
       "id": "E:/zlecenia/forestGroup/assets/scss/_globals.scss",
       "deps": [],
       "plugins": [
         {
-          "name": "__load__",
-          "transform": 0
+          "name": "vite:load-fallback",
+          "transform": 5
         },
         {
           "name": "vite:css",
-          "transform": 217
-        },
-        {
-          "name": "vite:css-post",
-          "transform": 0
-        },
-        {
-          "name": "vite:import-analysis",
-          "transform": 0
+          "transform": 588
         },
         {
           "name": "vite:resolve",
-          "resolveId": 0
+          "resolveId": 3
         }
       ],
       "virtual": false,
-      "totalTime": 217,
+      "totalTime": 593,
       "invokeCount": 1,
       "sourceSize": 1291,
-      "distSize": 2504
+      "distSize": 0
     },
     {
       "id": "E:/zlecenia/forestGroup/assets/scss/_header.scss",
       "deps": [],
       "plugins": [
         {
-          "name": "__load__",
-          "transform": 0
+          "name": "vite:load-fallback",
+          "transform": 6
         },
         {
           "name": "vite:css",
-          "transform": 199
-        },
-        {
-          "name": "vite:css-post",
-          "transform": 0
-        },
-        {
-          "name": "vite:import-analysis",
-          "transform": 0
+          "transform": 601
         },
         {
           "name": "vite:resolve",
-          "resolveId": 0
+          "resolveId": 1
         }
       ],
       "virtual": false,
-      "totalTime": 199,
+      "totalTime": 607,
       "invokeCount": 1,
       "sourceSize": 1233,
-      "distSize": 1632
+      "distSize": 0
     },
     {
       "id": "E:/zlecenia/forestGroup/assets/scss/_media.scss",
       "deps": [],
       "plugins": [
         {
-          "name": "__load__",
-          "transform": 0
+          "name": "vite:load-fallback",
+          "transform": 6
         },
         {
           "name": "vite:css",
-          "transform": 169
-        },
-        {
-          "name": "vite:css-post",
-          "transform": 0
-        },
-        {
-          "name": "vite:import-analysis",
-          "transform": 0
+          "transform": 602
         },
         {
           "name": "vite:resolve",
@@ -244,181 +211,156 @@
         }
       ],
       "virtual": false,
-      "totalTime": 169,
+      "totalTime": 608,
       "invokeCount": 1,
-      "sourceSize": 2656,
-      "distSize": 2666
+      "sourceSize": 2915,
+      "distSize": 0
     },
     {
       "id": "E:/zlecenia/forestGroup/assets/scss/_mixins.scss",
       "deps": [],
       "plugins": [
         {
-          "name": "__load__",
-          "transform": 0
-        },
-        {
-          "name": "vite:css-post",
-          "transform": 0
-        },
-        {
-          "name": "vite:import-analysis",
-          "transform": 0
+          "name": "vite:load-fallback",
+          "transform": 5
         },
         {
           "name": "vite:resolve",
-          "resolveId": 0
+          "resolveId": 2
         }
       ],
       "virtual": false,
-      "totalTime": 0,
+      "totalTime": 5,
       "invokeCount": 1,
-      "sourceSize": 1108,
-      "distSize": 475
+      "sourceSize": 1133,
+      "distSize": 0
     },
     {
       "id": "E:/zlecenia/forestGroup/assets/scss/_nav.scss",
       "deps": [],
       "plugins": [
         {
-          "name": "__load__",
-          "transform": 0
+          "name": "vite:load-fallback",
+          "transform": 5
         },
         {
           "name": "vite:css",
-          "transform": 201
-        },
-        {
-          "name": "vite:css-post",
-          "transform": 0
-        },
-        {
-          "name": "vite:import-analysis",
-          "transform": 0
+          "transform": 589
         },
         {
           "name": "vite:resolve",
-          "resolveId": 0
+          "resolveId": 2
         }
       ],
       "virtual": false,
-      "totalTime": 201,
+      "totalTime": 594,
       "invokeCount": 1,
       "sourceSize": 2794,
-      "distSize": 2943
+      "distSize": 0
     },
     {
       "id": "E:/zlecenia/forestGroup/assets/scss/_offersSection.scss",
       "deps": [],
       "plugins": [
         {
-          "name": "__load__",
-          "transform": 0
+          "name": "vite:load-fallback",
+          "transform": 5
         },
         {
           "name": "vite:css",
-          "transform": 185
-        },
-        {
-          "name": "vite:css-post",
-          "transform": 0
-        },
-        {
-          "name": "vite:import-analysis",
-          "transform": 0
+          "transform": 588
         },
         {
           "name": "vite:resolve",
-          "resolveId": 0
+          "resolveId": 1
         }
       ],
       "virtual": false,
-      "totalTime": 185,
+      "totalTime": 593,
       "invokeCount": 1,
-      "sourceSize": 1319,
-      "distSize": 1632
+      "sourceSize": 2366,
+      "distSize": 0
     },
     {
       "id": "E:/zlecenia/forestGroup/assets/scss/_parallax.scss",
       "deps": [],
       "plugins": [
         {
-          "name": "__load__",
-          "transform": 0
+          "name": "vite:load-fallback",
+          "transform": 5
         },
         {
           "name": "vite:css",
-          "transform": 184
-        },
-        {
-          "name": "vite:css-post",
-          "transform": 0
-        },
-        {
-          "name": "vite:import-analysis",
-          "transform": 0
+          "transform": 599
         },
         {
           "name": "vite:resolve",
-          "resolveId": 0
+          "resolveId": 1
         }
       ],
       "virtual": false,
-      "totalTime": 184,
+      "totalTime": 604,
       "invokeCount": 1,
       "sourceSize": 1348,
-      "distSize": 1376
+      "distSize": 0
     },
     {
       "id": "E:/zlecenia/forestGroup/assets/scss/_reset.scss",
       "deps": [],
       "plugins": [
         {
-          "name": "__load__",
-          "transform": 0
+          "name": "vite:load-fallback",
+          "transform": 5
         },
         {
           "name": "vite:css",
-          "transform": 221
-        },
-        {
-          "name": "vite:css-post",
-          "transform": 0
-        },
-        {
-          "name": "vite:import-analysis",
-          "transform": 0
+          "transform": 589
         },
         {
           "name": "vite:resolve",
-          "resolveId": 0
+          "resolveId": 4
         }
       ],
       "virtual": false,
-      "totalTime": 221,
+      "totalTime": 594,
       "invokeCount": 1,
       "sourceSize": 152,
-      "distSize": 639
+      "distSize": 0
     },
     {
       "id": "E:/zlecenia/forestGroup/assets/scss/main.scss",
       "deps": [],
       "plugins": [
         {
-          "name": "__load__",
-          "transform": 0
+          "name": "vite:load-fallback",
+          "transform": 3
         },
         {
           "name": "vite:css",
-          "transform": 226
+          "transform": 591
         },
         {
-          "name": "vite:css-post",
-          "transform": 0
+          "name": "vite:resolve",
+          "resolveId": 6
+        }
+      ],
+      "virtual": false,
+      "totalTime": 594,
+      "invokeCount": 1,
+      "sourceSize": 443,
+      "distSize": 0
+    },
+    {
+      "id": "E:/zlecenia/forestGroup/contact.html",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 18
         },
         {
-          "name": "vite:import-analysis",
-          "transform": 0
+          "name": "vite:build-html",
+          "transform": 81
         },
         {
           "name": "vite:resolve",
@@ -426,99 +368,56 @@
         }
       ],
       "virtual": false,
-      "totalTime": 226,
+      "totalTime": 99,
       "invokeCount": 1,
-      "sourceSize": 443,
-      "distSize": 892
+      "sourceSize": 4383,
+      "distSize": 0
     },
     {
       "id": "E:/zlecenia/forestGroup/index.html",
       "deps": [],
       "plugins": [
         {
-          "name": "vite:resolve",
-          "resolveId": 0
-        }
-      ],
-      "virtual": true,
-      "totalTime": 0,
-      "invokeCount": 0,
-      "sourceSize": 0,
-      "distSize": 0
-    },
-    {
-      "id": "E:/zlecenia/forestGroup/node_modules/vite/dist/client/client.mjs",
-      "deps": [],
-      "plugins": [
-        {
-          "name": "__load__",
-          "transform": 0
+          "name": "vite:load-fallback",
+          "transform": 11
         },
         {
-          "name": "vite:asset-import-meta-url",
-          "transform": 6
-        },
-        {
-          "name": "vite:client-inject",
-          "transform": 1
-        },
-        {
-          "name": "vite:import-analysis",
-          "transform": 2
+          "name": "vite:build-html",
+          "transform": 79
         },
         {
           "name": "vite:resolve",
-          "resolveId": 0
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        },
-        {
-          "name": "alias",
-          "resolveId": 0
-        },
-        {
-          "name": "alias",
-          "resolveId": 0
-        }
-      ],
-      "virtual": false,
-      "totalTime": 9,
-      "invokeCount": 1,
-      "sourceSize": 23730,
-      "distSize": 23675
-    },
-    {
-      "id": "E:/zlecenia/forestGroup/node_modules/vite/dist/client/env.mjs",
-      "deps": [],
-      "plugins": [
-        {
-          "name": "__load__",
-          "transform": 0
-        },
-        {
-          "name": "vite:client-inject",
-          "transform": 0
-        },
-        {
-          "name": "vite:import-analysis",
-          "transform": 0
-        },
-        {
-          "name": "vite:resolve",
-          "resolveId": 0
-        },
-        {
-          "name": "alias",
           "resolveId": 1
         }
       ],
       "virtual": false,
-      "totalTime": 0,
+      "totalTime": 90,
       "invokeCount": 1,
-      "sourceSize": 643,
-      "distSize": 634
+      "sourceSize": 10006,
+      "distSize": 0
+    },
+    {
+      "id": "E:/zlecenia/forestGroup/offers.html",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 19
+        },
+        {
+          "name": "vite:build-html",
+          "transform": 102
+        },
+        {
+          "name": "vite:resolve",
+          "resolveId": 1
+        }
+      ],
+      "virtual": false,
+      "totalTime": 121,
+      "invokeCount": 1,
+      "sourceSize": 8003,
+      "distSize": 0
     }
   ],
   "ssrModules": []

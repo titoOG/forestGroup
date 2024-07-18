@@ -5,10 +5,33 @@
       "totalTime": 0
     },
     "resolveId": {
-      "invokeCount": 3,
-      "totalTime": 1
+      "invokeCount": 0,
+      "totalTime": 0
     },
     "name": "alias"
+  },
+  {
+    "transform": {
+      "invokeCount": 17,
+      "totalTime": 4
+    },
+    "resolveId": {
+      "invokeCount": 0,
+      "totalTime": 0
+    },
+    "name": "commonjs"
+  },
+  {
+    "transform": {
+      "invokeCount": 0,
+      "totalTime": 0
+    },
+    "resolveId": {
+      "invokeCount": 0,
+      "totalTime": 0
+    },
+    "name": "vite-plugin-image-optimizer",
+    "enforce": "post"
   },
   {
     "transform": {
@@ -35,8 +58,8 @@
   },
   {
     "transform": {
-      "invokeCount": 16,
-      "totalTime": 6
+      "invokeCount": 17,
+      "totalTime": 0
     },
     "resolveId": {
       "invokeCount": 0,
@@ -46,19 +69,41 @@
   },
   {
     "transform": {
-      "invokeCount": 16,
-      "totalTime": 1
+      "invokeCount": 17,
+      "totalTime": 263
     },
     "resolveId": {
       "invokeCount": 0,
       "totalTime": 0
     },
-    "name": "vite:client-inject"
+    "name": "vite:build-html"
   },
   {
     "transform": {
-      "invokeCount": 16,
-      "totalTime": 2568
+      "invokeCount": 17,
+      "totalTime": 2
+    },
+    "resolveId": {
+      "invokeCount": 0,
+      "totalTime": 0
+    },
+    "name": "vite:build-import-analysis"
+  },
+  {
+    "transform": {
+      "invokeCount": 0,
+      "totalTime": 0
+    },
+    "resolveId": {
+      "invokeCount": 0,
+      "totalTime": 0
+    },
+    "name": "vite:build-metadata"
+  },
+  {
+    "transform": {
+      "invokeCount": 17,
+      "totalTime": 7706
     },
     "resolveId": {
       "invokeCount": 0,
@@ -68,19 +113,8 @@
   },
   {
     "transform": {
-      "invokeCount": 16,
-      "totalTime": 0
-    },
-    "resolveId": {
-      "invokeCount": 0,
-      "totalTime": 0
-    },
-    "name": "vite:css-analysis"
-  },
-  {
-    "transform": {
-      "invokeCount": 16,
-      "totalTime": 0
+      "invokeCount": 17,
+      "totalTime": 1
     },
     "resolveId": {
       "invokeCount": 0,
@@ -90,8 +124,19 @@
   },
   {
     "transform": {
-      "invokeCount": 16,
+      "invokeCount": 0,
       "totalTime": 0
+    },
+    "resolveId": {
+      "invokeCount": 0,
+      "totalTime": 0
+    },
+    "name": "vite:data-uri"
+  },
+  {
+    "transform": {
+      "invokeCount": 17,
+      "totalTime": 1
     },
     "resolveId": {
       "invokeCount": 0,
@@ -101,8 +146,8 @@
   },
   {
     "transform": {
-      "invokeCount": 16,
-      "totalTime": 4
+      "invokeCount": 17,
+      "totalTime": 1
     },
     "resolveId": {
       "invokeCount": 0,
@@ -112,8 +157,8 @@
   },
   {
     "transform": {
-      "invokeCount": 16,
-      "totalTime": 0
+      "invokeCount": 17,
+      "totalTime": 1
     },
     "resolveId": {
       "invokeCount": 0,
@@ -130,22 +175,33 @@
       "invokeCount": 0,
       "totalTime": 0
     },
-    "name": "vite:html-inline-proxy"
+    "name": "vite:esbuild-transpile"
   },
   {
     "transform": {
-      "invokeCount": 16,
-      "totalTime": 6
+      "invokeCount": 0,
+      "totalTime": 0
     },
     "resolveId": {
       "invokeCount": 0,
       "totalTime": 0
     },
-    "name": "vite:import-analysis"
+    "name": "vite:force-systemjs-wrap-complete"
   },
   {
     "transform": {
-      "invokeCount": 16,
+      "invokeCount": 0,
+      "totalTime": 0
+    },
+    "resolveId": {
+      "invokeCount": 0,
+      "totalTime": 0
+    },
+    "name": "vite:html-inline-proxy"
+  },
+  {
+    "transform": {
+      "invokeCount": 17,
       "totalTime": 0
     },
     "resolveId": {
@@ -156,8 +212,8 @@
   },
   {
     "transform": {
-      "invokeCount": 16,
-      "totalTime": 1
+      "invokeCount": 17,
+      "totalTime": 0
     },
     "resolveId": {
       "invokeCount": 0,
@@ -167,25 +223,25 @@
   },
   {
     "transform": {
-      "invokeCount": 0,
-      "totalTime": 0
+      "invokeCount": 17,
+      "totalTime": 133
     },
     "resolveId": {
       "invokeCount": 0,
       "totalTime": 0
     },
-    "name": "vite:modulepreload-polyfill"
+    "name": "vite:load-fallback"
   },
   {
     "transform": {
-      "invokeCount": 0,
+      "invokeCount": 1,
       "totalTime": 0
     },
     "resolveId": {
-      "invokeCount": 0,
+      "invokeCount": 3,
       "totalTime": 0
     },
-    "name": "vite:optimized-deps"
+    "name": "vite:modulepreload-polyfill"
   },
   {
     "transform": {
@@ -200,14 +256,36 @@
   },
   {
     "transform": {
+      "invokeCount": 17,
+      "totalTime": 3
+    },
+    "resolveId": {
+      "invokeCount": 0,
+      "totalTime": 0
+    },
+    "name": "vite:reporter"
+  },
+  {
+    "transform": {
       "invokeCount": 0,
       "totalTime": 0
     },
     "resolveId": {
-      "invokeCount": 20,
-      "totalTime": 1
+      "invokeCount": 19,
+      "totalTime": 29
     },
     "name": "vite:resolve"
+  },
+  {
+    "transform": {
+      "invokeCount": 0,
+      "totalTime": 0
+    },
+    "resolveId": {
+      "invokeCount": 0,
+      "totalTime": 0
+    },
+    "name": "vite:terser"
   },
   {
     "transform": {
@@ -244,7 +322,7 @@
   },
   {
     "transform": {
-      "invokeCount": 16,
+      "invokeCount": 17,
       "totalTime": 0
     },
     "resolveId": {
@@ -255,7 +333,7 @@
   },
   {
     "transform": {
-      "invokeCount": 16,
+      "invokeCount": 17,
       "totalTime": 0
     },
     "resolveId": {

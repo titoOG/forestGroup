@@ -2,19 +2,17 @@
   "resolvedId": "E:/zlecenia/forestGroup/assets/scss/_nav.scss",
   "transforms": [
     {
-      "name": "__load__",
+      "name": "vite:load-fallback",
       "result": "@use './colors' as c;\n@use './mixins' as m;\n// @use './animations';\n\n.nav {\n  display: flex;\n  width: 100%;\n  height: 1rem;\n  background-color: c.$primary-color;\n  z-index: 100;\n\n  &__content {\n    position: fixed;\n    display: flex;\n    height: 6rem;\n    width: 100%;\n    background-color: c.$primary-color;\n\n    z-index: 1000;\n  }\n\n  &__burger {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    position: relative;\n    padding: 1px 15px 1px 40px;\n    min-width: 2.5rem;\n    cursor: pointer;\n    z-index: 555;\n\n    &-icon {\n      display: flex;\n      justify-content: flex-end;\n      position: relative;\n      width: 100%;\n      padding: 23px 0.5rem 0.5rem;\n\n      &--top {\n        position: absolute;\n        width: 2rem;\n        height: 1px;\n        top: 20%;\n        border-bottom: 2px solid c.$secondary-color;\n      }\n\n      &--mid {\n        position: absolute;\n        width: 1.5rem;\n        top: 50%;\n        border-bottom: 2px solid c.$secondary-color;\n        animation: anm_burgerMidInactive 0.3s ease-in-out forwards;\n      }\n\n      &--bot {\n        position: absolute;\n        width: 1rem;\n        top: 80%;\n        border-bottom: 2px solid c.$secondary-color;\n        animation: anm_burgerBotInactive 0.3s ease-in-out forwards;\n      }\n    }\n  }\n\n  &__logo {\n    display: flex;\n    align-items: center;\n    z-index: 555;\n    width: 100%;\n    justify-content: center;\n\n    &--link {\n      display: flex;\n      justify-content: center;\n      align-items: center;\n      flex-shrink: 2.5;\n      font-size: 2.25rem;\n      padding: 0.5rem;\n    }\n    &--image {\n      display: flex;\n      min-width: 2.25rem;\n      max-width: 2.25rem;\n    }\n  }\n\n  &__mobile {\n    display: flex;\n    justify-content: center;\n    flex-direction: column;\n    align-items: center;\n    position: absolute;\n    top: -1000px;\n    // transform: translateY(-1000px);\n    width: 100dvw;\n    min-height: 100vh;\n    background-color: c.$primary-color;\n    transition: top 0.3s ease-in-out;\n    &--link {\n      position: relative;\n      margin: 0.5rem auto;\n      border: 1px solid;\n      padding: 1.35rem;\n      min-width: 8rem;\n      font-size: 1.45rem;\n      text-align: center;\n      transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;\n\n      &:hover {\n        background-color: c.$secondary-color;\n        color: c.$primary-color;\n      }\n    }\n  }\n\n  &__desktop {\n    display: none;\n    justify-content: center;\n    width: 100%;\n    margin: 0 10%;\n\n    &--link {\n      min-width: fit-content;\n      @include m.navigation;\n      padding: 2.4rem;\n    }\n  }\n}\n\n.active {\n  top: 0px;\n}\n\n.burgerActive {\n  animation: anm_burgerActive 0.3s ease-in-out forwards;\n}\n\n// &:hover &--mid,\n// &:hover &--bot {\n//   animation: anm_burgerActive 0.3s ease-in-out forwards;\n// }\n",
-      "start": 1721243571377,
-      "end": 1721243571377,
-      "sourcemaps": {
-        "mappings": ""
-      }
+      "start": 1721291291619,
+      "end": 1721291291624,
+      "sourcemaps": null
     },
     {
       "name": "vite:css",
       "result": ".nav {\n  display: flex;\n  width: 100%;\n  height: 1rem;\n  background-color: #fff;\n  z-index: 100;\n}\n.nav__content {\n  position: fixed;\n  display: flex;\n  height: 6rem;\n  width: 100%;\n  background-color: #fff;\n  z-index: 1000;\n}\n.nav__burger {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  position: relative;\n  padding: 1px 15px 1px 40px;\n  min-width: 2.5rem;\n  cursor: pointer;\n  z-index: 555;\n}\n.nav__burger-icon {\n  display: flex;\n  justify-content: flex-end;\n  position: relative;\n  width: 100%;\n  padding: 23px 0.5rem 0.5rem;\n}\n.nav__burger-icon--top {\n  position: absolute;\n  width: 2rem;\n  height: 1px;\n  top: 20%;\n  border-bottom: 2px solid #000000;\n}\n.nav__burger-icon--mid {\n  position: absolute;\n  width: 1.5rem;\n  top: 50%;\n  border-bottom: 2px solid #000000;\n  animation: anm_burgerMidInactive 0.3s ease-in-out forwards;\n}\n.nav__burger-icon--bot {\n  position: absolute;\n  width: 1rem;\n  top: 80%;\n  border-bottom: 2px solid #000000;\n  animation: anm_burgerBotInactive 0.3s ease-in-out forwards;\n}\n.nav__logo {\n  display: flex;\n  align-items: center;\n  z-index: 555;\n  width: 100%;\n  justify-content: center;\n}\n.nav__logo--link {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  flex-shrink: 2.5;\n  font-size: 2.25rem;\n  padding: 0.5rem;\n}\n.nav__logo--image {\n  display: flex;\n  min-width: 2.25rem;\n  max-width: 2.25rem;\n}\n.nav__mobile {\n  display: flex;\n  justify-content: center;\n  flex-direction: column;\n  align-items: center;\n  position: absolute;\n  top: -1000px;\n  width: 100dvw;\n  min-height: 100vh;\n  background-color: #fff;\n  transition: top 0.3s ease-in-out;\n}\n.nav__mobile--link {\n  position: relative;\n  margin: 0.5rem auto;\n  border: 1px solid;\n  padding: 1.35rem;\n  min-width: 8rem;\n  font-size: 1.45rem;\n  text-align: center;\n  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;\n}\n.nav__mobile--link:hover {\n  background-color: #000000;\n  color: #fff;\n}\n.nav__desktop {\n  display: none;\n  justify-content: center;\n  width: 100%;\n  margin: 0 10%;\n}\n.nav__desktop--link {\n  min-width: fit-content;\n  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;\n  padding: 2.4rem;\n}\n.nav__desktop--link:hover {\n  background-color: #000000;\n  color: #fff;\n}\n\n.active {\n  top: 0px;\n}\n\n.burgerActive {\n  animation: anm_burgerActive 0.3s ease-in-out forwards;\n}",
-      "start": 1721243571377,
-      "end": 1721243571578,
+      "start": 1721291291624,
+      "end": 1721291292213,
       "order": "normal",
       "sourcemaps": {
         "mappings": ""
@@ -22,81 +20,85 @@
     },
     {
       "name": "vite:esbuild",
-      "start": 1721243571578,
-      "end": 1721243571578,
+      "start": 1721291292213,
+      "end": 1721291292213,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1721243571578,
-      "end": 1721243571578,
+      "start": 1721291292214,
+      "end": 1721291292214,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1721243571581,
-      "end": 1721243571581,
+      "start": 1721291292214,
+      "end": 1721291292214,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1721243571583,
-      "end": 1721243571583,
+      "start": 1721291292214,
+      "end": 1721291292214,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "result": "import { updateStyle as __vite__updateStyle, removeStyle as __vite__removeStyle } from \"/@vite/client\"\nconst __vite__id = \"E:/zlecenia/forestGroup/assets/scss/_nav.scss\"\nconst __vite__css = \".nav {\\n  display: flex;\\n  width: 100%;\\n  height: 1rem;\\n  background-color: #fff;\\n  z-index: 100;\\n}\\n.nav__content {\\n  position: fixed;\\n  display: flex;\\n  height: 6rem;\\n  width: 100%;\\n  background-color: #fff;\\n  z-index: 1000;\\n}\\n.nav__burger {\\n  display: flex;\\n  justify-content: center;\\n  align-items: center;\\n  position: relative;\\n  padding: 1px 15px 1px 40px;\\n  min-width: 2.5rem;\\n  cursor: pointer;\\n  z-index: 555;\\n}\\n.nav__burger-icon {\\n  display: flex;\\n  justify-content: flex-end;\\n  position: relative;\\n  width: 100%;\\n  padding: 23px 0.5rem 0.5rem;\\n}\\n.nav__burger-icon--top {\\n  position: absolute;\\n  width: 2rem;\\n  height: 1px;\\n  top: 20%;\\n  border-bottom: 2px solid #000000;\\n}\\n.nav__burger-icon--mid {\\n  position: absolute;\\n  width: 1.5rem;\\n  top: 50%;\\n  border-bottom: 2px solid #000000;\\n  animation: anm_burgerMidInactive 0.3s ease-in-out forwards;\\n}\\n.nav__burger-icon--bot {\\n  position: absolute;\\n  width: 1rem;\\n  top: 80%;\\n  border-bottom: 2px solid #000000;\\n  animation: anm_burgerBotInactive 0.3s ease-in-out forwards;\\n}\\n.nav__logo {\\n  display: flex;\\n  align-items: center;\\n  z-index: 555;\\n  width: 100%;\\n  justify-content: center;\\n}\\n.nav__logo--link {\\n  display: flex;\\n  justify-content: center;\\n  align-items: center;\\n  flex-shrink: 2.5;\\n  font-size: 2.25rem;\\n  padding: 0.5rem;\\n}\\n.nav__logo--image {\\n  display: flex;\\n  min-width: 2.25rem;\\n  max-width: 2.25rem;\\n}\\n.nav__mobile {\\n  display: flex;\\n  justify-content: center;\\n  flex-direction: column;\\n  align-items: center;\\n  position: absolute;\\n  top: -1000px;\\n  width: 100dvw;\\n  min-height: 100vh;\\n  background-color: #fff;\\n  transition: top 0.3s ease-in-out;\\n}\\n.nav__mobile--link {\\n  position: relative;\\n  margin: 0.5rem auto;\\n  border: 1px solid;\\n  padding: 1.35rem;\\n  min-width: 8rem;\\n  font-size: 1.45rem;\\n  text-align: center;\\n  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;\\n}\\n.nav__mobile--link:hover {\\n  background-color: #000000;\\n  color: #fff;\\n}\\n.nav__desktop {\\n  display: none;\\n  justify-content: center;\\n  width: 100%;\\n  margin: 0 10%;\\n}\\n.nav__desktop--link {\\n  min-width: fit-content;\\n  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;\\n  padding: 2.4rem;\\n}\\n.nav__desktop--link:hover {\\n  background-color: #000000;\\n  color: #fff;\\n}\\n\\n.active {\\n  top: 0px;\\n}\\n\\n.burgerActive {\\n  animation: anm_burgerActive 0.3s ease-in-out forwards;\\n}\"\n__vite__updateStyle(__vite__id, __vite__css)\nimport.meta.hot.accept()\nimport.meta.hot.prune(() => __vite__removeStyle(__vite__id))",
-      "start": 1721243571583,
-      "end": 1721243571583,
+      "result": "",
+      "start": 1721291292214,
+      "end": 1721291292214,
       "order": "normal",
       "sourcemaps": {
         "mappings": ""
       }
     },
     {
+      "name": "vite:build-html",
+      "start": 1721291292214,
+      "end": 1721291292214,
+      "order": "normal"
+    },
+    {
       "name": "vite:worker-import-meta-url",
-      "start": 1721243571583,
-      "end": 1721243571583,
+      "start": 1721291292214,
+      "end": 1721291292214,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1721243571583,
-      "end": 1721243571583,
+      "start": 1721291292214,
+      "end": 1721291292214,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1721291292215,
+      "end": 1721291292215,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1721243571584,
-      "end": 1721243571584,
+      "start": 1721291292215,
+      "end": 1721291292215,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1721243571584,
-      "end": 1721243571584,
+      "start": 1721291292215,
+      "end": 1721291292215,
       "order": "normal"
     },
     {
-      "name": "vite:client-inject",
-      "start": 1721243571584,
-      "end": 1721243571584,
+      "name": "vite:build-import-analysis",
+      "start": 1721291292215,
+      "end": 1721291292215,
       "order": "normal"
     },
     {
-      "name": "vite:css-analysis",
-      "start": 1721243571584,
-      "end": 1721243571584,
+      "name": "vite:reporter",
+      "start": 1721291292216,
+      "end": 1721291292216,
       "order": "normal"
-    },
-    {
-      "name": "vite:import-analysis",
-      "result": "import { createHotContext as __vite__createHotContext } from \"/@vite/client\";import.meta.hot = __vite__createHotContext(\"/assets/scss/_nav.scss\");import { updateStyle as __vite__updateStyle, removeStyle as __vite__removeStyle } from \"/@vite/client\"\nconst __vite__id = \"E:/zlecenia/forestGroup/assets/scss/_nav.scss\"\nconst __vite__css = \".nav {\\n  display: flex;\\n  width: 100%;\\n  height: 1rem;\\n  background-color: #fff;\\n  z-index: 100;\\n}\\n.nav__content {\\n  position: fixed;\\n  display: flex;\\n  height: 6rem;\\n  width: 100%;\\n  background-color: #fff;\\n  z-index: 1000;\\n}\\n.nav__burger {\\n  display: flex;\\n  justify-content: center;\\n  align-items: center;\\n  position: relative;\\n  padding: 1px 15px 1px 40px;\\n  min-width: 2.5rem;\\n  cursor: pointer;\\n  z-index: 555;\\n}\\n.nav__burger-icon {\\n  display: flex;\\n  justify-content: flex-end;\\n  position: relative;\\n  width: 100%;\\n  padding: 23px 0.5rem 0.5rem;\\n}\\n.nav__burger-icon--top {\\n  position: absolute;\\n  width: 2rem;\\n  height: 1px;\\n  top: 20%;\\n  border-bottom: 2px solid #000000;\\n}\\n.nav__burger-icon--mid {\\n  position: absolute;\\n  width: 1.5rem;\\n  top: 50%;\\n  border-bottom: 2px solid #000000;\\n  animation: anm_burgerMidInactive 0.3s ease-in-out forwards;\\n}\\n.nav__burger-icon--bot {\\n  position: absolute;\\n  width: 1rem;\\n  top: 80%;\\n  border-bottom: 2px solid #000000;\\n  animation: anm_burgerBotInactive 0.3s ease-in-out forwards;\\n}\\n.nav__logo {\\n  display: flex;\\n  align-items: center;\\n  z-index: 555;\\n  width: 100%;\\n  justify-content: center;\\n}\\n.nav__logo--link {\\n  display: flex;\\n  justify-content: center;\\n  align-items: center;\\n  flex-shrink: 2.5;\\n  font-size: 2.25rem;\\n  padding: 0.5rem;\\n}\\n.nav__logo--image {\\n  display: flex;\\n  min-width: 2.25rem;\\n  max-width: 2.25rem;\\n}\\n.nav__mobile {\\n  display: flex;\\n  justify-content: center;\\n  flex-direction: column;\\n  align-items: center;\\n  position: absolute;\\n  top: -1000px;\\n  width: 100dvw;\\n  min-height: 100vh;\\n  background-color: #fff;\\n  transition: top 0.3s ease-in-out;\\n}\\n.nav__mobile--link {\\n  position: relative;\\n  margin: 0.5rem auto;\\n  border: 1px solid;\\n  padding: 1.35rem;\\n  min-width: 8rem;\\n  font-size: 1.45rem;\\n  text-align: center;\\n  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;\\n}\\n.nav__mobile--link:hover {\\n  background-color: #000000;\\n  color: #fff;\\n}\\n.nav__desktop {\\n  display: none;\\n  justify-content: center;\\n  width: 100%;\\n  margin: 0 10%;\\n}\\n.nav__desktop--link {\\n  min-width: fit-content;\\n  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;\\n  padding: 2.4rem;\\n}\\n.nav__desktop--link:hover {\\n  background-color: #000000;\\n  color: #fff;\\n}\\n\\n.active {\\n  top: 0px;\\n}\\n\\n.burgerActive {\\n  animation: anm_burgerActive 0.3s ease-in-out forwards;\\n}\"\n__vite__updateStyle(__vite__id, __vite__css)\nimport.meta.hot.accept()\nimport.meta.hot.prune(() => __vite__removeStyle(__vite__id))",
-      "start": 1721243571585,
-      "end": 1721243571585,
-      "order": "normal",
-      "sourcemaps": null
     }
   ]
 }

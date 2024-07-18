@@ -126,6 +126,22 @@
     &__card {
       margin: 2rem 1rem;
     }
+
+    // subpage
+
+    &__boxes {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    &__box {
+      flex-direction: row;
+      &:nth-child(2) {
+        flex-direction: row-reverse;
+      }
+      &-details {
+        flex-direction: column;
+      }
+    }
   }
 
   .footer {

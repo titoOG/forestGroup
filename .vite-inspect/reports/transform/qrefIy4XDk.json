@@ -1,0 +1,97 @@
+{
+  "resolvedId": "E:/zlecenia/forestGroup/offers.html",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<!doctype html>\r\n<html lang=\"en\">\r\n\r\n<head>\r\n    <meta charset=\"UTF-8\" />\r\n    <link rel=\"icon\" type=\"image/svg+xml\" href=\"./assets/img/favicon.svg\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\r\n    <meta name=\"author\" content=\"titoOG\" />\r\n    <meta name=\"description\" content=\"Odkryj niesamowity park.\" />\r\n    <meta name=\"keywords\" content=\"forestGroup, park\" />\r\n    <title>Oferty | Forest Group - najpiękniejszy park w Twojej okolicy</title>\r\n</head>\r\n\r\n<body id=\"offersPage\">\r\n\r\n    <nav class=\"nav spy\" id=\"home\">\r\n        <div class=\"nav__content\">\r\n            <div class=\"nav__logo\">\r\n                <a href=\"./\" class=\"nav__logo--link\" id=\"#home\">\r\n                    <img src=\"./assets/img/forestLogo.svg\" alt=\"forestGroup logo\" class=\"nav__logo--image\">Forest\r\n                </a>\r\n            </div>\r\n\r\n            <div class=\"nav__desktop\" id=\"navDesktop\">\r\n                <a href=\"#home\" class=\"nav__desktop--link\">Home</a>\r\n                <a href=\"./#about\" class=\"nav__desktop--link \">O nas</a>\r\n                <a href=\"./#offers\" class=\"nav__desktop--link\">Oferta</a>\r\n                <a href=\"./contact.html\" class=\"nav__desktop--link\">Kontakt</a>\r\n            </div>\r\n\r\n            <div class=\"nav__mobile\" id=\"navMobile\">\r\n                <a href=\"#home\" class=\"nav__mobile--link\">Home</a>\r\n                <a href=\"./#about\" class=\"nav__mobile--link \">O nas</a>\r\n                <a href=\"./#offers\" class=\"nav__mobile--link\">Oferta</a>\r\n                <a href=\"./contact.html\" class=\"nav__mobile--link\">Kontakt</a>\r\n            </div>\r\n\r\n\r\n            <div class=\"nav__burger\" id=\"burgerBtn\">\r\n                <div class=\"nav__burger-icon\">\r\n                    <span class=\" nav__burger-icon--top\"></span>\r\n                    <span class=\" nav__burger-icon--mid\" id=\"burgerBtnMid\"></span>\r\n                    <span class=\"nav__burger-icon--bot\" id=\"burgerBtnBot\"></span>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </nav>\r\n\r\n    <header class=\"header\" id=\"header\">\r\n        <div class=\"header__hero\">\r\n            <div class=\"header__box\">\r\n                <h1 class=\"header__box--title\">Forest Group</h1>\r\n                <h1 class=\"header__box--subtitle\">Najpiękniejszy park w Twojej okolicy!</h1>\r\n            </div>\r\n            <div class=\"header__hero--shadow\"></div>\r\n        </div>\r\n    </header>\r\n\r\n    <main class=\"wrapper\">\r\n        <section class=\"offers section\">\r\n            <h2 class=\"offers__title sectionTitle\">Nasze oferty</h2>\r\n\r\n            <div class=\"offers__selector\">\r\n                <div class=\"offers__selector-btns\">\r\n                    <a href=\"#solo\" class=\"offers__selector-btns--btn btn cta\">Solo</a>\r\n\r\n                    <a href=\"#group\" class=\"offers__selector-btns--btn btn\">Grupowe</a>\r\n                </div>\r\n            </div>\r\n\r\n            <div class=\"offers__content\">\r\n\r\n                <div class=\"offers__boxes\">\r\n\r\n                    <div class=\"offers__box\">\r\n\r\n                        <div class=\"offers__box-details\">\r\n\r\n                            <h2 class=\"offers__box-details--title sectionTitle\">Demo\r\n                            </h2>\r\n                            <p class=\"offers__box-details--description\">Lorem ipsum dolor sit, amet consectetur\r\n                                adipisicing\r\n                                elit.\r\n                                Deleniti, blanditiis totam rem omnis, perspiciatis, maiores nemo enim repellat\r\n                                cupiditate\r\n                                vero facere eligendi? Aut quam similique reprehenderit ipsum molestias, in id.</p>\r\n\r\n                            <a href=\"#\" class=\"offers__box-details--btn btn\">$0</a>\r\n                        </div>\r\n\r\n\r\n\r\n                        <img src=\"./assets/img/offersDemo_SD.jpg\" alt=\"\" class=\"offers__box--img\">\r\n\r\n\r\n\r\n                    </div>\r\n\r\n                    <div class=\"offers__box\">\r\n\r\n                        <div class=\"offers__box-details\">\r\n\r\n                            <h2 class=\"offers__box-details--title sectionTitle\">Standard</h2>\r\n                            <p class=\"offers__box-details--description\">Lorem ipsum dolor sit, amet consectetur\r\n                                adipisicing\r\n                                elit.\r\n                                Deleniti, blanditiis totam rem omnis, perspiciatis, maiores nemo enim repellat\r\n                                cupiditate\r\n                                vero facere eligendi? Aut quam similique reprehenderit ipsum molestias, in id.</p>\r\n\r\n                            <a href=\"#\" class=\"offers__box-details--btn btn\">$99</a>\r\n\r\n                        </div>\r\n\r\n\r\n\r\n                        <img src=\"./assets/img/offersStand_SD.jpg\" alt=\"\" class=\"offers__box--img\">\r\n\r\n\r\n\r\n                    </div>\r\n\r\n                    <div class=\"offers__box\">\r\n\r\n                        <div class=\"offers__box-details\">\r\n\r\n                            <h2 class=\"offers__box-details--title sectionTitle\">Premium</h2>\r\n                            <p class=\"offers__box-details--description\">Lorem ipsum dolor sit, amet consectetur\r\n                                adipisicing\r\n                                elit.\r\n                                Deleniti, blanditiis totam rem omnis, perspiciatis, maiores nemo enim repellat\r\n                                cupiditate\r\n                                vero facere eligendi? Aut quam similique reprehenderit ipsum molestias, in id.</p>\r\n\r\n                            <a href=\"#\" class=\"offers__box-details--btn btn\">$299</a>\r\n\r\n                        </div>\r\n\r\n\r\n\r\n                        <img src=\"./assets/img/offersPrem_HD.jpg\" alt=\"\" class=\"offers__box--img\">\r\n\r\n\r\n\r\n                    </div>\r\n\r\n\r\n                </div>\r\n\r\n\r\n                <!-- <div class=\"offers__advanced\">\r\n                    <h2 class=\"offers__advanced--title \">Nie znalazłeś odpowiedniej dla siebie oferty?</h2>\r\n\r\n                    <a href=\"./contact.html\">Skontaktuj się z nami</a>\r\n                </div> -->\r\n        </section>\r\n    </main>\r\n\r\n    <footer class=\"footer\" id=\"footer\">\r\n        <div class=\"footer__content\">\r\n            <div class=\"footer__container\">\r\n                <div class=\"footer__logo\">\r\n                    <a href=\"./\" class=\"footer__logo-link\">\r\n                        <img src=\"./assets/img/forestLogo.svg\" alt=\"forestGroup logo\" class=\"footer__logo-link--image\">\r\n                        Forest\r\n                    </a>\r\n                </div>\r\n\r\n                <div class=\"footer__list\">\r\n                    <h2 class=\"footer__list--title\">O nas</h2>\r\n                    <a href=\"#\" class=\"footer__list--item\">Historia</a>\r\n                    <a href=\"#\" class=\"footer__list--item\">Parki</a>\r\n                    <a href=\"#\" class=\"footer__list--item\">Opinie</a>\r\n                </div>\r\n\r\n                <div class=\"footer__list\">\r\n                    <h2 class=\"footer__list--title\">Nasza firma</h2>\r\n                    <a href=\"#\" class=\"footer__list--item\">Praca</a>\r\n                    <a href=\"#\" class=\"footer__list--item\">Kadry</a>\r\n                    <a href=\"#\" class=\"footer__list--item\">Zarząd</a>\r\n                </div>\r\n\r\n                <div class=\"footer__list\">\r\n                    <h2 class=\"footer__list--title\">Dokumenty</h2>\r\n                    <a href=\"#\" class=\"footer__list--item\">Wnioski</a>\r\n                    <a href=\"#\" class=\"footer__list--item\">Rezerwacje</a>\r\n                </div>\r\n            </div>\r\n            <div class=\"footer__separator\"></div>\r\n\r\n            <div class=\"footer__info\">\r\n                <p class=\"footer__info--details\" id=\"footerInfo\"></p>\r\n            </div>\r\n\r\n    </footer>\r\n\r\n    <a href=\"#\" class=\"upBtn\" id=\"scrollToTopBtn\">\r\n        <img src=\"./assets/img/icon_arrowUp.svg\" alt=\"arrowUp icon\" class=\"upBtn__image\">\r\n    </a>\r\n\r\n\r\n    <script type=\"module\" src=\"./assets/js/main.js\"></script>\r\n</body>\r\n\r\n</html>",
+      "start": 1721291291473,
+      "end": 1721291291492,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:css",
+      "start": 1721291291492,
+      "end": 1721291291492,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1721291291492,
+      "end": 1721291291492,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1721291291492,
+      "end": 1721291291492,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1721291291492,
+      "end": 1721291291492,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1721291291492,
+      "end": 1721291291492,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1721291291492,
+      "end": 1721291291492,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "result": "import \"vite/modulepreload-polyfill\";\n\nimport \"./assets/js/main.js\"",
+      "start": 1721291291492,
+      "end": 1721291291594,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1721291291594,
+      "end": 1721291291594,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1721291291594,
+      "end": 1721291291594,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1721291291594,
+      "end": 1721291291594,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1721291291594,
+      "end": 1721291291594,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1721291291594,
+      "end": 1721291291594,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1721291291594,
+      "end": 1721291291594,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1721291291594,
+      "end": 1721291291594,
+      "order": "normal"
+    }
+  ]
+}

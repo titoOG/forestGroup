@@ -2,90 +2,95 @@
   "resolvedId": "E:/zlecenia/forestGroup/assets/js/main.js",
   "transforms": [
     {
-      "name": "__load__",
+      "name": "vite:load-fallback",
       "result": "import '../scss/main.scss';\nimport '../scss/_reset.scss';\nimport '../scss/_fonts.scss';\nimport '../scss/_globals.scss';\nimport '../scss/_mixins.scss';\nimport '../scss/_nav.scss';\nimport '../scss/_header.scss';\nimport '../scss/_about.scss';\nimport '../scss/_offersSection.scss';\nimport '../scss/_parallax.scss';\nimport '../scss/_animations.scss';\nimport '../scss/_footer.scss';\nimport '../scss/_media.scss';\n\nconst burgerBtn = document.getElementById('burgerBtn');\nconst burgerBtnMid = document.getElementById('burgerBtnMid');\nconst burgerBtnBot = document.getElementById('burgerBtnBot');\nconst navMobile = document.getElementById('navMobile');\nconst navMobileLinks = document.querySelectorAll('.nav__mobile--link');\nconst navDesktop = document.getElementById('navDesktop');\nlet navDesktopLinks = document.querySelectorAll(`.nav__desktop--link`);\nconst footerInfo = document.getElementById('footerInfo');\nconst scrollToTopBtn = document.getElementById('scrollToTopBtn');\n\nconst target = document.querySelectorAll('.spy');\n\nlet scroll_Y_Position;\n\nburgerBtn.addEventListener('click', () => {\n  navMobile.classList.toggle('active');\n  burgerBtnMid.classList.toggle('burgerActive');\n  burgerBtnBot.classList.toggle('burgerActive');\n});\n\nconst date = new Date();\nfooterInfo.innerHTML = `&copy${date.getFullYear()} Forest Group Company Ltd`;\n\nscrollToTopBtn.addEventListener('click', (e) => {\n  e.preventDefault();\n  window.scrollTo({\n    top: 0,\n  });\n});\n\nnavMobileLinks.forEach((link) => {\n  link.addEventListener('click', () => {\n    navMobile.classList.remove('active');\n  });\n});\n\nsetInterval(() => {\n  scroll_Y_Position =\n    document.documentElement.scrollTop || document.body.scrollTop;\n  if (scroll_Y_Position > 500) {\n    scrollToTopBtn.classList.add('btnFadeIn');\n  }\n}, 100);\n\nwindow.onscroll = () => {\n  scroll_Y_Position =\n    document.documentElement.scrollTop || document.body.scrollTop;\n  if (scroll_Y_Position >= 500) {\n    scrollToTopBtn.classList.add('btnFadeIn');\n  } else if (scroll_Y_Position < 500) {\n    if (scrollToTopBtn.classList.contains('btnFadeIn')) {\n      scrollToTopBtn.classList.remove('btnFadeIn');\n      scrollToTopBtn.classList.add('btnFadeOut');\n    }\n  }\n};\n\nconst options = {\n  threshold: [0.85, 1],\n  rootMargin: '20px',\n  // rootMargin: '50px 0px -150px 0px ',\n};\nconst handleScrollSpy = (entries) => {\n  entries.forEach((entry) => {\n    // entry.target.style.opacity = entry.intersectionRatio - 0.25;\n    let targetID = entry.target.id;\n\n    if (!entry.isIntersecting) {\n      return;\n    } else if (entry.isIntersecting && entry.intersectionRatio >= 0.75) {\n      const activeLink = document.querySelector(\n        `.nav__desktop--link[href='#${targetID}']`\n      );\n      navDesktopLinks.forEach((link) => link.classList.remove('navActive'));\n      activeLink.classList.add('navActive');\n      console.log(\n        `target to: <${targetID}> jego ratio to <${entry.intersectionRatio}>`\n      );\n    }\n  });\n};\n\nconst observer = new IntersectionObserver(handleScrollSpy, options);\n\n// target.forEach((section) => {\n//   observer.observe(section);\n// });\n",
-      "start": 1721243571325,
-      "end": 1721243571325
+      "start": 1721291291577,
+      "end": 1721291291597,
+      "sourcemaps": null
     },
     {
       "name": "vite:css",
-      "start": 1721243571325,
-      "end": 1721243571325,
+      "start": 1721291291598,
+      "end": 1721291291598,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1721243571325,
-      "end": 1721243571325,
+      "start": 1721291291598,
+      "end": 1721291291598,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1721243571325,
-      "end": 1721243571325,
+      "start": 1721291291598,
+      "end": 1721291291598,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1721243571325,
-      "end": 1721243571325,
+      "start": 1721291291598,
+      "end": 1721291291598,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1721243571325,
-      "end": 1721243571325,
+      "start": 1721291291598,
+      "end": 1721291291598,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1721243571325,
-      "end": 1721243571325,
+      "start": 1721291291598,
+      "end": 1721291291598,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1721291291598,
+      "end": 1721291291598,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1721243571325,
-      "end": 1721243571325,
+      "start": 1721291291598,
+      "end": 1721291291598,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1721243571325,
-      "end": 1721243571325,
+      "start": 1721291291598,
+      "end": 1721291291598,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1721291291598,
+      "end": 1721291291598,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1721243571325,
-      "end": 1721243571325,
+      "start": 1721291291598,
+      "end": 1721291291598,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1721243571325,
-      "end": 1721243571325,
+      "start": 1721291291598,
+      "end": 1721291291598,
       "order": "normal"
     },
     {
-      "name": "vite:client-inject",
-      "start": 1721243571325,
-      "end": 1721243571325,
+      "name": "vite:build-import-analysis",
+      "start": 1721291291598,
+      "end": 1721291291599,
       "order": "normal"
     },
     {
-      "name": "vite:css-analysis",
-      "start": 1721243571326,
-      "end": 1721243571326,
+      "name": "vite:reporter",
+      "start": 1721291291599,
+      "end": 1721291291599,
       "order": "normal"
-    },
-    {
-      "name": "vite:import-analysis",
-      "result": "import \"/assets/scss/main.scss\";\nimport \"/assets/scss/_reset.scss\";\nimport \"/assets/scss/_fonts.scss\";\nimport \"/assets/scss/_globals.scss\";\nimport \"/assets/scss/_mixins.scss\";\nimport \"/assets/scss/_nav.scss\";\nimport \"/assets/scss/_header.scss\";\nimport \"/assets/scss/_about.scss\";\nimport \"/assets/scss/_offersSection.scss\";\nimport \"/assets/scss/_parallax.scss\";\nimport \"/assets/scss/_animations.scss\";\nimport \"/assets/scss/_footer.scss\";\nimport \"/assets/scss/_media.scss\";\n\nconst burgerBtn = document.getElementById('burgerBtn');\nconst burgerBtnMid = document.getElementById('burgerBtnMid');\nconst burgerBtnBot = document.getElementById('burgerBtnBot');\nconst navMobile = document.getElementById('navMobile');\nconst navMobileLinks = document.querySelectorAll('.nav__mobile--link');\nconst navDesktop = document.getElementById('navDesktop');\nlet navDesktopLinks = document.querySelectorAll(`.nav__desktop--link`);\nconst footerInfo = document.getElementById('footerInfo');\nconst scrollToTopBtn = document.getElementById('scrollToTopBtn');\n\nconst target = document.querySelectorAll('.spy');\n\nlet scroll_Y_Position;\n\nburgerBtn.addEventListener('click', () => {\n  navMobile.classList.toggle('active');\n  burgerBtnMid.classList.toggle('burgerActive');\n  burgerBtnBot.classList.toggle('burgerActive');\n});\n\nconst date = new Date();\nfooterInfo.innerHTML = `&copy${date.getFullYear()} Forest Group Company Ltd`;\n\nscrollToTopBtn.addEventListener('click', (e) => {\n  e.preventDefault();\n  window.scrollTo({\n    top: 0,\n  });\n});\n\nnavMobileLinks.forEach((link) => {\n  link.addEventListener('click', () => {\n    navMobile.classList.remove('active');\n  });\n});\n\nsetInterval(() => {\n  scroll_Y_Position =\n    document.documentElement.scrollTop || document.body.scrollTop;\n  if (scroll_Y_Position > 500) {\n    scrollToTopBtn.classList.add('btnFadeIn');\n  }\n}, 100);\n\nwindow.onscroll = () => {\n  scroll_Y_Position =\n    document.documentElement.scrollTop || document.body.scrollTop;\n  if (scroll_Y_Position >= 500) {\n    scrollToTopBtn.classList.add('btnFadeIn');\n  } else if (scroll_Y_Position < 500) {\n    if (scrollToTopBtn.classList.contains('btnFadeIn')) {\n      scrollToTopBtn.classList.remove('btnFadeIn');\n      scrollToTopBtn.classList.add('btnFadeOut');\n    }\n  }\n};\n\nconst options = {\n  threshold: [0.85, 1],\n  rootMargin: '20px',\n  // rootMargin: '50px 0px -150px 0px ',\n};\nconst handleScrollSpy = (entries) => {\n  entries.forEach((entry) => {\n    // entry.target.style.opacity = entry.intersectionRatio - 0.25;\n    let targetID = entry.target.id;\n\n    if (!entry.isIntersecting) {\n      return;\n    } else if (entry.isIntersecting && entry.intersectionRatio >= 0.75) {\n      const activeLink = document.querySelector(\n        `.nav__desktop--link[href='#${targetID}']`\n      );\n      navDesktopLinks.forEach((link) => link.classList.remove('navActive'));\n      activeLink.classList.add('navActive');\n      console.log(\n        `target to: <${targetID}> jego ratio to <${entry.intersectionRatio}>`\n      );\n    }\n  });\n};\n\nconst observer = new IntersectionObserver(handleScrollSpy, options);\n\n// target.forEach((section) => {\n//   observer.observe(section);\n// });\n",
-      "start": 1721243571326,
-      "end": 1721243571330,
-      "order": "normal",
-      "sourcemaps": null
     }
   ]
 }
