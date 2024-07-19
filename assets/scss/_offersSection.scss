@@ -37,6 +37,7 @@
   &__boxes {
     display: flex;
     flex-direction: column;
+    margin-bottom: 1.5rem;
   }
 
   &__box {
@@ -44,13 +45,12 @@
     align-items: center;
     flex-direction: column;
     margin: 2rem auto;
-    border: 1px solid c.$secondary-color;
-    border-radius: 0.05rem;
     width: 80%;
 
-    &:nth-child(2) {
-      flex-direction: column-reverse;
+    &:not(:last-child) {
+      border-bottom: 1px solid c.$secondary-color;
     }
+
     &-details {
       display: flex;
       flex-direction: column;
@@ -66,12 +66,15 @@
 
       &--description {
         padding: 2rem;
-        line-height: 1.5rem;
+        line-height: 1.8rem;
       }
     }
 
     &--img {
-      width: 100%;
+      width: 16.5rem;
+      height: 14.5rem;
+      margin: 1rem 1rem 2rem;
+      border-radius: 5%;
     }
   }
 

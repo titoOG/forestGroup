@@ -21,6 +21,33 @@ const navDesktop = document.getElementById('navDesktop');
 let navDesktopLinks = document.querySelectorAll(`.nav__desktop--link`);
 const footerInfo = document.getElementById('footerInfo');
 const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+const of_btns = document.querySelectorAll('.offers__selector-btns a');
+const of_soloBtn = document.getElementById('solo');
+const of_groupBtn = document.getElementById('group');
+
+const offersBtnToggle = (e) => {
+  if (!e.target.classList.contains('cta') && e.target === of_soloBtn) {
+    of_soloBtn.classList.add('cta');
+    of_groupBtn.classList.remove('cta');
+  } else if (e.target.classList.contains('cta') && e.target === of_soloBtn) {
+    of_soloBtn.classList.remove('cta');
+    of_groupBtn.classList.add('cta');
+  }
+
+  if (!e.target.classList.contains('cta') && e.target === of_groupBtn) {
+    of_groupBtn.classList.add('cta');
+    of_soloBtn.classList.remove('cta');
+  } else if (e.target.classList.contains('cta') && e.target === of_groupBtn) {
+    of_groupBtn.classList.remove('cta');
+    of_soloBtn.classList.add('cta');
+  }
+};
+
+of_soloBtn.addEventListener('click', offersBtnToggle);
+
+of_btns.forEach((btn) => {
+  btn.addEventListener('click', offersBtnToggle);
+});
 
 const target = document.querySelectorAll('.spy');
 
