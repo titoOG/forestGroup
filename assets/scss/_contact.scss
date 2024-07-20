@@ -2,9 +2,9 @@
 
 .contact {
   &__title {
-    white-space: break-spaces;
     padding: 0.75rem;
     margin: 2rem 5rem;
+    text-align: left;
   }
 
   &__content {
@@ -22,9 +22,9 @@
   }
   &__brand {
     display: flex;
+    justify-content: flex-start;
     align-items: center;
     padding: 1rem;
-    justify-content: center;
     width: 100%;
     &--title {
       font-weight: 100;
@@ -37,27 +37,30 @@
 
   &__info {
     display: flex;
-    padding: 1rem;
-    width: 100%;
-    align-items: flex-start;
     flex-direction: column;
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1rem;
+
     &--text {
+      width: 100%;
+      text-align: left;
+      padding: 1px 1rem;
       font-family: var(--bold-font);
       font-size: 1.2rem;
       margin: 1rem auto;
     }
     &-link {
-      //   border: 1px solid red;
       display: flex;
       align-items: center;
-      text-align: left;
-      //   width: 90%;
-      //   padding: 0.25rem;
+      justify-content: flex-start;
+      width: 100%;
+      padding: 0.25rem;
       margin: 0.25rem auto;
       font-size: 1.12rem;
       &--img {
         padding: 0.75rem;
-        margin-right: 1rem;
+        margin-right: 0.5rem;
         width: 3.5rem;
       }
     }
@@ -75,28 +78,44 @@
 
   &__form {
     display: flex;
-    padding: 0.5rem;
-    align-items: center;
     flex-direction: column;
-    -webkit-box-shadow: 1px 2px 16px -7px rgba(66, 68, 90, 1);
-    -moz-box-shadow: 1px 2px 16px -7px rgba(66, 68, 90, 1);
+    align-items: center;
+    padding: 0.5rem;
     border-radius: 0.5rem;
-    box-shadow: 1px 2px 16px -7px rgba(66, 68, 90, 1);
     &--title {
-      margin: 1rem auto 1.5rem;
       position: relative;
+      margin: 1rem auto 1.5rem;
       &::after {
         content: '';
         position: absolute;
-        top: 55px;
+        height: 1px;
         width: 100%;
+        top: 55px;
         left: 0;
         border-bottom: 1px solid c.$secondary-color;
-        height: 1px;
       }
     }
     &-option {
+      position: relative;
       margin: 0.5rem auto;
+      padding: 1rem;
+
+      &--img {
+        position: absolute;
+        width: 1.85rem;
+        top: 29px;
+        left: 27px;
+      }
+
+      &--input {
+        padding: 1.25rem;
+        border: none;
+        border-radius: 0.5rem;
+        text-align: center;
+        -webkit-box-shadow: 1px 2px 16px -7px rgba(66, 68, 90, 1);
+        -moz-box-shadow: 1px 2px 16px -7px rgba(66, 68, 90, 1);
+        box-shadow: 1px 2px 16px -7px rgba(66, 68, 90, 1);
+      }
 
       &--title {
         margin: 1rem auto;
@@ -106,10 +125,17 @@
       }
 
       &--textarea {
-        min-width: 14.5rem;
-        min-height: 5rem;
-        max-width: 14.5rem;
+        min-width: 15.5rem;
+        min-height: 5.75rem;
+        max-width: 15.5rem;
         max-height: 10rem;
+        padding: 1.25rem;
+        -webkit-box-shadow: 1px 2px 16px -7px rgba(66, 68, 90, 1);
+        -moz-box-shadow: 1px 2px 16px -7px rgba(66, 68, 90, 1);
+        box-shadow: 1px 2px 16px -7px rgba(66, 68, 90, 1);
+        border-radius: 0.5rem;
+        border: none;
+        text-align: center;
       }
     }
 
@@ -145,8 +171,8 @@
     display: flex;
     margin-top: 1rem;
     &--map {
-      height: 100%;
-      width: 100%;
+      height: 25rem;
+      width: 21rem;
     }
   }
 }

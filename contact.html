@@ -73,6 +73,7 @@
                             Jasnogórska 2, 31-358 Kraków
                         </p>
 
+
                         <a href="tel:+123456789" class="contact__info-link">
                             <img src="./assets/img/icon_phone.svg" alt="Phone icon" class="contact__info-link--img">
                             +48 123 456 789
@@ -82,29 +83,40 @@
                                 class="contact__info-link--img">
                             kontakt.forest@mail.com
                         </a>
+
                     </div>
                 </div>
 
                 <div class="contact__box">
 
-                    <form class="contact__form">
+                    <form class="contact__form shadow">
                         <h2 class="contact__form--title sectionTitle">Formularz</h2>
                         <div class="contact__form-option">
 
-                            <label for="person" class="contact__form-option--label"></label>
-                            <input type="text" class="contact__form-option--input" placeholder="Imię i nazwisko">
+                            <label for="person" class="contact__form-option--label">
+                                <img src="./assets/img/icon_people.svg" alt="Person icon"
+                                    class="contact__form-option--img">
+                                <input type="text" class="contact__form-option--input" placeholder="Imię i nazwisko">
+                            </label>
                         </div>
 
                         <div class="contact__form-option">
 
-                            <label for="phone" class="contact__form-option--label"></label>
-                            <input type="tel" class="contact__form-option--input" placeholder="Telefon">
+                            <label for="phone" class="contact__form-option--label">
+                                <img src="./assets/img/icon_phone.svg" alt="Phone icon"
+                                    class="contact__form-option--img">
+                                <input type="tel" class="contact__form-option--input" placeholder="Telefon">
+
+                            </label>
                         </div>
 
                         <div class="contact__form-option">
 
-                            <label for="email" class="contact__form-option--label"></label>
-                            <input type="text" class="contact__form-option--input" placeholder="E-mail">
+                            <label for="email" class="contact__form-option--label">
+                                <input type="text" class="contact__form-option--input" placeholder="E-mail">
+                                <img src="./assets/img/icon_envelope.svg" alt="Envelope icon"
+                                    class="contact__form-option--img">
+                            </label>
                         </div>
 
                         <div class="contact__form-option">
@@ -149,10 +161,12 @@
 
                     </form>
 
-                    <div class="contact__mapBox"><iframe
+                    <div class="contact__mapBox">
+                        <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1279.9235309991896!2d19.893911584940014!3d50.08915021286759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165a326d015c3b%3A0x47a12cd367a1f34e!2sRestauracja%20McDonald&#39;s!5e0!3m2!1spl!2spl!4v1721476448746!5m2!1spl!2spl"
                             loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                            class="contact__mapBox--map"></iframe></div>
+                            class="contact__mapBox--map shadow"></iframe>
+                    </div>
                 </div>
             </div>
         </section>

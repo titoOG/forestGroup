@@ -25,4 +25,6 @@ dist-ssr
 
 node_modules
 *.vite-inspect
+.vite-inspect
+.vite-inspect/*
 

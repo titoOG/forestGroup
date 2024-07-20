@@ -228,9 +228,14 @@
 }
 
 @media (width >= 1400px) {
-  // .header {
-  //   &__hero {
-  //     padding: 25.5rem;
-  //   }
-  // }
+  .header {
+    &__box {
+      top: 37%;
+      left: 64%;
+      align-items: flex-start;
+      &--subtitle {
+        text-align: left;
+      }
+    }
+  }
 }
