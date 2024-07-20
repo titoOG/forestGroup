@@ -1,0 +1,152 @@
+@use './colors' as c;
+
+.contact {
+  &__title {
+    white-space: break-spaces;
+    padding: 0.75rem;
+    margin: 2rem 5rem;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+  }
+  &__brand {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    justify-content: center;
+    width: 100%;
+    &--title {
+      font-weight: 100;
+      font-size: 2.5rem;
+    }
+    &--img {
+      width: 4rem;
+    }
+  }
+
+  &__info {
+    display: flex;
+    padding: 1rem;
+    width: 100%;
+    align-items: flex-start;
+    flex-direction: column;
+    &--text {
+      font-family: var(--bold-font);
+      font-size: 1.2rem;
+      margin: 1rem auto;
+    }
+    &-link {
+      //   border: 1px solid red;
+      display: flex;
+      align-items: center;
+      text-align: left;
+      //   width: 90%;
+      //   padding: 0.25rem;
+      margin: 0.25rem auto;
+      font-size: 1.12rem;
+      &--img {
+        padding: 0.75rem;
+        margin-right: 1rem;
+        width: 3.5rem;
+      }
+    }
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    // width: 90%;
+    margin: 0 auto;
+    padding: 1.75rem;
+    justify-content: space-evenly;
+    // border: 1px solid royalblue;
+  }
+
+  &__form {
+    display: flex;
+    padding: 0.5rem;
+    align-items: center;
+    flex-direction: column;
+    -webkit-box-shadow: 1px 2px 16px -7px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 1px 2px 16px -7px rgba(66, 68, 90, 1);
+    border-radius: 0.5rem;
+    box-shadow: 1px 2px 16px -7px rgba(66, 68, 90, 1);
+    &--title {
+      margin: 1rem auto 1.5rem;
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        top: 55px;
+        width: 100%;
+        left: 0;
+        border-bottom: 1px solid c.$secondary-color;
+        height: 1px;
+      }
+    }
+    &-option {
+      margin: 0.5rem auto;
+
+      &--title {
+        margin: 1rem auto;
+        padding: 0.25rem;
+        font-weight: 100;
+        text-transform: uppercase;
+      }
+
+      &--textarea {
+        min-width: 14.5rem;
+        min-height: 5rem;
+        max-width: 14.5rem;
+        max-height: 10rem;
+      }
+    }
+
+    &-box {
+      display: flex;
+      margin: 1rem auto;
+      align-items: center;
+      padding: 0.5rem;
+      width: 55%;
+      white-space: nowrap;
+      cursor: pointer;
+      &--checkbox {
+        cursor: pointer;
+      }
+      &--text {
+        margin-left: 1rem;
+        // padding: 1rem;
+      }
+    }
+
+    &-btns {
+      display: flex;
+      flex-direction: column;
+      margin: 1.5rem auto;
+
+      &--btn {
+        margin: 0.5rem auto;
+      }
+    }
+  }
+
+  &__mapBox {
+    display: flex;
+    margin-top: 1rem;
+    &--map {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

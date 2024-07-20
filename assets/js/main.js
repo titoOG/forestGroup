@@ -11,6 +11,7 @@ import '../scss/_parallax.scss';
 import '../scss/_animations.scss';
 import '../scss/_footer.scss';
 import '../scss/_media.scss';
+import '../scss/_contact.scss';
 
 const burgerBtn = document.getElementById('burgerBtn');
 const burgerBtnMid = document.getElementById('burgerBtnMid');
@@ -21,33 +22,47 @@ const navDesktop = document.getElementById('navDesktop');
 let navDesktopLinks = document.querySelectorAll(`.nav__desktop--link`);
 const footerInfo = document.getElementById('footerInfo');
 const scrollToTopBtn = document.getElementById('scrollToTopBtn');
-const of_btns = document.querySelectorAll('.offers__selector-btns a');
+const of_btns = document.querySelectorAll('.offers__selector-btns button');
 const of_soloBtn = document.getElementById('solo');
 const of_groupBtn = document.getElementById('group');
+
+const demoPrice = document.getElementById('demoPrice');
+const standardPrice = document.getElementById('standardPrice');
+const premiumPrice = document.getElementById('premiumPrice');
 
 const offersBtnToggle = (e) => {
   if (!e.target.classList.contains('cta') && e.target === of_soloBtn) {
     of_soloBtn.classList.add('cta');
     of_groupBtn.classList.remove('cta');
+    demoPrice.textContent = '$0';
+    standardPrice.textContent = '$99';
+    premiumPrice.textContent = '$299';
   } else if (e.target.classList.contains('cta') && e.target === of_soloBtn) {
     of_soloBtn.classList.remove('cta');
     of_groupBtn.classList.add('cta');
+    demoPrice.textContent = '$50';
+    standardPrice.textContent = '$299';
+    premiumPrice.textContent = '$599';
   }
 
   if (!e.target.classList.contains('cta') && e.target === of_groupBtn) {
     of_groupBtn.classList.add('cta');
     of_soloBtn.classList.remove('cta');
+    demoPrice.textContent = '$50';
+    standardPrice.textContent = '$299';
+    premiumPrice.textContent = '$599';
   } else if (e.target.classList.contains('cta') && e.target === of_groupBtn) {
+    demoPrice.textContent = '$0';
+    standardPrice.textContent = '$99';
+    premiumPrice.textContent = '$299';
     of_groupBtn.classList.remove('cta');
     of_soloBtn.classList.add('cta');
   }
 };
 
-of_soloBtn.addEventListener('click', offersBtnToggle);
-
-of_btns.forEach((btn) => {
-  btn.addEventListener('click', offersBtnToggle);
-});
+// of_btns.forEach((btn) => {
+//   btn.addEventListener('click', offersBtnToggle);
+// });
 
 const target = document.querySelectorAll('.spy');
 

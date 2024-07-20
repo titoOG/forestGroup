@@ -1,17 +1,17 @@
 {
-  "resolvedId": "E:/zlecenia/forestGroup/assets/scss/_reset.scss",
+  "resolvedId": "E:/zlecenia/forestGroup/assets/scss/_contact.scss",
   "transforms": [
     {
       "name": "vite:load-fallback",
-      "result": "*,\n*::before,\n*::after {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nbutton,\na {\n  font-family: inherit;\n}\n\nli {\n  list-style-type: none;\n}\n",
+      "result": ".contact {\r\n  &__content {\r\n    display: flex;\r\n    flex-direction: column;\r\n    border: 1px solid red;\r\n  }\r\n\r\n  &__brand {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n  }\r\n\r\n  &__map {\r\n    display: none;\r\n  }\r\n}\r\n",
       "start": 1721477843812,
-      "end": 1721477843817,
+      "end": 1721477843819,
       "sourcemaps": null
     },
     {
       "name": "vite:css",
-      "result": "*,\n*::before,\n*::after {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nbutton,\na {\n  font-family: inherit;\n}\n\nli {\n  list-style-type: none;\n}",
-      "start": 1721477843817,
+      "result": ".contact__content {\n  display: flex;\n  flex-direction: column;\n  border: 1px solid red;\n}\n.contact__brand {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.contact__map {\n  display: none;\n}",
+      "start": 1721477843819,
       "end": 1721477844454,
       "order": "normal",
       "sourcemaps": {
@@ -38,7 +38,7 @@
     },
     {
       "name": "vite:define",
-      "start": 1721477844455,
+      "start": 1721477844456,
       "end": 1721477844456,
       "order": "normal"
     },
@@ -96,7 +96,7 @@
     },
     {
       "name": "vite:reporter",
-      "start": 1721477844458,
+      "start": 1721477844460,
       "end": 1721477844460,
       "order": "normal"
     }

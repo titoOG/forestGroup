@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "@use './colors' as c;\n\n.parallax {\n  &__content {\n    min-width: 10rem;\n    width: 100%;\n    overflow: hidden;\n    // height: fit-content;\n  }\n\n  &__hero {\n    background-image: url('../img/parallax.jpg');\n    // background-attachment: fixed;\n    width: 100%;\n    background-position: center;\n    background-size: cover;\n    height: 23rem;\n    position: relative;\n    z-index: -1;\n    color: c.$primary-color;\n    &-box {\n      display: flex;\n      justify-content: center;\n      align-items: center;\n      margin: 0 auto;\n      min-width: 11.5rem;\n      width: 43.25rem;\n      height: 100%;\n      padding: 0.015rem;\n      white-space: wrap;\n      max-width: 100%;\n      &--title {\n        padding: 2.15rem;\n        line-height: 2.5rem;\n        font-size: 1.5rem;\n        // text-align: left;\n        width: 85%;\n        border-radius: 0.125rem;\n        border: 1px solid c.$parallax-border-color;\n      }\n    }\n\n    // &--img {\n    //   // position: absolute;\n    //   width: 100%;\n    //   height: 100%;\n    //   background-image: url('../img/parallax.jpg');\n    //   background-size: cover;\n    //   background-attachment: local;\n    //   background-position: center;\n    // }\n  }\n  &__shadow {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    background-color: rgba(0, 10, 0, 0.7);\n    z-index: -1;\n  }\n}\n",
-      "start": 1721291291620,
-      "end": 1721291291625,
+      "start": 1721477843812,
+      "end": 1721477843818,
       "sourcemaps": null
     },
     {
       "name": "vite:css",
       "result": ".parallax__content {\n  min-width: 10rem;\n  width: 100%;\n  overflow: hidden;\n}\n.parallax__hero {\n  background-image: url(\"__VITE_ASSET__DDCSwoWs__\");\n  width: 100%;\n  background-position: center;\n  background-size: cover;\n  height: 23rem;\n  position: relative;\n  z-index: -1;\n  color: #fff;\n}\n.parallax__hero-box {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin: 0 auto;\n  min-width: 11.5rem;\n  width: 43.25rem;\n  height: 100%;\n  padding: 0.015rem;\n  white-space: wrap;\n  max-width: 100%;\n}\n.parallax__hero-box--title {\n  padding: 2.15rem;\n  line-height: 2.5rem;\n  font-size: 1.5rem;\n  width: 85%;\n  border-radius: 0.125rem;\n  border: 1px solid rgba(255, 255, 255, 0.7);\n}\n.parallax__shadow {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background-color: rgba(0, 10, 0, 0.7);\n  z-index: -1;\n}",
-      "start": 1721291291625,
-      "end": 1721291292224,
+      "start": 1721477843818,
+      "end": 1721477844468,
       "order": "normal",
       "sourcemaps": {
         "mappings": ""
@@ -20,33 +20,33 @@
     },
     {
       "name": "vite:esbuild",
-      "start": 1721291292224,
-      "end": 1721291292224,
+      "start": 1721477844469,
+      "end": 1721477844469,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1721291292224,
-      "end": 1721291292224,
+      "start": 1721477844469,
+      "end": 1721477844469,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1721291292224,
-      "end": 1721291292224,
+      "start": 1721477844469,
+      "end": 1721477844469,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1721291292224,
-      "end": 1721291292224,
+      "start": 1721477844469,
+      "end": 1721477844469,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
       "result": "",
-      "start": 1721291292224,
-      "end": 1721291292224,
+      "start": 1721477844469,
+      "end": 1721477844469,
       "order": "normal",
       "sourcemaps": {
         "mappings": ""
@@ -54,50 +54,50 @@
     },
     {
       "name": "vite:build-html",
-      "start": 1721291292224,
-      "end": 1721291292225,
+      "start": 1721477844469,
+      "end": 1721477844469,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1721291292225,
-      "end": 1721291292225,
+      "start": 1721477844469,
+      "end": 1721477844469,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1721291292225,
-      "end": 1721291292225,
+      "start": 1721477844469,
+      "end": 1721477844469,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1721291292225,
-      "end": 1721291292225,
+      "start": 1721477844469,
+      "end": 1721477844469,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1721291292225,
-      "end": 1721291292225,
+      "start": 1721477844469,
+      "end": 1721477844469,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1721291292225,
-      "end": 1721291292225,
+      "start": 1721477844469,
+      "end": 1721477844469,
       "order": "normal"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1721291292225,
-      "end": 1721291292225,
+      "start": 1721477844469,
+      "end": 1721477844469,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1721291292225,
-      "end": 1721291292225,
+      "start": 1721477844469,
+      "end": 1721477844469,
       "order": "normal"
     }
   ]
