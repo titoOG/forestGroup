@@ -36,3 +36,9 @@
     color: c.$primary-color;
   }
 }
+
+@mixin focus {
+  &:focus {
+    outline: c.$accent-color solid 2px;
+  }
+}

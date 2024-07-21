@@ -1,7 +1,6 @@
 @use './colors' as c;
 
 .offers {
-  // min-width: 10rem;
   &__subtitle {
     font-weight: 100;
 
@@ -82,11 +81,12 @@
     width: 100%;
 
     &--title {
-      font-size: 2rem;
       margin-bottom: 1rem;
+      font-size: 2rem;
     }
 
     &--link {
+      margin-top: 1rem;
       padding: 1rem;
       font-size: 1.15rem;
     }
@@ -136,11 +136,11 @@
       }
     }
     &--button {
-      // padding: 1rem;
       margin-top: 1.5rem;
     }
   }
   &__button {
+    padding: 1rem;
     &--btn {
       width: 100%;
       padding: 1rem;

@@ -35,7 +35,6 @@
                 <a href="./contact.html" class="nav__mobile--link">Kontakt</a>
             </div>
 
-
             <div class="nav__burger" id="burgerBtn">
                 <div class="nav__burger-icon">
                     <span class=" nav__burger-icon--top"></span>
@@ -68,11 +67,9 @@
                             Forest Group</h1>
                     </div>
                     <div class="contact__info">
-
                         <p class="contact__info--text">
                             Jasnogórska 2, 31-358 Kraków
                         </p>
-
 
                         <a href="tel:+123456789" class="contact__info-link">
                             <img src="./assets/img/icon_phone.svg" alt="Phone icon" class="contact__info-link--img">
@@ -83,7 +80,6 @@
                                 class="contact__info-link--img">
                             kontakt.forest@mail.com
                         </a>
-
                     </div>
                 </div>
 
@@ -91,68 +87,63 @@
 
                     <form class="contact__form shadow">
                         <h2 class="contact__form--title sectionTitle">Formularz</h2>
-                        <div class="contact__form-option">
+                        <div class="contact__form-option shadow">
+                            <img src="./assets/img/icon_people.svg" alt="Person icon" class="contact__form-option--img">
+                            <input type="text" class="contact__form-option--input" placeholder="Imię i nazwisko">
+                        </div>
 
-                            <label for="person" class="contact__form-option--label">
-                                <img src="./assets/img/icon_people.svg" alt="Person icon"
-                                    class="contact__form-option--img">
-                                <input type="text" class="contact__form-option--input" placeholder="Imię i nazwisko">
-                            </label>
+                        <div class="contact__form-option shadow">
+                            <img src="./assets/img/icon_envelope.svg" alt="Envelope icon"
+                                class="contact__form-option--img">
+                            <input type="text" class="contact__form-option--input" placeholder="Email">
+                        </div>
+
+                        <div class="contact__form-option shadow">
+                            <img src="./assets/img/icon_phone.svg" alt="Phone icon" class="contact__form-option--img">
+                            <input type="text" class="contact__form-option--input" placeholder="Telefon">
                         </div>
 
                         <div class="contact__form-option">
-
-                            <label for="phone" class="contact__form-option--label">
-                                <img src="./assets/img/icon_phone.svg" alt="Phone icon"
-                                    class="contact__form-option--img">
-                                <input type="tel" class="contact__form-option--input" placeholder="Telefon">
-
-                            </label>
+                            <textarea class="contact__form-option--textarea shadow" id="formTextarea"
+                                placeholder="Twoja wiadomość"></textarea>
                         </div>
 
-                        <div class="contact__form-option">
+                        <h3 class="contact__form-option--title">
+                            Powód kontaktu:
+                        </h3>
+                        <div class="contact__form-option column">
 
-                            <label for="email" class="contact__form-option--label">
-                                <input type="text" class="contact__form-option--input" placeholder="E-mail">
-                                <img src="./assets/img/icon_envelope.svg" alt="Envelope icon"
-                                    class="contact__form-option--img">
-                            </label>
-                        </div>
-
-                        <div class="contact__form-option">
-
-                            <h3 class="contact__form-option--title">
-
-                                Czego dotyczy kontakt?:
-                            </h3>
                             <div class="contact__form-box">
                                 <input type="checkbox" class="contact__form-box--checkbox">
                                 <p class="contact__form-box--text">Plan wycieczki
                                 </p>
-
                             </div>
-                            <div class="contact__form-box">
 
+                            <div class="contact__form-box">
                                 <input type="checkbox" class="contact__form-box--checkbox">
                                 <p class="contact__form-box--text">
-
                                     Rezerwacja
                                 </p>
                             </div>
 
                             <div class="contact__form-box">
-
                                 <input type="checkbox" class="contact__form-box--checkbox">
                                 <p class="contact__form-box--text">
-                                    Rezerwacja2
+                                    Inne
                                 </p>
                             </div>
                         </div>
+                        <div class="contact__form-clause">
+                            <p class="contact__form-clause--text">
+                                <input type="checkbox" class="contact__form-clause--checkbox">
 
-                        <div class="contact__form-option">
-                            <textarea class="contact__form-option--textarea" id="formTextarea"
-                                placeholder="Twoja wiadomość"></textarea>
+                                "Wyrażam zgodę na przetwarzanie moich danych osobowych podanych w powyższym
+                                formularzu w
+                                celach handlowych i marketingowych przez ForestGroup oraz przez podmioty trzecie."
+                            </p>
+
                         </div>
+
 
                         <div class="contact__form-btns">
                             <button class="contact__form-btns--btn btn">Wyślij</button>
@@ -161,11 +152,13 @@
 
                     </form>
 
-                    <div class="contact__mapBox">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1279.9235309991896!2d19.893911584940014!3d50.08915021286759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165a326d015c3b%3A0x47a12cd367a1f34e!2sRestauracja%20McDonald&#39;s!5e0!3m2!1spl!2spl!4v1721476448746!5m2!1spl!2spl"
-                            loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                            class="contact__mapBox--map shadow"></iframe>
+                    <div class="contact__box">
+                        <div class="contact__mapBox">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1279.9235309991896!2d19.893911584940014!3d50.08915021286759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165a326d015c3b%3A0x47a12cd367a1f34e!2sRestauracja%20McDonald&#39;s!5e0!3m2!1spl!2spl!4v1721476448746!5m2!1spl!2spl"
+                                loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                                class="contact__mapBox--map shadow"></iframe>
+                        </div>
                     </div>
                 </div>
             </div>

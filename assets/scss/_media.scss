@@ -206,6 +206,55 @@
       }
     }
   }
+
+  .contact {
+    &__brand {
+      justify-content: center;
+    }
+
+    &__info {
+      margin: 0 auto;
+
+      &-link {
+        margin: 0;
+      }
+    }
+
+    &__form {
+      padding: 1.85rem;
+      max-width: 29rem;
+
+      &-box {
+        &--checkbox {
+          margin: 0 0.5rem;
+        }
+      }
+      &-option {
+        &:nth-child(7) {
+          flex-direction: row;
+        }
+      }
+      &-btns {
+        flex-direction: row;
+
+        &--btn {
+          margin: 0 0.5rem;
+        }
+      }
+    }
+
+    &__box {
+      flex-direction: row;
+      margin: 0 2rem;
+    }
+    &__mapBox {
+      margin-top: 0;
+      &--map {
+        height: 35rem;
+        width: 25rem;
+      }
+    }
+  }
 }
 
 @media (width >= 1200px) {

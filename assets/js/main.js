@@ -1,3 +1,4 @@
+import * as contact from './contact.js';
 import '../scss/main.scss';
 import '../scss/_reset.scss';
 import '../scss/_fonts.scss';
@@ -10,8 +11,8 @@ import '../scss/_offersSection.scss';
 import '../scss/_parallax.scss';
 import '../scss/_animations.scss';
 import '../scss/_footer.scss';
-import '../scss/_media.scss';
 import '../scss/_contact.scss';
+import '../scss/_media.scss';
 
 const burgerBtn = document.getElementById('burgerBtn');
 const burgerBtnMid = document.getElementById('burgerBtnMid');

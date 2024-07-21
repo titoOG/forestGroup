@@ -1,15 +1,17 @@
 @use './colors' as c;
+@use './mixins' as m;
 
 .contact {
   &__title {
     padding: 0.75rem;
     margin: 2rem 5rem;
-    text-align: left;
+    text-align: center;
   }
 
   &__content {
     display: flex;
     flex-direction: column;
+    margin-bottom: 1.5rem;
   }
 
   &__details {
@@ -18,7 +20,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding: 1rem;
+    padding: 1.75rem;
   }
   &__brand {
     display: flex;
@@ -38,7 +40,6 @@
   &__info {
     display: flex;
     flex-direction: column;
-    width: 100%;
     padding: 1rem;
     margin-top: 1rem;
 
@@ -58,6 +59,7 @@
       padding: 0.25rem;
       margin: 0.25rem auto;
       font-size: 1.12rem;
+
       &--img {
         padding: 0.75rem;
         margin-right: 0.5rem;
@@ -69,22 +71,18 @@
   &__box {
     display: flex;
     flex-direction: column;
-    // width: 90%;
     margin: 0 auto;
-    padding: 1.75rem;
-    justify-content: space-evenly;
-    // border: 1px solid royalblue;
   }
 
   &__form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0.5rem;
+    padding: 1.2rem;
     border-radius: 0.5rem;
     &--title {
       position: relative;
-      margin: 1rem auto 1.5rem;
+      margin: 1rem auto 2rem;
       &::after {
         content: '';
         position: absolute;
@@ -95,44 +93,40 @@
         border-bottom: 1px solid c.$secondary-color;
       }
     }
+
     &-option {
-      position: relative;
-      margin: 0.5rem auto;
-      padding: 1rem;
+      display: flex;
+      width: 100%;
+      margin: 0.5rem;
 
       &--img {
-        position: absolute;
-        width: 1.85rem;
-        top: 29px;
-        left: 27px;
+        width: 3.25rem;
+        padding: 0.75rem;
       }
 
       &--input {
-        padding: 1.25rem;
+        width: 100%;
+        padding: 1.4rem;
         border: none;
-        border-radius: 0.5rem;
+        overflow: hidden;
         text-align: center;
-        -webkit-box-shadow: 1px 2px 16px -7px rgba(66, 68, 90, 1);
-        -moz-box-shadow: 1px 2px 16px -7px rgba(66, 68, 90, 1);
-        box-shadow: 1px 2px 16px -7px rgba(66, 68, 90, 1);
       }
 
       &--title {
         margin: 1rem auto;
         padding: 0.25rem;
+        white-space: nowrap;
         font-weight: 100;
         text-transform: uppercase;
       }
 
       &--textarea {
-        min-width: 15.5rem;
+        min-width: 100%;
+        width: 100%;
+        max-width: 15rem;
         min-height: 5.75rem;
-        max-width: 15.5rem;
         max-height: 10rem;
         padding: 1.25rem;
-        -webkit-box-shadow: 1px 2px 16px -7px rgba(66, 68, 90, 1);
-        -moz-box-shadow: 1px 2px 16px -7px rgba(66, 68, 90, 1);
-        box-shadow: 1px 2px 16px -7px rgba(66, 68, 90, 1);
         border-radius: 0.5rem;
         border: none;
         text-align: center;
@@ -141,21 +135,34 @@
 
     &-box {
       display: flex;
-      margin: 1rem auto;
       align-items: center;
+      margin: 0.2rem auto;
+      width: 100%;
       padding: 0.5rem;
-      width: 55%;
       white-space: nowrap;
-      cursor: pointer;
+
       &--checkbox {
         cursor: pointer;
       }
       &--text {
-        margin-left: 1rem;
+        margin-left: 0.5rem;
         // padding: 1rem;
       }
     }
 
+    &-clause {
+      width: 18rem;
+      &--text {
+        padding: 0.5rem;
+        line-height: 1.5rem;
+        font-style: italic;
+        font-size: 0.88rem;
+      }
+
+      // &--checkbox {
+      //   margin-right: 4rem;
+      // }
+    }
     &-btns {
       display: flex;
       flex-direction: column;
@@ -170,9 +177,5 @@
   &__mapBox {
     display: flex;
     margin-top: 1rem;
-    &--map {
-      height: 25rem;
-      width: 21rem;
-    }
   }
 }

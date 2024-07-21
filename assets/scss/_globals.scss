@@ -6,6 +6,17 @@ a {
   color: c.$secondary-color;
 }
 
+a,
+textarea,
+input,
+iframe {
+  @include m.focus;
+}
+
+input[type='checkbox'] {
+  accent-color: c.$accent-color;
+}
+
 main {
   position: relative;
 }
@@ -41,6 +52,7 @@ main {
 
 .btn {
   @include m.buttonSettings;
+  @include m.focus;
 }
 
 .cta {
@@ -91,3 +103,17 @@ main {
   -moz-box-shadow: 1px 2px 16px -7px rgba(66, 68, 90, 1);
   box-shadow: 1px 2px 16px -7px rgba(66, 68, 90, 1);
 }
+
+.column {
+  flex-direction: column;
+}
+
+.row {
+  flex-direction: row;
+}
+
+// .focus {
+//   &:focus {
+//     outline: c.$accent-color solid 2px;
+//   }
+// }
