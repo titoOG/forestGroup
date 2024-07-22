@@ -25,14 +25,14 @@
                 <a href="#home" class="nav__desktop--link">Home</a>
                 <a href="./#about" class="nav__desktop--link ">O nas</a>
                 <a href="./#offers" class="nav__desktop--link">Oferta</a>
-                <a href="./contact.html" class="nav__desktop--link">Kontakt</a>
+                <a href="#contact" class="nav__desktop--link">Kontakt</a>
             </div>
 
             <div class="nav__mobile" id="navMobile">
                 <a href="#home" class="nav__mobile--link">Home</a>
                 <a href="./#about" class="nav__mobile--link ">O nas</a>
                 <a href="./#offers" class="nav__mobile--link">Oferta</a>
-                <a href="./contact.html" class="nav__mobile--link">Kontakt</a>
+                <a href="#contact" class="nav__mobile--link">Kontakt</a>
             </div>
 
             <div class="nav__burger" id="burgerBtn">
@@ -56,7 +56,7 @@
     </header>
 
     <main class="wrapper">
-        <section class="contact section">
+        <section class="contact section" id="contact">
             <h2 class="contact__title sectionTitle">Kontakt i lokalizacja</h2>
             <div class="contact__content">
 
@@ -83,74 +83,74 @@
                     </div>
                 </div>
 
-                <div class="contact__box">
+                <div class="contact__boxes">
 
-                    <form class="contact__form shadow">
-                        <h2 class="contact__form--title sectionTitle">Formularz</h2>
-                        <div class="contact__form-option shadow">
-                            <img src="./assets/img/icon_people.svg" alt="Person icon" class="contact__form-option--img">
-                            <input type="text" class="contact__form-option--input" placeholder="Imię i nazwisko">
-                        </div>
+                    <div class="contact__box">
 
-                        <div class="contact__form-option shadow">
-                            <img src="./assets/img/icon_envelope.svg" alt="Envelope icon"
-                                class="contact__form-option--img">
-                            <input type="text" class="contact__form-option--input" placeholder="Email">
-                        </div>
+                        <form class="contact__form shadow" id="contactForm">
+                            <div class="contact__form-option shadow">
+                                <img src="./assets/img/icon_people.svg" alt="Person icon"
+                                    class="contact__form-option--img">
+                                <input type="text" class="contact__form-option--input" placeholder="Imię i nazwisko">
+                            </div>
 
-                        <div class="contact__form-option shadow">
-                            <img src="./assets/img/icon_phone.svg" alt="Phone icon" class="contact__form-option--img">
-                            <input type="text" class="contact__form-option--input" placeholder="Telefon">
-                        </div>
+                            <div class="contact__form-option shadow">
+                                <img src="./assets/img/icon_envelope.svg" alt="Envelope icon"
+                                    class="contact__form-option--img">
+                                <input type="text" class="contact__form-option--input" placeholder="Email">
+                            </div>
 
-                        <div class="contact__form-option">
-                            <textarea class="contact__form-option--textarea shadow" id="formTextarea"
-                                placeholder="Twoja wiadomość"></textarea>
-                        </div>
+                            <div class="contact__form-option shadow">
+                                <img src="./assets/img/icon_phone.svg" alt="Phone icon"
+                                    class="contact__form-option--img">
+                                <input type="text" class="contact__form-option--input" placeholder="Telefon">
+                            </div>
 
-                        <h3 class="contact__form-option--title">
-                            Powód kontaktu:
-                        </h3>
-                        <div class="contact__form-option column">
+                            <div class="contact__form-option">
+                                <textarea class="contact__form-option--textarea shadow" id="formTextarea"
+                                    placeholder="Twoja wiadomość"></textarea>
+                            </div>
 
-                            <div class="contact__form-box">
-                                <input type="checkbox" class="contact__form-box--checkbox">
-                                <p class="contact__form-box--text">Plan wycieczki
+                            <h3 class="contact__form-option--title">
+                                Powód kontaktu:
+                            </h3>
+                            <div class="contact__form-option column">
+
+                                <div class="contact__form-box">
+                                    <input type="checkbox" class="contact__form-box--checkbox">
+                                    <p class="contact__form-box--text">Plan wycieczki
+                                    </p>
+                                </div>
+
+                                <div class="contact__form-box">
+                                    <input type="checkbox" class="contact__form-box--checkbox">
+                                    <p class="contact__form-box--text">
+                                        Rezerwacja
+                                    </p>
+                                </div>
+
+                                <div class="contact__form-box">
+                                    <input type="checkbox" class="contact__form-box--checkbox">
+                                    <p class="contact__form-box--text">
+                                        Inne
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="contact__form-clause">
+                                <p class="contact__form-clause--text">
+                                    <input type="checkbox" class="contact__form-clause--checkbox">
+                                    "Wyrażam zgodę na przetwarzanie moich danych osobowych podanych w powyższym
+                                    formularzu w
+                                    celach handlowych i marketingowych przez ForestGroup oraz przez podmioty trzecie."
                                 </p>
                             </div>
 
-                            <div class="contact__form-box">
-                                <input type="checkbox" class="contact__form-box--checkbox">
-                                <p class="contact__form-box--text">
-                                    Rezerwacja
-                                </p>
+                            <div class="contact__form-btns">
+                                <button class="contact__form-btns--btn btn" id="formSubmitBtn">Wyślij</button>
+                                <button class="contact__form-btns--btn btn" id="formClearBtn">Wyczyść</button>
                             </div>
-
-                            <div class="contact__form-box">
-                                <input type="checkbox" class="contact__form-box--checkbox">
-                                <p class="contact__form-box--text">
-                                    Inne
-                                </p>
-                            </div>
-                        </div>
-                        <div class="contact__form-clause">
-                            <p class="contact__form-clause--text">
-                                <input type="checkbox" class="contact__form-clause--checkbox">
-
-                                "Wyrażam zgodę na przetwarzanie moich danych osobowych podanych w powyższym
-                                formularzu w
-                                celach handlowych i marketingowych przez ForestGroup oraz przez podmioty trzecie."
-                            </p>
-
-                        </div>
-
-
-                        <div class="contact__form-btns">
-                            <button class="contact__form-btns--btn btn">Wyślij</button>
-                            <button class="contact__form-btns--btn btn">Wyczyść</button>
-                        </div>
-
-                    </form>
+                        </form>
+                    </div>
 
                     <div class="contact__box">
                         <div class="contact__mapBox">
@@ -160,7 +160,13 @@
                                 class="contact__mapBox--map shadow"></iframe>
                         </div>
                     </div>
+
                 </div>
+
+
+
+
+
             </div>
         </section>
     </main>

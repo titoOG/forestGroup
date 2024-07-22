@@ -6,12 +6,12 @@ a {
   color: c.$secondary-color;
 }
 
-a,
-textarea,
-input,
-iframe {
-  @include m.focus;
-}
+// a,
+// textarea,
+// input,
+// iframe {
+//   @include m.focus;
+// }
 
 input[type='checkbox'] {
   accent-color: c.$accent-color;

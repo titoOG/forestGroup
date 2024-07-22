@@ -14,6 +14,7 @@ import '../scss/_footer.scss';
 import '../scss/_contact.scss';
 import '../scss/_media.scss';
 
+const pageID = document.querySelector('body');
 const burgerBtn = document.getElementById('burgerBtn');
 const burgerBtnMid = document.getElementById('burgerBtnMid');
 const burgerBtnBot = document.getElementById('burgerBtnBot');
@@ -61,9 +62,9 @@ const offersBtnToggle = (e) => {
   }
 };
 
-// of_btns.forEach((btn) => {
-//   btn.addEventListener('click', offersBtnToggle);
-// });
+of_btns.forEach((btn) => {
+  btn.addEventListener('click', offersBtnToggle);
+});
 
 const target = document.querySelectorAll('.spy');
 

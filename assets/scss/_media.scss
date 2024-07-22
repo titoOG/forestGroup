@@ -221,8 +221,7 @@
     }
 
     &__form {
-      padding: 1.85rem;
-      max-width: 29rem;
+      padding: 1.5rem;
 
       &-box {
         &--checkbox {
@@ -230,7 +229,7 @@
         }
       }
       &-option {
-        &:nth-child(7) {
+        &:nth-child(6) {
           flex-direction: row;
         }
       }
@@ -243,15 +242,22 @@
       }
     }
 
+    &__boxes {
+      flex-direction: row;
+    }
+
     &__box {
       flex-direction: row;
-      margin: 0 2rem;
+      margin: 0.75rem;
     }
+
     &__mapBox {
       margin-top: 0;
+      padding: 0;
+      height: 100%;
       &--map {
-        height: 35rem;
-        width: 25rem;
+        width: 21.5rem;
+        height: 100%;
       }
     }
   }
