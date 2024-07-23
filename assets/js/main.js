@@ -105,6 +105,7 @@ window.onscroll = () => {
     document.documentElement.scrollTop || document.body.scrollTop;
   if (scroll_Y_Position >= 500) {
     scrollToTopBtn.classList.add('btnFadeIn');
+    scrollToTopBtn.classList.remove('btnFadeOut');
   } else if (scroll_Y_Position < 500) {
     if (scrollToTopBtn.classList.contains('btnFadeIn')) {
       scrollToTopBtn.classList.remove('btnFadeIn');

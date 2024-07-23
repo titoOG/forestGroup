@@ -9,10 +9,10 @@
   border: none;
   border-radius: 0.4rem;
   transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  cursor: pointer;
   -webkit-box-shadow: 0px 2px 5px 0px rgba(120, 120, 120, 1);
   -moz-box-shadow: 0px 2px 5px 0px rgba(120, 120, 120, 1);
   box-shadow: 0px 2px 5px 0px rgba(120, 120, 120, 1);
+  cursor: pointer;
 
   &:hover {
     background-color: c.$accent-hover;
@@ -38,7 +38,7 @@
 }
 
 @mixin focus {
-  &:focus {
+  &:focus-visible {
     outline: c.$accent-color solid 2px;
   }
 }

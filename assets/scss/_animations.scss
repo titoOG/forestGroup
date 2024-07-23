@@ -29,19 +29,23 @@
 
 @keyframes anm_btnFadeOut {
   from {
+    visibility: visible;
     opacity: 1;
   }
   to {
+    visibility: hidden;
     opacity: 0;
   }
 }
 
 @keyframes anm_btnFadeIn {
   from {
+    visibility: hidden;
     opacity: 0;
   }
 
   to {
+    visibility: visible;
     opacity: 1;
   }
 }

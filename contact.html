@@ -35,7 +35,7 @@
                 <a href="#contact" class="nav__mobile--link">Kontakt</a>
             </div>
 
-            <div class="nav__burger" id="burgerBtn">
+            <div class="nav__burger" id="burgerBtn" aria-label="Menu hamburgerowe">
                 <div class="nav__burger-icon">
                     <span class=" nav__burger-icon--top"></span>
                     <span class=" nav__burger-icon--mid" id="burgerBtnMid"></span>
@@ -86,29 +86,31 @@
                 <div class="contact__boxes">
 
                     <div class="contact__box">
-
                         <form class="contact__form shadow" id="contactForm">
                             <div class="contact__form-option shadow">
                                 <img src="./assets/img/icon_people.svg" alt="Person icon"
                                     class="contact__form-option--img">
-                                <input type="text" class="contact__form-option--input" placeholder="Imię i nazwisko">
+                                <input type="text" class="contact__form-option--input" placeholder="Imię i nazwisko"
+                                    id="formPerson">
                             </div>
 
                             <div class="contact__form-option shadow">
                                 <img src="./assets/img/icon_envelope.svg" alt="Envelope icon"
                                     class="contact__form-option--img">
-                                <input type="text" class="contact__form-option--input" placeholder="Email">
+                                <input type="text" class="contact__form-option--input" placeholder="Email"
+                                    id="formMail">
                             </div>
 
                             <div class="contact__form-option shadow">
                                 <img src="./assets/img/icon_phone.svg" alt="Phone icon"
                                     class="contact__form-option--img">
-                                <input type="text" class="contact__form-option--input" placeholder="Telefon">
+                                <input type="text" class="contact__form-option--input" placeholder="Telefon"
+                                    id="formPhone">
                             </div>
 
                             <div class="contact__form-option">
-                                <textarea class="contact__form-option--textarea shadow" id="formTextarea"
-                                    placeholder="Twoja wiadomość"></textarea>
+                                <textarea class="contact__form-option--textarea shadow " placeholder="Twoja wiadomość"
+                                    id="formMsg"></textarea>
                             </div>
 
                             <h3 class="contact__form-option--title">
@@ -117,28 +119,28 @@
                             <div class="contact__form-option column">
 
                                 <div class="contact__form-box">
-                                    <input type="checkbox" class="contact__form-box--checkbox">
+                                    <input type="checkbox" class="contact__form-box--checkbox" aria-checked="false">
                                     <p class="contact__form-box--text">Plan wycieczki
                                     </p>
                                 </div>
 
                                 <div class="contact__form-box">
-                                    <input type="checkbox" class="contact__form-box--checkbox">
+                                    <input type="checkbox" class="contact__form-box--checkbox" aria-checked="false">
                                     <p class="contact__form-box--text">
                                         Rezerwacja
                                     </p>
                                 </div>
 
                                 <div class="contact__form-box">
-                                    <input type="checkbox" class="contact__form-box--checkbox">
+                                    <input type="checkbox" class="contact__form-box--checkbox" aria-checked="false">
                                     <p class="contact__form-box--text">
                                         Inne
                                     </p>
                                 </div>
                             </div>
                             <div class="contact__form-clause">
-                                <p class="contact__form-clause--text">
-                                    <input type="checkbox" class="contact__form-clause--checkbox">
+                                <p class="contact__form-clause--text" id="formClauseText">
+                                    <input type="checkbox" class="contact__form-clause--checkbox" aria-checked="false">
                                     "Wyrażam zgodę na przetwarzanie moich danych osobowych podanych w powyższym
                                     formularzu w
                                     celach handlowych i marketingowych przez ForestGroup oraz przez podmioty trzecie."
@@ -160,13 +162,7 @@
                                 class="contact__mapBox--map shadow"></iframe>
                         </div>
                     </div>
-
                 </div>
-
-
-
-
-
             </div>
         </section>
     </main>
@@ -202,14 +198,11 @@
                 </div>
             </div>
             <div class="footer__separator"></div>
-
             <div class="footer__info">
                 <p class="footer__info--details" id="footerInfo"></p>
             </div>
-
     </footer>
-
-    <a href="#" class="upBtn" id="scrollToTopBtn">
+    <a href="#" class="upBtn" id="scrollToTopBtn" aria-label="Przewiń na górę">
         <img src="./assets/img/icon_arrowUp.svg" alt="arrowUp icon" class="upBtn__image">
     </a>
 

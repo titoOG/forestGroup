@@ -6,12 +6,12 @@ a {
   color: c.$secondary-color;
 }
 
-// a,
-// textarea,
-// input,
-// iframe {
-//   @include m.focus;
-// }
+a,
+textarea,
+input,
+iframe {
+  @include m.focus;
+}
 
 input[type='checkbox'] {
   accent-color: c.$accent-color;
@@ -75,6 +75,7 @@ main {
   background-color: c.$accent-color;
   background-position: center;
   border-radius: 25%;
+  visibility: hidden;
   transition: border-radius 0.3s ease-in-out;
 
   &:hover {
@@ -112,8 +113,8 @@ main {
   flex-direction: row;
 }
 
-// .focus {
-//   &:focus {
-//     outline: c.$accent-color solid 2px;
-//   }
-// }
+.formError {
+  color: c.$errorMsg;
+  font-weight: 500;
+  outline: 2px solid c.$errorOutline;
+}
