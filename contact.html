@@ -104,8 +104,8 @@
                             <div class="contact__form-option shadow">
                                 <img src="./assets/img/icon_phone.svg" alt="Phone icon"
                                     class="contact__form-option--img">
-                                <input type="text" class="contact__form-option--input" placeholder="Telefon"
-                                    id="formPhone">
+                                <input type="text" class="contact__form-option--input"
+                                    placeholder="Telefon (opcjonalne)" id="formPhone">
                             </div>
 
                             <div class="contact__form-option">
@@ -114,36 +114,45 @@
                             </div>
 
                             <h3 class="contact__form-option--title">
-                                Powód kontaktu:
+                                Powód kontaktu<span class="required">*</span>:
                             </h3>
                             <div class="contact__form-option column">
 
                                 <div class="contact__form-box">
-                                    <input type="checkbox" class="contact__form-box--checkbox" aria-checked="false">
+                                    <input type="checkbox" class="contact__form-box--checkbox" id="optionOne"
+                                        aria-checked="false">
                                     <p class="contact__form-box--text">Plan wycieczki
                                     </p>
                                 </div>
 
                                 <div class="contact__form-box">
-                                    <input type="checkbox" class="contact__form-box--checkbox" aria-checked="false">
+                                    <input type="checkbox" class="contact__form-box--checkbox" id="optionTwo"
+                                        aria-checked="false">
                                     <p class="contact__form-box--text">
                                         Rezerwacja
                                     </p>
                                 </div>
 
                                 <div class="contact__form-box">
-                                    <input type="checkbox" class="contact__form-box--checkbox" aria-checked="false">
+                                    <input type="checkbox" class="contact__form-box--checkbox" id="optionThree"
+                                        aria-checked="false">
                                     <p class="contact__form-box--text">
                                         Inne
                                     </p>
                                 </div>
                             </div>
+                            <p class="formErrorText" id="clauseErrorText"></p>
                             <div class="contact__form-clause">
                                 <p class="contact__form-clause--text" id="formClauseText">
+
                                     <input type="checkbox" class="contact__form-clause--checkbox" aria-checked="false">
-                                    "Wyrażam zgodę na przetwarzanie moich danych osobowych podanych w powyższym
+
+                                    <!-- <span class="required">*</span> -->
+                                    <span class="required">*</span>"Wyrażam zgodę na przetwarzanie moich danych
+                                    osobowych podanych w powyższym
                                     formularzu w
                                     celach handlowych i marketingowych przez ForestGroup oraz przez podmioty trzecie."
+
                                 </p>
                             </div>
 

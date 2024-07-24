@@ -98,9 +98,8 @@
 
       &--input {
         width: 100%;
+        padding: 0.25rem;
         border: none;
-        overflow: hidden;
-        text-align: center;
         font-size: 0.85rem;
       }
 
@@ -115,13 +114,14 @@
       &--textarea {
         min-width: 100%;
         width: 100%;
-        max-width: 15rem;
-        min-height: 4.75rem;
-        max-height: 10rem;
-        padding: 1.25rem;
-        border-radius: 0.5rem;
+        max-width: 0;
+        padding: 1rem 3.5rem;
+        min-height: 8.5rem;
+        max-height: 8.5rem;
+        background-image: url('../img/icon_msg.svg');
+        background-repeat: no-repeat;
+        background-position: 3.5% 9%;
         border: none;
-        text-align: center;
         font-size: 0.85rem;
       }
     }
@@ -139,8 +139,12 @@
       }
       &--text {
         margin-left: 0.5rem;
-        // padding: 1rem;
       }
+    }
+
+    &-error {
+      border: 1px solid red;
+      visibility: hidden;
     }
 
     &-clause {
