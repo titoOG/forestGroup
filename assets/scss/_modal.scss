@@ -1,0 +1,50 @@
+@use './colors' as c;
+
+.modal {
+  position: fixed;
+  padding: 1rem;
+  margin: 1rem auto;
+  min-width: 16rem;
+  left: 5dvw;
+  right: 5dvw;
+  transform: translateY(-100%);
+  bottom: -100%;
+  background-color: c.$primary-color;
+  transition: transform 0.3s;
+  z-index: 9999;
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &-title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 1rem auto;
+      padding: 0.25rem;
+      font-family: var(--bold-font);
+      font-size: 2rem;
+
+      &--img {
+        width: 2rem;
+        margin-right: 0.5rem;
+        border: 2px solid c.$accent-color;
+        border-radius: 50%;
+      }
+    }
+    &-text {
+      margin: 0 auto 1rem;
+      padding: 0.5rem;
+      line-height: 1.5rem;
+      &--span {
+        font-family: var(--bold-font);
+      }
+    }
+    &-button {
+      margin-bottom: 1rem;
+    }
+  }
+}

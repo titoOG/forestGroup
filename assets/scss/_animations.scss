@@ -49,3 +49,27 @@
     opacity: 1;
   }
 }
+
+@keyframes anm_modalIn {
+  from {
+    transform: translateY(-100%);
+    bottom: -100%;
+  }
+  to {
+    transform: translateY(0);
+    bottom: 0;
+  }
+}
+
+@keyframes anm_modalOut {
+  from {
+    transform: translateY(0);
+    bottom: 0;
+    transition: transform 0.3s;
+  }
+  to {
+    transform: translateY(-100%);
+    bottom: -100%;
+    transition: transform 0.3s;
+  }
+}

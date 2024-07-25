@@ -97,6 +97,14 @@ main {
   color: c.$primary-color;
 }
 
+.modalActive {
+  animation: anm_modalIn 0.85s ease-in-out forwards;
+}
+
+.modalInactive {
+  animation: anm_modalOut 1.5s ease-in-out forwards;
+}
+
 .shadow {
   border: none;
   border-radius: 0.25rem;

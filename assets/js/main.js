@@ -12,6 +12,7 @@ import '../scss/_parallax.scss';
 import '../scss/_animations.scss';
 import '../scss/_footer.scss';
 import '../scss/_contact.scss';
+import '../scss/_modal.scss';
 import '../scss/_media.scss';
 
 const pageID = document.querySelector('body');
@@ -20,8 +21,7 @@ const burgerBtnMid = document.getElementById('burgerBtnMid');
 const burgerBtnBot = document.getElementById('burgerBtnBot');
 const navMobile = document.getElementById('navMobile');
 const navMobileLinks = document.querySelectorAll('.nav__mobile--link');
-const navDesktop = document.getElementById('navDesktop');
-let navDesktopLinks = document.querySelectorAll(`.nav__desktop--link`);
+const navDesktopLinks = document.querySelectorAll(`.nav__desktop--link`);
 const footerInfo = document.getElementById('footerInfo');
 const scrollToTopBtn = document.getElementById('scrollToTopBtn');
 const of_btns = document.querySelectorAll('.offers__selector-btns button');

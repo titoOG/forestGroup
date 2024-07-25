@@ -86,7 +86,7 @@
                 <div class="contact__boxes">
 
                     <div class="contact__box">
-                        <form class="contact__form shadow" id="contactForm">
+                        <form class="contact__form shadow" action="/" id="contactForm">
                             <div class="contact__form-option shadow">
                                 <img src="./assets/img/icon_people.svg" alt="Person icon"
                                     class="contact__form-option--img">
@@ -214,6 +214,22 @@
     <a href="#" class="upBtn" id="scrollToTopBtn" aria-label="Przewiń na górę">
         <img src="./assets/img/icon_arrowUp.svg" alt="arrowUp icon" class="upBtn__image">
     </a>
+
+    <div class="modal shadow" id="formModal">
+        <div class="modal__body">
+            <h2 class="modal__body-title">
+                <img src="./assets/img/icon_checkmark.svg" alt="Checkmark icon" class="modal__body-title--img">
+                Formularz wysłany!
+            </h2>
+            <p class="modal__body-text">
+                Skontatujemy się z Tobą w przeciągu <span class="modal__body-text--span">48 godzin</span>
+
+            </p>
+            <div class="modal__body-button">
+                <button class="modal__body-button--btn btn" id="modalBtn">OK</button>
+            </div>
+        </div>
+    </div>
 
     <script type="module" src="./assets/js/main.js"></script>
 </body>

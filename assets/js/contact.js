@@ -2,6 +2,9 @@ const contactExport = 'Contact content export';
 export default contactExport;
 
 const pageID = document.querySelector('body');
+
+const form = document.getElementById('contactForm');
+
 const formBtns = document.querySelectorAll('.contact__form-btns--btn ');
 const formCheckboxes = document.querySelectorAll(
   '.contact__form-box--checkbox'
@@ -15,9 +18,16 @@ const formTextArea = document.querySelector('.contact__form-option--textarea');
 
 const formInputs = document.querySelectorAll('.contact__form-option--input');
 
+const formModal = document.getElementById('formModal');
+const modalBtn = document.getElementById('modalBtn');
+
+let event;
+
+let regex = / ^[a-zA-Z0-9 ]*$/;
 let regexEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 let regexNumbersOnly = /[0-9]|\. /;
-let regexLettersOnly = /^[A-Za-z]+$/;
+let regexLettersOnly = /^[A-Za-z\s]/;
+let regexSpaceContain = /^[A-Za-z]+\s+[A-Za-z]/;
 
 let formPhone = document.getElementById('formPhone');
 let optionOne = document.getElementById('optionOne');
@@ -25,23 +35,29 @@ let optionTwo = document.getElementById('optionTwo');
 let optionThree = document.getElementById('optionThree');
 let clauseErrorText = document.getElementById('clauseErrorText');
 
+let checkboxStatus;
+
 const formValidation = () => {
   let formPerson = document.getElementById('formPerson');
   let formMail = document.getElementById('formMail');
   let formMsg = document.getElementById('formMsg');
 
-  if (formPerson.value === '') {
+  if (formPerson.value === '' || !regexSpaceContain.test(formPerson.value)) {
     formPerson.placeholder = 'Wprowadź prawidłowe dane!';
     formPerson.classList.add('formError');
+    formPerson.removeAttribute('data-status');
   } else {
     formPerson.classList.remove('formError');
+    formPerson.setAttribute('data-status', 'true');
   }
 
   if (formMail.value === '' || !regexEmail.test(formMail.value)) {
     formMail.placeholder = 'Wprowadź poprawny email!';
     formMail.classList.add('formError');
+    formMail.removeAttribute('data-status');
   } else {
     formMail.classList.remove('formError');
+    formMail.setAttribute('data-status', 'true');
   }
 
   if (formPhone.value.length < 9 && formPhone.value.length >= 1) {
@@ -53,8 +69,10 @@ const formValidation = () => {
   if (formMsg.value === '') {
     formMsg.placeholder = 'Uzupełnij treść wiadomości!';
     formMsg.classList.add('formError');
+    formMsg.removeAttribute('data-status', 'false');
   } else {
     formMsg.classList.remove('formError');
+    formMsg.setAttribute('data-status', 'true');
   }
 
   if (formClauseCheckbox.checked === false) {
@@ -78,7 +96,10 @@ formCheckboxes.forEach((checkbox) => {
   checkbox.addEventListener('click', (e) => {
     if (e.target.ariaChecked == 'false') {
       e.target.ariaChecked = 'true';
+      checkboxStatus = e.target;
+      console.log(checkboxStatus.value.length);
     } else if (e.target.ariaChecked == 'true') {
+      checkboxStatus = '';
       e.target.ariaChecked = 'false';
     }
 
@@ -133,11 +154,24 @@ const clearScreen = () => {
   formClauseText.classList.remove('formErrorText');
 };
 
+const formSubmit = () => {
+  if (
+    formPerson.hasAttribute('data-status') &&
+    formMail.hasAttribute('data-status') &&
+    formMsg.hasAttribute('data-status') &&
+    formClauseCheckbox.checked === true &&
+    checkboxStatus !== undefined
+  ) {
+    formModal.classList.add('modalActive');
+  }
+};
+
 formBtns.forEach((btn) => {
   btn.addEventListener('click', (e) => {
     e.preventDefault();
     if (btn.id === 'formSubmitBtn') {
       formValidation();
+      formSubmit();
     } else if (btn.id === 'formClearBtn') {
       clearScreen();
     }
@@ -147,18 +181,51 @@ formBtns.forEach((btn) => {
 window.addEventListener('DOMContentLoaded', () => {
   if (pageID.id == 'contactPage') {
     clearScreen();
-  }
-});
 
-formPhone.addEventListener('keypress', (e) => {
-  const event = e || window.event;
-  let key = event.keyCode || event.which;
-  key = String.fromCharCode(key);
-  if (!regexNumbersOnly.test(key)) {
-    event.returnValue = false;
-    if (event.preventDefault) event.preventDefault();
-  }
-  if (formPhone.value.length >= 9) {
-    event.preventDefault();
+    formPhone.addEventListener('keypress', (e) => {
+      event = e || window.event;
+      let key = event.keyCode || event.which;
+      key = String.fromCharCode(key);
+      if (!regexNumbersOnly.test(key)) {
+        event.returnValue = false;
+        formPhone.classList.add('formError');
+        if (event.preventDefault) event.preventDefault();
+      } else {
+        formPhone.classList.remove('formError');
+      }
+
+      if (formPhone.value.length >= 9) {
+        event.preventDefault();
+      }
+    });
+
+    formPerson.addEventListener('keypress', (e) => {
+      event = e || window.event;
+      let key = event.keyCode || event.which;
+      key = String.fromCharCode(key);
+      if (!regexLettersOnly.test(key)) {
+        formPerson.classList.add('formError');
+        event.returnValue = false;
+        if (event.preventDefault) event.preventDefault();
+      } else {
+        formPerson.classList.remove('formError');
+      }
+    });
+
+    formMsg.addEventListener('keypress', (e) => {
+      event = e || window.event;
+      let key = event.keyCode || event.which;
+      key = String.fromCharCode(key);
+      if (regex.test(key)) {
+        event.returnValue = false;
+      } else {
+        formMsg.classList.remove('formError');
+      }
+    });
+
+    modalBtn.addEventListener('click', () => {
+      formModal.classList.add('modalInactive');
+      window.location.reload();
+    });
   }
 });
