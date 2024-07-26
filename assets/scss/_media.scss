@@ -37,6 +37,19 @@
   }
 }
 
+@media (width >=430px) {
+  .modal {
+    left: auto;
+    right: auto;
+  }
+}
+
+@media (width >=550px) {
+  .modal {
+    width: 30rem;
+  }
+}
+
 @media (width >=576px) {
   .offers {
     &__box {

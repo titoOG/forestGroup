@@ -21,6 +21,8 @@ const formInputs = document.querySelectorAll('.contact__form-option--input');
 const formModal = document.getElementById('formModal');
 const modalBtn = document.getElementById('modalBtn');
 
+const shadowBox = document.getElementById('shadowBox');
+
 let event;
 
 let regex = / ^[a-zA-Z0-9 ]*$/;
@@ -60,9 +62,13 @@ const formValidation = () => {
     formMail.setAttribute('data-status', 'true');
   }
 
-  if (formPhone.value.length < 9 && formPhone.value.length >= 1) {
+  if (formPhone.value.length < 9 && formPhone.value.length > 0) {
+    formPhone.removeAttribute('data-status');
     formPhone.classList.add('formError');
-  } else if (formPhone.value.length >= 9) {
+    console.log(` IF ${formPhone.value.length}`);
+  } else if (formPhone.value.length === 9 || formPhone.value.length === 0) {
+    console.log(` elsIF ${formPhone.value.length}`);
+    formPhone.setAttribute('data-status', 'true');
     formPhone.classList.remove('formError');
   }
 
@@ -159,10 +165,12 @@ const formSubmit = () => {
     formPerson.hasAttribute('data-status') &&
     formMail.hasAttribute('data-status') &&
     formMsg.hasAttribute('data-status') &&
+    formPhone.hasAttribute('data-status') &&
     formClauseCheckbox.checked === true &&
     checkboxStatus !== undefined
   ) {
     formModal.classList.add('modalActive');
+    shadowBox.classList.add('box-shadow');
   }
 };
 

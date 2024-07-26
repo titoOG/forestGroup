@@ -62,3 +62,12 @@
     outline: c.$accent-color solid 2px;
   }
 }
+
+@mixin formError($color) {
+  font-weight: 500;
+  outline: 2px solid c.$errorOutline;
+  color: $color;
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+}
