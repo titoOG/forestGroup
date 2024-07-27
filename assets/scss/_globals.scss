@@ -17,6 +17,10 @@ input[type='checkbox'] {
   accent-color: c.$accent-color;
 }
 
+input[type='checkbox']:disabled {
+  cursor: not-allowed;
+}
+
 main {
   position: relative;
 }
@@ -25,16 +29,16 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 75rem;
   align-items: center;
-  width: 100%;
-  min-width: 17rem;
   margin: 2rem auto;
+  min-width: 17rem;
+  width: 100%;
+  max-width: 75rem;
 }
 
 .sectionTitle {
-  font-size: 40px;
   margin-top: 2rem;
+  font-size: 40px;
   font-weight: 100;
   text-transform: uppercase;
 }
@@ -92,9 +96,9 @@ main {
 }
 
 .navActive {
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-  background-color: c.$secondary-color;
   color: c.$primary-color;
+  background-color: c.$secondary-color;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .modalActive {
@@ -142,8 +146,8 @@ main {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  // background-color: rgba(0, 0, 0, 0.7);
+  width: 1000rem;
+  height: 1000rem;
+  background-color: rgba(0, 0, 0, 0.7);
   z-index: 9999;
 }

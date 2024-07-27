@@ -2,9 +2,6 @@ const contactExport = 'Contact content export';
 export default contactExport;
 
 const pageID = document.querySelector('body');
-
-const form = document.getElementById('contactForm');
-
 const formBtns = document.querySelectorAll('.contact__form-btns--btn ');
 const formCheckboxes = document.querySelectorAll(
   '.contact__form-box--checkbox'
@@ -12,15 +9,11 @@ const formCheckboxes = document.querySelectorAll(
 const formClauseCheckbox = document.querySelector(
   '.contact__form-clause--checkbox'
 );
-
 const formClauseText = document.getElementById('formClauseText');
 const formTextArea = document.querySelector('.contact__form-option--textarea');
-
 const formInputs = document.querySelectorAll('.contact__form-option--input');
-
 const formModal = document.getElementById('formModal');
 const modalBtn = document.getElementById('modalBtn');
-
 const shadowBox = document.getElementById('shadowBox');
 
 let event;

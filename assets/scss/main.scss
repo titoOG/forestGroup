@@ -16,11 +16,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: c.$primary-color;
   color: c.$secondary-color;
+  background-color: c.$primary-color;
   font-family: var(--regular-font);
-}
-
-.test {
-  margin: 1rem auto;
 }

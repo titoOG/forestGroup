@@ -18,9 +18,9 @@
       font-family: var(--bold-font);
     }
     &-text {
+      padding: 1rem;
       line-height: 1.8rem;
       letter-spacing: 0.0125rem;
-      padding: 1rem;
       &--link {
         text-decoration: underline;
       }

@@ -2,14 +2,13 @@
 
 .offers {
   &__subtitle {
-    font-weight: 100;
-
+    min-width: fit-content;
     width: 90%;
-    text-align: center;
+    margin-top: 25px;
     padding: 1.15rem;
     font-size: 1.1rem;
-    min-width: fit-content;
-    margin-top: 25px;
+    font-weight: 100;
+    text-align: center;
   }
 
   &__content {
@@ -41,10 +40,10 @@
 
   &__box {
     display: flex;
-    align-items: center;
     flex-direction: column;
-    margin: 2rem auto;
+    align-items: center;
     width: 80%;
+    margin: 2rem auto;
 
     &:not(:last-child) {
       border-bottom: 1px solid c.$secondary-color;
@@ -53,8 +52,8 @@
     &-details {
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       height: 100%;
       &--btn {
         margin: 1rem auto 2rem;
@@ -116,9 +115,9 @@
         margin: 0.5rem auto;
       }
       &--price {
+        margin-bottom: 1rem;
         font-family: var(--bold-font);
         font-size: 2.45rem;
-        margin-bottom: 1rem;
       }
     }
 

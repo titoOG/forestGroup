@@ -6,6 +6,7 @@
   overflow: hidden;
   &__hero {
     display: flex;
+    position: relative;
     min-width: 11rem;
     width: 100%;
     padding: 24.25rem 1px;
@@ -14,7 +15,6 @@
     background-repeat: no-repeat;
     background-position: bottom;
     background-image: url('../img/heroSD.jpg');
-    position: relative;
     z-index: -1;
 
     &--shadow {
@@ -23,19 +23,17 @@
   }
   &__box {
     display: flex;
-    align-items: center;
-    width: 100%;
-    padding: 1.5rem;
+    position: absolute;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     min-width: 10rem;
-    position: absolute;
+    width: 100%;
+    padding: 1.5rem;
     top: 40%;
     left: 50%;
-    width: 100%;
-    transform: translate(-50%, -50%);
-    align-items: center;
     color: c.$primary-color;
+    transform: translate(-50%, -50%);
     z-index: 1;
 
     &--title {
@@ -46,8 +44,8 @@
       font-weight: 100;
     }
     &--subtitle {
-      width: 100%;
       text-align: center;
+      width: 100%;
       font-size: 2.25rem;
       font-family: var(--bold-font);
     }

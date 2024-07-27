@@ -122,6 +122,7 @@
 
                 </div>
         </section>
+        <div class="shadowBox" id="shadowBox"></div>
     </main>
 
     <footer class="footer" id="footer">
@@ -163,6 +164,23 @@
     <a href="#" class="upBtn" id="scrollToTopBtn" aria-label="Przewiń na górę">
         <img src="./assets/img/icon_arrowUp.svg" alt="arrowUp icon" class="upBtn__image">
     </a>
+
+    <div class="modal shadow " id="reservationModal">
+        <div class="modal__body">
+            <h2 class="modal__body-title">
+                <img src="./assets/img/icon_checkmark.svg" alt="Checkmark icon" class="modal__body-title--img">
+                Rezerwacja
+            </h2>
+            <p class="modal__body-text">
+                Skontatujemy się z Tobą w przeciągu <span class="modal__body-text--span">48 godzin</span>
+
+            </p>
+            <div class="modal__body-button">
+                <button class="modal__body-button--btn btn" id="modalBtn">Zatwierdź</button>
+                <button class="modal__body-button--btn btn" id="modalBtn">Anuluj</button>
+            </div>
+        </div>
+    </div>
 
     <script type="module" src="./assets/js/main.js"></script>
 </body>
