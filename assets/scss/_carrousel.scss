@@ -1,0 +1,76 @@
+@use './colors' as c;
+
+.carrousel {
+  display: flex;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 9999;
+  background-color: c.$primary-color;
+  min-width: 20rem;
+  max-width: 45rem;
+  width: 90%;
+  height: 25rem;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  &__body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: gold;
+    &-button {
+      position: absolute;
+      top: -100px;
+      right: -10px;
+      padding: 1rem;
+      z-index: 1;
+      &:nth-child(2) {
+        left: -100px;
+        top: 40%;
+      }
+
+      &:nth-child(3) {
+        right: -100px;
+        top: 40%;
+      }
+
+      &:nth-last-of-type(2) {
+        img {
+          rotate: 90deg;
+          background-color: c.$primary-color;
+        }
+      }
+
+      &:nth-last-of-type(3) {
+        img {
+          rotate: -90deg;
+          background-color: c.$primary-color;
+        }
+      }
+
+      &--img {
+        cursor: pointer;
+        border: 2px solid c.$secondary-color;
+        border-radius: 50%;
+        padding: 0.5rem;
+      }
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    &--img {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

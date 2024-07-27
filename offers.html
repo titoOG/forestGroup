@@ -58,11 +58,9 @@
     <main class="wrapper">
         <section class="offers section" id="offers">
             <h2 class="offers__title sectionTitle">Nasze oferty</h2>
-
             <div class="offers__selector">
                 <div class="offers__selector-btns">
                     <button id="solo" class="offers__selector-btns--btn btn cta">Solo</button>
-
                     <button id="group" class="offers__selector-btns--btn btn">Grupowe</button>
                 </div>
             </div>
@@ -70,7 +68,6 @@
             <div class="offers__content">
 
                 <div class="offers__boxes">
-
                     <div class="offers__box">
                         <div class="offers__box-details">
                             <h2 class="offers__box-details--title sectionTitle">Demo
@@ -82,7 +79,7 @@
                                 cupiditate
                                 vero facere eligendi? Aut quam similique reprehenderit ipsum molestias, in id.</p>
 
-                            <a href="#" class="offers__box-details--btn btn" id="demoPrice">$0</a>
+                            <button class="offers__box-details--btn btn" id="demoPrice">$0</but>
                         </div>
                         <img src="./assets/img/offersDemo_SD.jpg" alt="" class="offers__box--img">
                     </div>
@@ -96,7 +93,7 @@
                                 Deleniti, blanditiis totam rem omnis, perspiciatis, maiores nemo enim repellat
                                 cupiditate
                                 vero facere eligendi? Aut quam similique reprehenderit ipsum molestias, in id.</p>
-                            <a href="#" class="offers__box-details--btn btn" id="standardPrice">$99</a>
+                            <button class="offers__box-details--btn btn" id="standardPrice">$99</button>
                         </div>
                         <img src="./assets/img/offersStand_SD.jpg" alt="" class="offers__box--img">
                     </div>
@@ -110,7 +107,7 @@
                                 Deleniti, blanditiis totam rem omnis, perspiciatis, maiores nemo enim repellat
                                 cupiditate
                                 vero facere eligendi? Aut quam similique reprehenderit ipsum molestias, in id.</p>
-                            <a href="#" class="offers__box-details--btn btn" id="premiumPrice">$299</a>
+                            <button" class="offers__box-details--btn btn" id="premiumPrice">$299</button>
                         </div>
                         <img src="./assets/img/offersPrem_SD.jpg" alt="" class="offers__box--img">
                     </div>
@@ -119,10 +116,9 @@
                         <h2 class="offers__advanced--title sectionTitle ">Masz dodatkowe pytania odnośnie ofert?</h2>
                         <a href="./contact.html" class="offers__advanced--link btn cta">Napisz do nas!</a>
                     </div>
-
                 </div>
         </section>
-        <div class="shadowBox" id="shadowBox"></div>
+        <div class="box-shadow2" id="shadowBox"></div>
     </main>
 
     <footer class="footer" id="footer">
@@ -165,19 +161,22 @@
         <img src="./assets/img/icon_arrowUp.svg" alt="arrowUp icon" class="upBtn__image">
     </a>
 
-    <div class="modal shadow " id="reservationModal">
-        <div class="modal__body">
-            <h2 class="modal__body-title">
-                <img src="./assets/img/icon_checkmark.svg" alt="Checkmark icon" class="modal__body-title--img">
-                Rezerwacja
-            </h2>
-            <p class="modal__body-text">
-                Skontatujemy się z Tobą w przeciągu <span class="modal__body-text--span">48 godzin</span>
+    <div class="carrousel shadow " id="carrouselModal">
+        <div class="carrousel__body">
+            <div class="carrousel__body-button">
+                <img src="./assets/img/icon_close.svg" class="carrousel__body-button--img" alt="x icon">
+            </div>
 
-            </p>
-            <div class="modal__body-button">
-                <button class="modal__body-button--btn btn" id="modalBtn">Zatwierdź</button>
-                <button class="modal__body-button--btn btn" id="modalBtn">Anuluj</button>
+            <div class="carrousel__body-button">
+                <img src="./assets/img/icon_arrowUp.svg" class="carrousel__body-button--img" alt="arrow left icon">
+            </div>
+
+            <div class="carrousel__body-button">
+                <img src="./assets/img/icon_arrowUp.svg" class="carrousel__body-button--img" alt="arrow right icon">
+            </div>
+
+            <div class="carrousel__item">
+                <img src="./assets/img/offersDemo_HD.jpg" class="carrousel__item--img" alt="">
             </div>
         </div>
     </div>
