@@ -22,8 +22,10 @@
 
   .offers {
     &__box {
-      &--img {
-        width: 20rem;
+      &-item {
+        &--img {
+          width: 20rem;
+        }
       }
     }
   }
@@ -53,8 +55,10 @@
 @media (width >=576px) {
   .offers {
     &__box {
-      &--img {
-        width: 25.5rem;
+      &-item {
+        &--img {
+          width: 25.5rem;
+        }
       }
     }
   }
@@ -84,6 +88,10 @@
 }
 
 @media (width >= 992px) {
+  .noScroll {
+    overflow: auto;
+  }
+
   .sectionTitle {
     margin-bottom: 1.25rem;
   }
@@ -170,16 +178,19 @@
       &-details {
         flex-direction: column;
       }
-      &:hover &--img {
-        transition: scale 0.3s ease-in-out, opacity 0.3s ease-in-out;
-        opacity: 1;
-        scale: 1.03;
-      }
-      &--img {
-        width: 27rem;
-        height: 20rem;
-        transition: scale 0.3s ease-in-out, opacity 0.3s ease-in-out;
-        opacity: 0.5;
+
+      &-item {
+        &:hover &--img {
+          transition: scale 0.3s ease-in-out, opacity 0.3s ease-in-out;
+          opacity: 1;
+          scale: 1.03;
+        }
+        &--img {
+          width: 27rem;
+          height: 20rem;
+          transition: scale 0.3s ease-in-out, opacity 0.3s ease-in-out;
+          opacity: 0.5;
+        }
       }
     }
 

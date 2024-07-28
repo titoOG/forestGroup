@@ -10,9 +10,9 @@ import '../scss/_parallax.scss';
 import '../scss/_animations.scss';
 import '../scss/_footer.scss';
 import '../scss/_contact.scss';
-import '../scss/_globals.scss';
 import '../scss/_offersSection.scss';
 import '../scss/_carrousel.scss';
+import '../scss/_globals.scss';
 import '../scss/_modal.scss';
 import '../scss/_media.scss';
 
@@ -25,6 +25,8 @@ const navMobileLinks = document.querySelectorAll('.nav__mobile--link');
 const navDesktopLinks = document.querySelectorAll(`.nav__desktop--link`);
 const footerInfo = document.getElementById('footerInfo');
 const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+// offersSection
 const of_btns = document.querySelectorAll('.offers__selector-btns button');
 const of_soloBtn = document.getElementById('solo');
 const of_groupBtn = document.getElementById('group');
@@ -32,6 +34,71 @@ const of_groupBtn = document.getElementById('group');
 const demoPrice = document.getElementById('demoPrice');
 const standardPrice = document.getElementById('standardPrice');
 const premiumPrice = document.getElementById('premiumPrice');
+
+// carrousel
+const carrouselCloseBtn = document.getElementById('carrouselCloseBtn');
+const shadowBox = document.getElementById('shadowBox');
+const carrouselModal = document.getElementById('carrouselModal');
+const carrouselArrowLeft = document.getElementById('carrouselArrowLeft');
+const carrouselArrowRight = document.getElementById('carrouselArrowRight');
+const carrouselImages = document.querySelectorAll('.offers__box-item--img');
+const carrouselCurrentImage = document.querySelector('.carrousel__item--img');
+
+// globals
+const target = document.querySelectorAll('.spy');
+let scroll_Y_Position;
+let carrouselImageSrc;
+let carrouselImageID = 0;
+
+let carrouselGroupOne;
+let carrouselGroupTwo;
+let carrouselGroupThree;
+
+const openCarrousel = () => {
+  pageID.classList.add('noScroll');
+  shadowBox.classList.add('box-shadow');
+  carrouselCurrentImage.src = `${carrouselImageSrc}`;
+  carrouselModal.classList.add('dflex');
+  console.log(carrouselImageSrc);
+};
+
+const closeCarrousel = () => {
+  carrouselCloseBtn.addEventListener('click', () => {
+    carrouselImageID = 0;
+    pageID.classList.remove('noScroll');
+    shadowBox.classList.remove('box-shadow');
+    carrouselModal.classList.remove('dflex');
+  });
+};
+
+const carrouselOptions = () => {
+  carrouselArrowRight.addEventListener('click', () => {
+    carrouselImageID++;
+    if (carrouselImageID > 2) {
+      carrouselImageID = 0;
+    }
+    carrouselGroupOne = `../../assets/img/offersDemo_HD_${carrouselImageID}.jpg`;
+
+    carrouselCurrentImage.src = carrouselGroupOne;
+    console.log(carrouselImageID);
+  });
+  carrouselArrowLeft.addEventListener('click', () => {
+    carrouselImageID--;
+
+    console.log(carrouselImageID);
+  });
+};
+
+if (pageID.id === 'offersPage') {
+  closeCarrousel();
+  carrouselImages.forEach((image) => {
+    image.addEventListener('click', () => {
+      carrouselImageSrc = image.getAttribute('src');
+      openCarrousel();
+    });
+  });
+  carrouselOptions();
+}
 
 const offersBtnToggle = (e) => {
   if (!e.target.classList.contains('cta') && e.target === of_soloBtn) {
@@ -67,24 +134,11 @@ of_btns.forEach((btn) => {
   btn.addEventListener('click', offersBtnToggle);
 });
 
-const target = document.querySelectorAll('.spy');
-
-let scroll_Y_Position;
-
+// nav
 burgerBtn.addEventListener('click', () => {
   navMobile.classList.toggle('active');
   burgerBtnMid.classList.toggle('burgerActive');
   burgerBtnBot.classList.toggle('burgerActive');
-});
-
-const date = new Date();
-footerInfo.innerHTML = `&copy${date.getFullYear()} Forest Group Company Ltd`;
-
-scrollToTopBtn.addEventListener('click', (e) => {
-  e.preventDefault();
-  window.scrollTo({
-    top: 0,
-  });
 });
 
 navMobileLinks.forEach((link) => {
@@ -92,14 +146,6 @@ navMobileLinks.forEach((link) => {
     navMobile.classList.remove('active');
   });
 });
-
-setInterval(() => {
-  scroll_Y_Position =
-    document.documentElement.scrollTop || document.body.scrollTop;
-  if (scroll_Y_Position > 500) {
-    scrollToTopBtn.classList.add('btnFadeIn');
-  }
-}, 100);
 
 window.onscroll = () => {
   scroll_Y_Position =
@@ -114,6 +160,20 @@ window.onscroll = () => {
     }
   }
 };
+
+// footer
+
+const date = new Date();
+footerInfo.innerHTML = `&copy${date.getFullYear()} Forest Group Company Ltd`;
+
+scrollToTopBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  window.scrollTo({
+    top: 0,
+  });
+});
+
+// observer
 
 const options = {
   threshold: [0.85, 1],

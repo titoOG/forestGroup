@@ -71,6 +71,10 @@ main {
   top: 0px;
 }
 
+.dflex {
+  display: flex;
+}
+
 .burgerActive {
   animation: anm_burgerActive 0.3s ease-in-out forwards;
 }
@@ -158,4 +162,8 @@ main {
   height: 1000rem;
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 9999;
+}
+
+.noScroll {
+  overflow: hidden;
 }
