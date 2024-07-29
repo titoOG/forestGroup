@@ -11,7 +11,7 @@ import '../scss/_animations.scss';
 import '../scss/_footer.scss';
 import '../scss/_contact.scss';
 import '../scss/_offersSection.scss';
-import '../scss/_carrousel.scss';
+import '../scss/_carousel.scss';
 import '../scss/_globals.scss';
 import '../scss/_modal.scss';
 import '../scss/_media.scss';
@@ -35,69 +35,76 @@ const demoPrice = document.getElementById('demoPrice');
 const standardPrice = document.getElementById('standardPrice');
 const premiumPrice = document.getElementById('premiumPrice');
 
-// carrousel
-const carrouselCloseBtn = document.getElementById('carrouselCloseBtn');
+// carousel
 const shadowBox = document.getElementById('shadowBox');
-const carrouselModal = document.getElementById('carrouselModal');
-const carrouselArrowLeft = document.getElementById('carrouselArrowLeft');
-const carrouselArrowRight = document.getElementById('carrouselArrowRight');
-const carrouselImages = document.querySelectorAll('.offers__box-item--img');
-const carrouselCurrentImage = document.querySelector('.carrousel__item--img');
+const carouselBtns = document.querySelectorAll('.carousel__body-button--img');
+const carouselCloseBtn = document.getElementById('carouselCloseBtn');
+const carouselModal = document.getElementById('carouselModal');
+const carouselArrowLeft = document.getElementById('carouselArrowLeft');
+const carouselArrowRight = document.getElementById('carouselArrowRight');
+const carouselImages = document.querySelectorAll('.offers__box-item--img');
+const carouselCurrentImage = document.querySelector('.carousel__item--img');
 
 // globals
 const target = document.querySelectorAll('.spy');
 let scroll_Y_Position;
-let carrouselImageSrc;
-let carrouselImageID = 0;
+let carouselImageSrc = [];
+let carouselImageID = 0;
+let carouselImageGroup = [];
 
-let carrouselGroupOne;
-let carrouselGroupTwo;
-let carrouselGroupThree;
+const carouselOptions = (imagesSrc) => {
+  carouselBtns.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      if (e.target.id === 'carouselArrowRight') {
+        carouselImageID++;
+        imagesSrc = `./assets/img/offersDemo_HD_${carouselImageID}.jpg`;
+        carouselCurrentImage.src = imagesSrc;
+        console.log(carouselCurrentImage, carouselImageID, imagesSrc);
 
-const openCarrousel = () => {
+        if (carouselImageID > 1) {
+          carouselImageID = -1;
+        }
+      }
+      // else if (e.target.id === 'carouselArrowLeft') {
+      //   carouselImageID--;
+      //   if (carouselImageID < 0) {
+      //     carouselImageID = 2;
+      //   }
+      // }
+    });
+  });
+};
+
+const openCarousel = () => {
   pageID.classList.add('noScroll');
   shadowBox.classList.add('box-shadow');
-  carrouselCurrentImage.src = `${carrouselImageSrc}`;
-  carrouselModal.classList.add('dflex');
-  console.log(carrouselImageSrc);
+  carouselCurrentImage.src = `${carouselImageSrc}`;
+  carouselModal.classList.add('dflex');
+  carouselOptions();
+  // console.log(carouselImageGroup, carouselImageSrc);
 };
 
-const closeCarrousel = () => {
-  carrouselCloseBtn.addEventListener('click', () => {
-    carrouselImageID = 0;
+const closeCarousel = () => {
+  carouselCloseBtn.addEventListener('click', () => {
+    carouselImageID = 0;
+    carouselCurrentImage.src = '';
     pageID.classList.remove('noScroll');
     shadowBox.classList.remove('box-shadow');
-    carrouselModal.classList.remove('dflex');
-  });
-};
-
-const carrouselOptions = () => {
-  carrouselArrowRight.addEventListener('click', () => {
-    carrouselImageID++;
-    if (carrouselImageID > 2) {
-      carrouselImageID = 0;
-    }
-    carrouselGroupOne = `../../assets/img/offersDemo_HD_${carrouselImageID}.jpg`;
-
-    carrouselCurrentImage.src = carrouselGroupOne;
-    console.log(carrouselImageID);
-  });
-  carrouselArrowLeft.addEventListener('click', () => {
-    carrouselImageID--;
-
-    console.log(carrouselImageID);
+    carouselModal.classList.remove('dflex');
   });
 };
 
 if (pageID.id === 'offersPage') {
-  closeCarrousel();
-  carrouselImages.forEach((image) => {
+  closeCarousel();
+  carouselImages.forEach((image) => {
     image.addEventListener('click', () => {
-      carrouselImageSrc = image.getAttribute('src');
-      openCarrousel();
+      carouselImageSrc.pop();
+      carouselImageSrc.push(image.getAttribute('src'));
+      carouselImageGroup.pop();
+      carouselImageGroup.push(image.getAttribute('id'));
+      openCarousel();
     });
   });
-  carrouselOptions();
 }
 
 const offersBtnToggle = (e) => {
