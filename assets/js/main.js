@@ -10,9 +10,9 @@ import '../scss/_parallax.scss';
 import '../scss/_animations.scss';
 import '../scss/_footer.scss';
 import '../scss/_contact.scss';
-import '../scss/_offersSection.scss';
 import '../scss/_carousel.scss';
 import '../scss/_globals.scss';
+import '../scss/_offersSection.scss';
 import '../scss/_modal.scss';
 import '../scss/_media.scss';
 
@@ -43,34 +43,60 @@ const carouselModal = document.getElementById('carouselModal');
 const carouselArrowLeft = document.getElementById('carouselArrowLeft');
 const carouselArrowRight = document.getElementById('carouselArrowRight');
 const carouselImages = document.querySelectorAll('.offers__box-item--img');
-const carouselCurrentImage = document.querySelector('.carousel__item--img');
+const carouselCurrentImage = document.getElementById('carouselCurrentImage');
 
 // globals
 const target = document.querySelectorAll('.spy');
 let scroll_Y_Position;
-let carouselImageSrc = [];
 let carouselImageID = 0;
+let carouselImageSrc = [];
 let carouselImageGroup = [];
+let carouselImageGroupSrc;
 
-const carouselOptions = (imagesSrc) => {
+const closeCarousel = () => {
+  carouselImageID = 0;
+  carouselCurrentImage.src = '';
+  pageID.classList.remove('noScroll');
+  shadowBox.classList.remove('box-shadow');
+  carouselModal.classList.remove('dflex');
+};
+
+const carouselOptions = () => {
   carouselBtns.forEach((btn) => {
     btn.addEventListener('click', (e) => {
+      // console.log(carouselImageGroup);
+      if (carouselImageGroup == 'carouselDemoGroup') {
+        console.log(carouselImageGroup[0]);
+        carouselImageGroupSrc = `./assets/img/offersDemo_HD_${carouselImageID}.jpg`;
+        console.log('DEMO');
+      }
+      // if (carouselImageGroup[0] == 'carouselStandGroup') {
+      //   carouselImageGroupSrc = `./assets/img/offersStand_HD_${carouselImageID}.jpg`;
+      // }
+      // if (carouselImageGroup[0] == 'carouselPremGroup') {
+      //   carouselImageGroupSrc = `./assets/img/offersPrem_HD_${carouselImageID}.jpg`;
+      // }
+
+      if (e.target.id === 'carouselCloseBtn') {
+        closeCarousel();
+      }
+
       if (e.target.id === 'carouselArrowRight') {
         carouselImageID++;
-        imagesSrc = `./assets/img/offersDemo_HD_${carouselImageID}.jpg`;
-        carouselCurrentImage.src = imagesSrc;
-        console.log(carouselCurrentImage, carouselImageID, imagesSrc);
-
-        if (carouselImageID > 1) {
-          carouselImageID = -1;
+        if (carouselImageID > 2) {
+          carouselImageID = 0;
         }
+        // carouselImageGroupSrc = `./assets/img/offersDemo_HD_${carouselImageID}.jpg`;
+        carouselCurrentImage.src = carouselImageGroupSrc;
+        console.log(carouselImageID);
+      } else if (e.target.id === 'carouselArrowLeft') {
+        carouselImageID--;
+        if (carouselImageID < 0) {
+          carouselImageID = 2;
+        }
+        carouselCurrentImage.src = carouselImageGroupSrc;
+        console.log(carouselImageID);
       }
-      // else if (e.target.id === 'carouselArrowLeft') {
-      //   carouselImageID--;
-      //   if (carouselImageID < 0) {
-      //     carouselImageID = 2;
-      //   }
-      // }
     });
   });
 };
@@ -78,26 +104,16 @@ const carouselOptions = (imagesSrc) => {
 const openCarousel = () => {
   pageID.classList.add('noScroll');
   shadowBox.classList.add('box-shadow');
-  carouselCurrentImage.src = `${carouselImageSrc}`;
+  // carouselCurrentImage.src = `${carouselImageSrc}`;
+  carouselCurrentImage.src = `${carouselImageGroupSrc}`;
   carouselModal.classList.add('dflex');
-  carouselOptions();
-  // console.log(carouselImageGroup, carouselImageSrc);
-};
-
-const closeCarousel = () => {
-  carouselCloseBtn.addEventListener('click', () => {
-    carouselImageID = 0;
-    carouselCurrentImage.src = '';
-    pageID.classList.remove('noScroll');
-    shadowBox.classList.remove('box-shadow');
-    carouselModal.classList.remove('dflex');
-  });
 };
 
 if (pageID.id === 'offersPage') {
-  closeCarousel();
+  carouselOptions();
   carouselImages.forEach((image) => {
     image.addEventListener('click', () => {
+      // console.log(carouselCurrentImage);
       carouselImageSrc.pop();
       carouselImageSrc.push(image.getAttribute('src'));
       carouselImageGroup.pop();
