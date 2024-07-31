@@ -48,35 +48,25 @@ const carouselCurrentImage = document.getElementById('carouselCurrentImage');
 // globals
 const target = document.querySelectorAll('.spy');
 let scroll_Y_Position;
-let carouselImageID = 0;
 let carouselImageSrc = [];
 let carouselImageGroup = [];
 let carouselImageGroupSrc;
+let carouselImageID = 0;
 
-const closeCarousel = () => {
-  carouselImageID = 0;
-  carouselCurrentImage.src = '';
-  pageID.classList.remove('noScroll');
-  shadowBox.classList.remove('box-shadow');
-  carouselModal.classList.remove('dflex');
+const carouselGroupChecking = () => {
+  if (carouselImageGroup == 'carouselDemoGroup') {
+    carouselImageSrc[0] = `./assets/img/offersDemo_HD_${carouselImageID}.jpg`;
+    console.log(carouselImageSrc);
+  } else if (carouselImageGroup == 'carouselStandGroup') {
+    carouselImageSrc[0] = `./assets/img/offersStand_HD_${carouselImageID}.jpg`;
+  } else if (carouselImageGroup == 'carouselPremGroup') {
+    carouselImageSrc[0] = `./assets/img/offersPrem_HD_${carouselImageID}.jpg`;
+  }
 };
 
 const carouselOptions = () => {
   carouselBtns.forEach((btn) => {
     btn.addEventListener('click', (e) => {
-      // console.log(carouselImageGroup);
-      if (carouselImageGroup == 'carouselDemoGroup') {
-        console.log(carouselImageGroup[0]);
-        carouselImageGroupSrc = `./assets/img/offersDemo_HD_${carouselImageID}.jpg`;
-        console.log('DEMO');
-      }
-      // if (carouselImageGroup[0] == 'carouselStandGroup') {
-      //   carouselImageGroupSrc = `./assets/img/offersStand_HD_${carouselImageID}.jpg`;
-      // }
-      // if (carouselImageGroup[0] == 'carouselPremGroup') {
-      //   carouselImageGroupSrc = `./assets/img/offersPrem_HD_${carouselImageID}.jpg`;
-      // }
-
       if (e.target.id === 'carouselCloseBtn') {
         closeCarousel();
       }
@@ -86,16 +76,15 @@ const carouselOptions = () => {
         if (carouselImageID > 2) {
           carouselImageID = 0;
         }
-        // carouselImageGroupSrc = `./assets/img/offersDemo_HD_${carouselImageID}.jpg`;
-        carouselCurrentImage.src = carouselImageGroupSrc;
-        console.log(carouselImageID);
+        carouselGroupChecking();
+        carouselCurrentImage.src = carouselImageSrc;
       } else if (e.target.id === 'carouselArrowLeft') {
         carouselImageID--;
         if (carouselImageID < 0) {
           carouselImageID = 2;
         }
-        carouselCurrentImage.src = carouselImageGroupSrc;
-        console.log(carouselImageID);
+        carouselGroupChecking();
+        carouselCurrentImage.src = carouselImageSrc;
       }
     });
   });
@@ -104,22 +93,34 @@ const carouselOptions = () => {
 const openCarousel = () => {
   pageID.classList.add('noScroll');
   shadowBox.classList.add('box-shadow');
-  // carouselCurrentImage.src = `${carouselImageSrc}`;
-  carouselCurrentImage.src = `${carouselImageGroupSrc}`;
+  carouselCurrentImage.src = `${carouselImageSrc}`;
   carouselModal.classList.add('dflex');
+};
+
+const closeCarousel = () => {
+  carouselImageSrc.pop();
+  carouselImageGroup.pop();
+  carouselImageID = 0;
+  carouselCurrentImage.src = '';
+  pageID.classList.remove('noScroll');
+  shadowBox.classList.remove('box-shadow');
+  carouselModal.classList.remove('dflex');
 };
 
 if (pageID.id === 'offersPage') {
   carouselOptions();
   carouselImages.forEach((image) => {
     image.addEventListener('click', () => {
-      // console.log(carouselCurrentImage);
-      carouselImageSrc.pop();
       carouselImageSrc.push(image.getAttribute('src'));
-      carouselImageGroup.pop();
       carouselImageGroup.push(image.getAttribute('id'));
       openCarousel();
     });
+  });
+
+  window.addEventListener('click', (e) => {
+    if (e.target.id === 'shadowBox') {
+      closeCarousel();
+    }
   });
 }
 
