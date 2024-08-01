@@ -73,3 +73,23 @@
     transition: transform 0.3s;
   }
 }
+
+@keyframes anm_imageFadeIn {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0.5;
+  }
+}
+
+@keyframes anm_imageFadeOut {
+  from {
+    opacity: 0.5;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

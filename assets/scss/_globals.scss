@@ -167,3 +167,11 @@ main {
 .noScroll {
   overflow: hidden;
 }
+
+.imageFadeIn {
+  animation: anm_imageFadeIn 0.85s ease-in-out both;
+}
+
+.imageFadeOut {
+  animation: anm_imageFadOut 0.85s ease-in-out both;
+}

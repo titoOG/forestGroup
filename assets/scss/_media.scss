@@ -87,6 +87,12 @@
   }
 }
 
+@media (width >= 850px) {
+  .carousel {
+    min-width: 50rem;
+  }
+}
+
 @media (width >= 992px) {
   .noScroll {
     overflow: auto;
@@ -197,6 +203,10 @@
     // subpage
   }
 
+  .carousel {
+    min-width: 55rem;
+  }
+
   .footer {
     &__container {
       flex-direction: row;
@@ -301,6 +311,11 @@
       }
     }
   }
+
+  .carousel {
+    min-width: 70rem;
+    height: 60%;
+  }
 }
 
 @media (width >= 1400px) {
@@ -313,5 +328,11 @@
         text-align: left;
       }
     }
+  }
+}
+
+@media (height < 400px) {
+  .carousel {
+    height: 13.25rem;
   }
 }

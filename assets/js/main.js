@@ -38,25 +38,26 @@ const premiumPrice = document.getElementById('premiumPrice');
 // carousel
 const shadowBox = document.getElementById('shadowBox');
 const carouselBtns = document.querySelectorAll('.carousel__body-button--img');
-const carouselCloseBtn = document.getElementById('carouselCloseBtn');
 const carouselModal = document.getElementById('carouselModal');
-const carouselArrowLeft = document.getElementById('carouselArrowLeft');
-const carouselArrowRight = document.getElementById('carouselArrowRight');
 const carouselImages = document.querySelectorAll('.offers__box-item--img');
 const carouselCurrentImage = document.getElementById('carouselCurrentImage');
+
+const demoFirstItem = document.getElementById('demoFirstItem');
+
+console.log(demoFirstItem);
 
 // globals
 const target = document.querySelectorAll('.spy');
 let scroll_Y_Position;
 let carouselImageSrc = [];
 let carouselImageGroup = [];
-let carouselImageGroupSrc;
 let carouselImageID = 0;
+let windowWidth = [];
+let windowHeight = [];
 
 const carouselGroupChecking = () => {
   if (carouselImageGroup == 'carouselDemoGroup') {
     carouselImageSrc[0] = `./assets/img/offersDemo_HD_${carouselImageID}.jpg`;
-    console.log(carouselImageSrc);
   } else if (carouselImageGroup == 'carouselStandGroup') {
     carouselImageSrc[0] = `./assets/img/offersStand_HD_${carouselImageID}.jpg`;
   } else if (carouselImageGroup == 'carouselPremGroup') {
@@ -67,6 +68,12 @@ const carouselGroupChecking = () => {
 const carouselOptions = () => {
   carouselBtns.forEach((btn) => {
     btn.addEventListener('click', (e) => {
+      e.target.style.pointerEvents = 'none';
+
+      setTimeout(() => {
+        e.target.style.pointerEvents = 'auto';
+      }, 300);
+
       if (e.target.id === 'carouselCloseBtn') {
         closeCarousel();
       }
@@ -98,8 +105,8 @@ const openCarousel = () => {
 };
 
 const closeCarousel = () => {
-  carouselImageSrc.pop();
-  carouselImageGroup.pop();
+  carouselImageSrc.length = 0;
+  carouselImageGroup.length = 0;
   carouselImageID = 0;
   carouselCurrentImage.src = '';
   pageID.classList.remove('noScroll');
@@ -109,18 +116,34 @@ const closeCarousel = () => {
 
 if (pageID.id === 'offersPage') {
   carouselOptions();
-  carouselImages.forEach((image) => {
-    image.addEventListener('click', () => {
-      carouselImageSrc.push(image.getAttribute('src'));
-      carouselImageGroup.push(image.getAttribute('id'));
-      openCarousel();
-    });
-  });
 
   window.addEventListener('click', (e) => {
     if (e.target.id === 'shadowBox') {
       closeCarousel();
     }
+  });
+
+  window.addEventListener('resize', () => {
+    windowWidth.pop();
+    windowHeight.pop();
+    windowWidth.push(window.innerWidth);
+    windowHeight.push(window.innerHeight);
+    if (windowWidth < 350) {
+      closeCarousel();
+    } else if (windowHeight < 300) {
+      closeCarousel();
+    }
+  });
+
+  carouselImages.forEach((image) => {
+    image.addEventListener('click', () => {
+      if (windowWidth >= 350) {
+        carouselImageSrc.push(image.getAttribute('src'));
+        carouselImageGroup.push(image.getAttribute('id'));
+
+        openCarousel();
+      }
+    });
   });
 }
 
@@ -184,6 +207,10 @@ window.onscroll = () => {
     }
   }
 };
+
+window.addEventListener('DOMContentLoaded', () => {
+  windowWidth.push(window.innerWidth);
+});
 
 // footer
 
