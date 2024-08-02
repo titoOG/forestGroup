@@ -8,6 +8,10 @@
       }
     }
   }
+
+  .carousel {
+    min-width: 90%;
+  }
 }
 
 @media (width >= 400px) {
@@ -89,7 +93,7 @@
 
 @media (width >= 850px) {
   .carousel {
-    min-width: 50rem;
+    min-width: 47.688rem;
   }
 }
 

@@ -52,24 +52,24 @@
 
 @keyframes anm_modalIn {
   from {
-    transform: translateY(-100%);
     bottom: -250%;
+    transform: translateY(-100%);
   }
   to {
-    transform: translateY(0);
     bottom: 0;
+    transform: translateY(0);
   }
 }
 
 @keyframes anm_modalOut {
   from {
-    transform: translateY(0);
     bottom: 0;
+    transform: translateY(0);
     transition: transform 0.3s;
   }
   to {
-    transform: translateY(-100%);
     bottom: -250%;
+    transform: translateY(-100%);
     transition: transform 0.3s;
   }
 }
@@ -87,6 +87,16 @@
 @keyframes anm_imageFadeOut {
   from {
     opacity: 0.5;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes anm_carouselFadeIn {
+  from {
+    opacity: 0.35;
   }
 
   to {

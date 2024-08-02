@@ -22,7 +22,7 @@ const burgerBtnMid = document.getElementById('burgerBtnMid');
 const burgerBtnBot = document.getElementById('burgerBtnBot');
 const navMobile = document.getElementById('navMobile');
 const navMobileLinks = document.querySelectorAll('.nav__mobile--link');
-const navDesktopLinks = document.querySelectorAll(`.nav__desktop--link`);
+const navDesktopLinks = document.querySelectorAll('.nav__desktop--link');
 const footerInfo = document.getElementById('footerInfo');
 const scrollToTopBtn = document.getElementById('scrollToTopBtn');
 
@@ -42,12 +42,8 @@ const carouselModal = document.getElementById('carouselModal');
 const carouselImages = document.querySelectorAll('.offers__box-item--img');
 const carouselCurrentImage = document.getElementById('carouselCurrentImage');
 
-const demoFirstItem = document.getElementById('demoFirstItem');
-
-console.log(demoFirstItem);
-
 // globals
-const target = document.querySelectorAll('.spy');
+
 let scroll_Y_Position;
 let carouselImageSrc = [];
 let carouselImageGroup = [];
@@ -102,6 +98,7 @@ const openCarousel = () => {
   shadowBox.classList.add('box-shadow');
   carouselCurrentImage.src = `${carouselImageSrc}`;
   carouselModal.classList.add('dflex');
+  carouselModal.classList.add('carouselImagesIn');
 };
 
 const closeCarousel = () => {
@@ -128,7 +125,7 @@ if (pageID.id === 'offersPage') {
     windowHeight.pop();
     windowWidth.push(window.innerWidth);
     windowHeight.push(window.innerHeight);
-    if (windowWidth < 350) {
+    if (windowWidth < 150) {
       closeCarousel();
     } else if (windowHeight < 300) {
       closeCarousel();
@@ -137,10 +134,10 @@ if (pageID.id === 'offersPage') {
 
   carouselImages.forEach((image) => {
     image.addEventListener('click', () => {
-      if (windowWidth >= 350) {
+      if (windowWidth >= 150) {
+        carouselModal.classList.remove('carouselFadeIn');
         carouselImageSrc.push(image.getAttribute('src'));
         carouselImageGroup.push(image.getAttribute('id'));
-
         openCarousel();
       }
     });
@@ -197,6 +194,7 @@ navMobileLinks.forEach((link) => {
 window.onscroll = () => {
   scroll_Y_Position =
     document.documentElement.scrollTop || document.body.scrollTop;
+  // console.log(scroll_Y_Position);
   if (scroll_Y_Position >= 500) {
     scrollToTopBtn.classList.add('btnFadeIn');
     scrollToTopBtn.classList.remove('btnFadeOut');
@@ -227,21 +225,27 @@ scrollToTopBtn.addEventListener('click', (e) => {
 // observer
 
 const options = {
-  threshold: [0.85, 1],
+  threshold: [0.25, 0.5, 0.85, 1],
   rootMargin: '20px',
   // rootMargin: '50px 0px -150px 0px ',
 };
+
+const target = document.querySelectorAll('.spy');
+
 const handleScrollSpy = (entries) => {
   entries.forEach((entry) => {
     // entry.target.style.opacity = entry.intersectionRatio - 0.25;
     let targetID = entry.target.id;
+    console.log(targetID);
 
     if (!entry.isIntersecting) {
       return;
-    } else if (entry.isIntersecting && entry.intersectionRatio >= 0.75) {
+      // entry.isIntersecting && entry.intersectionRatio >= 0.75
+    } else if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
       const activeLink = document.querySelector(
         `.nav__desktop--link[href='#${targetID}']`
       );
+
       navDesktopLinks.forEach((link) => link.classList.remove('navActive'));
       activeLink.classList.add('navActive');
       console.log(
@@ -253,6 +257,6 @@ const handleScrollSpy = (entries) => {
 
 const observer = new IntersectionObserver(handleScrollSpy, options);
 
-// target.forEach((section) => {
-//   observer.observe(section);
-// });
+target.forEach((section) => {
+  observer.observe(section);
+});

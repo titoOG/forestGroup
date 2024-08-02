@@ -173,5 +173,9 @@ main {
 }
 
 .imageFadeOut {
-  animation: anm_imageFadOut 0.85s ease-in-out both;
+  animation: anm_imageFadOut 0.85s ease-in-out forwards;
+}
+
+.carouselImagesIn {
+  animation: anm_carouselFadeIn 0.5s ease-in-out forwards;
 }
