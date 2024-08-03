@@ -99,28 +99,6 @@ main {
   }
 }
 
-.btnFadeOut {
-  animation: anm_btnFadeOut 0.3s ease-in-out forwards;
-}
-
-.btnFadeIn {
-  animation: anm_btnFadeIn 0.3s ease-in-out forwards;
-}
-
-.navActive {
-  color: c.$primary-color;
-  background-color: c.$secondary-color;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-
-.modalActive {
-  animation: anm_modalIn 0.85s ease-in-out forwards;
-}
-
-.modalInactive {
-  animation: anm_modalOut 1.5s ease-in-out forwards;
-}
-
 .shadow {
   border: none;
   border-radius: 0.25rem;
@@ -166,6 +144,28 @@ main {
 
 .noScroll {
   overflow: hidden;
+}
+
+.btnFadeOut {
+  animation: anm_btnFadeOut 0.3s ease-in-out forwards;
+}
+
+.btnFadeIn {
+  animation: anm_btnFadeIn 0.3s ease-in-out forwards;
+}
+
+.navActive {
+  color: c.$primary-color;
+  background-color: c.$secondary-color;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.modalActive {
+  animation: anm_modalIn 0.85s ease-in-out forwards;
+}
+
+.modalInactive {
+  animation: anm_modalOut 1.5s ease-in-out forwards;
 }
 
 .imageFadeIn {

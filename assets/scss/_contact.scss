@@ -83,8 +83,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1.15rem;
-    border-radius: 0.5rem;
+    padding: 1.5rem;
 
     &-option {
       display: flex;
@@ -176,13 +175,12 @@
   &__mapBox {
     display: flex;
     margin: 1rem 0;
-    padding: 0rem;
     width: 100%;
     padding: 0.6rem;
     border-radius: 0.5rem;
 
     &--map {
-      width: 20rem;
+      width: 21rem;
       height: 13.5rem;
       border-radius: 0.5rem;
     }

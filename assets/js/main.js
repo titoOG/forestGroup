@@ -17,6 +17,7 @@ import '../scss/_modal.scss';
 import '../scss/_media.scss';
 
 const pageID = document.querySelector('body');
+const header = document.getElementById('header');
 const burgerBtn = document.getElementById('burgerBtn');
 const burgerBtnMid = document.getElementById('burgerBtnMid');
 const burgerBtnBot = document.getElementById('burgerBtnBot');
@@ -45,6 +46,8 @@ const carouselCurrentImage = document.getElementById('carouselCurrentImage');
 // globals
 
 let scroll_Y_Position;
+let elementOffsetTop = [];
+let offsetTopValue;
 let carouselImageSrc = [];
 let carouselImageGroup = [];
 let carouselImageID = 0;
@@ -192,6 +195,7 @@ navMobileLinks.forEach((link) => {
 });
 
 window.onscroll = () => {
+  // console.log(headerOffsetTop);
   scroll_Y_Position =
     document.documentElement.scrollTop || document.body.scrollTop;
   // console.log(scroll_Y_Position);
@@ -225,7 +229,8 @@ scrollToTopBtn.addEventListener('click', (e) => {
 // observer
 
 const options = {
-  threshold: [0.25, 0.5, 0.85, 1],
+  threshold: [0.5, 0.83, 1],
+  // threshold: [0.85, 1],
   rootMargin: '20px',
   // rootMargin: '50px 0px -150px 0px ',
 };
@@ -234,23 +239,18 @@ const target = document.querySelectorAll('.spy');
 
 const handleScrollSpy = (entries) => {
   entries.forEach((entry) => {
-    // entry.target.style.opacity = entry.intersectionRatio - 0.25;
     let targetID = entry.target.id;
-    console.log(targetID);
+
+    console.log(`${targetID}`, entry.intersectionRatio);
 
     if (!entry.isIntersecting) {
       return;
-      // entry.isIntersecting && entry.intersectionRatio >= 0.75
-    } else if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+    } else if (entry.isIntersecting && entry.intersectionRatio >= 0.83) {
       const activeLink = document.querySelector(
         `.nav__desktop--link[href='#${targetID}']`
       );
-
       navDesktopLinks.forEach((link) => link.classList.remove('navActive'));
       activeLink.classList.add('navActive');
-      console.log(
-        `target to: <${targetID}> jego ratio to <${entry.intersectionRatio}>`
-      );
     }
   });
 };
@@ -259,4 +259,6 @@ const observer = new IntersectionObserver(handleScrollSpy, options);
 
 target.forEach((section) => {
   observer.observe(section);
+  // console.log(section.offsetTop);
+  elementOffsetTop.push(section.offsetTop);
 });
