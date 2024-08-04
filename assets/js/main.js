@@ -46,8 +46,10 @@ const carouselCurrentImage = document.getElementById('carouselCurrentImage');
 // globals
 
 let scroll_Y_Position;
-let elementOffsetTop = [];
-let offsetTopValue;
+let elementRatio = [];
+let targetID;
+let activeLink;
+let lastActiveLink;
 let carouselImageSrc = [];
 let carouselImageGroup = [];
 let carouselImageID = 0;
@@ -229,24 +231,36 @@ scrollToTopBtn.addEventListener('click', (e) => {
 // observer
 
 const options = {
-  threshold: [0.5, 0.83, 1],
-  // threshold: [0.85, 1],
-  rootMargin: '20px',
-  // rootMargin: '50px 0px -150px 0px ',
+  // threshold: [0.3, 0.5, 0.83, 1],
+  // threshold: [0.97, 1],
+  // rootMargin: '0px 0px -396px ',
+  rootMargin: '0px 0px -55% ',
 };
 
 const target = document.querySelectorAll('.spy');
 
 const handleScrollSpy = (entries) => {
   entries.forEach((entry) => {
-    let targetID = entry.target.id;
-
-    console.log(`${targetID}`, entry.intersectionRatio);
+    // console.log(windowWidth);
+    elementRatio.pop();
+    targetID = entry.target.id;
+    elementRatio.push(entry.intersectionRatio.toFixed(3));
+    // console.log(`${targetID}`, elementRatio);
+    const maxValue = Math.max(...elementRatio);
+    activeLink = document.querySelector(
+      `.nav__desktop--link[href='#${targetID}']`
+    );
 
     if (!entry.isIntersecting) {
+      // console.log(activeLink);
+      // lastActiveLink.classList.add('navActive');
       return;
-    } else if (entry.isIntersecting && entry.intersectionRatio >= 0.83) {
-      const activeLink = document.querySelector(
+    } else if (entry.isIntersecting) {
+      navDesktopLinks.forEach((link) => link.classList.remove('navActive'));
+      activeLink.classList.add('navActive');
+    } else if (entry.isIntersecting && pageID.id == 'offersPage') {
+      console.log(`${targetID}`, entry.intersectionRatio);
+      activeLink = document.querySelector(
         `.nav__desktop--link[href='#${targetID}']`
       );
       navDesktopLinks.forEach((link) => link.classList.remove('navActive'));
@@ -259,6 +273,4 @@ const observer = new IntersectionObserver(handleScrollSpy, options);
 
 target.forEach((section) => {
   observer.observe(section);
-  // console.log(section.offsetTop);
-  elementOffsetTop.push(section.offsetTop);
 });
