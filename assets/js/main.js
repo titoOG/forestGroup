@@ -17,7 +17,6 @@ import '../scss/_modal.scss';
 import '../scss/_media.scss';
 
 const pageID = document.querySelector('body');
-const header = document.getElementById('header');
 const burgerBtn = document.getElementById('burgerBtn');
 const burgerBtnMid = document.getElementById('burgerBtnMid');
 const burgerBtnBot = document.getElementById('burgerBtnBot');
@@ -27,34 +26,28 @@ const navDesktopLinks = document.querySelectorAll('.nav__desktop--link');
 const footerInfo = document.getElementById('footerInfo');
 const scrollToTopBtn = document.getElementById('scrollToTopBtn');
 
-// offersSection
 const of_btns = document.querySelectorAll('.offers__selector-btns button');
 const of_soloBtn = document.getElementById('solo');
 const of_groupBtn = document.getElementById('group');
-
 const demoPrice = document.getElementById('demoPrice');
 const standardPrice = document.getElementById('standardPrice');
 const premiumPrice = document.getElementById('premiumPrice');
 
-// carousel
 const shadowBox = document.getElementById('shadowBox');
 const carouselBtns = document.querySelectorAll('.carousel__body-button--img');
 const carouselModal = document.getElementById('carouselModal');
 const carouselImages = document.querySelectorAll('.offers__box-item--img');
 const carouselCurrentImage = document.getElementById('carouselCurrentImage');
 
-// globals
-
-let scroll_Y_Position;
-let elementRatio = [];
+let scroll_Y_Pos;
 let targetID;
 let activeLink;
-let lastActiveLink;
 let carouselImageSrc = [];
 let carouselImageGroup = [];
 let carouselImageID = 0;
 let windowWidth = [];
 let windowHeight = [];
+let elementOffset = [];
 
 const carouselGroupChecking = () => {
   if (carouselImageGroup == 'carouselDemoGroup') {
@@ -127,9 +120,7 @@ if (pageID.id === 'offersPage') {
 
   window.addEventListener('resize', () => {
     windowWidth.pop();
-    windowHeight.pop();
     windowWidth.push(window.innerWidth);
-    windowHeight.push(window.innerHeight);
     if (windowWidth < 150) {
       closeCarousel();
     } else if (windowHeight < 300) {
@@ -183,7 +174,6 @@ of_btns.forEach((btn) => {
   btn.addEventListener('click', offersBtnToggle);
 });
 
-// nav
 burgerBtn.addEventListener('click', () => {
   navMobile.classList.toggle('active');
   burgerBtnMid.classList.toggle('burgerActive');
@@ -196,37 +186,8 @@ navMobileLinks.forEach((link) => {
   });
 });
 
-window.onscroll = () => {
-  // console.log(headerOffsetTop);
-  scroll_Y_Position =
-    document.documentElement.scrollTop || document.body.scrollTop;
-  // console.log(scroll_Y_Position);
-  if (scroll_Y_Position >= 500) {
-    scrollToTopBtn.classList.add('btnFadeIn');
-    scrollToTopBtn.classList.remove('btnFadeOut');
-  } else if (scroll_Y_Position < 500) {
-    if (scrollToTopBtn.classList.contains('btnFadeIn')) {
-      scrollToTopBtn.classList.remove('btnFadeIn');
-      scrollToTopBtn.classList.add('btnFadeOut');
-    }
-  }
-};
-
-window.addEventListener('DOMContentLoaded', () => {
-  windowWidth.push(window.innerWidth);
-});
-
-// footer
-
 const date = new Date();
 footerInfo.innerHTML = `&copy${date.getFullYear()} Forest Group Company Ltd`;
-
-scrollToTopBtn.addEventListener('click', (e) => {
-  e.preventDefault();
-  window.scrollTo({
-    top: 0,
-  });
-});
 
 // observer
 
@@ -234,43 +195,72 @@ const options = {
   // threshold: [0.3, 0.5, 0.83, 1],
   // threshold: [0.97, 1],
   // rootMargin: '0px 0px -396px ',
-  rootMargin: '0px 0px -55% ',
+  // rootMargin: '0px 0px -28% ',
+  rootMargin: '0px 0px -40% ',
 };
 
+function optionsUpdate() {
+  if (windowHeight <= 826) {
+    options.rootMargin = '0px 0px -28%';
+    console.log(options.rootMargin);
+  } else {
+    options.rootMargin = '0px 0px -40%';
+    console.log(options.rootMargin);
+  }
+}
 const target = document.querySelectorAll('.spy');
-
 const handleScrollSpy = (entries) => {
   entries.forEach((entry) => {
-    // console.log(windowWidth);
-    elementRatio.pop();
     targetID = entry.target.id;
-    elementRatio.push(entry.intersectionRatio.toFixed(3));
-    // console.log(`${targetID}`, elementRatio);
-    const maxValue = Math.max(...elementRatio);
     activeLink = document.querySelector(
       `.nav__desktop--link[href='#${targetID}']`
     );
 
     if (!entry.isIntersecting) {
-      // console.log(activeLink);
-      // lastActiveLink.classList.add('navActive');
       return;
     } else if (entry.isIntersecting) {
-      navDesktopLinks.forEach((link) => link.classList.remove('navActive'));
-      activeLink.classList.add('navActive');
-    } else if (entry.isIntersecting && pageID.id == 'offersPage') {
-      console.log(`${targetID}`, entry.intersectionRatio);
-      activeLink = document.querySelector(
-        `.nav__desktop--link[href='#${targetID}']`
-      );
       navDesktopLinks.forEach((link) => link.classList.remove('navActive'));
       activeLink.classList.add('navActive');
     }
   });
 };
 
-const observer = new IntersectionObserver(handleScrollSpy, options);
+// listeners
 
-target.forEach((section) => {
-  observer.observe(section);
+window.addEventListener('resize', () => {
+  windowHeight.pop();
+  windowHeight.push(window.innerHeight);
+  optionsUpdate();
 });
+
+window.addEventListener('DOMContentLoaded', () => {
+  const observer = new IntersectionObserver(handleScrollSpy, options);
+  target.forEach((section) => {
+    observer.observe(section);
+  });
+  optionsUpdate();
+  windowWidth.push(window.innerWidth);
+  windowHeight.push(window.innerHeight);
+  console.log(windowHeight);
+
+  scrollToTopBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+    });
+  });
+});
+
+window.onscroll = () => {
+  scroll_Y_Pos = document.documentElement.scrollTop || document.body.scrollTop;
+
+  if (scroll_Y_Pos >= 500) {
+    scrollToTopBtn.classList.add('btnFadeIn');
+    scrollToTopBtn.classList.remove('btnFadeOut');
+  } else if (scroll_Y_Pos < 500) {
+    if (scrollToTopBtn.classList.contains('btnFadeIn')) {
+      scrollToTopBtn.classList.remove('btnFadeIn');
+      scrollToTopBtn.classList.add('btnFadeOut');
+    }
+  }
+};
