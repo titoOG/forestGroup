@@ -50,6 +50,16 @@
   }
 }
 
+@keyframes anm_navLogo {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100px);
+  }
+}
+
 @keyframes anm_modalIn {
   from {
     bottom: -250%;

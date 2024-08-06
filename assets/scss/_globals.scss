@@ -154,6 +154,10 @@ main {
   animation: anm_btnFadeIn 0.3s ease-in-out forwards;
 }
 
+.navLogoFade {
+  animation: anm_navLogo 0.3s ease-in-out forwards;
+}
+
 .navActive {
   color: c.$primary-color;
   background-color: c.$secondary-color;

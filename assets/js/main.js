@@ -20,6 +20,8 @@ const pageID = document.querySelector('body');
 const burgerBtn = document.getElementById('burgerBtn');
 const burgerBtnMid = document.getElementById('burgerBtnMid');
 const burgerBtnBot = document.getElementById('burgerBtnBot');
+const navLogo = document.querySelector('.nav__logo');
+const navLogoImg = document.querySelector('.nav__logo--image');
 const navMobile = document.getElementById('navMobile');
 const navMobileLinks = document.querySelectorAll('.nav__mobile--link');
 const navDesktopLinks = document.querySelectorAll('.nav__desktop--link');
@@ -48,6 +50,10 @@ let carouselImageID = 0;
 let windowWidth = [];
 let windowHeight = [];
 let elementOffset = [];
+let rootOffset = [];
+let observerMargin;
+
+// console.log(elementOffset, rootOffset);
 
 const carouselGroupChecking = () => {
   if (carouselImageGroup == 'carouselDemoGroup') {
@@ -176,6 +182,9 @@ of_btns.forEach((btn) => {
 
 burgerBtn.addEventListener('click', () => {
   navMobile.classList.toggle('active');
+
+  navLogo.classList.add('navLogoFade');
+
   burgerBtnMid.classList.toggle('burgerActive');
   burgerBtnBot.classList.toggle('burgerActive');
 });
@@ -190,25 +199,14 @@ const date = new Date();
 footerInfo.innerHTML = `&copy${date.getFullYear()} Forest Group Company Ltd`;
 
 // observer
+const target = document.querySelectorAll('.spy');
 
 const options = {
-  // threshold: [0.3, 0.5, 0.83, 1],
-  // threshold: [0.97, 1],
-  // rootMargin: '0px 0px -396px ',
+  rootMargin: '0px 0px -40% 0px ',
+  // threshold: [0.15],
   // rootMargin: '0px 0px -28% ',
-  rootMargin: '0px 0px -40% ',
 };
 
-function optionsUpdate() {
-  if (windowHeight <= 826) {
-    options.rootMargin = '0px 0px -28%';
-    console.log(options.rootMargin);
-  } else {
-    options.rootMargin = '0px 0px -40%';
-    console.log(options.rootMargin);
-  }
-}
-const target = document.querySelectorAll('.spy');
 const handleScrollSpy = (entries) => {
   entries.forEach((entry) => {
     targetID = entry.target.id;
@@ -230,18 +228,19 @@ const handleScrollSpy = (entries) => {
 window.addEventListener('resize', () => {
   windowHeight.pop();
   windowHeight.push(window.innerHeight);
-  optionsUpdate();
 });
 
 window.addEventListener('DOMContentLoaded', () => {
   const observer = new IntersectionObserver(handleScrollSpy, options);
   target.forEach((section) => {
+    elementOffset.push(target[0].offsetHeight);
+    rootOffset.push(document.body.offsetHeight);
     observer.observe(section);
   });
-  optionsUpdate();
+  // optionsUpdate();
   windowWidth.push(window.innerWidth);
   windowHeight.push(window.innerHeight);
-  console.log(windowHeight);
+  // console.log(windowHeight);
 
   scrollToTopBtn.addEventListener('click', (e) => {
     e.preventDefault();
