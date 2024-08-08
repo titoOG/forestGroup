@@ -3,16 +3,16 @@
   "transforms": [
     {
       "name": "vite:load-fallback",
-      "result": "@use './colors' as c;\n\n.footer {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  width: 100%;\n  background-color: c.$footer-color;\n  overflow: hidden;\n\n  &__content {\n    display: flex;\n    flex-direction: column;\n    justify-content: space-evenly;\n    align-items: center;\n    width: 100%;\n    margin-top: 1.5rem;\n  }\n\n  &__container {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    width: 100%;\n  }\n\n  &__logo {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    margin: 1.5rem auto;\n    padding: 0.5rem;\n\n    &-link {\n      padding: 1rem;\n      min-width: 10rem;\n      display: flex;\n      font-size: 2.25rem;\n      align-items: center;\n      // padding: 1rem;\n      &--image {\n        width: 2.5rem;\n      }\n    }\n  }\n  &__list {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    // align-items: flex-start;\n    // justify-content: flex-start;\n    padding: 1.25rem;\n    width: 14.5rem;\n    margin: 1rem auto;\n    &--title {\n      font-family: var(--bold-font);\n      margin-bottom: 1rem;\n    }\n    &--item {\n      display: flex;\n      justify-content: center;\n      width: 100%;\n      margin: 0.25rem auto;\n      padding: 0.5rem;\n      font-size: 0.95rem;\n      transition: color 0.3s ease-in-out;\n\n      &:hover {\n        color: c.$footer-font;\n      }\n    }\n  }\n\n  &__separator {\n    height: 1px;\n    width: 100%;\n    margin: 1rem auto;\n    background-color: c.$grey-color;\n  }\n\n  &__info {\n    padding: 1.5rem;\n    width: 100%;\n    &--details {\n      display: flex;\n      justify-content: center;\n      align-items: center;\n      padding: 0.5rem;\n      font-size: 0.85rem;\n    }\n  }\n}\n",
-      "start": 1721477843812,
-      "end": 1721477843818,
+      "result": "@use './colors' as c;\n\n.footer {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  width: 100%;\n  background-color: c.$footer-color;\n  overflow: hidden;\n\n  &__content {\n    display: flex;\n    flex-direction: column;\n    justify-content: space-evenly;\n    align-items: center;\n    width: 100%;\n    margin-top: 1.5rem;\n  }\n\n  &__container {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    width: 100%;\n  }\n\n  &__logo {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    margin: 1.5rem auto;\n    padding: 0.5rem;\n\n    &-link {\n      display: flex;\n      align-items: center;\n      padding: 1rem;\n      min-width: 10rem;\n      font-size: 2.25rem;\n      // padding: 1rem;\n      &--image {\n        width: 2.5rem;\n      }\n    }\n  }\n  &__list {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    padding: 1.25rem;\n    width: 14.5rem;\n    margin: 1rem auto;\n    &--title {\n      margin-bottom: 1rem;\n      font-family: var(--bold-font);\n    }\n    &--item {\n      display: flex;\n      justify-content: center;\n      width: 100%;\n      margin: 0.25rem auto;\n      padding: 0.5rem;\n      font-size: 0.95rem;\n      transition: color 0.3s ease-in-out;\n\n      &:hover {\n        color: c.$footer-font;\n      }\n    }\n  }\n\n  &__separator {\n    height: 1px;\n    width: 100%;\n    margin: 1rem auto;\n    background-color: c.$grey-color;\n  }\n\n  &__info {\n    padding: 1.5rem;\n    width: 100%;\n    &--details {\n      display: flex;\n      justify-content: center;\n      align-items: center;\n      padding: 0.5rem;\n      font-size: 0.85rem;\n    }\n  }\n}\n",
+      "start": 1723154064771,
+      "end": 1723154064779,
       "sourcemaps": null
     },
     {
       "name": "vite:css",
-      "result": ".footer {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  width: 100%;\n  background-color: #f5f5f5;\n  overflow: hidden;\n}\n.footer__content {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-evenly;\n  align-items: center;\n  width: 100%;\n  margin-top: 1.5rem;\n}\n.footer__container {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  width: 100%;\n}\n.footer__logo {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  margin: 1.5rem auto;\n  padding: 0.5rem;\n}\n.footer__logo-link {\n  padding: 1rem;\n  min-width: 10rem;\n  display: flex;\n  font-size: 2.25rem;\n  align-items: center;\n}\n.footer__logo-link--image {\n  width: 2.5rem;\n}\n.footer__list {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  padding: 1.25rem;\n  width: 14.5rem;\n  margin: 1rem auto;\n}\n.footer__list--title {\n  font-family: var(--bold-font);\n  margin-bottom: 1rem;\n}\n.footer__list--item {\n  display: flex;\n  justify-content: center;\n  width: 100%;\n  margin: 0.25rem auto;\n  padding: 0.5rem;\n  font-size: 0.95rem;\n  transition: color 0.3s ease-in-out;\n}\n.footer__list--item:hover {\n  color: #656565;\n}\n.footer__separator {\n  height: 1px;\n  width: 100%;\n  margin: 1rem auto;\n  background-color: #787878;\n}\n.footer__info {\n  padding: 1.5rem;\n  width: 100%;\n}\n.footer__info--details {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  padding: 0.5rem;\n  font-size: 0.85rem;\n}",
-      "start": 1721477843819,
-      "end": 1721477844454,
+      "result": ".footer {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  width: 100%;\n  background-color: #f5f5f5;\n  overflow: hidden;\n}\n.footer__content {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-evenly;\n  align-items: center;\n  width: 100%;\n  margin-top: 1.5rem;\n}\n.footer__container {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  width: 100%;\n}\n.footer__logo {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  margin: 1.5rem auto;\n  padding: 0.5rem;\n}\n.footer__logo-link {\n  display: flex;\n  align-items: center;\n  padding: 1rem;\n  min-width: 10rem;\n  font-size: 2.25rem;\n}\n.footer__logo-link--image {\n  width: 2.5rem;\n}\n.footer__list {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  padding: 1.25rem;\n  width: 14.5rem;\n  margin: 1rem auto;\n}\n.footer__list--title {\n  margin-bottom: 1rem;\n  font-family: var(--bold-font);\n}\n.footer__list--item {\n  display: flex;\n  justify-content: center;\n  width: 100%;\n  margin: 0.25rem auto;\n  padding: 0.5rem;\n  font-size: 0.95rem;\n  transition: color 0.3s ease-in-out;\n}\n.footer__list--item:hover {\n  color: #656565;\n}\n.footer__separator {\n  height: 1px;\n  width: 100%;\n  margin: 1rem auto;\n  background-color: #787878;\n}\n.footer__info {\n  padding: 1.5rem;\n  width: 100%;\n}\n.footer__info--details {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  padding: 0.5rem;\n  font-size: 0.85rem;\n}",
+      "start": 1723154064779,
+      "end": 1723154065688,
       "order": "normal",
       "sourcemaps": {
         "mappings": ""
@@ -20,33 +20,33 @@
     },
     {
       "name": "vite:esbuild",
-      "start": 1721477844455,
-      "end": 1721477844455,
+      "start": 1723154065689,
+      "end": 1723154065689,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1721477844455,
-      "end": 1721477844455,
+      "start": 1723154065689,
+      "end": 1723154065689,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1721477844455,
-      "end": 1721477844455,
+      "start": 1723154065690,
+      "end": 1723154065690,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1721477844456,
-      "end": 1721477844456,
+      "start": 1723154065690,
+      "end": 1723154065690,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
       "result": "",
-      "start": 1721477844456,
-      "end": 1721477844456,
+      "start": 1723154065691,
+      "end": 1723154065691,
       "order": "normal",
       "sourcemaps": {
         "mappings": ""
@@ -54,50 +54,50 @@
     },
     {
       "name": "vite:build-html",
-      "start": 1721477844456,
-      "end": 1721477844457,
+      "start": 1723154065691,
+      "end": 1723154065691,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1721477844457,
-      "end": 1721477844457,
+      "start": 1723154065692,
+      "end": 1723154065692,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1721477844457,
-      "end": 1721477844457,
+      "start": 1723154065692,
+      "end": 1723154065692,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1721477844457,
-      "end": 1721477844457,
+      "start": 1723154065692,
+      "end": 1723154065692,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1721477844457,
-      "end": 1721477844457,
+      "start": 1723154065692,
+      "end": 1723154065692,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1721477844457,
-      "end": 1721477844457,
+      "start": 1723154065693,
+      "end": 1723154065693,
       "order": "normal"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1721477844458,
-      "end": 1721477844458,
+      "start": 1723154065693,
+      "end": 1723154065693,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1721477844460,
-      "end": 1721477844460,
+      "start": 1723154065695,
+      "end": 1723154065695,
       "order": "normal"
     }
   ]

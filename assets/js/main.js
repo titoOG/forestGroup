@@ -1,4 +1,5 @@
 import * as contact from './contact.js';
+
 import '../scss/main.scss';
 import '../scss/_reset.scss';
 import '../scss/_fonts.scss';
@@ -12,6 +13,7 @@ import '../scss/_footer.scss';
 import '../scss/_contact.scss';
 import '../scss/_carousel.scss';
 import '../scss/_globals.scss';
+import '../scss/_404.scss';
 import '../scss/_offersSection.scss';
 import '../scss/_modal.scss';
 import '../scss/_media.scss';
@@ -21,7 +23,6 @@ const burgerBtn = document.getElementById('burgerBtn');
 const burgerBtnMid = document.getElementById('burgerBtnMid');
 const burgerBtnBot = document.getElementById('burgerBtnBot');
 const navLogo = document.querySelector('.nav__logo');
-const navLogoImg = document.querySelector('.nav__logo--image');
 const navMobile = document.getElementById('navMobile');
 const navMobileLinks = document.querySelectorAll('.nav__mobile--link');
 const navDesktopLinks = document.querySelectorAll('.nav__desktop--link');
@@ -49,11 +50,6 @@ let carouselImageGroup = [];
 let carouselImageID = 0;
 let windowWidth = [];
 let windowHeight = [];
-let elementOffset = [];
-let rootOffset = [];
-let observerMargin;
-
-// console.log(elementOffset, rootOffset);
 
 const carouselGroupChecking = () => {
   if (carouselImageGroup == 'carouselDemoGroup') {
@@ -176,29 +172,9 @@ const offersBtnToggle = (e) => {
   }
 };
 
-of_btns.forEach((btn) => {
-  btn.addEventListener('click', offersBtnToggle);
-});
-
-burgerBtn.addEventListener('click', () => {
-  navMobile.classList.toggle('active');
-
-  navLogo.classList.add('navLogoFade');
-
-  burgerBtnMid.classList.toggle('burgerActive');
-  burgerBtnBot.classList.toggle('burgerActive');
-});
-
-navMobileLinks.forEach((link) => {
-  link.addEventListener('click', () => {
-    navMobile.classList.remove('active');
-  });
-});
-
 const date = new Date();
 footerInfo.innerHTML = `&copy${date.getFullYear()} Forest Group Company Ltd`;
 
-// observer
 const target = document.querySelectorAll('.spy');
 
 const options = {
@@ -223,7 +199,24 @@ const handleScrollSpy = (entries) => {
   });
 };
 
-// listeners
+of_btns.forEach((btn) => {
+  btn.addEventListener('click', offersBtnToggle);
+});
+
+burgerBtn.addEventListener('click', () => {
+  navMobile.classList.toggle('active');
+
+  navLogo.classList.toggle('navLogoLeft');
+  navLogo.classList.toggle('navLogoCenter');
+  burgerBtnMid.classList.toggle('burgerActive');
+  burgerBtnBot.classList.toggle('burgerActive');
+});
+
+navMobileLinks.forEach((link) => {
+  link.addEventListener('click', () => {
+    navMobile.classList.remove('active');
+  });
+});
 
 window.addEventListener('resize', () => {
   windowHeight.pop();
@@ -233,14 +226,11 @@ window.addEventListener('resize', () => {
 window.addEventListener('DOMContentLoaded', () => {
   const observer = new IntersectionObserver(handleScrollSpy, options);
   target.forEach((section) => {
-    elementOffset.push(target[0].offsetHeight);
-    rootOffset.push(document.body.offsetHeight);
     observer.observe(section);
   });
-  // optionsUpdate();
+
   windowWidth.push(window.innerWidth);
   windowHeight.push(window.innerHeight);
-  // console.log(windowHeight);
 
   scrollToTopBtn.addEventListener('click', (e) => {
     e.preventDefault();

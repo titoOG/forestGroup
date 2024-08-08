@@ -3,16 +3,16 @@
   "transforms": [
     {
       "name": "vite:load-fallback",
-      "result": "@use './mixins' as m;\n@use './colors' as c;\n\na {\n  text-decoration: none;\n  color: c.$secondary-color;\n}\n\nmain {\n  position: relative;\n}\n\n.section {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  max-width: 75rem;\n  align-items: center;\n  width: 100%;\n  min-width: 17rem;\n  margin: 2rem auto;\n}\n\n.sectionTitle {\n  font-size: 40px;\n  margin-top: 2rem;\n  font-weight: 100;\n  text-transform: uppercase;\n}\n\n.wrapper {\n  margin: 0 auto;\n  width: 100%;\n  text-align: center;\n  overflow-x: hidden;\n}\n\n.center {\n  max-width: 75rem;\n}\n\n.btn {\n  @include m.buttonSettings;\n}\n\n.cta {\n  @include m.buttonCta;\n}\n\n.inactive {\n  color: grey;\n}\n\n.upBtn {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  position: fixed;\n  opacity: 0;\n  padding: 0.15rem;\n  bottom: 10px;\n  right: 5px;\n  background-color: c.$accent-color;\n  background-position: center;\n  border-radius: 25%;\n  transition: border-radius 0.3s ease-in-out;\n\n  &:hover {\n    border-radius: 50%;\n  }\n}\n\n.btnFadeOut {\n  animation: anm_btnFadeOut 0.3s ease-in-out forwards;\n}\n\n.btnFadeIn {\n  animation: anm_btnFadeIn 0.3s ease-in-out forwards;\n}\n\n.navActive {\n  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;\n  background-color: c.$secondary-color;\n  color: c.$primary-color;\n}\n",
-      "start": 1721477843812,
-      "end": 1721477843817,
+      "result": "@use './mixins' as m;\n@use './colors' as c;\n\na {\n  text-decoration: none;\n  color: c.$secondary-color;\n}\n\na,\ntextarea,\ninput,\niframe {\n  @include m.focus;\n}\n\ninput[type='checkbox'] {\n  accent-color: c.$accent-color;\n}\n\ninput[type='checkbox']:disabled {\n  cursor: not-allowed;\n}\n\nmain {\n  position: relative;\n}\n\n.section {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  margin: 2rem auto;\n  min-width: 17rem;\n  width: 100%;\n  max-width: 75rem;\n}\n\n.sectionTitle {\n  margin-top: 2rem;\n  font-size: 40px;\n  font-weight: 100;\n  text-transform: uppercase;\n}\n\n.wrapper {\n  margin: 0 auto;\n  width: 100%;\n  text-align: center;\n  overflow-x: hidden;\n}\n\n.center {\n  max-width: 75rem;\n}\n\n.btn {\n  @include m.buttonSettings;\n  @include m.focus;\n}\n\n.cta {\n  @include m.buttonCta;\n}\n\n.inactive {\n  color: grey;\n}\n\n.active {\n  top: 0px;\n}\n\n.dflex {\n  display: flex;\n}\n\n.burgerActive {\n  animation: anm_burgerActive 0.3s ease-in-out forwards;\n}\n\n.upBtn {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  position: fixed;\n  opacity: 0;\n  padding: 0.15rem;\n  bottom: 10px;\n  right: 5px;\n  background-color: c.$accent-color;\n  background-position: center;\n  border-radius: 25%;\n  visibility: hidden;\n  transition: border-radius 0.3s ease-in-out;\n\n  &:hover {\n    border-radius: 50%;\n  }\n}\n\n.shadow {\n  border: none;\n  border-radius: 0.25rem;\n  -webkit-box-shadow: 1px 2px 16px -7px rgba(66, 68, 90, 1);\n  -moz-box-shadow: 1px 2px 16px -7px rgba(66, 68, 90, 1);\n  box-shadow: 1px 2px 16px -7px rgba(66, 68, 90, 1);\n}\n\n.column {\n  flex-direction: column;\n}\n\n.row {\n  flex-direction: row;\n}\n\n.formError {\n  @include m.formError(c.$errorMsg);\n}\n\n.formErrorText {\n  padding: 0.5rem;\n  color: c.$errorMsg;\n}\n\n.required {\n  display: inline-block;\n  height: 1px;\n  width: 10.5px;\n  font-size: 1.75rem;\n  color: c.$errorMsg;\n}\n\n.box-shadow {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 1000rem;\n  height: 1000rem;\n  background-color: rgba(0, 0, 0, 0.7);\n  z-index: 9999;\n}\n\n.noScroll {\n  overflow: hidden;\n}\n\n.btnFadeOut {\n  animation: anm_btnFadeOut 0.3s ease-in-out forwards;\n}\n\n.btnFadeIn {\n  animation: anm_btnFadeIn 0.3s ease-in-out forwards;\n}\n\n.navLogoLeft {\n  animation: anm_navLogoLeft 0.3s ease-in-out forwards;\n}\n\n.navLogoCenter {\n  animation: anm_navLogoCenter 0.3s ease-in-out forwards;\n}\n\n.navActive {\n  color: c.$primary-color;\n  background-color: c.$secondary-color;\n  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;\n}\n\n.modalActive {\n  animation: anm_modalIn 0.85s ease-in-out forwards;\n}\n\n.modalInactive {\n  animation: anm_modalOut 1.5s ease-in-out forwards;\n}\n\n.imageFadeIn {\n  animation: anm_imageFadeIn 0.85s ease-in-out both;\n}\n\n.imageFadeOut {\n  animation: anm_imageFadOut 0.85s ease-in-out forwards;\n}\n\n.carouselImagesIn {\n  animation: anm_carouselFadeIn 0.5s ease-in-out forwards;\n}\n",
+      "start": 1723154064771,
+      "end": 1723154064779,
       "sourcemaps": null
     },
     {
       "name": "vite:css",
-      "result": "a {\n  text-decoration: none;\n  color: #000000;\n}\n\nmain {\n  position: relative;\n}\n\n.section {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  max-width: 75rem;\n  align-items: center;\n  width: 100%;\n  min-width: 17rem;\n  margin: 2rem auto;\n}\n\n.sectionTitle {\n  font-size: 40px;\n  margin-top: 2rem;\n  font-weight: 100;\n  text-transform: uppercase;\n}\n\n.wrapper {\n  margin: 0 auto;\n  width: 100%;\n  text-align: center;\n  overflow-x: hidden;\n}\n\n.center {\n  max-width: 75rem;\n}\n\n.btn {\n  display: inline-block;\n  padding: 0.5rem;\n  width: 11.25rem;\n  background-color: #fff;\n  font-size: 1.05rem;\n  border: none;\n  border-radius: 0.4rem;\n  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;\n  cursor: pointer;\n  -webkit-box-shadow: 0px 2px 5px 0px rgb(120, 120, 120);\n  -moz-box-shadow: 0px 2px 5px 0px rgb(120, 120, 120);\n  box-shadow: 0px 2px 5px 0px rgb(120, 120, 120);\n}\n.btn:hover {\n  background-color: #2cf57c;\n  -webkit-box-shadow: 0px 2px 5px 0px rgb(42, 222, 114);\n  -moz-box-shadow: 0px 2px 5px 0px rgb(42, 222, 114);\n  box-shadow: 0px 2px 5px 0px rgb(42, 222, 114);\n}\n\n.cta {\n  background-color: #2ade72;\n  -webkit-box-shadow: 0px 2px 5px 0px rgb(42, 222, 114);\n  -moz-box-shadow: 0px 2px 5px 0px rgb(42, 222, 114);\n  box-shadow: 0px 2px 5px 0px rgb(42, 222, 114);\n}\n\n.inactive {\n  color: grey;\n}\n\n.upBtn {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  position: fixed;\n  opacity: 0;\n  padding: 0.15rem;\n  bottom: 10px;\n  right: 5px;\n  background-color: #2ade72;\n  background-position: center;\n  border-radius: 25%;\n  transition: border-radius 0.3s ease-in-out;\n}\n.upBtn:hover {\n  border-radius: 50%;\n}\n\n.btnFadeOut {\n  animation: anm_btnFadeOut 0.3s ease-in-out forwards;\n}\n\n.btnFadeIn {\n  animation: anm_btnFadeIn 0.3s ease-in-out forwards;\n}\n\n.navActive {\n  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;\n  background-color: #000000;\n  color: #fff;\n}",
-      "start": 1721477843817,
-      "end": 1721477844454,
+      "result": "a {\n  text-decoration: none;\n  color: #000000;\n}\n\na:focus-visible,\ntextarea:focus-visible,\ninput:focus-visible,\niframe:focus-visible {\n  outline: #2ade72 solid 2px;\n}\n\ninput[type=checkbox] {\n  accent-color: #2ade72;\n}\n\ninput[type=checkbox]:disabled {\n  cursor: not-allowed;\n}\n\nmain {\n  position: relative;\n}\n\n.section {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  margin: 2rem auto;\n  min-width: 17rem;\n  width: 100%;\n  max-width: 75rem;\n}\n\n.sectionTitle {\n  margin-top: 2rem;\n  font-size: 40px;\n  font-weight: 100;\n  text-transform: uppercase;\n}\n\n.wrapper {\n  margin: 0 auto;\n  width: 100%;\n  text-align: center;\n  overflow-x: hidden;\n}\n\n.center {\n  max-width: 75rem;\n}\n\n.btn {\n  display: inline-block;\n  width: 11.25rem;\n  padding: 0.5rem;\n  background-color: #fff;\n  border: none;\n  border-radius: 0.4rem;\n  font-size: 1.05rem;\n  -webkit-box-shadow: 0px 2px 5px 0px rgb(120, 120, 120);\n  -moz-box-shadow: 0px 2px 5px 0px rgb(120, 120, 120);\n  box-shadow: 0px 2px 5px 0px rgb(120, 120, 120);\n  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;\n  cursor: pointer;\n}\n.btn:hover {\n  background-color: #2cf57c;\n  -webkit-box-shadow: 0px 2px 5px 0px rgb(42, 222, 114);\n  -moz-box-shadow: 0px 2px 5px 0px rgb(42, 222, 114);\n  box-shadow: 0px 2px 5px 0px rgb(42, 222, 114);\n}\n.btn:focus-visible {\n  outline: #2ade72 solid 2px;\n}\n\n.cta {\n  background-color: #2ade72;\n  -webkit-box-shadow: 0px 2px 5px 0px rgb(42, 222, 114);\n  -moz-box-shadow: 0px 2px 5px 0px rgb(42, 222, 114);\n  box-shadow: 0px 2px 5px 0px rgb(42, 222, 114);\n}\n\n.inactive {\n  color: grey;\n}\n\n.active {\n  top: 0px;\n}\n\n.dflex {\n  display: flex;\n}\n\n.burgerActive {\n  animation: anm_burgerActive 0.3s ease-in-out forwards;\n}\n\n.upBtn {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  position: fixed;\n  opacity: 0;\n  padding: 0.15rem;\n  bottom: 10px;\n  right: 5px;\n  background-color: #2ade72;\n  background-position: center;\n  border-radius: 25%;\n  visibility: hidden;\n  transition: border-radius 0.3s ease-in-out;\n}\n.upBtn:hover {\n  border-radius: 50%;\n}\n\n.shadow {\n  border: none;\n  border-radius: 0.25rem;\n  -webkit-box-shadow: 1px 2px 16px -7px rgb(66, 68, 90);\n  -moz-box-shadow: 1px 2px 16px -7px rgb(66, 68, 90);\n  box-shadow: 1px 2px 16px -7px rgb(66, 68, 90);\n}\n\n.column {\n  flex-direction: column;\n}\n\n.row {\n  flex-direction: row;\n}\n\n.formError {\n  font-weight: 500;\n  outline: 2px solid #f80202;\n  color: #f50c0c;\n}\n.formError::-webkit-input-placeholder {\n  color: #f50c0c;\n}\n\n.formErrorText {\n  padding: 0.5rem;\n  color: #f50c0c;\n}\n\n.required {\n  display: inline-block;\n  height: 1px;\n  width: 10.5px;\n  font-size: 1.75rem;\n  color: #f50c0c;\n}\n\n.box-shadow {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 1000rem;\n  height: 1000rem;\n  background-color: rgba(0, 0, 0, 0.7);\n  z-index: 9999;\n}\n\n.noScroll {\n  overflow: hidden;\n}\n\n.btnFadeOut {\n  animation: anm_btnFadeOut 0.3s ease-in-out forwards;\n}\n\n.btnFadeIn {\n  animation: anm_btnFadeIn 0.3s ease-in-out forwards;\n}\n\n.navLogoLeft {\n  animation: anm_navLogoLeft 0.3s ease-in-out forwards;\n}\n\n.navLogoCenter {\n  animation: anm_navLogoCenter 0.3s ease-in-out forwards;\n}\n\n.navActive {\n  color: #fff;\n  background-color: #000000;\n  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;\n}\n\n.modalActive {\n  animation: anm_modalIn 0.85s ease-in-out forwards;\n}\n\n.modalInactive {\n  animation: anm_modalOut 1.5s ease-in-out forwards;\n}\n\n.imageFadeIn {\n  animation: anm_imageFadeIn 0.85s ease-in-out both;\n}\n\n.imageFadeOut {\n  animation: anm_imageFadOut 0.85s ease-in-out forwards;\n}\n\n.carouselImagesIn {\n  animation: anm_carouselFadeIn 0.5s ease-in-out forwards;\n}",
+      "start": 1723154064779,
+      "end": 1723154065688,
       "order": "normal",
       "sourcemaps": {
         "mappings": ""
@@ -20,33 +20,33 @@
     },
     {
       "name": "vite:esbuild",
-      "start": 1721477844455,
-      "end": 1721477844455,
+      "start": 1723154065689,
+      "end": 1723154065689,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1721477844455,
-      "end": 1721477844455,
+      "start": 1723154065689,
+      "end": 1723154065689,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1721477844455,
-      "end": 1721477844455,
+      "start": 1723154065690,
+      "end": 1723154065690,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1721477844456,
-      "end": 1721477844456,
+      "start": 1723154065690,
+      "end": 1723154065690,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
       "result": "",
-      "start": 1721477844456,
-      "end": 1721477844456,
+      "start": 1723154065691,
+      "end": 1723154065691,
       "order": "normal",
       "sourcemaps": {
         "mappings": ""
@@ -54,50 +54,50 @@
     },
     {
       "name": "vite:build-html",
-      "start": 1721477844457,
-      "end": 1721477844457,
+      "start": 1723154065691,
+      "end": 1723154065691,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1721477844457,
-      "end": 1721477844457,
+      "start": 1723154065692,
+      "end": 1723154065692,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1721477844457,
-      "end": 1721477844457,
+      "start": 1723154065692,
+      "end": 1723154065692,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1721477844457,
-      "end": 1721477844457,
+      "start": 1723154065692,
+      "end": 1723154065692,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1721477844457,
-      "end": 1721477844457,
+      "start": 1723154065692,
+      "end": 1723154065692,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1721477844457,
-      "end": 1721477844457,
+      "start": 1723154065693,
+      "end": 1723154065693,
       "order": "normal"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1721477844458,
-      "end": 1721477844458,
+      "start": 1723154065693,
+      "end": 1723154065693,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1721477844460,
-      "end": 1721477844460,
+      "start": 1723154065695,
+      "end": 1723154065695,
       "order": "normal"
     }
   ]

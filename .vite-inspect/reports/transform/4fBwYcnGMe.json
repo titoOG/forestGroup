@@ -3,93 +3,93 @@
   "transforms": [
     {
       "name": "vite:load-fallback",
-      "result": "import '../scss/main.scss';\nimport '../scss/_reset.scss';\nimport '../scss/_fonts.scss';\nimport '../scss/_globals.scss';\nimport '../scss/_mixins.scss';\nimport '../scss/_nav.scss';\nimport '../scss/_header.scss';\nimport '../scss/_about.scss';\nimport '../scss/_offersSection.scss';\nimport '../scss/_parallax.scss';\nimport '../scss/_animations.scss';\nimport '../scss/_footer.scss';\nimport '../scss/_media.scss';\nimport '../scss/_contact.scss';\n\nconst burgerBtn = document.getElementById('burgerBtn');\nconst burgerBtnMid = document.getElementById('burgerBtnMid');\nconst burgerBtnBot = document.getElementById('burgerBtnBot');\nconst navMobile = document.getElementById('navMobile');\nconst navMobileLinks = document.querySelectorAll('.nav__mobile--link');\nconst navDesktop = document.getElementById('navDesktop');\nlet navDesktopLinks = document.querySelectorAll(`.nav__desktop--link`);\nconst footerInfo = document.getElementById('footerInfo');\nconst scrollToTopBtn = document.getElementById('scrollToTopBtn');\nconst of_btns = document.querySelectorAll('.offers__selector-btns button');\nconst of_soloBtn = document.getElementById('solo');\nconst of_groupBtn = document.getElementById('group');\n\nconst demoPrice = document.getElementById('demoPrice');\nconst standardPrice = document.getElementById('standardPrice');\nconst premiumPrice = document.getElementById('premiumPrice');\n\nconst offersBtnToggle = (e) => {\n  if (!e.target.classList.contains('cta') && e.target === of_soloBtn) {\n    of_soloBtn.classList.add('cta');\n    of_groupBtn.classList.remove('cta');\n    demoPrice.textContent = '$0';\n    standardPrice.textContent = '$99';\n    premiumPrice.textContent = '$299';\n  } else if (e.target.classList.contains('cta') && e.target === of_soloBtn) {\n    of_soloBtn.classList.remove('cta');\n    of_groupBtn.classList.add('cta');\n    demoPrice.textContent = '$50';\n    standardPrice.textContent = '$299';\n    premiumPrice.textContent = '$599';\n  }\n\n  if (!e.target.classList.contains('cta') && e.target === of_groupBtn) {\n    of_groupBtn.classList.add('cta');\n    of_soloBtn.classList.remove('cta');\n    demoPrice.textContent = '$50';\n    standardPrice.textContent = '$299';\n    premiumPrice.textContent = '$599';\n  } else if (e.target.classList.contains('cta') && e.target === of_groupBtn) {\n    demoPrice.textContent = '$0';\n    standardPrice.textContent = '$99';\n    premiumPrice.textContent = '$299';\n    of_groupBtn.classList.remove('cta');\n    of_soloBtn.classList.add('cta');\n  }\n};\n\nof_soloBtn.addEventListener('click', offersBtnToggle);\n\nof_btns.forEach((btn) => {\n  btn.addEventListener('click', offersBtnToggle);\n});\n\nconst target = document.querySelectorAll('.spy');\n\nlet scroll_Y_Position;\n\nburgerBtn.addEventListener('click', () => {\n  navMobile.classList.toggle('active');\n  burgerBtnMid.classList.toggle('burgerActive');\n  burgerBtnBot.classList.toggle('burgerActive');\n});\n\nconst date = new Date();\nfooterInfo.innerHTML = `&copy${date.getFullYear()} Forest Group Company Ltd`;\n\nscrollToTopBtn.addEventListener('click', (e) => {\n  e.preventDefault();\n  window.scrollTo({\n    top: 0,\n  });\n});\n\nnavMobileLinks.forEach((link) => {\n  link.addEventListener('click', () => {\n    navMobile.classList.remove('active');\n  });\n});\n\nsetInterval(() => {\n  scroll_Y_Position =\n    document.documentElement.scrollTop || document.body.scrollTop;\n  if (scroll_Y_Position > 500) {\n    scrollToTopBtn.classList.add('btnFadeIn');\n  }\n}, 100);\n\nwindow.onscroll = () => {\n  scroll_Y_Position =\n    document.documentElement.scrollTop || document.body.scrollTop;\n  if (scroll_Y_Position >= 500) {\n    scrollToTopBtn.classList.add('btnFadeIn');\n  } else if (scroll_Y_Position < 500) {\n    if (scrollToTopBtn.classList.contains('btnFadeIn')) {\n      scrollToTopBtn.classList.remove('btnFadeIn');\n      scrollToTopBtn.classList.add('btnFadeOut');\n    }\n  }\n};\n\nconst options = {\n  threshold: [0.85, 1],\n  rootMargin: '20px',\n  // rootMargin: '50px 0px -150px 0px ',\n};\nconst handleScrollSpy = (entries) => {\n  entries.forEach((entry) => {\n    // entry.target.style.opacity = entry.intersectionRatio - 0.25;\n    let targetID = entry.target.id;\n\n    if (!entry.isIntersecting) {\n      return;\n    } else if (entry.isIntersecting && entry.intersectionRatio >= 0.75) {\n      const activeLink = document.querySelector(\n        `.nav__desktop--link[href='#${targetID}']`\n      );\n      navDesktopLinks.forEach((link) => link.classList.remove('navActive'));\n      activeLink.classList.add('navActive');\n      console.log(\n        `target to: <${targetID}> jego ratio to <${entry.intersectionRatio}>`\n      );\n    }\n  });\n};\n\nconst observer = new IntersectionObserver(handleScrollSpy, options);\n\n// target.forEach((section) => {\n//   observer.observe(section);\n// });\n",
-      "start": 1721477843782,
-      "end": 1721477843798,
+      "result": "import * as contact from './contact.js';\n\nimport '../scss/main.scss';\nimport '../scss/_reset.scss';\nimport '../scss/_fonts.scss';\nimport '../scss/_mixins.scss';\nimport '../scss/_nav.scss';\nimport '../scss/_header.scss';\nimport '../scss/_about.scss';\nimport '../scss/_parallax.scss';\nimport '../scss/_animations.scss';\nimport '../scss/_footer.scss';\nimport '../scss/_contact.scss';\nimport '../scss/_carousel.scss';\nimport '../scss/_globals.scss';\nimport '../scss/_404.scss';\nimport '../scss/_offersSection.scss';\nimport '../scss/_modal.scss';\nimport '../scss/_media.scss';\n\nconst pageID = document.querySelector('body');\nconst burgerBtn = document.getElementById('burgerBtn');\nconst burgerBtnMid = document.getElementById('burgerBtnMid');\nconst burgerBtnBot = document.getElementById('burgerBtnBot');\nconst navLogo = document.querySelector('.nav__logo');\nconst navMobile = document.getElementById('navMobile');\nconst navMobileLinks = document.querySelectorAll('.nav__mobile--link');\nconst navDesktopLinks = document.querySelectorAll('.nav__desktop--link');\nconst footerInfo = document.getElementById('footerInfo');\nconst scrollToTopBtn = document.getElementById('scrollToTopBtn');\n\nconst of_btns = document.querySelectorAll('.offers__selector-btns button');\nconst of_soloBtn = document.getElementById('solo');\nconst of_groupBtn = document.getElementById('group');\nconst demoPrice = document.getElementById('demoPrice');\nconst standardPrice = document.getElementById('standardPrice');\nconst premiumPrice = document.getElementById('premiumPrice');\n\nconst shadowBox = document.getElementById('shadowBox');\nconst carouselBtns = document.querySelectorAll('.carousel__body-button--img');\nconst carouselModal = document.getElementById('carouselModal');\nconst carouselImages = document.querySelectorAll('.offers__box-item--img');\nconst carouselCurrentImage = document.getElementById('carouselCurrentImage');\n\nlet scroll_Y_Pos;\nlet targetID;\nlet activeLink;\nlet carouselImageSrc = [];\nlet carouselImageGroup = [];\nlet carouselImageID = 0;\nlet windowWidth = [];\nlet windowHeight = [];\n\nconst carouselGroupChecking = () => {\n  if (carouselImageGroup == 'carouselDemoGroup') {\n    carouselImageSrc[0] = `./assets/img/offersDemo_HD_${carouselImageID}.jpg`;\n  } else if (carouselImageGroup == 'carouselStandGroup') {\n    carouselImageSrc[0] = `./assets/img/offersStand_HD_${carouselImageID}.jpg`;\n  } else if (carouselImageGroup == 'carouselPremGroup') {\n    carouselImageSrc[0] = `./assets/img/offersPrem_HD_${carouselImageID}.jpg`;\n  }\n};\n\nconst carouselOptions = () => {\n  carouselBtns.forEach((btn) => {\n    btn.addEventListener('click', (e) => {\n      e.target.style.pointerEvents = 'none';\n\n      setTimeout(() => {\n        e.target.style.pointerEvents = 'auto';\n      }, 300);\n\n      if (e.target.id === 'carouselCloseBtn') {\n        closeCarousel();\n      }\n\n      if (e.target.id === 'carouselArrowRight') {\n        carouselImageID++;\n        if (carouselImageID > 2) {\n          carouselImageID = 0;\n        }\n        carouselGroupChecking();\n        carouselCurrentImage.src = carouselImageSrc;\n      } else if (e.target.id === 'carouselArrowLeft') {\n        carouselImageID--;\n        if (carouselImageID < 0) {\n          carouselImageID = 2;\n        }\n        carouselGroupChecking();\n        carouselCurrentImage.src = carouselImageSrc;\n      }\n    });\n  });\n};\n\nconst openCarousel = () => {\n  pageID.classList.add('noScroll');\n  shadowBox.classList.add('box-shadow');\n  carouselCurrentImage.src = `${carouselImageSrc}`;\n  carouselModal.classList.add('dflex');\n  carouselModal.classList.add('carouselImagesIn');\n};\n\nconst closeCarousel = () => {\n  carouselImageSrc.length = 0;\n  carouselImageGroup.length = 0;\n  carouselImageID = 0;\n  carouselCurrentImage.src = '';\n  pageID.classList.remove('noScroll');\n  shadowBox.classList.remove('box-shadow');\n  carouselModal.classList.remove('dflex');\n};\n\nif (pageID.id === 'offersPage') {\n  carouselOptions();\n\n  window.addEventListener('click', (e) => {\n    if (e.target.id === 'shadowBox') {\n      closeCarousel();\n    }\n  });\n\n  window.addEventListener('resize', () => {\n    windowWidth.pop();\n    windowWidth.push(window.innerWidth);\n    if (windowWidth < 150) {\n      closeCarousel();\n    } else if (windowHeight < 300) {\n      closeCarousel();\n    }\n  });\n\n  carouselImages.forEach((image) => {\n    image.addEventListener('click', () => {\n      if (windowWidth >= 150) {\n        carouselModal.classList.remove('carouselFadeIn');\n        carouselImageSrc.push(image.getAttribute('src'));\n        carouselImageGroup.push(image.getAttribute('id'));\n        openCarousel();\n      }\n    });\n  });\n}\n\nconst offersBtnToggle = (e) => {\n  if (!e.target.classList.contains('cta') && e.target === of_soloBtn) {\n    of_soloBtn.classList.add('cta');\n    of_groupBtn.classList.remove('cta');\n    demoPrice.textContent = '$0';\n    standardPrice.textContent = '$99';\n    premiumPrice.textContent = '$299';\n  } else if (e.target.classList.contains('cta') && e.target === of_soloBtn) {\n    of_soloBtn.classList.remove('cta');\n    of_groupBtn.classList.add('cta');\n    demoPrice.textContent = '$50';\n    standardPrice.textContent = '$299';\n    premiumPrice.textContent = '$599';\n  }\n\n  if (!e.target.classList.contains('cta') && e.target === of_groupBtn) {\n    of_groupBtn.classList.add('cta');\n    of_soloBtn.classList.remove('cta');\n    demoPrice.textContent = '$50';\n    standardPrice.textContent = '$299';\n    premiumPrice.textContent = '$599';\n  } else if (e.target.classList.contains('cta') && e.target === of_groupBtn) {\n    demoPrice.textContent = '$0';\n    standardPrice.textContent = '$99';\n    premiumPrice.textContent = '$299';\n    of_groupBtn.classList.remove('cta');\n    of_soloBtn.classList.add('cta');\n  }\n};\n\nconst date = new Date();\nfooterInfo.innerHTML = `&copy${date.getFullYear()} Forest Group Company Ltd`;\n\nconst target = document.querySelectorAll('.spy');\n\nconst options = {\n  rootMargin: '0px 0px -40% 0px ',\n  // threshold: [0.15],\n  // rootMargin: '0px 0px -28% ',\n};\n\nconst handleScrollSpy = (entries) => {\n  entries.forEach((entry) => {\n    targetID = entry.target.id;\n    activeLink = document.querySelector(\n      `.nav__desktop--link[href='#${targetID}']`\n    );\n\n    if (!entry.isIntersecting) {\n      return;\n    } else if (entry.isIntersecting) {\n      navDesktopLinks.forEach((link) => link.classList.remove('navActive'));\n      activeLink.classList.add('navActive');\n    }\n  });\n};\n\nof_btns.forEach((btn) => {\n  btn.addEventListener('click', offersBtnToggle);\n});\n\nburgerBtn.addEventListener('click', () => {\n  navMobile.classList.toggle('active');\n\n  navLogo.classList.toggle('navLogoLeft');\n  navLogo.classList.toggle('navLogoCenter');\n  burgerBtnMid.classList.toggle('burgerActive');\n  burgerBtnBot.classList.toggle('burgerActive');\n});\n\nnavMobileLinks.forEach((link) => {\n  link.addEventListener('click', () => {\n    navMobile.classList.remove('active');\n  });\n});\n\nwindow.addEventListener('resize', () => {\n  windowHeight.pop();\n  windowHeight.push(window.innerHeight);\n});\n\nwindow.addEventListener('DOMContentLoaded', () => {\n  const observer = new IntersectionObserver(handleScrollSpy, options);\n  target.forEach((section) => {\n    observer.observe(section);\n  });\n\n  windowWidth.push(window.innerWidth);\n  windowHeight.push(window.innerHeight);\n\n  scrollToTopBtn.addEventListener('click', (e) => {\n    e.preventDefault();\n    window.scrollTo({\n      top: 0,\n    });\n  });\n});\n\nwindow.onscroll = () => {\n  scroll_Y_Pos = document.documentElement.scrollTop || document.body.scrollTop;\n\n  if (scroll_Y_Pos >= 500) {\n    scrollToTopBtn.classList.add('btnFadeIn');\n    scrollToTopBtn.classList.remove('btnFadeOut');\n  } else if (scroll_Y_Pos < 500) {\n    if (scrollToTopBtn.classList.contains('btnFadeIn')) {\n      scrollToTopBtn.classList.remove('btnFadeIn');\n      scrollToTopBtn.classList.add('btnFadeOut');\n    }\n  }\n};\n",
+      "start": 1723154064739,
+      "end": 1723154064750,
       "sourcemaps": null
     },
     {
       "name": "vite:css",
-      "start": 1721477843798,
-      "end": 1721477843798,
+      "start": 1723154064750,
+      "end": 1723154064750,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1721477843798,
-      "end": 1721477843798,
+      "start": 1723154064750,
+      "end": 1723154064750,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1721477843798,
-      "end": 1721477843798,
+      "start": 1723154064750,
+      "end": 1723154064750,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1721477843798,
-      "end": 1721477843798,
+      "start": 1723154064750,
+      "end": 1723154064750,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1721477843798,
-      "end": 1721477843798,
+      "start": 1723154064750,
+      "end": 1723154064750,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1721477843798,
-      "end": 1721477843798,
+      "start": 1723154064750,
+      "end": 1723154064750,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1721477843798,
-      "end": 1721477843798,
+      "start": 1723154064750,
+      "end": 1723154064750,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1721477843798,
-      "end": 1721477843798,
+      "start": 1723154064750,
+      "end": 1723154064750,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1721477843798,
-      "end": 1721477843798,
+      "start": 1723154064750,
+      "end": 1723154064750,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1721477843798,
-      "end": 1721477843798,
+      "start": 1723154064750,
+      "end": 1723154064750,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1721477843798,
-      "end": 1721477843798,
+      "start": 1723154064750,
+      "end": 1723154064750,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1721477843798,
-      "end": 1721477843798,
+      "start": 1723154064750,
+      "end": 1723154064750,
       "order": "normal"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1721477843798,
-      "end": 1721477843801,
+      "start": 1723154064751,
+      "end": 1723154064752,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1721477843801,
-      "end": 1721477843801,
+      "start": 1723154064752,
+      "end": 1723154064752,
       "order": "normal"
     }
   ]

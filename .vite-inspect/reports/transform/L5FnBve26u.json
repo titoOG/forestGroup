@@ -3,16 +3,16 @@
   "transforms": [
     {
       "name": "vite:load-fallback",
-      "result": "@use './colors' as c;\n.header {\n  width: 100%;\n  height: 34.375rem;\n  overflow: hidden;\n  &__hero {\n    display: flex;\n    min-width: 11rem;\n    width: 100%;\n    padding: 24.25rem 1px;\n    background-color: rgb(158, 140, 39);\n    background-size: cover;\n    background-repeat: no-repeat;\n    background-position: bottom;\n    background-image: url('../img/heroSD.jpg');\n    position: relative;\n    z-index: -1;\n\n    &--shadow {\n      position: absolute;\n      top: 0;\n      left: 0;\n      width: 100%;\n      height: 100%;\n      background-color: rgba(0, 0, 0, 0.7);\n      z-index: -1;\n    }\n  }\n  &__box {\n    display: flex;\n    align-items: center;\n    width: 100%;\n    padding: 1.5rem;\n    flex-direction: column;\n    justify-content: center;\n    min-width: 10rem;\n    position: absolute;\n    top: 40%;\n    left: 50%;\n    width: 100%;\n    transform: translate(-50%, -50%);\n    align-items: center;\n    color: c.$primary-color;\n    z-index: 1;\n\n    &--title {\n      margin-bottom: 0.25rem;\n      padding: 0.25rem;\n      text-align: center;\n      font-size: 1.5rem;\n      font-weight: 100;\n    }\n    &--subtitle {\n      width: 100%;\n      text-align: center;\n      font-size: 2.25rem;\n      font-family: var(--bold-font);\n    }\n  }\n}\n",
-      "start": 1721477843812,
-      "end": 1721477843818,
+      "result": "@use './colors' as c;\n@use './mixins' as m;\n.header {\n  width: 100%;\n  height: 34.375rem;\n  overflow: hidden;\n  &__hero {\n    display: flex;\n    position: relative;\n    min-width: 11rem;\n    width: 100%;\n    padding: 24.25rem 1px;\n    background-color: rgb(158, 140, 39);\n    background-size: cover;\n    background-repeat: no-repeat;\n    background-position: bottom;\n    background-image: url('../img/heroSD.jpg');\n    z-index: -1;\n\n    &--shadow {\n      @include m.shadowEffect;\n    }\n  }\n  &__box {\n    display: flex;\n    position: absolute;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    min-width: 10rem;\n    width: 100%;\n    padding: 1.5rem;\n    top: 40%;\n    left: 50%;\n    color: c.$primary-color;\n    transform: translate(-50%, -50%);\n    z-index: 1;\n\n    &--title {\n      margin-bottom: 0.25rem;\n      padding: 0.25rem;\n      text-align: center;\n      font-size: 1.5rem;\n      font-weight: 100;\n    }\n    &--subtitle {\n      text-align: center;\n      width: 100%;\n      font-size: 2.25rem;\n      font-family: var(--bold-font);\n    }\n  }\n}\n",
+      "start": 1723154064771,
+      "end": 1723154064778,
       "sourcemaps": null
     },
     {
       "name": "vite:css",
-      "result": ".header {\n  width: 100%;\n  height: 34.375rem;\n  overflow: hidden;\n}\n.header__hero {\n  display: flex;\n  min-width: 11rem;\n  width: 100%;\n  padding: 24.25rem 1px;\n  background-color: rgb(158, 140, 39);\n  background-size: cover;\n  background-repeat: no-repeat;\n  background-position: bottom;\n  background-image: url(\"__VITE_ASSET__BRDEXNLb__\");\n  position: relative;\n  z-index: -1;\n}\n.header__hero--shadow {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background-color: rgba(0, 0, 0, 0.7);\n  z-index: -1;\n}\n.header__box {\n  display: flex;\n  align-items: center;\n  width: 100%;\n  padding: 1.5rem;\n  flex-direction: column;\n  justify-content: center;\n  min-width: 10rem;\n  position: absolute;\n  top: 40%;\n  left: 50%;\n  width: 100%;\n  transform: translate(-50%, -50%);\n  align-items: center;\n  color: #fff;\n  z-index: 1;\n}\n.header__box--title {\n  margin-bottom: 0.25rem;\n  padding: 0.25rem;\n  text-align: center;\n  font-size: 1.5rem;\n  font-weight: 100;\n}\n.header__box--subtitle {\n  width: 100%;\n  text-align: center;\n  font-size: 2.25rem;\n  font-family: var(--bold-font);\n}",
-      "start": 1721477843818,
-      "end": 1721477844470,
+      "result": ".header {\n  width: 100%;\n  height: 34.375rem;\n  overflow: hidden;\n}\n.header__hero {\n  display: flex;\n  position: relative;\n  min-width: 11rem;\n  width: 100%;\n  padding: 24.25rem 1px;\n  background-color: rgb(158, 140, 39);\n  background-size: cover;\n  background-repeat: no-repeat;\n  background-position: bottom;\n  background-image: url(\"__VITE_ASSET__BRDEXNLb__\");\n  z-index: -1;\n}\n.header__hero--shadow {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background-color: rgba(0, 0, 0, 0.7);\n  z-index: -1;\n}\n.header__box {\n  display: flex;\n  position: absolute;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  min-width: 10rem;\n  width: 100%;\n  padding: 1.5rem;\n  top: 40%;\n  left: 50%;\n  color: #fff;\n  transform: translate(-50%, -50%);\n  z-index: 1;\n}\n.header__box--title {\n  margin-bottom: 0.25rem;\n  padding: 0.25rem;\n  text-align: center;\n  font-size: 1.5rem;\n  font-weight: 100;\n}\n.header__box--subtitle {\n  text-align: center;\n  width: 100%;\n  font-size: 2.25rem;\n  font-family: var(--bold-font);\n}",
+      "start": 1723154064779,
+      "end": 1723154065705,
       "order": "normal",
       "sourcemaps": {
         "mappings": ""
@@ -20,33 +20,33 @@
     },
     {
       "name": "vite:esbuild",
-      "start": 1721477844470,
-      "end": 1721477844470,
+      "start": 1723154065705,
+      "end": 1723154065705,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1721477844470,
-      "end": 1721477844470,
+      "start": 1723154065705,
+      "end": 1723154065705,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1721477844470,
-      "end": 1721477844470,
+      "start": 1723154065705,
+      "end": 1723154065705,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1721477844470,
-      "end": 1721477844471,
+      "start": 1723154065705,
+      "end": 1723154065705,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
       "result": "",
-      "start": 1721477844471,
-      "end": 1721477844471,
+      "start": 1723154065705,
+      "end": 1723154065706,
       "order": "normal",
       "sourcemaps": {
         "mappings": ""
@@ -54,50 +54,50 @@
     },
     {
       "name": "vite:build-html",
-      "start": 1721477844471,
-      "end": 1721477844471,
+      "start": 1723154065706,
+      "end": 1723154065706,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1721477844471,
-      "end": 1721477844471,
+      "start": 1723154065706,
+      "end": 1723154065706,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1721477844471,
-      "end": 1721477844471,
+      "start": 1723154065706,
+      "end": 1723154065706,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1721477844471,
-      "end": 1721477844471,
+      "start": 1723154065706,
+      "end": 1723154065706,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1721477844471,
-      "end": 1721477844471,
+      "start": 1723154065706,
+      "end": 1723154065706,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1721477844471,
-      "end": 1721477844471,
+      "start": 1723154065706,
+      "end": 1723154065706,
       "order": "normal"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1721477844471,
-      "end": 1721477844471,
+      "start": 1723154065706,
+      "end": 1723154065706,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1721477844471,
-      "end": 1721477844471,
+      "start": 1723154065706,
+      "end": 1723154065706,
       "order": "normal"
     }
   ]

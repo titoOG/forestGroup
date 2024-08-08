@@ -154,8 +154,12 @@ main {
   animation: anm_btnFadeIn 0.3s ease-in-out forwards;
 }
 
-.navLogoFade {
-  animation: anm_navLogo 0.3s ease-in-out forwards;
+.navLogoLeft {
+  animation: anm_navLogoLeft 0.3s ease-in-out forwards;
+}
+
+.navLogoCenter {
+  animation: anm_navLogoCenter 0.3s ease-in-out forwards;
 }
 
 .navActive {

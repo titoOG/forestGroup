@@ -3,16 +3,16 @@
   "transforms": [
     {
       "name": "vite:load-fallback",
-      "result": "*,\n*::before,\n*::after {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nbutton,\na {\n  font-family: inherit;\n}\n\nli {\n  list-style-type: none;\n}\n",
-      "start": 1721477843812,
-      "end": 1721477843817,
+      "result": "*,\n*::before,\n*::after {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nbutton,\na,\ninput,\ntextarea {\n  font-family: inherit;\n}\n\nli {\n  list-style-type: none;\n}\n",
+      "start": 1723154064770,
+      "end": 1723154064778,
       "sourcemaps": null
     },
     {
       "name": "vite:css",
-      "result": "*,\n*::before,\n*::after {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nbutton,\na {\n  font-family: inherit;\n}\n\nli {\n  list-style-type: none;\n}",
-      "start": 1721477843817,
-      "end": 1721477844454,
+      "result": "*,\n*::before,\n*::after {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nbutton,\na,\ninput,\ntextarea {\n  font-family: inherit;\n}\n\nli {\n  list-style-type: none;\n}",
+      "start": 1723154064778,
+      "end": 1723154065688,
       "order": "normal",
       "sourcemaps": {
         "mappings": ""
@@ -20,33 +20,33 @@
     },
     {
       "name": "vite:esbuild",
-      "start": 1721477844455,
-      "end": 1721477844455,
+      "start": 1723154065689,
+      "end": 1723154065689,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1721477844455,
-      "end": 1721477844455,
+      "start": 1723154065689,
+      "end": 1723154065689,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1721477844455,
-      "end": 1721477844455,
+      "start": 1723154065690,
+      "end": 1723154065690,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1721477844455,
-      "end": 1721477844456,
+      "start": 1723154065690,
+      "end": 1723154065690,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
       "result": "",
-      "start": 1721477844456,
-      "end": 1721477844456,
+      "start": 1723154065690,
+      "end": 1723154065691,
       "order": "normal",
       "sourcemaps": {
         "mappings": ""
@@ -54,50 +54,50 @@
     },
     {
       "name": "vite:build-html",
-      "start": 1721477844456,
-      "end": 1721477844457,
+      "start": 1723154065691,
+      "end": 1723154065691,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1721477844457,
-      "end": 1721477844457,
+      "start": 1723154065692,
+      "end": 1723154065692,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1721477844457,
-      "end": 1721477844457,
+      "start": 1723154065692,
+      "end": 1723154065692,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1721477844457,
-      "end": 1721477844457,
+      "start": 1723154065692,
+      "end": 1723154065692,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1721477844457,
-      "end": 1721477844457,
+      "start": 1723154065692,
+      "end": 1723154065692,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1721477844457,
-      "end": 1721477844457,
+      "start": 1723154065693,
+      "end": 1723154065693,
       "order": "normal"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1721477844458,
-      "end": 1721477844458,
+      "start": 1723154065693,
+      "end": 1723154065693,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1721477844458,
-      "end": 1721477844460,
+      "start": 1723154065693,
+      "end": 1723154065695,
       "order": "normal"
     }
   ]

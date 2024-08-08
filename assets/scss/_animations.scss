@@ -50,13 +50,23 @@
   }
 }
 
-@keyframes anm_navLogo {
+@keyframes anm_navLogoLeft {
   0% {
     transform: translateX(0);
   }
 
   100% {
-    transform: translateX(-100px);
+    transform: translateX(-15%);
+  }
+}
+
+@keyframes anm_navLogoCenter {
+  0% {
+    transform: translateX(-15%);
+  }
+
+  100% {
+    transform: translateX(0);
   }
 }
 
