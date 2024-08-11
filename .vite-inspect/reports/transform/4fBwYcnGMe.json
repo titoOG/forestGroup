@@ -3,93 +3,93 @@
   "transforms": [
     {
       "name": "vite:load-fallback",
-      "result": "import * as contact from './contact.js';\n\nimport '../scss/main.scss';\nimport '../scss/_reset.scss';\nimport '../scss/_fonts.scss';\nimport '../scss/_mixins.scss';\nimport '../scss/_nav.scss';\nimport '../scss/_header.scss';\nimport '../scss/_about.scss';\nimport '../scss/_parallax.scss';\nimport '../scss/_animations.scss';\nimport '../scss/_footer.scss';\nimport '../scss/_contact.scss';\nimport '../scss/_carousel.scss';\nimport '../scss/_globals.scss';\nimport '../scss/_404.scss';\nimport '../scss/_offersSection.scss';\nimport '../scss/_modal.scss';\nimport '../scss/_media.scss';\n\nconst pageID = document.querySelector('body');\nconst burgerBtn = document.getElementById('burgerBtn');\nconst burgerBtnMid = document.getElementById('burgerBtnMid');\nconst burgerBtnBot = document.getElementById('burgerBtnBot');\nconst navLogo = document.querySelector('.nav__logo');\nconst navMobile = document.getElementById('navMobile');\nconst navMobileLinks = document.querySelectorAll('.nav__mobile--link');\nconst navDesktopLinks = document.querySelectorAll('.nav__desktop--link');\nconst footerInfo = document.getElementById('footerInfo');\nconst scrollToTopBtn = document.getElementById('scrollToTopBtn');\n\nconst of_btns = document.querySelectorAll('.offers__selector-btns button');\nconst of_soloBtn = document.getElementById('solo');\nconst of_groupBtn = document.getElementById('group');\nconst demoPrice = document.getElementById('demoPrice');\nconst standardPrice = document.getElementById('standardPrice');\nconst premiumPrice = document.getElementById('premiumPrice');\n\nconst shadowBox = document.getElementById('shadowBox');\nconst carouselBtns = document.querySelectorAll('.carousel__body-button--img');\nconst carouselModal = document.getElementById('carouselModal');\nconst carouselImages = document.querySelectorAll('.offers__box-item--img');\nconst carouselCurrentImage = document.getElementById('carouselCurrentImage');\n\nlet scroll_Y_Pos;\nlet targetID;\nlet activeLink;\nlet carouselImageSrc = [];\nlet carouselImageGroup = [];\nlet carouselImageID = 0;\nlet windowWidth = [];\nlet windowHeight = [];\n\nconst carouselGroupChecking = () => {\n  if (carouselImageGroup == 'carouselDemoGroup') {\n    carouselImageSrc[0] = `./assets/img/offersDemo_HD_${carouselImageID}.jpg`;\n  } else if (carouselImageGroup == 'carouselStandGroup') {\n    carouselImageSrc[0] = `./assets/img/offersStand_HD_${carouselImageID}.jpg`;\n  } else if (carouselImageGroup == 'carouselPremGroup') {\n    carouselImageSrc[0] = `./assets/img/offersPrem_HD_${carouselImageID}.jpg`;\n  }\n};\n\nconst carouselOptions = () => {\n  carouselBtns.forEach((btn) => {\n    btn.addEventListener('click', (e) => {\n      e.target.style.pointerEvents = 'none';\n\n      setTimeout(() => {\n        e.target.style.pointerEvents = 'auto';\n      }, 300);\n\n      if (e.target.id === 'carouselCloseBtn') {\n        closeCarousel();\n      }\n\n      if (e.target.id === 'carouselArrowRight') {\n        carouselImageID++;\n        if (carouselImageID > 2) {\n          carouselImageID = 0;\n        }\n        carouselGroupChecking();\n        carouselCurrentImage.src = carouselImageSrc;\n      } else if (e.target.id === 'carouselArrowLeft') {\n        carouselImageID--;\n        if (carouselImageID < 0) {\n          carouselImageID = 2;\n        }\n        carouselGroupChecking();\n        carouselCurrentImage.src = carouselImageSrc;\n      }\n    });\n  });\n};\n\nconst openCarousel = () => {\n  pageID.classList.add('noScroll');\n  shadowBox.classList.add('box-shadow');\n  carouselCurrentImage.src = `${carouselImageSrc}`;\n  carouselModal.classList.add('dflex');\n  carouselModal.classList.add('carouselImagesIn');\n};\n\nconst closeCarousel = () => {\n  carouselImageSrc.length = 0;\n  carouselImageGroup.length = 0;\n  carouselImageID = 0;\n  carouselCurrentImage.src = '';\n  pageID.classList.remove('noScroll');\n  shadowBox.classList.remove('box-shadow');\n  carouselModal.classList.remove('dflex');\n};\n\nif (pageID.id === 'offersPage') {\n  carouselOptions();\n\n  window.addEventListener('click', (e) => {\n    if (e.target.id === 'shadowBox') {\n      closeCarousel();\n    }\n  });\n\n  window.addEventListener('resize', () => {\n    windowWidth.pop();\n    windowWidth.push(window.innerWidth);\n    if (windowWidth < 150) {\n      closeCarousel();\n    } else if (windowHeight < 300) {\n      closeCarousel();\n    }\n  });\n\n  carouselImages.forEach((image) => {\n    image.addEventListener('click', () => {\n      if (windowWidth >= 150) {\n        carouselModal.classList.remove('carouselFadeIn');\n        carouselImageSrc.push(image.getAttribute('src'));\n        carouselImageGroup.push(image.getAttribute('id'));\n        openCarousel();\n      }\n    });\n  });\n}\n\nconst offersBtnToggle = (e) => {\n  if (!e.target.classList.contains('cta') && e.target === of_soloBtn) {\n    of_soloBtn.classList.add('cta');\n    of_groupBtn.classList.remove('cta');\n    demoPrice.textContent = '$0';\n    standardPrice.textContent = '$99';\n    premiumPrice.textContent = '$299';\n  } else if (e.target.classList.contains('cta') && e.target === of_soloBtn) {\n    of_soloBtn.classList.remove('cta');\n    of_groupBtn.classList.add('cta');\n    demoPrice.textContent = '$50';\n    standardPrice.textContent = '$299';\n    premiumPrice.textContent = '$599';\n  }\n\n  if (!e.target.classList.contains('cta') && e.target === of_groupBtn) {\n    of_groupBtn.classList.add('cta');\n    of_soloBtn.classList.remove('cta');\n    demoPrice.textContent = '$50';\n    standardPrice.textContent = '$299';\n    premiumPrice.textContent = '$599';\n  } else if (e.target.classList.contains('cta') && e.target === of_groupBtn) {\n    demoPrice.textContent = '$0';\n    standardPrice.textContent = '$99';\n    premiumPrice.textContent = '$299';\n    of_groupBtn.classList.remove('cta');\n    of_soloBtn.classList.add('cta');\n  }\n};\n\nconst date = new Date();\nfooterInfo.innerHTML = `&copy${date.getFullYear()} Forest Group Company Ltd`;\n\nconst target = document.querySelectorAll('.spy');\n\nconst options = {\n  rootMargin: '0px 0px -40% 0px ',\n  // threshold: [0.15],\n  // rootMargin: '0px 0px -28% ',\n};\n\nconst handleScrollSpy = (entries) => {\n  entries.forEach((entry) => {\n    targetID = entry.target.id;\n    activeLink = document.querySelector(\n      `.nav__desktop--link[href='#${targetID}']`\n    );\n\n    if (!entry.isIntersecting) {\n      return;\n    } else if (entry.isIntersecting) {\n      navDesktopLinks.forEach((link) => link.classList.remove('navActive'));\n      activeLink.classList.add('navActive');\n    }\n  });\n};\n\nof_btns.forEach((btn) => {\n  btn.addEventListener('click', offersBtnToggle);\n});\n\nburgerBtn.addEventListener('click', () => {\n  navMobile.classList.toggle('active');\n\n  navLogo.classList.toggle('navLogoLeft');\n  navLogo.classList.toggle('navLogoCenter');\n  burgerBtnMid.classList.toggle('burgerActive');\n  burgerBtnBot.classList.toggle('burgerActive');\n});\n\nnavMobileLinks.forEach((link) => {\n  link.addEventListener('click', () => {\n    navMobile.classList.remove('active');\n  });\n});\n\nwindow.addEventListener('resize', () => {\n  windowHeight.pop();\n  windowHeight.push(window.innerHeight);\n});\n\nwindow.addEventListener('DOMContentLoaded', () => {\n  const observer = new IntersectionObserver(handleScrollSpy, options);\n  target.forEach((section) => {\n    observer.observe(section);\n  });\n\n  windowWidth.push(window.innerWidth);\n  windowHeight.push(window.innerHeight);\n\n  scrollToTopBtn.addEventListener('click', (e) => {\n    e.preventDefault();\n    window.scrollTo({\n      top: 0,\n    });\n  });\n});\n\nwindow.onscroll = () => {\n  scroll_Y_Pos = document.documentElement.scrollTop || document.body.scrollTop;\n\n  if (scroll_Y_Pos >= 500) {\n    scrollToTopBtn.classList.add('btnFadeIn');\n    scrollToTopBtn.classList.remove('btnFadeOut');\n  } else if (scroll_Y_Pos < 500) {\n    if (scrollToTopBtn.classList.contains('btnFadeIn')) {\n      scrollToTopBtn.classList.remove('btnFadeIn');\n      scrollToTopBtn.classList.add('btnFadeOut');\n    }\n  }\n};\n",
-      "start": 1723154064739,
-      "end": 1723154064750,
+      "result": "import * as contact from './contact.js';\r\n\r\nimport '../scss/main.scss';\r\nimport '../scss/_reset.scss';\r\nimport '../scss/_fonts.scss';\r\nimport '../scss/_mixins.scss';\r\nimport '../scss/_nav.scss';\r\nimport '../scss/_header.scss';\r\nimport '../scss/_about.scss';\r\nimport '../scss/_parallax.scss';\r\nimport '../scss/_animations.scss';\r\nimport '../scss/_footer.scss';\r\nimport '../scss/_contact.scss';\r\nimport '../scss/_carousel.scss';\r\nimport '../scss/_globals.scss';\r\nimport '../scss/_404.scss';\r\nimport '../scss/_offersSection.scss';\r\nimport '../scss/_modal.scss';\r\nimport '../scss/_media.scss';\r\n\r\nconst pageID = document.querySelector('body');\r\nconst burgerBtn = document.getElementById('burgerBtn');\r\nconst burgerBtnMid = document.getElementById('burgerBtnMid');\r\nconst burgerBtnBot = document.getElementById('burgerBtnBot');\r\nconst navLogo = document.querySelector('.nav__logo');\r\nconst navMobile = document.getElementById('navMobile');\r\nconst navMobileLinks = document.querySelectorAll('.nav__mobile--link');\r\nconst navDesktopLinks = document.querySelectorAll('.nav__desktop--link');\r\nconst footerInfo = document.getElementById('footerInfo');\r\nconst scrollToTopBtn = document.getElementById('scrollToTopBtn');\r\n\r\nconst of_btns = document.querySelectorAll('.offers__selector-btns button');\r\nconst of_soloBtn = document.getElementById('solo');\r\nconst of_groupBtn = document.getElementById('group');\r\nconst demoPrice = document.getElementById('demoPrice');\r\nconst standardPrice = document.getElementById('standardPrice');\r\nconst premiumPrice = document.getElementById('premiumPrice');\r\n\r\nconst shadowBox = document.getElementById('shadowBox');\r\nconst carouselBtns = document.querySelectorAll('.carousel__body-button--img');\r\nconst carouselModal = document.getElementById('carouselModal');\r\nconst carouselImages = document.querySelectorAll('.offers__box-item--img');\r\nconst carouselCurrentImage = document.getElementById('carouselCurrentImage');\r\n\r\nlet scroll_Y_Pos;\r\nlet targetID;\r\nlet activeLink;\r\nlet carouselImageSrc = [];\r\nlet carouselImageGroup = [];\r\nlet carouselImageID = 0;\r\nlet windowWidth = [];\r\nlet windowHeight = [];\r\n\r\nconst carouselGroupChecking = () => {\r\n  if (carouselImageGroup == 'carouselDemoGroup') {\r\n    carouselImageSrc[0] = `./assets/img/offersDemo_HD_${carouselImageID}.jpg`;\r\n  } else if (carouselImageGroup == 'carouselStandGroup') {\r\n    carouselImageSrc[0] = `./assets/img/offersStand_HD_${carouselImageID}.jpg`;\r\n  } else if (carouselImageGroup == 'carouselPremGroup') {\r\n    carouselImageSrc[0] = `./assets/img/offersPrem_HD_${carouselImageID}.jpg`;\r\n  }\r\n};\r\n\r\nconst carouselOptions = () => {\r\n  carouselBtns.forEach((btn) => {\r\n    btn.addEventListener('click', (e) => {\r\n      e.target.style.pointerEvents = 'none';\r\n\r\n      setTimeout(() => {\r\n        e.target.style.pointerEvents = 'auto';\r\n      }, 300);\r\n\r\n      if (e.target.id === 'carouselCloseBtn') {\r\n        closeCarousel();\r\n      }\r\n\r\n      if (e.target.id === 'carouselArrowRight') {\r\n        carouselImageID++;\r\n        if (carouselImageID > 2) {\r\n          carouselImageID = 0;\r\n        }\r\n        carouselGroupChecking();\r\n        carouselCurrentImage.src = carouselImageSrc;\r\n      } else if (e.target.id === 'carouselArrowLeft') {\r\n        carouselImageID--;\r\n        if (carouselImageID < 0) {\r\n          carouselImageID = 2;\r\n        }\r\n        carouselGroupChecking();\r\n        carouselCurrentImage.src = carouselImageSrc;\r\n      }\r\n    });\r\n  });\r\n};\r\n\r\nconst openCarousel = () => {\r\n  pageID.classList.add('noScroll');\r\n  shadowBox.classList.add('box-shadow');\r\n  carouselCurrentImage.src = `${carouselImageSrc}`;\r\n  carouselModal.classList.add('dflex');\r\n  carouselModal.classList.add('carouselImagesIn');\r\n};\r\n\r\nconst closeCarousel = () => {\r\n  carouselImageSrc.length = 0;\r\n  carouselImageGroup.length = 0;\r\n  carouselImageID = 0;\r\n  carouselCurrentImage.src = '';\r\n  pageID.classList.remove('noScroll');\r\n  shadowBox.classList.remove('box-shadow');\r\n  carouselModal.classList.remove('dflex');\r\n};\r\n\r\nif (pageID.id === 'offersPage') {\r\n  carouselOptions();\r\n\r\n  window.addEventListener('click', (e) => {\r\n    if (e.target.id === 'shadowBox') {\r\n      closeCarousel();\r\n    }\r\n  });\r\n\r\n  window.addEventListener('resize', () => {\r\n    windowWidth.pop();\r\n    windowWidth.push(window.innerWidth);\r\n    if (windowWidth < 150) {\r\n      closeCarousel();\r\n    } else if (windowHeight < 300) {\r\n      closeCarousel();\r\n    }\r\n  });\r\n\r\n  carouselImages.forEach((image) => {\r\n    image.addEventListener('click', () => {\r\n      if (windowWidth >= 150) {\r\n        carouselModal.classList.remove('carouselFadeIn');\r\n        carouselImageSrc.push(image.getAttribute('src'));\r\n        carouselImageGroup.push(image.getAttribute('id'));\r\n        openCarousel();\r\n      }\r\n    });\r\n  });\r\n}\r\n\r\nconst offersBtnToggle = (e) => {\r\n  if (!e.target.classList.contains('cta') && e.target === of_soloBtn) {\r\n    of_soloBtn.classList.add('cta');\r\n    of_groupBtn.classList.remove('cta');\r\n    demoPrice.textContent = '$0';\r\n    standardPrice.textContent = '$99';\r\n    premiumPrice.textContent = '$299';\r\n  } else if (e.target.classList.contains('cta') && e.target === of_soloBtn) {\r\n    of_soloBtn.classList.remove('cta');\r\n    of_groupBtn.classList.add('cta');\r\n    demoPrice.textContent = '$50';\r\n    standardPrice.textContent = '$299';\r\n    premiumPrice.textContent = '$599';\r\n  }\r\n\r\n  if (!e.target.classList.contains('cta') && e.target === of_groupBtn) {\r\n    of_groupBtn.classList.add('cta');\r\n    of_soloBtn.classList.remove('cta');\r\n    demoPrice.textContent = '$50';\r\n    standardPrice.textContent = '$299';\r\n    premiumPrice.textContent = '$599';\r\n  } else if (e.target.classList.contains('cta') && e.target === of_groupBtn) {\r\n    demoPrice.textContent = '$0';\r\n    standardPrice.textContent = '$99';\r\n    premiumPrice.textContent = '$299';\r\n    of_groupBtn.classList.remove('cta');\r\n    of_soloBtn.classList.add('cta');\r\n  }\r\n};\r\n\r\nconst date = new Date();\r\nfooterInfo.innerHTML = `&copy${date.getFullYear()} Forest Group Company Ltd`;\r\n\r\nconst target = document.querySelectorAll('.spy');\r\n\r\nconst options = {\r\n  rootMargin: '0px 0px -40% 0px ',\r\n  // threshold: [0.15],\r\n  // rootMargin: '0px 0px -28% ',\r\n};\r\n\r\nconst handleScrollSpy = (entries) => {\r\n  entries.forEach((entry) => {\r\n    targetID = entry.target.id;\r\n    activeLink = document.querySelector(\r\n      `.nav__desktop--link[href='#${targetID}']`\r\n    );\r\n\r\n    if (pageID.id === 'errorPage') {\r\n      activeLink = document.querySelector(`.nav__desktop--link[href='#home']`);\r\n      activeLink.classList.add('navActive');\r\n    }\r\n\r\n    if (!entry.isIntersecting) {\r\n      return;\r\n    } else if (entry.isIntersecting) {\r\n      navDesktopLinks.forEach((link) => link.classList.remove('navActive'));\r\n      activeLink.classList.add('navActive');\r\n    }\r\n  });\r\n};\r\n\r\nof_btns.forEach((btn) => {\r\n  btn.addEventListener('click', offersBtnToggle);\r\n});\r\n\r\nburgerBtn.addEventListener('click', () => {\r\n  navMobile.classList.toggle('active');\r\n\r\n  navLogo.classList.toggle('navLogoLeft');\r\n  navLogo.classList.toggle('navLogoCenter');\r\n  burgerBtnMid.classList.toggle('burgerActive');\r\n  burgerBtnBot.classList.toggle('burgerActive');\r\n});\r\n\r\nnavMobileLinks.forEach((link) => {\r\n  link.addEventListener('click', () => {\r\n    navMobile.classList.remove('active');\r\n  });\r\n});\r\n\r\nwindow.addEventListener('resize', () => {\r\n  windowHeight.pop();\r\n  windowHeight.push(window.innerHeight);\r\n});\r\n\r\nwindow.addEventListener('DOMContentLoaded', () => {\r\n  const observer = new IntersectionObserver(handleScrollSpy, options);\r\n  target.forEach((section) => {\r\n    observer.observe(section);\r\n  });\r\n\r\n  windowWidth.push(window.innerWidth);\r\n  windowHeight.push(window.innerHeight);\r\n\r\n  scrollToTopBtn.addEventListener('click', (e) => {\r\n    e.preventDefault();\r\n    window.scrollTo({\r\n      top: 0,\r\n    });\r\n  });\r\n});\r\n\r\nwindow.onscroll = () => {\r\n  scroll_Y_Pos = document.documentElement.scrollTop || document.body.scrollTop;\r\n\r\n  if (scroll_Y_Pos >= 500) {\r\n    scrollToTopBtn.classList.add('btnFadeIn');\r\n    scrollToTopBtn.classList.remove('btnFadeOut');\r\n  } else if (scroll_Y_Pos < 500) {\r\n    if (scrollToTopBtn.classList.contains('btnFadeIn')) {\r\n      scrollToTopBtn.classList.remove('btnFadeIn');\r\n      scrollToTopBtn.classList.add('btnFadeOut');\r\n    }\r\n  }\r\n};\r\n",
+      "start": 1723405568906,
+      "end": 1723405568911,
       "sourcemaps": null
     },
     {
       "name": "vite:css",
-      "start": 1723154064750,
-      "end": 1723154064750,
+      "start": 1723405568911,
+      "end": 1723405568911,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1723154064750,
-      "end": 1723154064750,
+      "start": 1723405568911,
+      "end": 1723405568911,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1723154064750,
-      "end": 1723154064750,
+      "start": 1723405568912,
+      "end": 1723405568912,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1723154064750,
-      "end": 1723154064750,
+      "start": 1723405568912,
+      "end": 1723405568912,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1723154064750,
-      "end": 1723154064750,
+      "start": 1723405568912,
+      "end": 1723405568912,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1723154064750,
-      "end": 1723154064750,
+      "start": 1723405568912,
+      "end": 1723405568912,
       "order": "normal"
     },
     {
       "name": "vite:build-html",
-      "start": 1723154064750,
-      "end": 1723154064750,
+      "start": 1723405568912,
+      "end": 1723405568912,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1723154064750,
-      "end": 1723154064750,
+      "start": 1723405568912,
+      "end": 1723405568912,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1723154064750,
-      "end": 1723154064750,
+      "start": 1723405568912,
+      "end": 1723405568912,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1723154064750,
-      "end": 1723154064750,
+      "start": 1723405568912,
+      "end": 1723405568912,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1723154064750,
-      "end": 1723154064750,
+      "start": 1723405568912,
+      "end": 1723405568912,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1723154064750,
-      "end": 1723154064750,
+      "start": 1723405568912,
+      "end": 1723405568912,
       "order": "normal"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1723154064751,
-      "end": 1723154064752,
+      "start": 1723405568912,
+      "end": 1723405568913,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1723154064752,
-      "end": 1723154064752,
+      "start": 1723405568913,
+      "end": 1723405568913,
       "order": "normal"
     }
   ]

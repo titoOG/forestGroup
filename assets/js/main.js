@@ -190,6 +190,11 @@ const handleScrollSpy = (entries) => {
       `.nav__desktop--link[href='#${targetID}']`
     );
 
+    if (pageID.id === 'errorPage') {
+      activeLink = document.querySelector(`.nav__desktop--link[href='#home']`);
+      activeLink.classList.add('navActive');
+    }
+
     if (!entry.isIntersecting) {
       return;
     } else if (entry.isIntersecting) {

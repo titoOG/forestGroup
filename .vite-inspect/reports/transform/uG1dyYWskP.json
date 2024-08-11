@@ -3,16 +3,16 @@
   "transforms": [
     {
       "name": "vite:load-fallback",
-      "result": "@use './colors' as c;\n@use './mixins' as m;\n\n.nav {\n  display: flex;\n  width: 100%;\n  height: 1rem;\n  background-color: c.$primary-color;\n  z-index: 100;\n\n  &__content {\n    display: flex;\n    position: fixed;\n    height: 6rem;\n    width: 100%;\n    background-color: c.$primary-color;\n    z-index: 1000;\n  }\n\n  &__burger {\n    display: flex;\n    position: relative;\n    justify-content: center;\n    align-items: center;\n    min-width: 2.5rem;\n    padding: 1px 15px 1px 40px;\n    cursor: pointer;\n    z-index: 555;\n\n    &-icon {\n      display: flex;\n      position: relative;\n      justify-content: flex-end;\n      width: 100%;\n      padding: 23px 0.5rem 0.5rem;\n\n      &--top {\n        position: absolute;\n        width: 2rem;\n        height: 1px;\n        top: 20%;\n        border-bottom: 2px solid c.$secondary-color;\n      }\n\n      &--mid {\n        position: absolute;\n        width: 1.5rem;\n        top: 50%;\n        border-bottom: 2px solid c.$secondary-color;\n        animation: anm_burgerMidInactive 0.3s ease-in-out forwards;\n      }\n\n      &--bot {\n        position: absolute;\n        width: 1rem;\n        top: 80%;\n        border-bottom: 2px solid c.$secondary-color;\n        animation: anm_burgerBotInactive 0.3s ease-in-out forwards;\n      }\n    }\n  }\n\n  &__logo {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    width: 100%;\n    z-index: 555;\n\n    &--link {\n      display: flex;\n      justify-content: center;\n      align-items: center;\n      flex-shrink: 2.5;\n      padding: 0.5rem;\n      font-size: 2.25rem;\n    }\n    &--image {\n      display: flex;\n      min-width: 2.25rem;\n      max-width: 2.25rem;\n    }\n  }\n\n  &__mobile {\n    display: flex;\n    position: absolute;\n    justify-content: center;\n    flex-direction: column;\n    align-items: center;\n    min-height: 100vh;\n    width: 100dvw;\n    top: -1000px;\n    background-color: c.$primary-color;\n    transition: top 0.3s ease-in-out;\n    &--link {\n      position: relative;\n      margin: 0.5rem auto;\n      min-width: 8rem;\n      padding: 1.35rem;\n      border: 1px solid;\n      font-size: 1.45rem;\n      text-align: center;\n      transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;\n\n      &:hover {\n        color: c.$primary-color;\n        background-color: c.$secondary-color;\n      }\n    }\n  }\n\n  &__desktop {\n    display: none;\n    justify-content: center;\n    width: 100%;\n    margin: 0 10%;\n\n    &--link {\n      min-width: fit-content;\n      padding: 2.4rem;\n      @include m.navigation;\n    }\n  }\n}\n",
-      "start": 1723154064771,
-      "end": 1723154064778,
+      "result": "@use './colors' as c;\r\n@use './mixins' as m;\r\n\r\n.nav {\r\n  display: flex;\r\n  width: 100%;\r\n  height: 1rem;\r\n  background-color: c.$primary-color;\r\n  z-index: 100;\r\n\r\n  &__content {\r\n    display: flex;\r\n    position: fixed;\r\n    height: 6rem;\r\n    width: 100%;\r\n    background-color: c.$primary-color;\r\n    z-index: 1000;\r\n  }\r\n\r\n  &__burger {\r\n    display: flex;\r\n    position: relative;\r\n    justify-content: center;\r\n    align-items: center;\r\n    min-width: 2.5rem;\r\n    padding: 1px 15px 1px 40px;\r\n    cursor: pointer;\r\n    z-index: 555;\r\n\r\n    &-icon {\r\n      display: flex;\r\n      position: relative;\r\n      justify-content: flex-end;\r\n      width: 100%;\r\n      padding: 23px 0.5rem 0.5rem;\r\n\r\n      &--top {\r\n        position: absolute;\r\n        width: 2rem;\r\n        height: 1px;\r\n        top: 20%;\r\n        border-bottom: 2px solid c.$secondary-color;\r\n      }\r\n\r\n      &--mid {\r\n        position: absolute;\r\n        width: 1.5rem;\r\n        top: 50%;\r\n        border-bottom: 2px solid c.$secondary-color;\r\n        animation: anm_burgerMidInactive 0.3s ease-in-out forwards;\r\n      }\r\n\r\n      &--bot {\r\n        position: absolute;\r\n        width: 1rem;\r\n        top: 80%;\r\n        border-bottom: 2px solid c.$secondary-color;\r\n        animation: anm_burgerBotInactive 0.3s ease-in-out forwards;\r\n      }\r\n    }\r\n  }\r\n\r\n  &__logo {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    width: 100%;\r\n    z-index: 555;\r\n\r\n    &--link {\r\n      display: flex;\r\n      justify-content: center;\r\n      align-items: center;\r\n      flex-shrink: 2.5;\r\n      padding: 0.5rem;\r\n      font-size: 2.25rem;\r\n    }\r\n    &--image {\r\n      display: flex;\r\n      min-width: 2.25rem;\r\n      max-width: 2.25rem;\r\n    }\r\n  }\r\n\r\n  &__mobile {\r\n    display: flex;\r\n    position: absolute;\r\n    justify-content: center;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    min-height: 100vh;\r\n    width: 100dvw;\r\n    top: -1000px;\r\n    background-color: c.$primary-color;\r\n    transition: top 0.3s ease-in-out;\r\n    &--link {\r\n      position: relative;\r\n      margin: 0.5rem auto;\r\n      min-width: 8rem;\r\n      padding: 1.35rem;\r\n      border: 1px solid;\r\n      font-size: 1.45rem;\r\n      text-align: center;\r\n      transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;\r\n\r\n      &:hover {\r\n        color: c.$primary-color;\r\n        background-color: c.$secondary-color;\r\n      }\r\n    }\r\n  }\r\n\r\n  &__desktop {\r\n    display: none;\r\n    justify-content: center;\r\n    width: 100%;\r\n    margin: 0 10%;\r\n\r\n    &--link {\r\n      min-width: fit-content;\r\n      padding: 2.4rem;\r\n      @include m.navigation;\r\n    }\r\n  }\r\n}\r\n",
+      "start": 1723405568970,
+      "end": 1723405569339,
       "sourcemaps": null
     },
     {
       "name": "vite:css",
       "result": ".nav {\n  display: flex;\n  width: 100%;\n  height: 1rem;\n  background-color: #fff;\n  z-index: 100;\n}\n.nav__content {\n  display: flex;\n  position: fixed;\n  height: 6rem;\n  width: 100%;\n  background-color: #fff;\n  z-index: 1000;\n}\n.nav__burger {\n  display: flex;\n  position: relative;\n  justify-content: center;\n  align-items: center;\n  min-width: 2.5rem;\n  padding: 1px 15px 1px 40px;\n  cursor: pointer;\n  z-index: 555;\n}\n.nav__burger-icon {\n  display: flex;\n  position: relative;\n  justify-content: flex-end;\n  width: 100%;\n  padding: 23px 0.5rem 0.5rem;\n}\n.nav__burger-icon--top {\n  position: absolute;\n  width: 2rem;\n  height: 1px;\n  top: 20%;\n  border-bottom: 2px solid #000000;\n}\n.nav__burger-icon--mid {\n  position: absolute;\n  width: 1.5rem;\n  top: 50%;\n  border-bottom: 2px solid #000000;\n  animation: anm_burgerMidInactive 0.3s ease-in-out forwards;\n}\n.nav__burger-icon--bot {\n  position: absolute;\n  width: 1rem;\n  top: 80%;\n  border-bottom: 2px solid #000000;\n  animation: anm_burgerBotInactive 0.3s ease-in-out forwards;\n}\n.nav__logo {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 100%;\n  z-index: 555;\n}\n.nav__logo--link {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  flex-shrink: 2.5;\n  padding: 0.5rem;\n  font-size: 2.25rem;\n}\n.nav__logo--image {\n  display: flex;\n  min-width: 2.25rem;\n  max-width: 2.25rem;\n}\n.nav__mobile {\n  display: flex;\n  position: absolute;\n  justify-content: center;\n  flex-direction: column;\n  align-items: center;\n  min-height: 100vh;\n  width: 100dvw;\n  top: -1000px;\n  background-color: #fff;\n  transition: top 0.3s ease-in-out;\n}\n.nav__mobile--link {\n  position: relative;\n  margin: 0.5rem auto;\n  min-width: 8rem;\n  padding: 1.35rem;\n  border: 1px solid;\n  font-size: 1.45rem;\n  text-align: center;\n  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;\n}\n.nav__mobile--link:hover {\n  color: #fff;\n  background-color: #000000;\n}\n.nav__desktop {\n  display: none;\n  justify-content: center;\n  width: 100%;\n  margin: 0 10%;\n}\n.nav__desktop--link {\n  min-width: fit-content;\n  padding: 2.4rem;\n  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;\n}\n.nav__desktop--link:hover {\n  color: #fff;\n  background-color: #000000;\n}",
-      "start": 1723154064778,
-      "end": 1723154065688,
+      "start": 1723405569340,
+      "end": 1723405569781,
       "order": "normal",
       "sourcemaps": {
         "mappings": ""
@@ -20,33 +20,33 @@
     },
     {
       "name": "vite:esbuild",
-      "start": 1723154065689,
-      "end": 1723154065689,
+      "start": 1723405569782,
+      "end": 1723405569782,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1723154065689,
-      "end": 1723154065689,
+      "start": 1723405569782,
+      "end": 1723405569782,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1723154065690,
-      "end": 1723154065690,
+      "start": 1723405569782,
+      "end": 1723405569782,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1723154065690,
-      "end": 1723154065690,
+      "start": 1723405569782,
+      "end": 1723405569782,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
       "result": "",
-      "start": 1723154065691,
-      "end": 1723154065691,
+      "start": 1723405569783,
+      "end": 1723405569783,
       "order": "normal",
       "sourcemaps": {
         "mappings": ""
@@ -54,50 +54,50 @@
     },
     {
       "name": "vite:build-html",
-      "start": 1723154065691,
-      "end": 1723154065691,
+      "start": 1723405569784,
+      "end": 1723405569784,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1723154065692,
-      "end": 1723154065692,
+      "start": 1723405569784,
+      "end": 1723405569784,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1723154065692,
-      "end": 1723154065692,
+      "start": 1723405569784,
+      "end": 1723405569784,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1723154065692,
-      "end": 1723154065692,
+      "start": 1723405569784,
+      "end": 1723405569784,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1723154065692,
-      "end": 1723154065692,
+      "start": 1723405569785,
+      "end": 1723405569785,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1723154065693,
-      "end": 1723154065693,
+      "start": 1723405569785,
+      "end": 1723405569785,
       "order": "normal"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1723154065693,
-      "end": 1723154065693,
+      "start": 1723405569785,
+      "end": 1723405569785,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1723154065695,
-      "end": 1723154065695,
+      "start": 1723405569787,
+      "end": 1723405569787,
       "order": "normal"
     }
   ]

@@ -3,16 +3,16 @@
   "transforms": [
     {
       "name": "vite:load-fallback",
-      "result": "@font-face {\n  font-family: 'regularRaleway';\n  src: url('../fonts/Raleway-RegularFont.woff2') format('woff2'),\n    url('../fonts/Raleway-RegularFont.woff') format('woff');\n  font-weight: normal;\n  font-style: normal;\n  font-display: swap;\n}\n\n@font-face {\n  font-family: 'BoldRaleway';\n  src: url('../fonts/RalewayBold.woff2') format('woff2'),\n    url('../fonts/RalewayBold.woff') format('woff');\n  font-weight: bold;\n  font-style: normal;\n  font-display: swap;\n}\n",
-      "start": 1723154064770,
-      "end": 1723154064778,
+      "result": "@font-face {\r\n  font-family: 'regularRaleway';\r\n  src: url('../fonts/Raleway-RegularFont.woff2') format('woff2'),\r\n    url('../fonts/Raleway-RegularFont.woff') format('woff');\r\n  font-weight: normal;\r\n  font-style: normal;\r\n  font-display: swap;\r\n}\r\n\r\n@font-face {\r\n  font-family: 'BoldRaleway';\r\n  src: url('../fonts/RalewayBold.woff2') format('woff2'),\r\n    url('../fonts/RalewayBold.woff') format('woff');\r\n  font-weight: bold;\r\n  font-style: normal;\r\n  font-display: swap;\r\n}\r\n",
+      "start": 1723405568970,
+      "end": 1723405569321,
       "sourcemaps": null
     },
     {
       "name": "vite:css",
       "result": "@font-face {\n  font-family: \"regularRaleway\";\n  src: url(\"__VITE_ASSET__CRkeeun3__\") format(\"woff2\"), url(\"__VITE_ASSET__yK$miak0__\") format(\"woff\");\n  font-weight: normal;\n  font-style: normal;\n  font-display: swap;\n}\n@font-face {\n  font-family: \"BoldRaleway\";\n  src: url(\"__VITE_ASSET__CrRQBBhN__\") format(\"woff2\"), url(\"__VITE_ASSET__COrxpdNN__\") format(\"woff\");\n  font-weight: bold;\n  font-style: normal;\n  font-display: swap;\n}",
-      "start": 1723154064778,
-      "end": 1723154065712,
+      "start": 1723405569321,
+      "end": 1723405569799,
       "order": "normal",
       "sourcemaps": {
         "mappings": ""
@@ -20,33 +20,33 @@
     },
     {
       "name": "vite:esbuild",
-      "start": 1723154065712,
-      "end": 1723154065712,
+      "start": 1723405569799,
+      "end": 1723405569799,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1723154065713,
-      "end": 1723154065713,
+      "start": 1723405569799,
+      "end": 1723405569799,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1723154065713,
-      "end": 1723154065713,
+      "start": 1723405569799,
+      "end": 1723405569799,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1723154065713,
-      "end": 1723154065713,
+      "start": 1723405569799,
+      "end": 1723405569799,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
       "result": "",
-      "start": 1723154065713,
-      "end": 1723154065713,
+      "start": 1723405569799,
+      "end": 1723405569799,
       "order": "normal",
       "sourcemaps": {
         "mappings": ""
@@ -54,50 +54,50 @@
     },
     {
       "name": "vite:build-html",
-      "start": 1723154065713,
-      "end": 1723154065713,
+      "start": 1723405569799,
+      "end": 1723405569799,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1723154065713,
-      "end": 1723154065713,
+      "start": 1723405569799,
+      "end": 1723405569799,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1723154065713,
-      "end": 1723154065713,
+      "start": 1723405569799,
+      "end": 1723405569799,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1723154065713,
-      "end": 1723154065713,
+      "start": 1723405569799,
+      "end": 1723405569799,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1723154065713,
-      "end": 1723154065713,
+      "start": 1723405569799,
+      "end": 1723405569799,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1723154065713,
-      "end": 1723154065713,
+      "start": 1723405569799,
+      "end": 1723405569799,
       "order": "normal"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1723154065713,
-      "end": 1723154065713,
+      "start": 1723405569799,
+      "end": 1723405569799,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1723154065713,
-      "end": 1723154065713,
+      "start": 1723405569799,
+      "end": 1723405569799,
       "order": "normal"
     }
   ]
