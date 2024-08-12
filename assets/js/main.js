@@ -18,6 +18,22 @@ import '../scss/_offersSection.scss';
 import '../scss/_modal.scss';
 import '../scss/_media.scss';
 
+// images
+
+import imgDemo0 from '../img/offersDemo_HD_0.jpg';
+import imgDemo1 from '../img/offersDemo_HD_1.jpg';
+import imgDemo2 from '../img/offersDemo_HD_2.jpg';
+
+import imgStand0 from '../img/offersStand_HD_0.jpg';
+import imgStand1 from '../img/offersStand_HD_1.jpg';
+import imgStand2 from '../img/offersStand_HD_2.jpg';
+
+import imgPrem0 from '../img/offersPrem_HD_0.jpg';
+import imgPrem1 from '../img/offersPrem_HD_1.jpg';
+import imgPrem2 from '../img/offersPrem_HD_2.jpg';
+
+//
+
 const pageID = document.querySelector('body');
 const burgerBtn = document.getElementById('burgerBtn');
 const burgerBtnMid = document.getElementById('burgerBtnMid');
@@ -51,13 +67,21 @@ let carouselImageID = 0;
 let windowWidth = [];
 let windowHeight = [];
 
+let carouselGroup_D = [];
+let carouselGroup_S = [];
+let carouselGroup_P = [];
+
+carouselGroup_D.push(imgDemo0, imgDemo1, imgDemo2);
+carouselGroup_S.push(imgStand0, imgStand1, imgStand2);
+carouselGroup_P.push(imgPrem0, imgPrem1, imgPrem2);
+
 const carouselGroupChecking = () => {
   if (carouselImageGroup == 'carouselDemoGroup') {
-    carouselImageSrc[0] = `./assets/img/offersDemo_HD_${carouselImageID}.jpg`;
+    carouselImageSrc[0] = carouselGroup_D[carouselImageID];
   } else if (carouselImageGroup == 'carouselStandGroup') {
-    carouselImageSrc[0] = `./assets/img/offersStand_HD_${carouselImageID}.jpg`;
+    carouselImageSrc[0] = carouselGroup_S[carouselImageID];
   } else if (carouselImageGroup == 'carouselPremGroup') {
-    carouselImageSrc[0] = `./assets/img/offersPrem_HD_${carouselImageID}.jpg`;
+    carouselImageSrc[0] = carouselGroup_P[carouselImageID];
   }
 };
 

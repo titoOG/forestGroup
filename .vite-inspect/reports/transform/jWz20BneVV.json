@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "@use './colors' as c;\r\n\r\n@mixin shadowEffect {\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  width: 100%;\r\n  height: 100%;\r\n  background-color: rgba(0, 0, 0, 0.7);\r\n  z-index: -1;\r\n}\r\n\r\n@mixin buttonSettings {\r\n  display: inline-block;\r\n  width: 11.25rem;\r\n  padding: 0.5rem;\r\n  background-color: c.$primary-color;\r\n  border: none;\r\n  border-radius: 0.4rem;\r\n  font-size: 1.05rem;\r\n  -webkit-box-shadow: 0px 2px 5px 0px rgba(120, 120, 120, 1);\r\n  -moz-box-shadow: 0px 2px 5px 0px rgba(120, 120, 120, 1);\r\n  box-shadow: 0px 2px 5px 0px rgba(120, 120, 120, 1);\r\n  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;\r\n  cursor: pointer;\r\n\r\n  &:hover {\r\n    background-color: c.$accent-hover;\r\n    -webkit-box-shadow: 0px 2px 5px 0px rgba(42, 222, 114, 1);\r\n    -moz-box-shadow: 0px 2px 5px 0px rgba(42, 222, 114, 1);\r\n    box-shadow: 0px 2px 5px 0px rgba(42, 222, 114, 1);\r\n  }\r\n}\r\n\r\n@mixin buttonCta {\r\n  background-color: c.$accent-color;\r\n  -webkit-box-shadow: 0px 2px 5px 0px rgba(42, 222, 114, 1);\r\n  -moz-box-shadow: 0px 2px 5px 0px rgba(42, 222, 114, 1);\r\n  box-shadow: 0px 2px 5px 0px rgba(42, 222, 114, 1);\r\n}\r\n\r\n@mixin navigation {\r\n  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;\r\n  &:hover {\r\n    color: c.$primary-color;\r\n    background-color: c.$secondary-color;\r\n  }\r\n}\r\n\r\n@mixin focus {\r\n  &:focus-visible {\r\n    outline: c.$accent-color solid 2px;\r\n  }\r\n}\r\n\r\n@mixin formError($color) {\r\n  font-weight: 500;\r\n  outline: 2px solid c.$errorOutline;\r\n  color: $color;\r\n  &::-webkit-input-placeholder {\r\n    color: $color;\r\n  }\r\n}\r\n",
-      "start": 1723405568970,
-      "end": 1723405569327,
+      "start": 1723445202321,
+      "end": 1723445202329,
       "sourcemaps": null
     },
     {
       "name": "vite:css",
       "result": "",
-      "start": 1723405569327,
-      "end": 1723405569781,
+      "start": 1723445202329,
+      "end": 1723445203149,
       "order": "normal",
       "sourcemaps": {
         "mappings": ""
@@ -20,33 +20,33 @@
     },
     {
       "name": "vite:esbuild",
-      "start": 1723405569782,
-      "end": 1723405569782,
+      "start": 1723445203150,
+      "end": 1723445203150,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1723405569782,
-      "end": 1723405569782,
+      "start": 1723445203150,
+      "end": 1723445203150,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1723405569782,
-      "end": 1723405569782,
+      "start": 1723445203150,
+      "end": 1723445203150,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1723405569782,
-      "end": 1723405569782,
+      "start": 1723445203150,
+      "end": 1723445203150,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
       "result": "",
-      "start": 1723405569783,
-      "end": 1723405569783,
+      "start": 1723445203150,
+      "end": 1723445203151,
       "order": "normal",
       "sourcemaps": {
         "mappings": ""
@@ -54,50 +54,50 @@
     },
     {
       "name": "vite:build-html",
-      "start": 1723405569784,
-      "end": 1723405569784,
+      "start": 1723445203151,
+      "end": 1723445203151,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1723405569784,
-      "end": 1723405569784,
+      "start": 1723445203151,
+      "end": 1723445203151,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1723405569784,
-      "end": 1723405569784,
+      "start": 1723445203151,
+      "end": 1723445203151,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1723405569784,
-      "end": 1723405569784,
+      "start": 1723445203151,
+      "end": 1723445203151,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1723405569785,
-      "end": 1723405569785,
+      "start": 1723445203151,
+      "end": 1723445203151,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1723405569785,
-      "end": 1723405569785,
+      "start": 1723445203151,
+      "end": 1723445203151,
       "order": "normal"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1723405569785,
-      "end": 1723405569785,
+      "start": 1723445203151,
+      "end": 1723445203151,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1723405569787,
-      "end": 1723405569787,
+      "start": 1723445203152,
+      "end": 1723445203152,
       "order": "normal"
     }
   ]

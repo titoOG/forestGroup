@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "@use './colors' as c;\r\n@use './mixins' as m;\r\n\r\n.contact {\r\n  &__title {\r\n    padding: 0.75rem;\r\n    margin: 2rem 5rem;\r\n    text-align: center;\r\n  }\r\n\r\n  &__content {\r\n    display: flex;\r\n    flex-direction: column;\r\n    margin-bottom: 2.5rem;\r\n  }\r\n\r\n  &__details {\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n    align-items: center;\r\n    width: 100%;\r\n    padding: 1.75rem;\r\n  }\r\n  &__brand {\r\n    display: flex;\r\n    justify-content: flex-start;\r\n    align-items: center;\r\n    padding: 1rem;\r\n    width: 100%;\r\n    &--title {\r\n      font-weight: 100;\r\n      font-size: 2.5rem;\r\n    }\r\n    &--img {\r\n      width: 4rem;\r\n    }\r\n  }\r\n\r\n  &__info {\r\n    display: flex;\r\n    flex-direction: column;\r\n    padding: 1rem;\r\n    margin-top: 1rem;\r\n\r\n    &--text {\r\n      width: 100%;\r\n      text-align: left;\r\n      padding: 1px 1rem;\r\n      font-family: var(--bold-font);\r\n      font-size: 1.2rem;\r\n      margin: 1rem auto;\r\n    }\r\n    &-link {\r\n      display: flex;\r\n      align-items: center;\r\n      justify-content: flex-start;\r\n      width: 100%;\r\n      padding: 0.25rem;\r\n      margin: 0.25rem auto;\r\n      font-size: 1.12rem;\r\n\r\n      &--img {\r\n        padding: 0.75rem;\r\n        margin-right: 0.5rem;\r\n        width: 3.5rem;\r\n      }\r\n    }\r\n  }\r\n\r\n  &__boxes {\r\n    display: flex;\r\n    flex-direction: column;\r\n  }\r\n\r\n  &__box {\r\n    display: flex;\r\n    flex-direction: column;\r\n    margin: 0 auto;\r\n  }\r\n\r\n  &__form {\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    padding: 1.5rem;\r\n\r\n    &-option {\r\n      display: flex;\r\n      width: 100%;\r\n      margin: 0.5rem;\r\n\r\n      &--img {\r\n        width: 3.25rem;\r\n        padding: 0.75rem;\r\n      }\r\n\r\n      &--input {\r\n        width: 100%;\r\n        padding: 0.25rem;\r\n        border: none;\r\n        font-size: 0.85rem;\r\n      }\r\n\r\n      &--title {\r\n        margin: 0.5rem auto 0;\r\n        padding: 0.25rem;\r\n        white-space: nowrap;\r\n        font-weight: 100;\r\n        text-transform: uppercase;\r\n      }\r\n\r\n      &--textarea {\r\n        padding: 1rem 3.5rem;\r\n        min-width: 100%;\r\n        width: 100%;\r\n        max-width: 0;\r\n        min-height: 8.5rem;\r\n        max-height: 8.5rem;\r\n        line-height: 1.35rem;\r\n        resize: none;\r\n        background-image: url('../img/icon_msg.svg');\r\n        background-repeat: no-repeat;\r\n        background-position: 3.05% 9%;\r\n        border: none;\r\n        font-size: 0.85rem;\r\n      }\r\n    }\r\n\r\n    &-box {\r\n      display: flex;\r\n      align-items: center;\r\n      margin: 0.1rem auto;\r\n      width: 100%;\r\n      padding: 0.25rem;\r\n      white-space: nowrap;\r\n\r\n      &--checkbox {\r\n        cursor: pointer;\r\n      }\r\n      &--text {\r\n        margin-left: 0.5rem;\r\n      }\r\n    }\r\n\r\n    &-error {\r\n      border: 1px solid red;\r\n      visibility: hidden;\r\n    }\r\n\r\n    &-clause {\r\n      width: 18rem;\r\n\r\n      &--checkbox {\r\n        cursor: pointer;\r\n      }\r\n      &--text {\r\n        padding: 0.5rem;\r\n        line-height: 1.5rem;\r\n        font-style: italic;\r\n        font-size: 0.88rem;\r\n      }\r\n    }\r\n    &-btns {\r\n      display: flex;\r\n      flex-direction: column;\r\n      margin: 1rem auto 0.25rem;\r\n\r\n      &--btn {\r\n        margin: 0.5rem auto;\r\n      }\r\n    }\r\n  }\r\n\r\n  &__mapBox {\r\n    display: flex;\r\n    margin: 1rem 0;\r\n    width: 100%;\r\n    padding: 0.6rem;\r\n    border-radius: 0.5rem;\r\n\r\n    &--map {\r\n      width: 21rem;\r\n      height: 13.5rem;\r\n      border-radius: 0.5rem;\r\n    }\r\n  }\r\n}\r\n",
-      "start": 1723405568971,
-      "end": 1723405569375,
+      "start": 1723445202321,
+      "end": 1723445202330,
       "sourcemaps": null
     },
     {
       "name": "vite:css",
       "result": ".contact__title {\n  padding: 0.75rem;\n  margin: 2rem 5rem;\n  text-align: center;\n}\n.contact__content {\n  display: flex;\n  flex-direction: column;\n  margin-bottom: 2.5rem;\n}\n.contact__details {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  width: 100%;\n  padding: 1.75rem;\n}\n.contact__brand {\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n  padding: 1rem;\n  width: 100%;\n}\n.contact__brand--title {\n  font-weight: 100;\n  font-size: 2.5rem;\n}\n.contact__brand--img {\n  width: 4rem;\n}\n.contact__info {\n  display: flex;\n  flex-direction: column;\n  padding: 1rem;\n  margin-top: 1rem;\n}\n.contact__info--text {\n  width: 100%;\n  text-align: left;\n  padding: 1px 1rem;\n  font-family: var(--bold-font);\n  font-size: 1.2rem;\n  margin: 1rem auto;\n}\n.contact__info-link {\n  display: flex;\n  align-items: center;\n  justify-content: flex-start;\n  width: 100%;\n  padding: 0.25rem;\n  margin: 0.25rem auto;\n  font-size: 1.12rem;\n}\n.contact__info-link--img {\n  padding: 0.75rem;\n  margin-right: 0.5rem;\n  width: 3.5rem;\n}\n.contact__boxes {\n  display: flex;\n  flex-direction: column;\n}\n.contact__box {\n  display: flex;\n  flex-direction: column;\n  margin: 0 auto;\n}\n.contact__form {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  padding: 1.5rem;\n}\n.contact__form-option {\n  display: flex;\n  width: 100%;\n  margin: 0.5rem;\n}\n.contact__form-option--img {\n  width: 3.25rem;\n  padding: 0.75rem;\n}\n.contact__form-option--input {\n  width: 100%;\n  padding: 0.25rem;\n  border: none;\n  font-size: 0.85rem;\n}\n.contact__form-option--title {\n  margin: 0.5rem auto 0;\n  padding: 0.25rem;\n  white-space: nowrap;\n  font-weight: 100;\n  text-transform: uppercase;\n}\n.contact__form-option--textarea {\n  padding: 1rem 3.5rem;\n  min-width: 100%;\n  width: 100%;\n  max-width: 0;\n  min-height: 8.5rem;\n  max-height: 8.5rem;\n  line-height: 1.35rem;\n  resize: none;\n  background-image: url(\"data:image/svg+xml,%3c!DOCTYPE%20svg%20PUBLIC%20'-//W3C//DTD%20SVG%201.1//EN'%20'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3e%3c!--%20Uploaded%20to:%20SVG%20Repo,%20www.svgrepo.com,%20Transformed%20by:%20SVG%20Repo%20Mixer%20Tools%20--%3e%3csvg%20width='32px'%20height='32px'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20id='SVGRepo_bgCarrier'%20stroke-width='0'/%3e%3cg%20id='SVGRepo_tracerCarrier'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cg%20id='SVGRepo_iconCarrier'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M19.186%202.09c.521.25%201.136.612%201.625%201.101.49.49.852%201.104%201.1%201.625.313.654.11%201.408-.401%201.92l-7.214%207.213c-.31.31-.688.541-1.105.675l-4.222%201.353a.75.75%200%200%201-.943-.944l1.353-4.221a2.75%202.75%200%200%201%20.674-1.105l7.214-7.214c.512-.512%201.266-.714%201.92-.402zm.211%202.516a3.608%203.608%200%200%200-.828-.586l-6.994%206.994a1.002%201.002%200%200%200-.178.241L9.9%2014.102l2.846-1.496c.09-.047.171-.107.242-.178l6.994-6.994a3.61%203.61%200%200%200-.586-.828zM4.999%205.5A.5.5%200%200%201%205.47%205l5.53.005a1%201%200%200%200%200-2L5.5%203A2.5%202.5%200%200%200%203%205.5v12.577c0%20.76.082%201.185.319%201.627.224.419.558.754.977.978.442.236.866.318%201.627.318h12.154c.76%200%201.185-.082%201.627-.318.42-.224.754-.559.978-.978.236-.442.318-.866.318-1.627V13a1%201%200%201%200-2%200v5.077c0%20.459-.021.571-.082.684a.364.364%200%200%201-.157.157c-.113.06-.225.082-.684.082H5.923c-.459%200-.57-.022-.684-.082a.363.363%200%200%201-.157-.157c-.06-.113-.082-.225-.082-.684V5.5z'%20fill='%23000000'/%3e%3c/g%3e%3c/svg%3e\");\n  background-repeat: no-repeat;\n  background-position: 3.05% 9%;\n  border: none;\n  font-size: 0.85rem;\n}\n.contact__form-box {\n  display: flex;\n  align-items: center;\n  margin: 0.1rem auto;\n  width: 100%;\n  padding: 0.25rem;\n  white-space: nowrap;\n}\n.contact__form-box--checkbox {\n  cursor: pointer;\n}\n.contact__form-box--text {\n  margin-left: 0.5rem;\n}\n.contact__form-error {\n  border: 1px solid red;\n  visibility: hidden;\n}\n.contact__form-clause {\n  width: 18rem;\n}\n.contact__form-clause--checkbox {\n  cursor: pointer;\n}\n.contact__form-clause--text {\n  padding: 0.5rem;\n  line-height: 1.5rem;\n  font-style: italic;\n  font-size: 0.88rem;\n}\n.contact__form-btns {\n  display: flex;\n  flex-direction: column;\n  margin: 1rem auto 0.25rem;\n}\n.contact__form-btns--btn {\n  margin: 0.5rem auto;\n}\n.contact__mapBox {\n  display: flex;\n  margin: 1rem 0;\n  width: 100%;\n  padding: 0.6rem;\n  border-radius: 0.5rem;\n}\n.contact__mapBox--map {\n  width: 21rem;\n  height: 13.5rem;\n  border-radius: 0.5rem;\n}",
-      "start": 1723405569375,
-      "end": 1723405569795,
+      "start": 1723445202330,
+      "end": 1723445203157,
       "order": "normal",
       "sourcemaps": {
         "mappings": ""
@@ -20,33 +20,33 @@
     },
     {
       "name": "vite:esbuild",
-      "start": 1723405569795,
-      "end": 1723405569795,
+      "start": 1723445203157,
+      "end": 1723445203157,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1723405569795,
-      "end": 1723405569795,
+      "start": 1723445203157,
+      "end": 1723445203157,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1723405569795,
-      "end": 1723405569795,
+      "start": 1723445203157,
+      "end": 1723445203157,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1723405569795,
-      "end": 1723405569795,
+      "start": 1723445203157,
+      "end": 1723445203157,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
       "result": "",
-      "start": 1723405569795,
-      "end": 1723405569795,
+      "start": 1723445203157,
+      "end": 1723445203157,
       "order": "normal",
       "sourcemaps": {
         "mappings": ""
@@ -54,50 +54,50 @@
     },
     {
       "name": "vite:build-html",
-      "start": 1723405569795,
-      "end": 1723405569795,
+      "start": 1723445203157,
+      "end": 1723445203157,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1723405569795,
-      "end": 1723405569795,
+      "start": 1723445203157,
+      "end": 1723445203157,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1723405569795,
-      "end": 1723405569795,
+      "start": 1723445203157,
+      "end": 1723445203157,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1723405569795,
-      "end": 1723405569795,
+      "start": 1723445203157,
+      "end": 1723445203157,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1723405569795,
-      "end": 1723405569795,
+      "start": 1723445203157,
+      "end": 1723445203157,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1723405569795,
-      "end": 1723405569795,
+      "start": 1723445203157,
+      "end": 1723445203157,
       "order": "normal"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1723405569795,
-      "end": 1723405569795,
+      "start": 1723445203157,
+      "end": 1723445203157,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1723405569795,
-      "end": 1723405569795,
+      "start": 1723445203157,
+      "end": 1723445203157,
       "order": "normal"
     }
   ]
