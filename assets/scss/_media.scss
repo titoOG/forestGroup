@@ -28,7 +28,7 @@
     &__box {
       &-item {
         &--img {
-          width: 20rem;
+          width: 21.5rem;
         }
       }
     }
@@ -102,6 +102,7 @@
 @media (width >= 850px) {
   .carousel {
     min-width: 47.688rem;
+    height: 50%;
   }
 }
 
@@ -220,24 +221,14 @@
   }
 
   .error {
-    &__content {
-      flex-direction: row-reverse;
-    }
     &__box {
       &--title {
-        position: absolute;
-        top: 50px;
         width: 100%;
-        margin-top: -2.5rem;
         font-size: 2.35rem;
       }
       &--image {
         width: 35rem;
         margin: 0 1rem;
-      }
-      &-button {
-        position: absolute;
-        bottom: -10px;
       }
     }
   }

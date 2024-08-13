@@ -58,7 +58,9 @@ const carouselModal = document.getElementById('carouselModal');
 const carouselImages = document.querySelectorAll('.offers__box-item--img');
 const carouselCurrentImage = document.getElementById('carouselCurrentImage');
 
-let scroll_Y_Pos;
+let scroll_Y_Pos =
+  document.documentElement.scrollTop || document.body.scrollTop;
+
 let targetID;
 let activeLink;
 let carouselImageSrc = [];
@@ -210,6 +212,7 @@ const options = {
 const handleScrollSpy = (entries) => {
   entries.forEach((entry) => {
     targetID = entry.target.id;
+    console.log(targetID);
     activeLink = document.querySelector(
       `.nav__desktop--link[href='#${targetID}']`
     );
@@ -220,9 +223,36 @@ const handleScrollSpy = (entries) => {
     }
 
     if (!entry.isIntersecting) {
+      // if (
+      //   scroll_Y_Pos >= 968 &&
+      //   windowHeight <= 955 &&
+      //   pageID.id == 'indexPage'
+      // ) {
+      //   navDesktopLinks.forEach((link) => link.classList.remove('navActive'));
+      //   activeLink = document.querySelector(
+      //     `.nav__desktop--link[href='#offers']`
+      //   );
+      //   activeLink.classList.add('navActive');
+      // }
+
+      // if (
+      //   scroll_Y_Pos >= 17 &&
+      //   scroll_Y_Pos <= 967 &&
+      //   windowHeight <= 955 &&
+      //   pageID.id == 'indexPage'
+      // ) {
+      //   console.log(scroll_Y_Pos);
+      //   activeLink.classList.remove('navActive');
+      //   activeLink = document.querySelector(
+      //     `.nav__desktop--link[href='#about']`
+      //   );
+      //   activeLink.classList.add('navActive');
+      // }
+
       return;
     } else if (entry.isIntersecting) {
       navDesktopLinks.forEach((link) => link.classList.remove('navActive'));
+
       activeLink.classList.add('navActive');
     }
   });
@@ -247,31 +277,7 @@ navMobileLinks.forEach((link) => {
   });
 });
 
-window.addEventListener('resize', () => {
-  windowHeight.pop();
-  windowHeight.push(window.innerHeight);
-});
-
-window.addEventListener('DOMContentLoaded', () => {
-  const observer = new IntersectionObserver(handleScrollSpy, options);
-  target.forEach((section) => {
-    observer.observe(section);
-  });
-
-  windowWidth.push(window.innerWidth);
-  windowHeight.push(window.innerHeight);
-
-  scrollToTopBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    window.scrollTo({
-      top: 0,
-    });
-  });
-});
-
-window.onscroll = () => {
-  scroll_Y_Pos = document.documentElement.scrollTop || document.body.scrollTop;
-
+function scrollBtnChecking() {
   if (scroll_Y_Pos >= 500) {
     scrollToTopBtn.classList.add('btnFadeIn');
     scrollToTopBtn.classList.remove('btnFadeOut');
@@ -281,4 +287,36 @@ window.onscroll = () => {
       scrollToTopBtn.classList.add('btnFadeOut');
     }
   }
-};
+}
+
+window.addEventListener('resize', () => {
+  windowHeight.pop();
+  windowHeight.push(window.innerHeight);
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+  scrollBtnChecking();
+  const observer = new IntersectionObserver(handleScrollSpy, options);
+  target.forEach((section) => {
+    // console.log(section.offsetTop);
+    window.addEventListener('scroll', () => {});
+    observer.observe(section);
+  });
+
+  windowWidth.push(window.innerWidth);
+  windowHeight.push(window.innerHeight);
+  console.log('L0adeD', scroll_Y_Pos);
+  // console.log(windowHeight);
+
+  scrollToTopBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+    });
+  });
+});
+
+window.addEventListener('scroll', () => {
+  scroll_Y_Pos = document.documentElement.scrollTop || document.body.scrollTop;
+  scrollBtnChecking();
+});
