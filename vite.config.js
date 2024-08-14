@@ -6,6 +6,10 @@ import { resolve } from 'path';
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 
 export default defineConfig({
+  // ssr:{
+
+  // },
+
   server: {
     port: '2705',
     host: '0.0.0.0',

@@ -18,8 +18,6 @@ import '../scss/_offersSection.scss';
 import '../scss/_modal.scss';
 import '../scss/_media.scss';
 
-// images
-
 import imgDemo0 from '../img/offersDemo_HD_0.jpg';
 import imgDemo1 from '../img/offersDemo_HD_1.jpg';
 import imgDemo2 from '../img/offersDemo_HD_2.jpg';
@@ -31,8 +29,6 @@ import imgStand2 from '../img/offersStand_HD_2.jpg';
 import imgPrem0 from '../img/offersPrem_HD_0.jpg';
 import imgPrem1 from '../img/offersPrem_HD_1.jpg';
 import imgPrem2 from '../img/offersPrem_HD_2.jpg';
-
-//
 
 const pageID = document.querySelector('body');
 const burgerBtn = document.getElementById('burgerBtn');
@@ -57,6 +53,7 @@ const carouselBtns = document.querySelectorAll('.carousel__body-button--img');
 const carouselModal = document.getElementById('carouselModal');
 const carouselImages = document.querySelectorAll('.offers__box-item--img');
 const carouselCurrentImage = document.getElementById('carouselCurrentImage');
+const target = document.querySelectorAll('.spy');
 
 let scroll_Y_Pos =
   document.documentElement.scrollTop || document.body.scrollTop;
@@ -201,21 +198,13 @@ const offersBtnToggle = (e) => {
 const date = new Date();
 footerInfo.innerHTML = `&copy${date.getFullYear()} Forest Group Company Ltd`;
 
-const target = document.querySelectorAll('.spy');
-
 const options = {
-  rootMargin: '0px 0px -40% 0px ',
-  // threshold: [0.15],
-  // rootMargin: '0px 0px -28% ',
+  rootMargin: '0px 0px -35% 0px ',
 };
 
 const handleScrollSpy = (entries) => {
   entries.forEach((entry) => {
     targetID = entry.target.id;
-    console.log(targetID);
-    activeLink = document.querySelector(
-      `.nav__desktop--link[href='#${targetID}']`
-    );
 
     if (pageID.id === 'errorPage') {
       activeLink = document.querySelector(`.nav__desktop--link[href='#home']`);
@@ -223,36 +212,20 @@ const handleScrollSpy = (entries) => {
     }
 
     if (!entry.isIntersecting) {
-      // if (
-      //   scroll_Y_Pos >= 968 &&
-      //   windowHeight <= 955 &&
-      //   pageID.id == 'indexPage'
-      // ) {
-      //   navDesktopLinks.forEach((link) => link.classList.remove('navActive'));
-      //   activeLink = document.querySelector(
-      //     `.nav__desktop--link[href='#offers']`
-      //   );
-      //   activeLink.classList.add('navActive');
-      // }
-
-      // if (
-      //   scroll_Y_Pos >= 17 &&
-      //   scroll_Y_Pos <= 967 &&
-      //   windowHeight <= 955 &&
-      //   pageID.id == 'indexPage'
-      // ) {
-      //   console.log(scroll_Y_Pos);
-      //   activeLink.classList.remove('navActive');
-      //   activeLink = document.querySelector(
-      //     `.nav__desktop--link[href='#about']`
-      //   );
-      //   activeLink.classList.add('navActive');
-      // }
-
+      if (activeLink == undefined) {
+        if (windowHeight <= 855) {
+          activeLink = document.querySelector(
+            `.nav__desktop--link[href='#home']`
+          );
+          activeLink.classList.add('navActive');
+        }
+      }
       return;
     } else if (entry.isIntersecting) {
+      activeLink = document.querySelector(
+        `.nav__desktop--link[href='#${targetID}']`
+      );
       navDesktopLinks.forEach((link) => link.classList.remove('navActive'));
-
       activeLink.classList.add('navActive');
     }
   });
@@ -264,7 +237,6 @@ of_btns.forEach((btn) => {
 
 burgerBtn.addEventListener('click', () => {
   navMobile.classList.toggle('active');
-
   navLogo.classList.toggle('navLogoLeft');
   navLogo.classList.toggle('navLogoCenter');
   burgerBtnMid.classList.toggle('burgerActive');
@@ -298,15 +270,12 @@ window.addEventListener('DOMContentLoaded', () => {
   scrollBtnChecking();
   const observer = new IntersectionObserver(handleScrollSpy, options);
   target.forEach((section) => {
-    // console.log(section.offsetTop);
     window.addEventListener('scroll', () => {});
     observer.observe(section);
   });
 
   windowWidth.push(window.innerWidth);
   windowHeight.push(window.innerHeight);
-  console.log('L0adeD', scroll_Y_Pos);
-  // console.log(windowHeight);
 
   scrollToTopBtn.addEventListener('click', (e) => {
     e.preventDefault();

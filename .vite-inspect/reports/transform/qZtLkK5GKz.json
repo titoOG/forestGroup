@@ -4,15 +4,15 @@
     {
       "name": "vite:load-fallback",
       "result": "@use './colors' as c;\r\n\r\n.footer {\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: center;\r\n  align-items: center;\r\n  width: 100%;\r\n  background-color: c.$footer-color;\r\n  overflow: hidden;\r\n\r\n  &__content {\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: space-evenly;\r\n    align-items: center;\r\n    width: 100%;\r\n    margin-top: 1.5rem;\r\n  }\r\n\r\n  &__container {\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    justify-content: center;\r\n    width: 100%;\r\n  }\r\n\r\n  &__logo {\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    justify-content: center;\r\n    margin: 1.5rem auto;\r\n    padding: 0.5rem;\r\n\r\n    &-link {\r\n      display: flex;\r\n      align-items: center;\r\n      padding: 1rem;\r\n      min-width: 10rem;\r\n      font-size: 2.25rem;\r\n      // padding: 1rem;\r\n      &--image {\r\n        width: 2.5rem;\r\n      }\r\n    }\r\n  }\r\n  &__list {\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    padding: 1.25rem;\r\n    width: 14.5rem;\r\n    margin: 1rem auto;\r\n    &--title {\r\n      margin-bottom: 1rem;\r\n      font-family: var(--bold-font);\r\n    }\r\n    &--item {\r\n      display: flex;\r\n      justify-content: center;\r\n      width: 100%;\r\n      margin: 0.25rem auto;\r\n      padding: 0.5rem;\r\n      font-size: 0.95rem;\r\n      transition: color 0.3s ease-in-out;\r\n\r\n      &:hover {\r\n        color: c.$footer-font;\r\n      }\r\n    }\r\n  }\r\n\r\n  &__separator {\r\n    height: 1px;\r\n    width: 100%;\r\n    margin: 1rem auto;\r\n    background-color: c.$grey-color;\r\n  }\r\n\r\n  &__info {\r\n    padding: 1.5rem;\r\n    width: 100%;\r\n    &--details {\r\n      display: flex;\r\n      justify-content: center;\r\n      align-items: center;\r\n      padding: 0.5rem;\r\n      font-size: 0.85rem;\r\n    }\r\n  }\r\n}\r\n",
-      "start": 1723445202321,
-      "end": 1723445202330,
+      "start": 1723658823937,
+      "end": 1723658823946,
       "sourcemaps": null
     },
     {
       "name": "vite:css",
       "result": ".footer {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  width: 100%;\n  background-color: #f5f5f5;\n  overflow: hidden;\n}\n.footer__content {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-evenly;\n  align-items: center;\n  width: 100%;\n  margin-top: 1.5rem;\n}\n.footer__container {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  width: 100%;\n}\n.footer__logo {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  margin: 1.5rem auto;\n  padding: 0.5rem;\n}\n.footer__logo-link {\n  display: flex;\n  align-items: center;\n  padding: 1rem;\n  min-width: 10rem;\n  font-size: 2.25rem;\n}\n.footer__logo-link--image {\n  width: 2.5rem;\n}\n.footer__list {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  padding: 1.25rem;\n  width: 14.5rem;\n  margin: 1rem auto;\n}\n.footer__list--title {\n  margin-bottom: 1rem;\n  font-family: var(--bold-font);\n}\n.footer__list--item {\n  display: flex;\n  justify-content: center;\n  width: 100%;\n  margin: 0.25rem auto;\n  padding: 0.5rem;\n  font-size: 0.95rem;\n  transition: color 0.3s ease-in-out;\n}\n.footer__list--item:hover {\n  color: #656565;\n}\n.footer__separator {\n  height: 1px;\n  width: 100%;\n  margin: 1rem auto;\n  background-color: #787878;\n}\n.footer__info {\n  padding: 1.5rem;\n  width: 100%;\n}\n.footer__info--details {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  padding: 0.5rem;\n  font-size: 0.85rem;\n}",
-      "start": 1723445202330,
-      "end": 1723445203149,
+      "start": 1723658823946,
+      "end": 1723658824834,
       "order": "normal",
       "sourcemaps": {
         "mappings": ""
@@ -20,33 +20,33 @@
     },
     {
       "name": "vite:esbuild",
-      "start": 1723445203150,
-      "end": 1723445203150,
+      "start": 1723658824835,
+      "end": 1723658824835,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1723445203150,
-      "end": 1723445203150,
+      "start": 1723658824836,
+      "end": 1723658824836,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1723445203150,
-      "end": 1723445203150,
+      "start": 1723658824836,
+      "end": 1723658824836,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1723445203150,
-      "end": 1723445203150,
+      "start": 1723658824836,
+      "end": 1723658824836,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
       "result": "",
-      "start": 1723445203150,
-      "end": 1723445203151,
+      "start": 1723658824837,
+      "end": 1723658824837,
       "order": "normal",
       "sourcemaps": {
         "mappings": ""
@@ -54,50 +54,50 @@
     },
     {
       "name": "vite:build-html",
-      "start": 1723445203151,
-      "end": 1723445203151,
+      "start": 1723658824837,
+      "end": 1723658824837,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1723445203151,
-      "end": 1723445203151,
+      "start": 1723658824837,
+      "end": 1723658824837,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1723445203151,
-      "end": 1723445203151,
+      "start": 1723658824838,
+      "end": 1723658824838,
       "order": "normal"
     },
     {
       "name": "commonjs",
-      "start": 1723445203151,
-      "end": 1723445203151,
+      "start": 1723658824838,
+      "end": 1723658824838,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1723445203151,
-      "end": 1723445203151,
+      "start": 1723658824838,
+      "end": 1723658824838,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1723445203151,
-      "end": 1723445203151,
+      "start": 1723658824838,
+      "end": 1723658824838,
       "order": "normal"
     },
     {
       "name": "vite:build-import-analysis",
-      "start": 1723445203151,
-      "end": 1723445203151,
+      "start": 1723658824838,
+      "end": 1723658824838,
       "order": "normal"
     },
     {
       "name": "vite:reporter",
-      "start": 1723445203152,
-      "end": 1723445203152,
+      "start": 1723658824838,
+      "end": 1723658824838,
       "order": "normal"
     }
   ]
