@@ -10,6 +10,8 @@ export default defineConfig({
 
   // },
 
+  base: '/<forestGroup>/',
+
   server: {
     port: '2705',
     host: '0.0.0.0',
