@@ -2,17 +2,19 @@
   "resolvedId": "E:/zlecenia/forestGroup/assets/scss/_globals.scss",
   "transforms": [
     {
-      "name": "vite:load-fallback",
+      "name": "__load__",
       "result": "@use './mixins' as m;\r\n@use './colors' as c;\r\n\r\na {\r\n  text-decoration: none;\r\n  color: c.$secondary-color;\r\n}\r\n\r\na,\r\ntextarea,\r\ninput,\r\niframe {\r\n  @include m.focus;\r\n}\r\n\r\ninput[type='checkbox'] {\r\n  accent-color: c.$accent-color;\r\n}\r\n\r\ninput[type='checkbox']:disabled {\r\n  cursor: not-allowed;\r\n}\r\n\r\nmain {\r\n  position: relative;\r\n}\r\n\r\n.section {\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: center;\r\n  align-items: center;\r\n  margin: 2rem auto;\r\n  min-width: 17rem;\r\n  width: 100%;\r\n  max-width: 75rem;\r\n}\r\n\r\n.sectionTitle {\r\n  margin-top: 2rem;\r\n  font-size: 40px;\r\n  font-weight: 100;\r\n  text-transform: uppercase;\r\n}\r\n\r\n.wrapper {\r\n  margin: 0 auto;\r\n  width: 100%;\r\n  text-align: center;\r\n  overflow-x: hidden;\r\n}\r\n\r\n.center {\r\n  max-width: 75rem;\r\n}\r\n\r\n.btn {\r\n  @include m.buttonSettings;\r\n  @include m.focus;\r\n}\r\n\r\n.cta {\r\n  @include m.buttonCta;\r\n}\r\n\r\n.inactive {\r\n  color: grey;\r\n}\r\n\r\n.active {\r\n  top: 0px;\r\n}\r\n\r\n.dflex {\r\n  display: flex;\r\n}\r\n\r\n.burgerActive {\r\n  animation: anm_burgerActive 0.3s ease-in-out forwards;\r\n}\r\n\r\n.upBtn {\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  position: fixed;\r\n  opacity: 0;\r\n  padding: 0.15rem;\r\n  bottom: 10px;\r\n  right: 5px;\r\n  background-color: c.$accent-color;\r\n  background-position: center;\r\n  border-radius: 25%;\r\n  visibility: hidden;\r\n  transition: border-radius 0.3s ease-in-out;\r\n\r\n  &:hover {\r\n    border-radius: 50%;\r\n  }\r\n}\r\n\r\n.shadow {\r\n  border: none;\r\n  border-radius: 0.25rem;\r\n  -webkit-box-shadow: 1px 2px 16px -7px rgba(66, 68, 90, 1);\r\n  -moz-box-shadow: 1px 2px 16px -7px rgba(66, 68, 90, 1);\r\n  box-shadow: 1px 2px 16px -7px rgba(66, 68, 90, 1);\r\n}\r\n\r\n.column {\r\n  flex-direction: column;\r\n}\r\n\r\n.row {\r\n  flex-direction: row;\r\n}\r\n\r\n.formError {\r\n  @include m.formError(c.$errorMsg);\r\n}\r\n\r\n.formErrorText {\r\n  padding: 0.5rem;\r\n  color: c.$errorMsg;\r\n}\r\n\r\n.required {\r\n  display: inline-block;\r\n  height: 1px;\r\n  width: 10.5px;\r\n  font-size: 1.75rem;\r\n  color: c.$errorMsg;\r\n}\r\n\r\n.box-shadow {\r\n  position: fixed;\r\n  top: 0;\r\n  left: 0;\r\n  width: 1000rem;\r\n  height: 1000rem;\r\n  background-color: rgba(0, 0, 0, 0.7);\r\n  z-index: 9999;\r\n}\r\n\r\n.noScroll {\r\n  overflow: hidden;\r\n}\r\n\r\n.btnFadeOut {\r\n  animation: anm_btnFadeOut 0.3s ease-in-out forwards;\r\n}\r\n\r\n.btnFadeIn {\r\n  animation: anm_btnFadeIn 0.3s ease-in-out forwards;\r\n}\r\n\r\n.navLogoLeft {\r\n  animation: anm_navLogoLeft 0.3s ease-in-out forwards;\r\n}\r\n\r\n.navLogoCenter {\r\n  animation: anm_navLogoCenter 0.3s ease-in-out forwards;\r\n}\r\n\r\n.navActive {\r\n  color: c.$primary-color;\r\n  background-color: c.$secondary-color;\r\n  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;\r\n}\r\n\r\n.modalActive {\r\n  animation: anm_modalIn 0.85s ease-in-out forwards;\r\n}\r\n\r\n.modalInactive {\r\n  animation: anm_modalOut 1.5s ease-in-out forwards;\r\n}\r\n\r\n.imageFadeIn {\r\n  animation: anm_imageFadeIn 0.85s ease-in-out both;\r\n}\r\n\r\n.imageFadeOut {\r\n  animation: anm_imageFadOut 0.85s ease-in-out forwards;\r\n}\r\n\r\n.carouselImagesIn {\r\n  animation: anm_carouselFadeIn 0.5s ease-in-out forwards;\r\n}\r\n",
-      "start": 1723658823938,
-      "end": 1723658823946,
-      "sourcemaps": null
+      "start": 1723712153195,
+      "end": 1723712153195,
+      "sourcemaps": {
+        "mappings": ""
+      }
     },
     {
       "name": "vite:css",
       "result": "a {\n  text-decoration: none;\n  color: #000000;\n}\n\na:focus-visible,\ntextarea:focus-visible,\ninput:focus-visible,\niframe:focus-visible {\n  outline: #2ade72 solid 2px;\n}\n\ninput[type=checkbox] {\n  accent-color: #2ade72;\n}\n\ninput[type=checkbox]:disabled {\n  cursor: not-allowed;\n}\n\nmain {\n  position: relative;\n}\n\n.section {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  margin: 2rem auto;\n  min-width: 17rem;\n  width: 100%;\n  max-width: 75rem;\n}\n\n.sectionTitle {\n  margin-top: 2rem;\n  font-size: 40px;\n  font-weight: 100;\n  text-transform: uppercase;\n}\n\n.wrapper {\n  margin: 0 auto;\n  width: 100%;\n  text-align: center;\n  overflow-x: hidden;\n}\n\n.center {\n  max-width: 75rem;\n}\n\n.btn {\n  display: inline-block;\n  width: 11.25rem;\n  padding: 0.5rem;\n  background-color: #fff;\n  border: none;\n  border-radius: 0.4rem;\n  font-size: 1.05rem;\n  -webkit-box-shadow: 0px 2px 5px 0px rgb(120, 120, 120);\n  -moz-box-shadow: 0px 2px 5px 0px rgb(120, 120, 120);\n  box-shadow: 0px 2px 5px 0px rgb(120, 120, 120);\n  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;\n  cursor: pointer;\n}\n.btn:hover {\n  background-color: #2cf57c;\n  -webkit-box-shadow: 0px 2px 5px 0px rgb(42, 222, 114);\n  -moz-box-shadow: 0px 2px 5px 0px rgb(42, 222, 114);\n  box-shadow: 0px 2px 5px 0px rgb(42, 222, 114);\n}\n.btn:focus-visible {\n  outline: #2ade72 solid 2px;\n}\n\n.cta {\n  background-color: #2ade72;\n  -webkit-box-shadow: 0px 2px 5px 0px rgb(42, 222, 114);\n  -moz-box-shadow: 0px 2px 5px 0px rgb(42, 222, 114);\n  box-shadow: 0px 2px 5px 0px rgb(42, 222, 114);\n}\n\n.inactive {\n  color: grey;\n}\n\n.active {\n  top: 0px;\n}\n\n.dflex {\n  display: flex;\n}\n\n.burgerActive {\n  animation: anm_burgerActive 0.3s ease-in-out forwards;\n}\n\n.upBtn {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  position: fixed;\n  opacity: 0;\n  padding: 0.15rem;\n  bottom: 10px;\n  right: 5px;\n  background-color: #2ade72;\n  background-position: center;\n  border-radius: 25%;\n  visibility: hidden;\n  transition: border-radius 0.3s ease-in-out;\n}\n.upBtn:hover {\n  border-radius: 50%;\n}\n\n.shadow {\n  border: none;\n  border-radius: 0.25rem;\n  -webkit-box-shadow: 1px 2px 16px -7px rgb(66, 68, 90);\n  -moz-box-shadow: 1px 2px 16px -7px rgb(66, 68, 90);\n  box-shadow: 1px 2px 16px -7px rgb(66, 68, 90);\n}\n\n.column {\n  flex-direction: column;\n}\n\n.row {\n  flex-direction: row;\n}\n\n.formError {\n  font-weight: 500;\n  outline: 2px solid #f80202;\n  color: #f50c0c;\n}\n.formError::-webkit-input-placeholder {\n  color: #f50c0c;\n}\n\n.formErrorText {\n  padding: 0.5rem;\n  color: #f50c0c;\n}\n\n.required {\n  display: inline-block;\n  height: 1px;\n  width: 10.5px;\n  font-size: 1.75rem;\n  color: #f50c0c;\n}\n\n.box-shadow {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 1000rem;\n  height: 1000rem;\n  background-color: rgba(0, 0, 0, 0.7);\n  z-index: 9999;\n}\n\n.noScroll {\n  overflow: hidden;\n}\n\n.btnFadeOut {\n  animation: anm_btnFadeOut 0.3s ease-in-out forwards;\n}\n\n.btnFadeIn {\n  animation: anm_btnFadeIn 0.3s ease-in-out forwards;\n}\n\n.navLogoLeft {\n  animation: anm_navLogoLeft 0.3s ease-in-out forwards;\n}\n\n.navLogoCenter {\n  animation: anm_navLogoCenter 0.3s ease-in-out forwards;\n}\n\n.navActive {\n  color: #fff;\n  background-color: #000000;\n  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;\n}\n\n.modalActive {\n  animation: anm_modalIn 0.85s ease-in-out forwards;\n}\n\n.modalInactive {\n  animation: anm_modalOut 1.5s ease-in-out forwards;\n}\n\n.imageFadeIn {\n  animation: anm_imageFadeIn 0.85s ease-in-out both;\n}\n\n.imageFadeOut {\n  animation: anm_imageFadOut 0.85s ease-in-out forwards;\n}\n\n.carouselImagesIn {\n  animation: anm_carouselFadeIn 0.5s ease-in-out forwards;\n}",
-      "start": 1723658823946,
-      "end": 1723658824834,
+      "start": 1723712153195,
+      "end": 1723712153771,
       "order": "normal",
       "sourcemaps": {
         "mappings": ""
@@ -20,85 +22,81 @@
     },
     {
       "name": "vite:esbuild",
-      "start": 1723658824835,
-      "end": 1723658824835,
+      "start": 1723712153771,
+      "end": 1723712153771,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1723658824836,
-      "end": 1723658824836,
+      "start": 1723712153771,
+      "end": 1723712153771,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1723658824836,
-      "end": 1723658824836,
+      "start": 1723712153774,
+      "end": 1723712153774,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1723658824836,
-      "end": 1723658824836,
+      "start": 1723712153777,
+      "end": 1723712153777,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "result": "",
-      "start": 1723658824837,
-      "end": 1723658824837,
+      "result": "import { updateStyle as __vite__updateStyle, removeStyle as __vite__removeStyle } from \"/forestGroup/@vite/client\"\nconst __vite__id = \"E:/zlecenia/forestGroup/assets/scss/_globals.scss\"\nconst __vite__css = \"a {\\n  text-decoration: none;\\n  color: #000000;\\n}\\n\\na:focus-visible,\\ntextarea:focus-visible,\\ninput:focus-visible,\\niframe:focus-visible {\\n  outline: #2ade72 solid 2px;\\n}\\n\\ninput[type=checkbox] {\\n  accent-color: #2ade72;\\n}\\n\\ninput[type=checkbox]:disabled {\\n  cursor: not-allowed;\\n}\\n\\nmain {\\n  position: relative;\\n}\\n\\n.section {\\n  display: flex;\\n  flex-direction: column;\\n  justify-content: center;\\n  align-items: center;\\n  margin: 2rem auto;\\n  min-width: 17rem;\\n  width: 100%;\\n  max-width: 75rem;\\n}\\n\\n.sectionTitle {\\n  margin-top: 2rem;\\n  font-size: 40px;\\n  font-weight: 100;\\n  text-transform: uppercase;\\n}\\n\\n.wrapper {\\n  margin: 0 auto;\\n  width: 100%;\\n  text-align: center;\\n  overflow-x: hidden;\\n}\\n\\n.center {\\n  max-width: 75rem;\\n}\\n\\n.btn {\\n  display: inline-block;\\n  width: 11.25rem;\\n  padding: 0.5rem;\\n  background-color: #fff;\\n  border: none;\\n  border-radius: 0.4rem;\\n  font-size: 1.05rem;\\n  -webkit-box-shadow: 0px 2px 5px 0px rgb(120, 120, 120);\\n  -moz-box-shadow: 0px 2px 5px 0px rgb(120, 120, 120);\\n  box-shadow: 0px 2px 5px 0px rgb(120, 120, 120);\\n  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;\\n  cursor: pointer;\\n}\\n.btn:hover {\\n  background-color: #2cf57c;\\n  -webkit-box-shadow: 0px 2px 5px 0px rgb(42, 222, 114);\\n  -moz-box-shadow: 0px 2px 5px 0px rgb(42, 222, 114);\\n  box-shadow: 0px 2px 5px 0px rgb(42, 222, 114);\\n}\\n.btn:focus-visible {\\n  outline: #2ade72 solid 2px;\\n}\\n\\n.cta {\\n  background-color: #2ade72;\\n  -webkit-box-shadow: 0px 2px 5px 0px rgb(42, 222, 114);\\n  -moz-box-shadow: 0px 2px 5px 0px rgb(42, 222, 114);\\n  box-shadow: 0px 2px 5px 0px rgb(42, 222, 114);\\n}\\n\\n.inactive {\\n  color: grey;\\n}\\n\\n.active {\\n  top: 0px;\\n}\\n\\n.dflex {\\n  display: flex;\\n}\\n\\n.burgerActive {\\n  animation: anm_burgerActive 0.3s ease-in-out forwards;\\n}\\n\\n.upBtn {\\n  display: flex;\\n  justify-content: center;\\n  align-items: center;\\n  position: fixed;\\n  opacity: 0;\\n  padding: 0.15rem;\\n  bottom: 10px;\\n  right: 5px;\\n  background-color: #2ade72;\\n  background-position: center;\\n  border-radius: 25%;\\n  visibility: hidden;\\n  transition: border-radius 0.3s ease-in-out;\\n}\\n.upBtn:hover {\\n  border-radius: 50%;\\n}\\n\\n.shadow {\\n  border: none;\\n  border-radius: 0.25rem;\\n  -webkit-box-shadow: 1px 2px 16px -7px rgb(66, 68, 90);\\n  -moz-box-shadow: 1px 2px 16px -7px rgb(66, 68, 90);\\n  box-shadow: 1px 2px 16px -7px rgb(66, 68, 90);\\n}\\n\\n.column {\\n  flex-direction: column;\\n}\\n\\n.row {\\n  flex-direction: row;\\n}\\n\\n.formError {\\n  font-weight: 500;\\n  outline: 2px solid #f80202;\\n  color: #f50c0c;\\n}\\n.formError::-webkit-input-placeholder {\\n  color: #f50c0c;\\n}\\n\\n.formErrorText {\\n  padding: 0.5rem;\\n  color: #f50c0c;\\n}\\n\\n.required {\\n  display: inline-block;\\n  height: 1px;\\n  width: 10.5px;\\n  font-size: 1.75rem;\\n  color: #f50c0c;\\n}\\n\\n.box-shadow {\\n  position: fixed;\\n  top: 0;\\n  left: 0;\\n  width: 1000rem;\\n  height: 1000rem;\\n  background-color: rgba(0, 0, 0, 0.7);\\n  z-index: 9999;\\n}\\n\\n.noScroll {\\n  overflow: hidden;\\n}\\n\\n.btnFadeOut {\\n  animation: anm_btnFadeOut 0.3s ease-in-out forwards;\\n}\\n\\n.btnFadeIn {\\n  animation: anm_btnFadeIn 0.3s ease-in-out forwards;\\n}\\n\\n.navLogoLeft {\\n  animation: anm_navLogoLeft 0.3s ease-in-out forwards;\\n}\\n\\n.navLogoCenter {\\n  animation: anm_navLogoCenter 0.3s ease-in-out forwards;\\n}\\n\\n.navActive {\\n  color: #fff;\\n  background-color: #000000;\\n  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;\\n}\\n\\n.modalActive {\\n  animation: anm_modalIn 0.85s ease-in-out forwards;\\n}\\n\\n.modalInactive {\\n  animation: anm_modalOut 1.5s ease-in-out forwards;\\n}\\n\\n.imageFadeIn {\\n  animation: anm_imageFadeIn 0.85s ease-in-out both;\\n}\\n\\n.imageFadeOut {\\n  animation: anm_imageFadOut 0.85s ease-in-out forwards;\\n}\\n\\n.carouselImagesIn {\\n  animation: anm_carouselFadeIn 0.5s ease-in-out forwards;\\n}\"\n__vite__updateStyle(__vite__id, __vite__css)\nimport.meta.hot.accept()\nimport.meta.hot.prune(() => __vite__removeStyle(__vite__id))",
+      "start": 1723712153777,
+      "end": 1723712153778,
       "order": "normal",
       "sourcemaps": {
         "mappings": ""
       }
     },
     {
-      "name": "vite:build-html",
-      "start": 1723658824837,
-      "end": 1723658824837,
-      "order": "normal"
-    },
-    {
       "name": "vite:worker-import-meta-url",
-      "start": 1723658824837,
-      "end": 1723658824837,
+      "start": 1723712153778,
+      "end": 1723712153778,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1723658824838,
-      "end": 1723658824838,
-      "order": "normal"
-    },
-    {
-      "name": "commonjs",
-      "start": 1723658824838,
-      "end": 1723658824838,
+      "start": 1723712153778,
+      "end": 1723712153778,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1723658824838,
-      "end": 1723658824838,
+      "start": 1723712153778,
+      "end": 1723712153779,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1723658824838,
-      "end": 1723658824838,
+      "start": 1723712153779,
+      "end": 1723712153780,
       "order": "normal"
     },
     {
-      "name": "vite:build-import-analysis",
-      "start": 1723658824838,
-      "end": 1723658824838,
+      "name": "vite:client-inject",
+      "start": 1723712153780,
+      "end": 1723712153780,
       "order": "normal"
     },
     {
-      "name": "vite:reporter",
-      "start": 1723658824838,
-      "end": 1723658824838,
+      "name": "vite:css-analysis",
+      "start": 1723712153780,
+      "end": 1723712153780,
       "order": "normal"
+    },
+    {
+      "name": "vite:import-analysis",
+      "result": "import { createHotContext as __vite__createHotContext } from \"/forestGroup/@vite/client\";import.meta.hot = __vite__createHotContext(\"/assets/scss/_globals.scss\");import { updateStyle as __vite__updateStyle, removeStyle as __vite__removeStyle } from \"/forestGroup/@vite/client\"\nconst __vite__id = \"E:/zlecenia/forestGroup/assets/scss/_globals.scss\"\nconst __vite__css = \"a {\\n  text-decoration: none;\\n  color: #000000;\\n}\\n\\na:focus-visible,\\ntextarea:focus-visible,\\ninput:focus-visible,\\niframe:focus-visible {\\n  outline: #2ade72 solid 2px;\\n}\\n\\ninput[type=checkbox] {\\n  accent-color: #2ade72;\\n}\\n\\ninput[type=checkbox]:disabled {\\n  cursor: not-allowed;\\n}\\n\\nmain {\\n  position: relative;\\n}\\n\\n.section {\\n  display: flex;\\n  flex-direction: column;\\n  justify-content: center;\\n  align-items: center;\\n  margin: 2rem auto;\\n  min-width: 17rem;\\n  width: 100%;\\n  max-width: 75rem;\\n}\\n\\n.sectionTitle {\\n  margin-top: 2rem;\\n  font-size: 40px;\\n  font-weight: 100;\\n  text-transform: uppercase;\\n}\\n\\n.wrapper {\\n  margin: 0 auto;\\n  width: 100%;\\n  text-align: center;\\n  overflow-x: hidden;\\n}\\n\\n.center {\\n  max-width: 75rem;\\n}\\n\\n.btn {\\n  display: inline-block;\\n  width: 11.25rem;\\n  padding: 0.5rem;\\n  background-color: #fff;\\n  border: none;\\n  border-radius: 0.4rem;\\n  font-size: 1.05rem;\\n  -webkit-box-shadow: 0px 2px 5px 0px rgb(120, 120, 120);\\n  -moz-box-shadow: 0px 2px 5px 0px rgb(120, 120, 120);\\n  box-shadow: 0px 2px 5px 0px rgb(120, 120, 120);\\n  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;\\n  cursor: pointer;\\n}\\n.btn:hover {\\n  background-color: #2cf57c;\\n  -webkit-box-shadow: 0px 2px 5px 0px rgb(42, 222, 114);\\n  -moz-box-shadow: 0px 2px 5px 0px rgb(42, 222, 114);\\n  box-shadow: 0px 2px 5px 0px rgb(42, 222, 114);\\n}\\n.btn:focus-visible {\\n  outline: #2ade72 solid 2px;\\n}\\n\\n.cta {\\n  background-color: #2ade72;\\n  -webkit-box-shadow: 0px 2px 5px 0px rgb(42, 222, 114);\\n  -moz-box-shadow: 0px 2px 5px 0px rgb(42, 222, 114);\\n  box-shadow: 0px 2px 5px 0px rgb(42, 222, 114);\\n}\\n\\n.inactive {\\n  color: grey;\\n}\\n\\n.active {\\n  top: 0px;\\n}\\n\\n.dflex {\\n  display: flex;\\n}\\n\\n.burgerActive {\\n  animation: anm_burgerActive 0.3s ease-in-out forwards;\\n}\\n\\n.upBtn {\\n  display: flex;\\n  justify-content: center;\\n  align-items: center;\\n  position: fixed;\\n  opacity: 0;\\n  padding: 0.15rem;\\n  bottom: 10px;\\n  right: 5px;\\n  background-color: #2ade72;\\n  background-position: center;\\n  border-radius: 25%;\\n  visibility: hidden;\\n  transition: border-radius 0.3s ease-in-out;\\n}\\n.upBtn:hover {\\n  border-radius: 50%;\\n}\\n\\n.shadow {\\n  border: none;\\n  border-radius: 0.25rem;\\n  -webkit-box-shadow: 1px 2px 16px -7px rgb(66, 68, 90);\\n  -moz-box-shadow: 1px 2px 16px -7px rgb(66, 68, 90);\\n  box-shadow: 1px 2px 16px -7px rgb(66, 68, 90);\\n}\\n\\n.column {\\n  flex-direction: column;\\n}\\n\\n.row {\\n  flex-direction: row;\\n}\\n\\n.formError {\\n  font-weight: 500;\\n  outline: 2px solid #f80202;\\n  color: #f50c0c;\\n}\\n.formError::-webkit-input-placeholder {\\n  color: #f50c0c;\\n}\\n\\n.formErrorText {\\n  padding: 0.5rem;\\n  color: #f50c0c;\\n}\\n\\n.required {\\n  display: inline-block;\\n  height: 1px;\\n  width: 10.5px;\\n  font-size: 1.75rem;\\n  color: #f50c0c;\\n}\\n\\n.box-shadow {\\n  position: fixed;\\n  top: 0;\\n  left: 0;\\n  width: 1000rem;\\n  height: 1000rem;\\n  background-color: rgba(0, 0, 0, 0.7);\\n  z-index: 9999;\\n}\\n\\n.noScroll {\\n  overflow: hidden;\\n}\\n\\n.btnFadeOut {\\n  animation: anm_btnFadeOut 0.3s ease-in-out forwards;\\n}\\n\\n.btnFadeIn {\\n  animation: anm_btnFadeIn 0.3s ease-in-out forwards;\\n}\\n\\n.navLogoLeft {\\n  animation: anm_navLogoLeft 0.3s ease-in-out forwards;\\n}\\n\\n.navLogoCenter {\\n  animation: anm_navLogoCenter 0.3s ease-in-out forwards;\\n}\\n\\n.navActive {\\n  color: #fff;\\n  background-color: #000000;\\n  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;\\n}\\n\\n.modalActive {\\n  animation: anm_modalIn 0.85s ease-in-out forwards;\\n}\\n\\n.modalInactive {\\n  animation: anm_modalOut 1.5s ease-in-out forwards;\\n}\\n\\n.imageFadeIn {\\n  animation: anm_imageFadeIn 0.85s ease-in-out both;\\n}\\n\\n.imageFadeOut {\\n  animation: anm_imageFadOut 0.85s ease-in-out forwards;\\n}\\n\\n.carouselImagesIn {\\n  animation: anm_carouselFadeIn 0.5s ease-in-out forwards;\\n}\"\n__vite__updateStyle(__vite__id, __vite__css)\nimport.meta.hot.accept()\nimport.meta.hot.prune(() => __vite__removeStyle(__vite__id))",
+      "start": 1723712153781,
+      "end": 1723712153784,
+      "order": "normal",
+      "sourcemaps": null
     }
   ]
 }

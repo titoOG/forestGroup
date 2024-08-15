@@ -2,17 +2,19 @@
   "resolvedId": "E:/zlecenia/forestGroup/assets/scss/_mixins.scss",
   "transforms": [
     {
-      "name": "vite:load-fallback",
+      "name": "__load__",
       "result": "@use './colors' as c;\r\n\r\n@mixin shadowEffect {\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  width: 100%;\r\n  height: 100%;\r\n  background-color: rgba(0, 0, 0, 0.7);\r\n  z-index: -1;\r\n}\r\n\r\n@mixin buttonSettings {\r\n  display: inline-block;\r\n  width: 11.25rem;\r\n  padding: 0.5rem;\r\n  background-color: c.$primary-color;\r\n  border: none;\r\n  border-radius: 0.4rem;\r\n  font-size: 1.05rem;\r\n  -webkit-box-shadow: 0px 2px 5px 0px rgba(120, 120, 120, 1);\r\n  -moz-box-shadow: 0px 2px 5px 0px rgba(120, 120, 120, 1);\r\n  box-shadow: 0px 2px 5px 0px rgba(120, 120, 120, 1);\r\n  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;\r\n  cursor: pointer;\r\n\r\n  &:hover {\r\n    background-color: c.$accent-hover;\r\n    -webkit-box-shadow: 0px 2px 5px 0px rgba(42, 222, 114, 1);\r\n    -moz-box-shadow: 0px 2px 5px 0px rgba(42, 222, 114, 1);\r\n    box-shadow: 0px 2px 5px 0px rgba(42, 222, 114, 1);\r\n  }\r\n}\r\n\r\n@mixin buttonCta {\r\n  background-color: c.$accent-color;\r\n  -webkit-box-shadow: 0px 2px 5px 0px rgba(42, 222, 114, 1);\r\n  -moz-box-shadow: 0px 2px 5px 0px rgba(42, 222, 114, 1);\r\n  box-shadow: 0px 2px 5px 0px rgba(42, 222, 114, 1);\r\n}\r\n\r\n@mixin navigation {\r\n  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;\r\n  &:hover {\r\n    color: c.$primary-color;\r\n    background-color: c.$secondary-color;\r\n  }\r\n}\r\n\r\n@mixin focus {\r\n  &:focus-visible {\r\n    outline: c.$accent-color solid 2px;\r\n  }\r\n}\r\n\r\n@mixin formError($color) {\r\n  font-weight: 500;\r\n  outline: 2px solid c.$errorOutline;\r\n  color: $color;\r\n  &::-webkit-input-placeholder {\r\n    color: $color;\r\n  }\r\n}\r\n",
-      "start": 1723658823936,
-      "end": 1723658823945,
-      "sourcemaps": null
+      "start": 1723712152622,
+      "end": 1723712152622,
+      "sourcemaps": {
+        "mappings": ""
+      }
     },
     {
       "name": "vite:css",
       "result": "",
-      "start": 1723658823945,
-      "end": 1723658824834,
+      "start": 1723712152622,
+      "end": 1723712153770,
       "order": "normal",
       "sourcemaps": {
         "mappings": ""
@@ -20,85 +22,81 @@
     },
     {
       "name": "vite:esbuild",
-      "start": 1723658824835,
-      "end": 1723658824835,
+      "start": 1723712153771,
+      "end": 1723712153771,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1723658824835,
-      "end": 1723658824836,
+      "start": 1723712153771,
+      "end": 1723712153771,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1723658824836,
-      "end": 1723658824836,
+      "start": 1723712153774,
+      "end": 1723712153774,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1723658824836,
-      "end": 1723658824836,
+      "start": 1723712153777,
+      "end": 1723712153777,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "result": "",
-      "start": 1723658824837,
-      "end": 1723658824837,
+      "result": "import { updateStyle as __vite__updateStyle, removeStyle as __vite__removeStyle } from \"/forestGroup/@vite/client\"\nconst __vite__id = \"E:/zlecenia/forestGroup/assets/scss/_mixins.scss\"\nconst __vite__css = \"\"\n__vite__updateStyle(__vite__id, __vite__css)\nimport.meta.hot.accept()\nimport.meta.hot.prune(() => __vite__removeStyle(__vite__id))",
+      "start": 1723712153777,
+      "end": 1723712153778,
       "order": "normal",
       "sourcemaps": {
         "mappings": ""
       }
     },
     {
-      "name": "vite:build-html",
-      "start": 1723658824837,
-      "end": 1723658824837,
-      "order": "normal"
-    },
-    {
       "name": "vite:worker-import-meta-url",
-      "start": 1723658824837,
-      "end": 1723658824837,
+      "start": 1723712153778,
+      "end": 1723712153778,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1723658824838,
-      "end": 1723658824838,
-      "order": "normal"
-    },
-    {
-      "name": "commonjs",
-      "start": 1723658824838,
-      "end": 1723658824838,
+      "start": 1723712153778,
+      "end": 1723712153778,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1723658824838,
-      "end": 1723658824838,
+      "start": 1723712153778,
+      "end": 1723712153778,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1723658824838,
-      "end": 1723658824838,
+      "start": 1723712153779,
+      "end": 1723712153779,
       "order": "normal"
     },
     {
-      "name": "vite:build-import-analysis",
-      "start": 1723658824838,
-      "end": 1723658824838,
+      "name": "vite:client-inject",
+      "start": 1723712153780,
+      "end": 1723712153780,
       "order": "normal"
     },
     {
-      "name": "vite:reporter",
-      "start": 1723658824838,
-      "end": 1723658824838,
+      "name": "vite:css-analysis",
+      "start": 1723712153780,
+      "end": 1723712153780,
       "order": "normal"
+    },
+    {
+      "name": "vite:import-analysis",
+      "result": "import { createHotContext as __vite__createHotContext } from \"/forestGroup/@vite/client\";import.meta.hot = __vite__createHotContext(\"/assets/scss/_mixins.scss\");import { updateStyle as __vite__updateStyle, removeStyle as __vite__removeStyle } from \"/forestGroup/@vite/client\"\nconst __vite__id = \"E:/zlecenia/forestGroup/assets/scss/_mixins.scss\"\nconst __vite__css = \"\"\n__vite__updateStyle(__vite__id, __vite__css)\nimport.meta.hot.accept()\nimport.meta.hot.prune(() => __vite__removeStyle(__vite__id))",
+      "start": 1723712153781,
+      "end": 1723712153784,
+      "order": "normal",
+      "sourcemaps": null
     }
   ]
 }

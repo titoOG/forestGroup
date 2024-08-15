@@ -2,17 +2,19 @@
   "resolvedId": "E:/zlecenia/forestGroup/assets/scss/_offersSection.scss",
   "transforms": [
     {
-      "name": "vite:load-fallback",
+      "name": "__load__",
       "result": "@use './colors' as c;\r\n\r\n.offers {\r\n  &__subtitle {\r\n    min-width: fit-content;\r\n    width: 90%;\r\n    margin-top: 25px;\r\n    padding: 1.15rem;\r\n    font-size: 1.1rem;\r\n    font-weight: 100;\r\n    text-align: center;\r\n  }\r\n\r\n  &__content {\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n    align-items: center;\r\n  }\r\n\r\n  // OFFERS SUBPAGE\r\n\r\n  &__selector {\r\n    display: flex;\r\n\r\n    &-btns {\r\n      margin: 0 auto;\r\n      padding: 2rem;\r\n      &--btn {\r\n        margin: 0.55rem;\r\n      }\r\n    }\r\n  }\r\n\r\n  &__boxes {\r\n    display: flex;\r\n    flex-direction: column;\r\n    margin-bottom: 1.5rem;\r\n  }\r\n\r\n  &__box {\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    width: 80%;\r\n    margin: 2rem auto;\r\n\r\n    &:not(:last-child) {\r\n      border-bottom: 1px solid c.$secondary-color;\r\n    }\r\n\r\n    &-details {\r\n      display: flex;\r\n      flex-direction: column;\r\n      justify-content: center;\r\n      align-items: center;\r\n      height: 100%;\r\n      &--btn {\r\n        margin: 1rem auto 2rem;\r\n        font-size: 1.5rem;\r\n        font-family: var(--bold-font);\r\n      }\r\n\r\n      &--description {\r\n        padding: 2rem;\r\n        line-height: 1.8rem;\r\n      }\r\n    }\r\n\r\n    &-item {\r\n      position: relative;\r\n      &--img {\r\n        width: 16.5rem;\r\n        height: 14.5rem;\r\n        margin: 1rem 1rem 2rem;\r\n        border-radius: 5%;\r\n        cursor: pointer;\r\n      }\r\n      &--more {\r\n        position: absolute;\r\n        font-size: 2rem;\r\n        bottom: 50px;\r\n        display: flex;\r\n        justify-content: center;\r\n        align-items: center;\r\n        padding: 0.75rem;\r\n        // border-radius: 50%;\r\n        background-color: rgba(0, 0, 0, 0.65);\r\n        height: 55px;\r\n        width: 50px;\r\n        right: 25px;\r\n      }\r\n    }\r\n  }\r\n\r\n  &__advanced {\r\n    width: 100%;\r\n\r\n    &--title {\r\n      margin-bottom: 1rem;\r\n      padding: 1rem;\r\n      font-size: 2rem;\r\n    }\r\n\r\n    &--link {\r\n      margin-top: 1rem;\r\n      padding: 1rem;\r\n      font-size: 1.15rem;\r\n    }\r\n  }\r\n\r\n  // OFFERS SUBPAGE\r\n\r\n  &__card {\r\n    margin: 2rem auto;\r\n    padding: 2rem;\r\n    border: 1px solid c.$parallax-border-color;\r\n    border-radius: 0.5rem;\r\n    -webkit-box-shadow: 1px 2px 16px -7px rgba(66, 68, 90, 1);\r\n    -moz-box-shadow: 1px 2px 16px -7px rgba(66, 68, 90, 1);\r\n    box-shadow: 1px 2px 16px -7px rgba(66, 68, 90, 1);\r\n\r\n    &:nth-child(3) {\r\n      padding: 2rem 2.73rem;\r\n    }\r\n\r\n    &-infoBox {\r\n      margin-top: -1rem;\r\n      padding: 0.5rem;\r\n\r\n      &--title {\r\n        font-size: 1.5rem;\r\n        margin: 0.5rem auto;\r\n      }\r\n      &--price {\r\n        margin-bottom: 1rem;\r\n        font-family: var(--bold-font);\r\n        font-size: 2.45rem;\r\n      }\r\n    }\r\n\r\n    &-option {\r\n      display: flex;\r\n      margin: 0.25rem auto;\r\n      padding: 0.05rem 1rem;\r\n      font-size: 0.95rem;\r\n\r\n      &--image {\r\n        margin-right: 0.5rem;\r\n      }\r\n    }\r\n    &--button {\r\n      margin-top: 1.5rem;\r\n    }\r\n  }\r\n  &__button {\r\n    padding: 1rem;\r\n    &--btn {\r\n      width: 100%;\r\n      padding: 1rem;\r\n      text-transform: uppercase;\r\n    }\r\n  }\r\n}\r\n",
-      "start": 1723658823938,
-      "end": 1723658823947,
-      "sourcemaps": null
+      "start": 1723712153228,
+      "end": 1723712153228,
+      "sourcemaps": {
+        "mappings": ""
+      }
     },
     {
       "name": "vite:css",
       "result": ".offers__subtitle {\n  min-width: fit-content;\n  width: 90%;\n  margin-top: 25px;\n  padding: 1.15rem;\n  font-size: 1.1rem;\n  font-weight: 100;\n  text-align: center;\n}\n.offers__content {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n}\n.offers__selector {\n  display: flex;\n}\n.offers__selector-btns {\n  margin: 0 auto;\n  padding: 2rem;\n}\n.offers__selector-btns--btn {\n  margin: 0.55rem;\n}\n.offers__boxes {\n  display: flex;\n  flex-direction: column;\n  margin-bottom: 1.5rem;\n}\n.offers__box {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  width: 80%;\n  margin: 2rem auto;\n}\n.offers__box:not(:last-child) {\n  border-bottom: 1px solid #000000;\n}\n.offers__box-details {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  height: 100%;\n}\n.offers__box-details--btn {\n  margin: 1rem auto 2rem;\n  font-size: 1.5rem;\n  font-family: var(--bold-font);\n}\n.offers__box-details--description {\n  padding: 2rem;\n  line-height: 1.8rem;\n}\n.offers__box-item {\n  position: relative;\n}\n.offers__box-item--img {\n  width: 16.5rem;\n  height: 14.5rem;\n  margin: 1rem 1rem 2rem;\n  border-radius: 5%;\n  cursor: pointer;\n}\n.offers__box-item--more {\n  position: absolute;\n  font-size: 2rem;\n  bottom: 50px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  padding: 0.75rem;\n  background-color: rgba(0, 0, 0, 0.65);\n  height: 55px;\n  width: 50px;\n  right: 25px;\n}\n.offers__advanced {\n  width: 100%;\n}\n.offers__advanced--title {\n  margin-bottom: 1rem;\n  padding: 1rem;\n  font-size: 2rem;\n}\n.offers__advanced--link {\n  margin-top: 1rem;\n  padding: 1rem;\n  font-size: 1.15rem;\n}\n.offers__card {\n  margin: 2rem auto;\n  padding: 2rem;\n  border: 1px solid rgba(255, 255, 255, 0.7);\n  border-radius: 0.5rem;\n  -webkit-box-shadow: 1px 2px 16px -7px rgb(66, 68, 90);\n  -moz-box-shadow: 1px 2px 16px -7px rgb(66, 68, 90);\n  box-shadow: 1px 2px 16px -7px rgb(66, 68, 90);\n}\n.offers__card:nth-child(3) {\n  padding: 2rem 2.73rem;\n}\n.offers__card-infoBox {\n  margin-top: -1rem;\n  padding: 0.5rem;\n}\n.offers__card-infoBox--title {\n  font-size: 1.5rem;\n  margin: 0.5rem auto;\n}\n.offers__card-infoBox--price {\n  margin-bottom: 1rem;\n  font-family: var(--bold-font);\n  font-size: 2.45rem;\n}\n.offers__card-option {\n  display: flex;\n  margin: 0.25rem auto;\n  padding: 0.05rem 1rem;\n  font-size: 0.95rem;\n}\n.offers__card-option--image {\n  margin-right: 0.5rem;\n}\n.offers__card--button {\n  margin-top: 1.5rem;\n}\n.offers__button {\n  padding: 1rem;\n}\n.offers__button--btn {\n  width: 100%;\n  padding: 1rem;\n  text-transform: uppercase;\n}",
-      "start": 1723658823947,
-      "end": 1723658824834,
+      "start": 1723712153228,
+      "end": 1723712153771,
       "order": "normal",
       "sourcemaps": {
         "mappings": ""
@@ -20,85 +22,81 @@
     },
     {
       "name": "vite:esbuild",
-      "start": 1723658824835,
-      "end": 1723658824835,
+      "start": 1723712153771,
+      "end": 1723712153771,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1723658824836,
-      "end": 1723658824836,
+      "start": 1723712153771,
+      "end": 1723712153771,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1723658824836,
-      "end": 1723658824836,
+      "start": 1723712153774,
+      "end": 1723712153774,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1723658824836,
-      "end": 1723658824836,
+      "start": 1723712153777,
+      "end": 1723712153777,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "result": "",
-      "start": 1723658824837,
-      "end": 1723658824837,
+      "result": "import { updateStyle as __vite__updateStyle, removeStyle as __vite__removeStyle } from \"/forestGroup/@vite/client\"\nconst __vite__id = \"E:/zlecenia/forestGroup/assets/scss/_offersSection.scss\"\nconst __vite__css = \".offers__subtitle {\\n  min-width: fit-content;\\n  width: 90%;\\n  margin-top: 25px;\\n  padding: 1.15rem;\\n  font-size: 1.1rem;\\n  font-weight: 100;\\n  text-align: center;\\n}\\n.offers__content {\\n  display: flex;\\n  flex-direction: column;\\n  justify-content: center;\\n  align-items: center;\\n}\\n.offers__selector {\\n  display: flex;\\n}\\n.offers__selector-btns {\\n  margin: 0 auto;\\n  padding: 2rem;\\n}\\n.offers__selector-btns--btn {\\n  margin: 0.55rem;\\n}\\n.offers__boxes {\\n  display: flex;\\n  flex-direction: column;\\n  margin-bottom: 1.5rem;\\n}\\n.offers__box {\\n  display: flex;\\n  flex-direction: column;\\n  align-items: center;\\n  width: 80%;\\n  margin: 2rem auto;\\n}\\n.offers__box:not(:last-child) {\\n  border-bottom: 1px solid #000000;\\n}\\n.offers__box-details {\\n  display: flex;\\n  flex-direction: column;\\n  justify-content: center;\\n  align-items: center;\\n  height: 100%;\\n}\\n.offers__box-details--btn {\\n  margin: 1rem auto 2rem;\\n  font-size: 1.5rem;\\n  font-family: var(--bold-font);\\n}\\n.offers__box-details--description {\\n  padding: 2rem;\\n  line-height: 1.8rem;\\n}\\n.offers__box-item {\\n  position: relative;\\n}\\n.offers__box-item--img {\\n  width: 16.5rem;\\n  height: 14.5rem;\\n  margin: 1rem 1rem 2rem;\\n  border-radius: 5%;\\n  cursor: pointer;\\n}\\n.offers__box-item--more {\\n  position: absolute;\\n  font-size: 2rem;\\n  bottom: 50px;\\n  display: flex;\\n  justify-content: center;\\n  align-items: center;\\n  padding: 0.75rem;\\n  background-color: rgba(0, 0, 0, 0.65);\\n  height: 55px;\\n  width: 50px;\\n  right: 25px;\\n}\\n.offers__advanced {\\n  width: 100%;\\n}\\n.offers__advanced--title {\\n  margin-bottom: 1rem;\\n  padding: 1rem;\\n  font-size: 2rem;\\n}\\n.offers__advanced--link {\\n  margin-top: 1rem;\\n  padding: 1rem;\\n  font-size: 1.15rem;\\n}\\n.offers__card {\\n  margin: 2rem auto;\\n  padding: 2rem;\\n  border: 1px solid rgba(255, 255, 255, 0.7);\\n  border-radius: 0.5rem;\\n  -webkit-box-shadow: 1px 2px 16px -7px rgb(66, 68, 90);\\n  -moz-box-shadow: 1px 2px 16px -7px rgb(66, 68, 90);\\n  box-shadow: 1px 2px 16px -7px rgb(66, 68, 90);\\n}\\n.offers__card:nth-child(3) {\\n  padding: 2rem 2.73rem;\\n}\\n.offers__card-infoBox {\\n  margin-top: -1rem;\\n  padding: 0.5rem;\\n}\\n.offers__card-infoBox--title {\\n  font-size: 1.5rem;\\n  margin: 0.5rem auto;\\n}\\n.offers__card-infoBox--price {\\n  margin-bottom: 1rem;\\n  font-family: var(--bold-font);\\n  font-size: 2.45rem;\\n}\\n.offers__card-option {\\n  display: flex;\\n  margin: 0.25rem auto;\\n  padding: 0.05rem 1rem;\\n  font-size: 0.95rem;\\n}\\n.offers__card-option--image {\\n  margin-right: 0.5rem;\\n}\\n.offers__card--button {\\n  margin-top: 1.5rem;\\n}\\n.offers__button {\\n  padding: 1rem;\\n}\\n.offers__button--btn {\\n  width: 100%;\\n  padding: 1rem;\\n  text-transform: uppercase;\\n}\"\n__vite__updateStyle(__vite__id, __vite__css)\nimport.meta.hot.accept()\nimport.meta.hot.prune(() => __vite__removeStyle(__vite__id))",
+      "start": 1723712153777,
+      "end": 1723712153778,
       "order": "normal",
       "sourcemaps": {
         "mappings": ""
       }
     },
     {
-      "name": "vite:build-html",
-      "start": 1723658824837,
-      "end": 1723658824837,
-      "order": "normal"
-    },
-    {
       "name": "vite:worker-import-meta-url",
-      "start": 1723658824837,
-      "end": 1723658824837,
+      "start": 1723712153778,
+      "end": 1723712153778,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1723658824838,
-      "end": 1723658824838,
-      "order": "normal"
-    },
-    {
-      "name": "commonjs",
-      "start": 1723658824838,
-      "end": 1723658824838,
+      "start": 1723712153778,
+      "end": 1723712153778,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1723658824838,
-      "end": 1723658824838,
+      "start": 1723712153778,
+      "end": 1723712153779,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1723658824838,
-      "end": 1723658824838,
+      "start": 1723712153779,
+      "end": 1723712153780,
       "order": "normal"
     },
     {
-      "name": "vite:build-import-analysis",
-      "start": 1723658824838,
-      "end": 1723658824838,
+      "name": "vite:client-inject",
+      "start": 1723712153780,
+      "end": 1723712153780,
       "order": "normal"
     },
     {
-      "name": "vite:reporter",
-      "start": 1723658824838,
-      "end": 1723658824838,
+      "name": "vite:css-analysis",
+      "start": 1723712153780,
+      "end": 1723712153780,
       "order": "normal"
+    },
+    {
+      "name": "vite:import-analysis",
+      "result": "import { createHotContext as __vite__createHotContext } from \"/forestGroup/@vite/client\";import.meta.hot = __vite__createHotContext(\"/assets/scss/_offersSection.scss\");import { updateStyle as __vite__updateStyle, removeStyle as __vite__removeStyle } from \"/forestGroup/@vite/client\"\nconst __vite__id = \"E:/zlecenia/forestGroup/assets/scss/_offersSection.scss\"\nconst __vite__css = \".offers__subtitle {\\n  min-width: fit-content;\\n  width: 90%;\\n  margin-top: 25px;\\n  padding: 1.15rem;\\n  font-size: 1.1rem;\\n  font-weight: 100;\\n  text-align: center;\\n}\\n.offers__content {\\n  display: flex;\\n  flex-direction: column;\\n  justify-content: center;\\n  align-items: center;\\n}\\n.offers__selector {\\n  display: flex;\\n}\\n.offers__selector-btns {\\n  margin: 0 auto;\\n  padding: 2rem;\\n}\\n.offers__selector-btns--btn {\\n  margin: 0.55rem;\\n}\\n.offers__boxes {\\n  display: flex;\\n  flex-direction: column;\\n  margin-bottom: 1.5rem;\\n}\\n.offers__box {\\n  display: flex;\\n  flex-direction: column;\\n  align-items: center;\\n  width: 80%;\\n  margin: 2rem auto;\\n}\\n.offers__box:not(:last-child) {\\n  border-bottom: 1px solid #000000;\\n}\\n.offers__box-details {\\n  display: flex;\\n  flex-direction: column;\\n  justify-content: center;\\n  align-items: center;\\n  height: 100%;\\n}\\n.offers__box-details--btn {\\n  margin: 1rem auto 2rem;\\n  font-size: 1.5rem;\\n  font-family: var(--bold-font);\\n}\\n.offers__box-details--description {\\n  padding: 2rem;\\n  line-height: 1.8rem;\\n}\\n.offers__box-item {\\n  position: relative;\\n}\\n.offers__box-item--img {\\n  width: 16.5rem;\\n  height: 14.5rem;\\n  margin: 1rem 1rem 2rem;\\n  border-radius: 5%;\\n  cursor: pointer;\\n}\\n.offers__box-item--more {\\n  position: absolute;\\n  font-size: 2rem;\\n  bottom: 50px;\\n  display: flex;\\n  justify-content: center;\\n  align-items: center;\\n  padding: 0.75rem;\\n  background-color: rgba(0, 0, 0, 0.65);\\n  height: 55px;\\n  width: 50px;\\n  right: 25px;\\n}\\n.offers__advanced {\\n  width: 100%;\\n}\\n.offers__advanced--title {\\n  margin-bottom: 1rem;\\n  padding: 1rem;\\n  font-size: 2rem;\\n}\\n.offers__advanced--link {\\n  margin-top: 1rem;\\n  padding: 1rem;\\n  font-size: 1.15rem;\\n}\\n.offers__card {\\n  margin: 2rem auto;\\n  padding: 2rem;\\n  border: 1px solid rgba(255, 255, 255, 0.7);\\n  border-radius: 0.5rem;\\n  -webkit-box-shadow: 1px 2px 16px -7px rgb(66, 68, 90);\\n  -moz-box-shadow: 1px 2px 16px -7px rgb(66, 68, 90);\\n  box-shadow: 1px 2px 16px -7px rgb(66, 68, 90);\\n}\\n.offers__card:nth-child(3) {\\n  padding: 2rem 2.73rem;\\n}\\n.offers__card-infoBox {\\n  margin-top: -1rem;\\n  padding: 0.5rem;\\n}\\n.offers__card-infoBox--title {\\n  font-size: 1.5rem;\\n  margin: 0.5rem auto;\\n}\\n.offers__card-infoBox--price {\\n  margin-bottom: 1rem;\\n  font-family: var(--bold-font);\\n  font-size: 2.45rem;\\n}\\n.offers__card-option {\\n  display: flex;\\n  margin: 0.25rem auto;\\n  padding: 0.05rem 1rem;\\n  font-size: 0.95rem;\\n}\\n.offers__card-option--image {\\n  margin-right: 0.5rem;\\n}\\n.offers__card--button {\\n  margin-top: 1.5rem;\\n}\\n.offers__button {\\n  padding: 1rem;\\n}\\n.offers__button--btn {\\n  width: 100%;\\n  padding: 1rem;\\n  text-transform: uppercase;\\n}\"\n__vite__updateStyle(__vite__id, __vite__css)\nimport.meta.hot.accept()\nimport.meta.hot.prune(() => __vite__removeStyle(__vite__id))",
+      "start": 1723712153781,
+      "end": 1723712153784,
+      "order": "normal",
+      "sourcemaps": null
     }
   ]
 }

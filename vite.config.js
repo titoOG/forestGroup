@@ -1,6 +1,5 @@
 import { defineConfig } from 'vite';
 import Inspect from 'vite-plugin-inspect';
-import express from 'express';
 import path from 'path';
 import { resolve } from 'path';
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
