@@ -2,19 +2,17 @@
   "resolvedId": "E:/zlecenia/forestGroup/assets/scss/_parallax.scss",
   "transforms": [
     {
-      "name": "__load__",
-      "result": "@use './colors' as c;\r\n\r\n.parallax {\r\n  &__content {\r\n    min-width: 10rem;\r\n    width: 100%;\r\n    overflow: hidden;\r\n  }\r\n\r\n  &__hero {\r\n    position: relative;\r\n    height: 23rem;\r\n    width: 100%;\r\n    color: c.$primary-color;\r\n    background-image: url('../img/parallax.jpg');\r\n    background-position: center;\r\n    background-size: cover;\r\n    z-index: -1;\r\n    &-box {\r\n      display: flex;\r\n      justify-content: center;\r\n      align-items: center;\r\n      margin: 0 auto;\r\n      min-width: 11.5rem;\r\n      width: 43.25rem;\r\n      max-width: 100%;\r\n      height: 100%;\r\n      padding: 0.015rem;\r\n      white-space: wrap;\r\n      &--title {\r\n        padding: 2.15rem;\r\n        width: 85%;\r\n        line-height: 2.5rem;\r\n        border-radius: 0.125rem;\r\n        border: 1px solid c.$parallax-border-color;\r\n        font-size: 1.5rem;\r\n      }\r\n    }\r\n  }\r\n  &__shadow {\r\n    position: absolute;\r\n    top: 0;\r\n    left: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n    background-color: rgba(0, 10, 0, 0.7);\r\n    z-index: -1;\r\n  }\r\n}\r\n",
-      "start": 1723712152647,
-      "end": 1723712152647,
-      "sourcemaps": {
-        "mappings": ""
-      }
+      "name": "vite:load-fallback",
+      "result": "@use './colors' as c;\r\n\r\n.parallax {\r\n  overflow: hidden;\r\n  &__content {\r\n    width: 100%;\r\n    text-align: center;\r\n    overflow: hidden;\r\n  }\r\n\r\n  &__hero {\r\n    position: relative;\r\n    height: 23rem;\r\n    width: 100%;\r\n    color: c.$primary-color;\r\n    background-image: url('../img/parallax.jpg');\r\n    background-position: center;\r\n    background-size: cover;\r\n    z-index: -1;\r\n    &-box {\r\n      display: flex;\r\n      justify-content: center;\r\n      align-items: center;\r\n      margin: 0 auto;\r\n      min-width: 11.5rem;\r\n      width: 43.25rem;\r\n      max-width: 100%;\r\n      height: 100%;\r\n      padding: 0.015rem;\r\n      word-break: break-word;\r\n      &--title {\r\n        padding: 2.15rem;\r\n        width: 85%;\r\n        line-height: 2.5rem;\r\n        border-radius: 0.125rem;\r\n        border: 1px solid c.$parallax-border-color;\r\n        font-size: 1.5rem;\r\n      }\r\n    }\r\n  }\r\n  &__shadow {\r\n    position: absolute;\r\n    top: 0;\r\n    left: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n    background-color: rgba(0, 10, 0, 0.7);\r\n    z-index: -1;\r\n  }\r\n}\r\n",
+      "start": 1724099915976,
+      "end": 1724099917492,
+      "sourcemaps": null
     },
     {
       "name": "vite:css",
-      "result": ".parallax__content {\n  min-width: 10rem;\n  width: 100%;\n  overflow: hidden;\n}\n.parallax__hero {\n  position: relative;\n  height: 23rem;\n  width: 100%;\n  color: #fff;\n  background-image: url(\"/forestGroup/assets/img/parallax.jpg\");\n  background-position: center;\n  background-size: cover;\n  z-index: -1;\n}\n.parallax__hero-box {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin: 0 auto;\n  min-width: 11.5rem;\n  width: 43.25rem;\n  max-width: 100%;\n  height: 100%;\n  padding: 0.015rem;\n  white-space: wrap;\n}\n.parallax__hero-box--title {\n  padding: 2.15rem;\n  width: 85%;\n  line-height: 2.5rem;\n  border-radius: 0.125rem;\n  border: 1px solid rgba(255, 255, 255, 0.7);\n  font-size: 1.5rem;\n}\n.parallax__shadow {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background-color: rgba(0, 10, 0, 0.7);\n  z-index: -1;\n}",
-      "start": 1723712152647,
-      "end": 1723712153776,
+      "result": ".parallax {\n  overflow: hidden;\n}\n.parallax__content {\n  width: 100%;\n  text-align: center;\n  overflow: hidden;\n}\n.parallax__hero {\n  position: relative;\n  height: 23rem;\n  width: 100%;\n  color: #fff;\n  background-image: url(\"__VITE_ASSET__DDCSwoWs__\");\n  background-position: center;\n  background-size: cover;\n  z-index: -1;\n}\n.parallax__hero-box {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin: 0 auto;\n  min-width: 11.5rem;\n  width: 43.25rem;\n  max-width: 100%;\n  height: 100%;\n  padding: 0.015rem;\n  word-break: break-word;\n}\n.parallax__hero-box--title {\n  padding: 2.15rem;\n  width: 85%;\n  line-height: 2.5rem;\n  border-radius: 0.125rem;\n  border: 1px solid rgba(255, 255, 255, 0.7);\n  font-size: 1.5rem;\n}\n.parallax__shadow {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background-color: rgba(0, 10, 0, 0.7);\n  z-index: -1;\n}",
+      "start": 1724099917492,
+      "end": 1724099918543,
       "order": "normal",
       "sourcemaps": {
         "mappings": ""
@@ -22,81 +20,85 @@
     },
     {
       "name": "vite:esbuild",
-      "start": 1723712153777,
-      "end": 1723712153777,
+      "start": 1724099918543,
+      "end": 1724099918543,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1723712153778,
-      "end": 1723712153778,
+      "start": 1724099918543,
+      "end": 1724099918543,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1723712153778,
-      "end": 1723712153778,
+      "start": 1724099918543,
+      "end": 1724099918543,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1723712153778,
-      "end": 1723712153778,
+      "start": 1724099918543,
+      "end": 1724099918543,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "result": "import { updateStyle as __vite__updateStyle, removeStyle as __vite__removeStyle } from \"/forestGroup/@vite/client\"\nconst __vite__id = \"E:/zlecenia/forestGroup/assets/scss/_parallax.scss\"\nconst __vite__css = \".parallax__content {\\n  min-width: 10rem;\\n  width: 100%;\\n  overflow: hidden;\\n}\\n.parallax__hero {\\n  position: relative;\\n  height: 23rem;\\n  width: 100%;\\n  color: #fff;\\n  background-image: url(\\\"/forestGroup/assets/img/parallax.jpg\\\");\\n  background-position: center;\\n  background-size: cover;\\n  z-index: -1;\\n}\\n.parallax__hero-box {\\n  display: flex;\\n  justify-content: center;\\n  align-items: center;\\n  margin: 0 auto;\\n  min-width: 11.5rem;\\n  width: 43.25rem;\\n  max-width: 100%;\\n  height: 100%;\\n  padding: 0.015rem;\\n  white-space: wrap;\\n}\\n.parallax__hero-box--title {\\n  padding: 2.15rem;\\n  width: 85%;\\n  line-height: 2.5rem;\\n  border-radius: 0.125rem;\\n  border: 1px solid rgba(255, 255, 255, 0.7);\\n  font-size: 1.5rem;\\n}\\n.parallax__shadow {\\n  position: absolute;\\n  top: 0;\\n  left: 0;\\n  width: 100%;\\n  height: 100%;\\n  background-color: rgba(0, 10, 0, 0.7);\\n  z-index: -1;\\n}\"\n__vite__updateStyle(__vite__id, __vite__css)\nimport.meta.hot.accept()\nimport.meta.hot.prune(() => __vite__removeStyle(__vite__id))",
-      "start": 1723712153778,
-      "end": 1723712153779,
+      "result": "",
+      "start": 1724099918543,
+      "end": 1724099918543,
       "order": "normal",
       "sourcemaps": {
         "mappings": ""
       }
     },
     {
+      "name": "vite:build-html",
+      "start": 1724099918543,
+      "end": 1724099918543,
+      "order": "normal"
+    },
+    {
       "name": "vite:worker-import-meta-url",
-      "start": 1723712153780,
-      "end": 1723712153780,
+      "start": 1724099918543,
+      "end": 1724099918543,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1723712153780,
-      "end": 1723712153780,
+      "start": 1724099918543,
+      "end": 1724099918543,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1724099918543,
+      "end": 1724099918543,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1723712153780,
-      "end": 1723712153780,
+      "start": 1724099918543,
+      "end": 1724099918543,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1723712153782,
-      "end": 1723712153783,
+      "start": 1724099918543,
+      "end": 1724099918543,
       "order": "normal"
     },
     {
-      "name": "vite:client-inject",
-      "start": 1723712153784,
-      "end": 1723712153784,
+      "name": "vite:build-import-analysis",
+      "start": 1724099918543,
+      "end": 1724099918543,
       "order": "normal"
     },
     {
-      "name": "vite:css-analysis",
-      "start": 1723712153785,
-      "end": 1723712153785,
+      "name": "vite:reporter",
+      "start": 1724099918543,
+      "end": 1724099918543,
       "order": "normal"
-    },
-    {
-      "name": "vite:import-analysis",
-      "result": "import { createHotContext as __vite__createHotContext } from \"/forestGroup/@vite/client\";import.meta.hot = __vite__createHotContext(\"/assets/scss/_parallax.scss\");import { updateStyle as __vite__updateStyle, removeStyle as __vite__removeStyle } from \"/forestGroup/@vite/client\"\nconst __vite__id = \"E:/zlecenia/forestGroup/assets/scss/_parallax.scss\"\nconst __vite__css = \".parallax__content {\\n  min-width: 10rem;\\n  width: 100%;\\n  overflow: hidden;\\n}\\n.parallax__hero {\\n  position: relative;\\n  height: 23rem;\\n  width: 100%;\\n  color: #fff;\\n  background-image: url(\\\"/forestGroup/assets/img/parallax.jpg\\\");\\n  background-position: center;\\n  background-size: cover;\\n  z-index: -1;\\n}\\n.parallax__hero-box {\\n  display: flex;\\n  justify-content: center;\\n  align-items: center;\\n  margin: 0 auto;\\n  min-width: 11.5rem;\\n  width: 43.25rem;\\n  max-width: 100%;\\n  height: 100%;\\n  padding: 0.015rem;\\n  white-space: wrap;\\n}\\n.parallax__hero-box--title {\\n  padding: 2.15rem;\\n  width: 85%;\\n  line-height: 2.5rem;\\n  border-radius: 0.125rem;\\n  border: 1px solid rgba(255, 255, 255, 0.7);\\n  font-size: 1.5rem;\\n}\\n.parallax__shadow {\\n  position: absolute;\\n  top: 0;\\n  left: 0;\\n  width: 100%;\\n  height: 100%;\\n  background-color: rgba(0, 10, 0, 0.7);\\n  z-index: -1;\\n}\"\n__vite__updateStyle(__vite__id, __vite__css)\nimport.meta.hot.accept()\nimport.meta.hot.prune(() => __vite__removeStyle(__vite__id))",
-      "start": 1723712153785,
-      "end": 1723712153786,
-      "order": "normal",
-      "sourcemaps": null
     }
   ]
 }

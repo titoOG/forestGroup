@@ -17,7 +17,6 @@ const modalBtn = document.getElementById('modalBtn');
 const shadowBox = document.getElementById('shadowBox');
 
 let event;
-
 let regex = / ^[a-zA-Z0-9 ]*$/;
 let regexEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 let regexNumbersOnly = /[0-9]|\. /;
@@ -29,7 +28,6 @@ let optionOne = document.getElementById('optionOne');
 let optionTwo = document.getElementById('optionTwo');
 let optionThree = document.getElementById('optionThree');
 let clauseErrorText = document.getElementById('clauseErrorText');
-
 let checkboxStatus;
 
 const formValidation = () => {
@@ -58,9 +56,7 @@ const formValidation = () => {
   if (formPhone.value.length < 9 && formPhone.value.length > 0) {
     formPhone.removeAttribute('data-status');
     formPhone.classList.add('formError');
-    console.log(` IF ${formPhone.value.length}`);
   } else if (formPhone.value.length === 9 || formPhone.value.length === 0) {
-    console.log(` elsIF ${formPhone.value.length}`);
     formPhone.setAttribute('data-status', 'true');
     formPhone.classList.remove('formError');
   }
@@ -96,7 +92,6 @@ formCheckboxes.forEach((checkbox) => {
     if (e.target.ariaChecked == 'false') {
       e.target.ariaChecked = 'true';
       checkboxStatus = e.target;
-      console.log(checkboxStatus.value.length);
     } else if (e.target.ariaChecked == 'true') {
       checkboxStatus = '';
       e.target.ariaChecked = 'false';
@@ -126,7 +121,6 @@ const clearScreen = () => {
     input.value = '';
   });
   formTextArea.value = '';
-
   formCheckboxes.forEach((checkbox) => {
     checkbox.checked = false;
     checkbox.ariaChecked = false;

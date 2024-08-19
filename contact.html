@@ -15,31 +15,33 @@
 
     <nav class="nav spy" id="home">
         <div class="nav__content">
-            <div class="nav__logo navLogoCenter">
-                <a href="./" class="nav__logo--link" id="#home">
-                    <img src="./assets/img/forestLogo.svg" alt="Logo forestGroup" class="nav__logo--image">Forest
-                </a>
-            </div>
+            <div class="nav__items center">
+                <div class="nav__logo navLogoCenter">
+                    <a href="./" class="nav__logo--link" id="#home">
+                        <img src="./assets/img/forestLogo.svg" alt="Logo forestGroup" class="nav__logo--image">Forest
+                    </a>
+                </div>
 
-            <div class="nav__desktop" id="navDesktop">
-                <a href="#home" class="nav__desktop--link">Home</a>
-                <a href="./#about" class="nav__desktop--link ">O nas</a>
-                <a href="./#offers" class="nav__desktop--link">Oferta</a>
-                <a href="#contact" class="nav__desktop--link">Kontakt</a>
-            </div>
+                <div class="nav__desktop" id="navDesktop">
+                    <a href="#home" class="nav__desktop--link">Home</a>
+                    <a href="./#about" class="nav__desktop--link ">O nas</a>
+                    <a href="./#offers" class="nav__desktop--link">Oferta</a>
+                    <a href="#contact" class="nav__desktop--link">Kontakt</a>
+                </div>
 
-            <div class="nav__mobile" id="navMobile">
-                <a href="#home" class="nav__mobile--link">Home</a>
-                <a href="./#about" class="nav__mobile--link ">O nas</a>
-                <a href="./#offers" class="nav__mobile--link">Oferta</a>
-                <a href="#contact" class="nav__mobile--link">Kontakt</a>
-            </div>
+                <div class="nav__mobile" id="navMobile">
+                    <a href="#home" class="nav__mobile--link">Home</a>
+                    <a href="./#about" class="nav__mobile--link ">O nas</a>
+                    <a href="./#offers" class="nav__mobile--link">Oferta</a>
+                    <a href="#contact" class="nav__mobile--link">Kontakt</a>
+                </div>
 
-            <div class="nav__burger" id="burgerBtn" aria-label="Menu hamburgerowe">
-                <div class="nav__burger-icon">
-                    <span class=" nav__burger-icon--top"></span>
-                    <span class=" nav__burger-icon--mid" id="burgerBtnMid"></span>
-                    <span class="nav__burger-icon--bot" id="burgerBtnBot"></span>
+                <div class="nav__burger" id="burgerBtn" aria-label="Menu hamburgerowe">
+                    <div class="nav__burger-icon">
+                        <span class=" nav__burger-icon--top"></span>
+                        <span class=" nav__burger-icon--mid" id="burgerBtnMid"></span>
+                        <span class="nav__burger-icon--bot" id="burgerBtnBot"></span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -47,7 +49,7 @@
 
     <header class="header" id="header">
         <div class="header__hero">
-            <div class="header__box">
+            <div class="header__box center">
                 <h1 class="header__box--title">Forest Group</h1>
                 <h1 class="header__box--subtitle">Najpiękniejszy park w Twojej okolicy!</h1>
             </div>
@@ -85,26 +87,32 @@
                 </div>
 
                 <div class="contact__boxes">
-
                     <div class="contact__box">
                         <form class="contact__form shadow" action="/" id="contactForm">
                             <div class="contact__form-option shadow">
-                                <img src="./assets/img/icon_people.svg" alt="Ikona sylwetki człowieka"
-                                    class="contact__form-option--img">
+                                <label for="formPerson">
+
+                                    <img src="./assets/img/icon_people.svg" alt="Ikona sylwetki człowieka"
+                                        class="contact__form-option--img">
+                                </label>
                                 <input type="text" class="contact__form-option--input" placeholder="Imię i nazwisko"
                                     id="formPerson">
                             </div>
 
                             <div class="contact__form-option shadow">
-                                <img src="./assets/img/icon_envelope.svg" alt="Ikona koperty"
-                                    class="contact__form-option--img">
+                                <label for="formMail">
+                                    <img src="./assets/img/icon_envelope.svg" alt="Ikona koperty"
+                                        class="contact__form-option--img">
+                                </label>
                                 <input type="text" class="contact__form-option--input" placeholder="Email"
                                     id="formMail">
                             </div>
 
                             <div class="contact__form-option shadow">
-                                <img src="./assets/img/icon_phone.svg" alt="Ikona słuchawki telefonu"
-                                    class="contact__form-option--img">
+                                <label for="formPhone">
+                                    <img src="./assets/img/icon_phone.svg" alt="Ikona słuchawki telefonu"
+                                        class="contact__form-option--img">
+                                </label>
                                 <input type="tel" class="contact__form-option--input" placeholder="Telefon (opcjonalne)"
                                     id="formPhone">
                             </div>
@@ -122,37 +130,36 @@
                                 <div class="contact__form-box">
                                     <input type="checkbox" class="contact__form-box--checkbox" id="optionOne"
                                         aria-checked="false">
-                                    <p class="contact__form-box--text">Plan wycieczki
-                                    </p>
+                                    <label for="optionOne" class="contact__form-box--text">Plan wycieczki
+                                    </label>
                                 </div>
 
                                 <div class="contact__form-box">
                                     <input type="checkbox" class="contact__form-box--checkbox" id="optionTwo"
                                         aria-checked="false">
-                                    <p class="contact__form-box--text">
+                                    <label for="optionTwo" class="contact__form-box--text">
                                         Rezerwacja
-                                    </p>
+                                    </label>
                                 </div>
 
                                 <div class="contact__form-box">
                                     <input type="checkbox" class="contact__form-box--checkbox" id="optionThree"
                                         aria-checked="false">
-                                    <p class="contact__form-box--text">
+                                    <label for="optionThree" class="contact__form-box--text">
                                         Inne
-                                    </p>
+                                    </label>
                                 </div>
                             </div>
                             <p class="formErrorText" id="clauseErrorText"></p>
                             <div class="contact__form-clause">
-                                <p class="contact__form-clause--text" id="formClauseText">
-
-                                    <input type="checkbox" class="contact__form-clause--checkbox" aria-checked="false">
-
+                                <input type="checkbox" class="contact__form-clause--checkbox" aria-checked="false"
+                                    id="formClauseText">
+                                <label for="formClauseText" class="contact__form-clause--text">
                                     <span class="required">*</span>"Wyrażam zgodę na przetwarzanie moich danych
                                     osobowych podanych w powyższym
                                     formularzu w
                                     celach handlowych i marketingowych przez ForestGroup oraz przez podmioty trzecie."
-                                </p>
+                                </label>
                             </div>
 
                             <div class="contact__form-btns">

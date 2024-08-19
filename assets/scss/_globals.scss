@@ -33,7 +33,6 @@ main {
   margin: 2rem auto;
   min-width: 17rem;
   width: 100%;
-  max-width: 75rem;
 }
 
 .sectionTitle {
@@ -51,7 +50,8 @@ main {
 }
 
 .center {
-  max-width: 75rem;
+  overflow-x: hidden;
+  max-width: 83rem;
 }
 
 .btn {
@@ -64,7 +64,7 @@ main {
 }
 
 .inactive {
-  color: grey;
+  color: c.$grey-color;
 }
 
 .active {

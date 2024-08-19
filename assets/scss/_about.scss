@@ -4,30 +4,35 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
   }
   &__box {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin: 1rem;
-    padding: 1rem;
+    padding: 0rem 0.688rem;
+
     &--title {
       width: 100%;
-      margin-bottom: 1rem;
+      margin: 2rem auto 1rem -0.125rem;
+      padding: 0.5rem;
       font-size: 1.6rem;
       font-family: var(--bold-font);
+      text-align: left;
     }
     &-text {
-      padding: 1rem;
+      padding: 0.5rem;
       line-height: 1.8rem;
       letter-spacing: 0.0125rem;
+      text-align: left;
       &--link {
         text-decoration: underline;
       }
     }
     &--image {
-      width: 255px;
-      height: 200px;
+      width: 100%;
+      height: 250px;
     }
   }
 }

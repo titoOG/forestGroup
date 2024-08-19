@@ -120,18 +120,18 @@ const openCarousel = () => {
   pageID.classList.add('noScroll');
   shadowBox.classList.add('box-shadow');
   carouselCurrentImage.src = `${carouselImageSrc}`;
-  carouselModal.classList.add('dflex');
+  carouselModal.style.display = 'flex';
   carouselModal.classList.add('carouselImagesIn');
 };
 
 const closeCarousel = () => {
+  carouselModal.style.display = 'none';
   carouselImageSrc.length = 0;
   carouselImageGroup.length = 0;
   carouselImageID = 0;
   carouselCurrentImage.src = '';
   pageID.classList.remove('noScroll');
   shadowBox.classList.remove('box-shadow');
-  carouselModal.classList.remove('dflex');
 };
 
 if (pageID.id === 'offersPage') {
@@ -199,7 +199,7 @@ const date = new Date();
 footerInfo.innerHTML = `&copy${date.getFullYear()} Forest Group Company Ltd`;
 
 const options = {
-  rootMargin: '0px 0px -35% 0px ',
+  rootMargin: '0px 0px -45% 0px ',
 };
 
 const handleScrollSpy = (entries) => {

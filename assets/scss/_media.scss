@@ -17,9 +17,10 @@
 @media (width >= 400px) {
   .about {
     &__box {
-      &--image {
-        width: 350px;
-        height: 220px;
+      &--title,
+      &-text {
+        padding: 0.5rem 1.5rem;
+        text-align: center;
       }
     }
   }
@@ -88,15 +89,6 @@
       }
     }
   }
-
-  .about {
-    &__box {
-      &--image {
-        width: 433px;
-        height: 333px;
-      }
-    }
-  }
 }
 
 @media (width >= 850px) {
@@ -124,6 +116,7 @@
     }
     &__desktop {
       display: flex;
+      justify-content: flex-end;
     }
   }
 
@@ -135,29 +128,30 @@
 
   .about {
     &__content {
+      margin-bottom: 2.25rem;
       flex-direction: row;
     }
 
     &__box {
-      padding: 1.25rem;
-      align-items: center;
-      justify-content: center;
-
+      margin: 0 1rem;
+      width: 50%;
+      text-align: left;
       &--title {
-        width: 110%;
         text-align: left;
       }
 
       &-text {
-        width: 110%;
-        padding: 0.25rem;
+        width: 100%;
         line-height: 2.05rem;
+        text-align: left;
       }
 
       &:nth-child(2) {
         display: flex;
-        text-align: left;
-        justify-content: flex-start;
+        align-self: flex-start;
+      }
+      &--image {
+        height: 100%;
       }
     }
   }
@@ -181,8 +175,6 @@
     &__card {
       margin: 2rem 1rem;
     }
-
-    // subpage
 
     &__boxes {
       flex-direction: row;
@@ -212,8 +204,6 @@
         }
       }
     }
-
-    // subpage
   }
 
   .carousel {
@@ -321,19 +311,11 @@
 }
 
 @media (width >= 1200px) {
-  .about {
+  .header {
     &__box {
-      &--image {
-        width: 503px;
-        height: 333px;
-      }
-      &:nth-child(2) {
-        padding: 2.25rem;
-        margin-top: -2.5rem;
-      }
-      &-text {
-        padding: 0.25rem;
-        width: 110%;
+      align-items: flex-start;
+      &--subtitle {
+        text-align: left;
       }
     }
   }
@@ -347,19 +329,6 @@
     &__box {
       &--image {
         width: 45rem;
-      }
-    }
-  }
-}
-
-@media (width >= 1400px) {
-  .header {
-    &__box {
-      top: 37%;
-      left: 64%;
-      align-items: flex-start;
-      &--subtitle {
-        text-align: left;
       }
     }
   }
